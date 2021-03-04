@@ -1,0 +1,6 @@
+Hello there, lovely human!
+
+MinElev leder (https://github.com/vtfk/minelev-leder-web) is
+developed by Vestfold og Telemark fylkeskommune (Vestfold and Telemark County Council).
+
+Is you find any issues, please file an issue on the github repository linked above.
