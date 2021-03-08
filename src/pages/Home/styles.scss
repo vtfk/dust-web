@@ -1,18 +1,5 @@
 @import "~@vtfk/components/src/ui/Tokens/tokens.scss";
 
 .home {
-  max-width: 922px;
-
-  .page-title {
-    margin-bottom: $baseUnit * 7;
-
-    @media(max-width: 1000px) {
-      margin-bottom: $baseUnit * 3;
-    }
-
-    // Wrap text on mobile, but not tablets
-    @media(max-width: 550px) {
-      max-width: 310px;
-    }
-  }
+  
 }
