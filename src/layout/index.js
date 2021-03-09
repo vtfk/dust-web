@@ -17,6 +17,8 @@ import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 
 import { ROUTES } from '../config'
 
+import systems from '../data/systems.json'
+
 import './styles.scss'
 import './base-styles.scss'
 
@@ -74,11 +76,7 @@ export function Layout (props) {
             <Paragraph size="small">
               <strong>Søker i basene:</strong>
               {
-                ['Visma', 'Extens', 'AD', 'Azure', 'SDS Teams', 'FEIDE'].map(function(location) {
-                  return (
-                    <span>{location}</span>
-                  )
-                })
+                systems.map(system => <span>{system.name}</span>)
               }
             </Paragraph>
             <button onClick={() => { alert('WIP') }} className="header-search-locations-toggle">
