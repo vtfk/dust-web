@@ -58,10 +58,10 @@ export function Layout (props) {
 
         <div className="container">
           <Heading2 as="h1" className="header-title">Debug User Status Tool</Heading2>
-          <Paragraph className="header-description">Et verktøy hvor du kan søke på navn, brukernavn, e-post eller personnummer.  Verktøyet søker i mange datakilder, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
+          <Paragraph className="header-description">Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange datakilder, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
           <div className="header-search-text">
             <SearchField
-              placeholder='Søk på navn, brukernavn, e-post eller personnummer..'
+              placeholder='Søk på visningsnavn, brukernavn, e-post eller personnummer..'
               value=''
               onSearch={() => console.log('onSearch!')}
               rounded
