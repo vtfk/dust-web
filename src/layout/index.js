@@ -17,6 +17,8 @@ import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 
 import { ROUTES } from '../config'
 
+import systems from '../data/systems.json'
+
 import './styles.scss'
 import './base-styles.scss'
 
@@ -56,29 +58,24 @@ export function Layout (props) {
 
         <div className="container">
           <Heading2 as="h1" className="header-title">Debug User Status Tool</Heading2>
-          <Paragraph className="header-description">Et verktøy hvor du kan søke på navn, brukernavn, e-post eller personnummer.  Verktøyet søker i mange datakilder, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
+          <Paragraph className="header-description">Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange datakilder, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
           <div className="header-search-text">
             <SearchField
-              placeholder='Søk på navn, brukernavn, e-post eller personnummer..'
+              placeholder='Søk på visningsnavn, brukernavn, e-post eller personnummer..'
               value=''
               onSearch={() => console.log('onSearch!')}
               rounded
             />
           </div>
           <div className="header-search-type">
-            <RadioButton name='name' value='value-1' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
-            <RadioButton name='name' value='value-2' label='Søk blant ansatte' onChange={(e) => { console.log(e.target.value) }} />
-            <RadioButton name='name' value='value-3' label='Søk i alt' onChange={(e) => { console.log(e.target.value) }} />
+            <RadioButton name='name' value='value-1' label='Søk blant ansatte' checked onChange={(e) => { console.log(e.target.value) }} />
+            <RadioButton name='name' value='value-2' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
           </div>
           <div className="header-search-locations">
             <Paragraph size="small">
               <strong>Søker i basene:</strong>
               {
-                ['Visma', 'Extens', 'AD', 'Azure', 'SDS Teams', 'FEIDE'].map(function(location) {
-                  return (
-                    <span>{location}</span>
-                  )
-                })
+                systems.map(system => <span>{system.name}</span>)
               }
             </Paragraph>
             <button onClick={() => { alert('WIP') }} className="header-search-locations-toggle">
