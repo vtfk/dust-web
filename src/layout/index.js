@@ -68,9 +68,8 @@ export function Layout (props) {
             />
           </div>
           <div className="header-search-type">
-            <RadioButton name='name' value='value-1' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
-            <RadioButton name='name' value='value-2' label='Søk blant ansatte' onChange={(e) => { console.log(e.target.value) }} />
-            <RadioButton name='name' value='value-3' label='Søk i alt' onChange={(e) => { console.log(e.target.value) }} />
+            <RadioButton name='name' value='value-1' label='Søk blant ansatte' checked onChange={(e) => { console.log(e.target.value) }} />
+            <RadioButton name='name' value='value-2' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
           </div>
           <div className="header-search-locations">
             <Paragraph size="small">
