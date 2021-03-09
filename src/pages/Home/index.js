@@ -1,15 +1,24 @@
 import { useSession } from '@vtfk/react-msal'
-import { Heading2 } from '@vtfk/components'
+import { useLocation, Link } from 'react-router-dom'
+import {
+  Heading2,
+  Paragraph,
+} from '@vtfk/components'
 
 import './styles.scss'
 import { Layout } from '../../layout'
 
 export const Home = () => {
-  const { user } = useSession()
+  const { user, logout } = useSession()
+  const location = useLocation()
 
   return (
     <Layout>
-      <Heading2 as='h1'>{`Hei ${user.givenName} og velkommen til MinElev leder`}</Heading2>
+      <div className="home">
+        <div className="container">
+          
+        </div>
+      </div>
     </Layout>
   )
 }

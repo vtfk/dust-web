@@ -1,7 +1,18 @@
 import React, { useState } from 'react'
 import { useSession } from '@vtfk/react-msal'
 import { useLocation, Link } from 'react-router-dom'
-import { SideNav, SideNavItem, InitialsBadge, Paragraph, SkipLink, IconDropdownNav, IconDropdownNavItem, Icon, Logo } from '@vtfk/components'
+import {
+  Heading2,
+  Logo,
+  InitialsBadge,
+  Paragraph,
+  IconDropdownNav,
+  IconDropdownNavItem,
+  SearchField,
+  Icon,
+  RadioButton,
+  SkipLink,
+} from '@vtfk/components'
 import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 
 import { ROUTES } from '../config'
@@ -12,94 +23,22 @@ import './base-styles.scss'
 export function Layout (props) {
   const { user, logout } = useSession()
   const location = useLocation()
-  const [openTopNavSide, setOpenTopNavSide] = useState(false)
-  const [scrollLock, setScrollLock] = useState(false)
-
-  function clickTopNavToggle () {
-    const newIsOpen = !openTopNavSide
-    setOpenTopNavSide(newIsOpen)
-
-    if (newIsOpen && window.innerWidth <= 1000) {
-      setScrollLock(true)
-    } else {
-      setScrollLock(false)
-    }
-
-    return newIsOpen
-  }
-
-  function clickContainer () {
-    if (openTopNavSide) setOpenTopNavSide(false)
-  }
 
   return (
-    <div>
+    <div className="layout">
       <SkipLink href='#main-content'>Hopp til hovedinnhold</SkipLink>
 
-      <div className='layout'>
-        <SideNav title='DUST'>
-          <SideNavItem icon={<Icon name='home' />} active={location.pathname === '/'} href='/' title='Forside' />
-        </SideNav>
-
-        <nav role='navigation' className={`topnav-side ${openTopNavSide ? 'open' : ''}`}>
-          <div className='topnav-side-user'>
-            <div className='user'>
-              <InitialsBadge className='user-image' firstName={user.givenName} lastName={user.surname} />
-              <div className='user-name'>
-                <Paragraph>{user.displayName}</Paragraph>
-              </div>
-              <div className='user-menu'>
-                <IconDropdownNav>
-                  <IconDropdownNavItem onClick={() => logout()} title='Logg ut' />
-                </IconDropdownNav>
-              </div>
-            </div>
-
-            <button aria-label='Lukk meny' title='Lukk menyen' className='topnav-side-top-close' onClick={clickTopNavToggle}>
-              <Icon name='close' size='xsmall' />
-            </button>
-          </div>
-
-          <TouchScrollable>
-            <div className='topnav-side-list'>
-              <div className='topnav-side-list-inner'>
-                <Link className={`topnav-side-list-item ${location.pathname === '/' ? 'active' : ''}`} to='/'>
-                  <div className='topnav-side-list-item-icon'><Icon size='medium' name='home' /></div>
-                  <div className='topnav-side-list-item-text'>Forside</div>
-                </Link>
-              </div>
-            </div>
-          </TouchScrollable>
-        </nav>
-
-        <div className='container' onClick={() => { clickContainer() }}>
-          <header className='topnav'>
+      <div className="header">
+        <div className="topnav">
+          <div className="container">
             <a href='/' className='topnav-brand'>
               <div className='brand-logo' aria-hidden>
                 <Logo />
               </div>
               <div className='brand-name'>
-                MinElev Leder
+                D.U.S.T
               </div>
             </a>
-            <div className='topnav-toggles'>
-              <button aria-label='Åpne meny' title='Åpne menyen' onClick={clickTopNavToggle}>
-                <Icon size='small' name='menu' />
-              </button>
-            </div>
-          </header>
-
-          <div className='action-bar'>
-            <div className='search'>
-              {/*   <SearchField
-                value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
-                onSearch={() => { window.location.replace(`/${ROUTES.students}?s=${searchTerm || ''}`) }}
-                placeholder='Søk etter elev ...'
-                className='search-input'
-                rounded
-              /> */}
-            </div>
 
             <div className='user'>
               <div className='user-name'>
@@ -113,14 +52,44 @@ export function Layout (props) {
               </div>
             </div>
           </div>
+        </div>
 
-          <ScrollLock isActive={scrollLock}>
-            <div id='main-content' {...props}>
-              {props.children}
-            </div>
-          </ScrollLock>
+        <div className="container">
+          <Heading2 as="h1" className="header-title">Debug User Status Tool</Heading2>
+          <Paragraph className="header-description">Et verktøy hvor du kan søke på navn, brukernavn, e-post eller personnummer.  Verktøyet søker i mange datakilder, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
+          <div className="header-search-text">
+            <SearchField
+              placeholder='Søk på navn, brukernavn, e-post eller personnummer..'
+              value=''
+              onSearch={() => console.log('onSearch!')}
+              rounded
+            />
+          </div>
+          <div className="header-search-type">
+            <RadioButton name='name' value='value-1' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
+            <RadioButton name='name' value='value-2' label='Søk blant ansatte' onChange={(e) => { console.log(e.target.value) }} />
+            <RadioButton name='name' value='value-3' label='Søk i alt' onChange={(e) => { console.log(e.target.value) }} />
+          </div>
+          <div className="header-search-locations">
+            <Paragraph size="small">
+              <strong>Søker i basene:</strong>
+              {
+                ['Visma', 'Extens', 'AD', 'Azure', 'SDS Teams', 'FEIDE'].map(function(location) {
+                  return (
+                    <span>{location}</span>
+                  )
+                })
+              }
+            </Paragraph>
+            <button onClick={() => { alert('WIP') }} className="header-search-locations-toggle">
+              <Icon name='chevronDown' size="xsmall" />
+            </button>
+          </div>
         </div>
       </div>
+
+      {props.children}
+
     </div>
   )
 }

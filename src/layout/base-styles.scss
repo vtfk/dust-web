@@ -14,95 +14,17 @@ body {
   color: #1D1C28;
 }
 
-.school-information {
-  display: flex;
-  flex-wrap: nowrap;
-  margin-bottom: $baseUnit * 7;
-  align-items: center;
+.container {
+  max-width: 1100px;
+  margin: ($baseUnit * 4) auto;
 
   @media(max-width: 1000px) {
-    margin-bottom: $baseUnit * 4;
-  }
-
-  .school-shortname {
-    font-family: "Nunito", sans-serif;
-    padding: ($baseUnit * 3) ($baseUnit * 2);
-    cursor: default;
-    user-select: none;
-    font-size: 28px;
-    line-height: 49px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    background: $hawkesBlue;
-    border-radius: $baseUnit * 2;
-  }
-
-  .text-wrapper {
-    flex: 1;
-    margin-left: $baseUnit * 3;
-
-    .name {
-      font-weight: 700;
-    }
-
-    .other {
-      margin-top: $baseUnit / 2;
-    }
+    padding: 0 ($baseUnit * 2);
+    min-width: 100%;
+    max-width: none;
+    margin-top: 0;
   }
 }
-
-.numbers {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -($baseUnit * 4);
-  margin-bottom: $baseUnit * 5;
-
-  @media(max-width: 1000px) {
-    margin-left: 0;
-    margin-bottom: $baseUnit * 3;
-  }
-
-  .numbers-item {
-    width: calc(100% / 3 - (#{$baseUnit * 4}));
-    margin-bottom: $baseUnit * 2;
-    margin-left: $baseUnit * 4;
-    padding: ($baseUnit * 2) ($baseUnit * 4) ($baseUnit * 2) ($baseUnit * 4);
-    
-    &:not(.card-link) {
-      background: $catSkillWhite;
-    }
-
-    &.card-link {
-      position: relative;
-      outline: 0 !important;
-
-      .card-link-text {
-        text-decoration: none !important;
-      }
-
-      &:focus:not([disabled]) {
-        background: #DAEED5;
-      }
-    }
-
-    & .card-link-icon {
-      position: absolute;
-      right: 20px;
-      min-width: 40px;
-    }
-
-    @media(max-width: 1000px) {
-      margin-left: 0;
-      width: 100%;
-      padding-left: $baseUnit * 2;
-    }
-
-    .numbers-item-text {
-      padding-right: $baseUnit * 4;
-    }
-  }
-}
-
 
 .data-actions-table {
   width: 100%;
@@ -129,8 +51,6 @@ body {
       }
     }
   }
-
-  
 
   tbody {
     tr {
