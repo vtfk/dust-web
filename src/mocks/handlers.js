@@ -22,7 +22,7 @@ export const handlers = [
   rest.get(`${APP.API_URL}/hello`, (req, res, ctx) => {
     return res(
       ctx.status(200),
-      ctx.json(generateResponseObject({hello: 'world'}))
+      ctx.json(generateResponseObject({ hello: 'world' }))
     )
   })
 ]

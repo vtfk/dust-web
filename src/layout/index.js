@@ -11,7 +11,7 @@ import {
   SearchField,
   Icon,
   RadioButton,
-  SkipLink,
+  SkipLink
 } from '@vtfk/components'
 import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 
@@ -27,12 +27,12 @@ export function Layout (props) {
   const location = useLocation()
 
   return (
-    <div className="layout">
+    <div className='layout'>
       <SkipLink href='#main-content'>Hopp til hovedinnhold</SkipLink>
 
-      <div className="header">
-        <div className="topnav">
-          <div className="container">
+      <div className='header'>
+        <div className='topnav'>
+          <div className='container'>
             <a href='/' className='topnav-brand'>
               <div className='brand-logo' aria-hidden>
                 <Logo />
@@ -56,10 +56,10 @@ export function Layout (props) {
           </div>
         </div>
 
-        <div className="container">
-          <Heading2 as="h1" className="header-title">Debug User Status Tool</Heading2>
-          <Paragraph className="header-description">Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange datakilder, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
-          <div className="header-search-text">
+        <div className='container'>
+          <Heading2 as='h1' className='header-title'>Debug User Status Tool</Heading2>
+          <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange datakilder, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
+          <div className='header-search-text'>
             <SearchField
               placeholder='Søk på visningsnavn, brukernavn, e-post eller personnummer..'
               value=''
@@ -67,19 +67,19 @@ export function Layout (props) {
               rounded
             />
           </div>
-          <div className="header-search-type">
+          <div className='header-search-type'>
             <RadioButton name='name' value='value-1' label='Søk blant ansatte' checked onChange={(e) => { console.log(e.target.value) }} />
             <RadioButton name='name' value='value-2' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
           </div>
-          <div className="header-search-locations">
-            <Paragraph size="small">
+          <div className='header-search-locations'>
+            <Paragraph size='small'>
               <strong>Søker i basene:</strong>
               {
                 systems.map(system => <span>{system.name}</span>)
               }
             </Paragraph>
-            <button onClick={() => { alert('WIP') }} className="header-search-locations-toggle">
-              <Icon name='chevronDown' size="xsmall" />
+            <button onClick={() => { alert('WIP') }} className='header-search-locations-toggle'>
+              <Icon name='chevronDown' size='xsmall' />
             </button>
           </div>
         </div>

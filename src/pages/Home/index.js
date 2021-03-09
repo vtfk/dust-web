@@ -2,7 +2,7 @@ import { useSession } from '@vtfk/react-msal'
 import { useLocation, Link } from 'react-router-dom'
 import {
   Heading2,
-  Paragraph,
+  Paragraph
 } from '@vtfk/components'
 
 import './styles.scss'
@@ -14,10 +14,8 @@ export const Home = () => {
 
   return (
     <Layout>
-      <div className="home">
-        <div className="container">
-          
-        </div>
+      <div className='home'>
+        <div className='container' />
       </div>
     </Layout>
   )
