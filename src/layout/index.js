@@ -25,6 +25,21 @@ import './base-styles.scss'
 export function Layout (props) {
   const { user, logout } = useSession()
   const location = useLocation()
+  const [selectedSystems, setSelectedSystems] = useState(systems)
+  const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
+
+  function clickSystemsSwitch(item) {
+    let tmpSystems = [...selectedSystems]
+    let exists = tmpSystems.some(s => s.name === item.name)
+
+    if (exists) {
+      tmpSystems = tmpSystems.filter((c) => { return c !== item })
+    } else {
+      tmpSystems.push(item)
+    }
+
+    setSelectedSystems(tmpSystems)
+  }
 
   return (
     <div className='layout'>
@@ -71,16 +86,37 @@ export function Layout (props) {
             <RadioButton name='name' value='value-1' label='Søk blant ansatte' checked onChange={(e) => { console.log(e.target.value) }} />
             <RadioButton name='name' value='value-2' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
           </div>
-          <div className='header-search-locations'>
+          <div className='header-search-systems'>
             <Paragraph size='small'>
               <strong>Søker i basene:</strong>
               {
-                systems.map(system => <span>{system.name}</span>)
+                selectedSystems.map(system => <span>{system.name}</span>)
               }
             </Paragraph>
-            <button onClick={() => { alert('WIP') }} className='header-search-locations-toggle'>
-              <Icon name='chevronDown' size='xsmall' />
-            </button>
+            <div className='header-search-systems-toggle'>
+              <Icon onClick={() => { setOpenSystemsSelect(!openSystemsSelect) }} name='chevronDown' size='xsmall' />
+              {
+                openSystemsSelect &&
+                <div className="header-search-systems-list">
+                  <div className="header-search-systems-list-header">
+                    <div className="header-search-systems-list-header-title">Valgte databaser</div>
+                    <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
+                  </div>
+                  <div className="header-search-systems-list-items">
+                    {
+                      systems.map(function(item, index) {
+                        return (
+                          <div key={index} className="header-search-systems-list-item">
+                            <div className="header-search-systems-list-item-name">{item.name}</div>
+                            <div className={`header-search-systems-list-item-switch ${selectedSystems.some(s => s.name === item.name) ? 'selected' : ''}`} onClick={() => { clickSystemsSwitch(item) }}></div>
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                </div>
+              }
+            </div>
           </div>
         </div>
       </div>
