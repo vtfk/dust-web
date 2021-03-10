@@ -28,9 +28,9 @@ export function Layout (props) {
   const [selectedSystems, setSelectedSystems] = useState(systems)
   const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
 
-  function clickSystemsSwitch(item) {
+  function clickSystemsSwitch (item) {
     let tmpSystems = [...selectedSystems]
-    let exists = tmpSystems.some(s => s.name === item.name)
+    const exists = tmpSystems.some(s => s.name === item.name)
 
     if (exists) {
       tmpSystems = tmpSystems.filter((c) => { return c !== item })
@@ -42,7 +42,7 @@ export function Layout (props) {
     setSelectedSystems(sortedSystems)
   }
 
-  function sortSystems(systems) {
+  function sortSystems (systems) {
     return systems.sort((a, b) => {
       if (a.name < b.name) return -1
       if (a.name > b.name) return 1
@@ -106,24 +106,24 @@ export function Layout (props) {
               <Icon onClick={() => { setOpenSystemsSelect(!openSystemsSelect) }} name='chevronDown' size='xsmall' />
               {
                 openSystemsSelect &&
-                <div className="header-search-systems-list">
-                  <div className="header-search-systems-list-header">
-                    <div className="header-search-systems-list-header-title">Valgte datakilder</div>
-                    <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
-                  </div>
-                  <div className="header-search-systems-list-items">
-                    {
-                      systems.map(function(item, index) {
+                  <div className='header-search-systems-list'>
+                    <div className='header-search-systems-list-header'>
+                      <div className='header-search-systems-list-header-title'>Valgte datakilder</div>
+                      <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
+                    </div>
+                    <div className='header-search-systems-list-items'>
+                      {
+                      systems.map(function (item, index) {
                         return (
-                          <div key={index} className="header-search-systems-list-item">
-                            <div className="header-search-systems-list-item-name">{item.name}</div>
-                            <div className={`header-search-systems-list-item-switch ${selectedSystems.some(s => s.name === item.name) ? 'selected' : ''}`} onClick={() => { clickSystemsSwitch(item) }}></div>
+                          <div key={index} className='header-search-systems-list-item'>
+                            <div className='header-search-systems-list-item-name'>{item.name}</div>
+                            <div className={`header-search-systems-list-item-switch ${selectedSystems.some(s => s.name === item.name) ? 'selected' : ''}`} onClick={() => { clickSystemsSwitch(item) }} />
                           </div>
                         )
                       })
                     }
+                    </div>
                   </div>
-                </div>
               }
             </div>
           </div>
