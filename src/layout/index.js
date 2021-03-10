@@ -82,7 +82,7 @@ export function Layout (props) {
 
         <div className='container'>
           <Heading2 as='h1' className='header-title'>Debug User Status Tool</Heading2>
-          <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange datakilder, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
+          <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange systemer, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
           <div className='header-search-text'>
             <SearchField
               placeholder='Søk på visningsnavn, brukernavn, e-post eller personnummer..'
@@ -97,7 +97,7 @@ export function Layout (props) {
           </div>
           <div className='header-search-systems'>
             <Paragraph size='small'>
-              <strong>Søker i kildene:</strong>
+              <strong>Søker i systemene:</strong>
               {
                 selectedSystems.map(system => <span>{system.name}</span>)
               }
@@ -108,7 +108,7 @@ export function Layout (props) {
                 openSystemsSelect &&
                   <div className='header-search-systems-list'>
                     <div className='header-search-systems-list-header'>
-                      <div className='header-search-systems-list-header-title'>Valgte datakilder</div>
+                      <div className='header-search-systems-list-header-title'>Valgte systemer</div>
                       <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
                     </div>
                     <div className='header-search-systems-list-items'>
