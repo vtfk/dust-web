@@ -88,7 +88,7 @@ export function Layout (props) {
           </div>
           <div className='header-search-systems'>
             <Paragraph size='small'>
-              <strong>Søker i basene:</strong>
+              <strong>Søker i kildene:</strong>
               {
                 selectedSystems.map(system => <span>{system.name}</span>)
               }
@@ -99,7 +99,7 @@ export function Layout (props) {
                 openSystemsSelect &&
                 <div className="header-search-systems-list">
                   <div className="header-search-systems-list-header">
-                    <div className="header-search-systems-list-header-title">Valgte databaser</div>
+                    <div className="header-search-systems-list-header-title">Valgte datakilder</div>
                     <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
                   </div>
                   <div className="header-search-systems-list-items">
