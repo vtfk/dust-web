@@ -110,6 +110,11 @@
       justify-content: center;
       user-select: none;
 
+      .system-disabled {
+        text-decoration: line-through;
+        color: #A3A3A3;
+      }
+
       .paragraph {
         text-align: center;
 

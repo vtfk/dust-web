@@ -103,7 +103,7 @@ export function Layout (props) {
             <Paragraph size='small'>
               <strong>Søker i systemene:</strong>
               {
-                selectedSystems.map(system => <span>{system.name}</span>)
+                systems.map(system => selectedSystems.some(s => s.name === system.name) ? <span>{system.name}</span> : <span className='system-disabled'>{system.name}</span>)
               }
             </Paragraph>
             <div className='header-search-systems-toggle'>
