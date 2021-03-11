@@ -42,6 +42,10 @@ export function Layout (props) {
     setSelectedSystems(sortedSystems)
   }
 
+  function selectAllSystemSwitch(enable) {
+    setSelectedSystems(enable ? systems : [])
+  }
+
   function sortSystems (systems) {
     return systems.sort((a, b) => {
       if (a.name < b.name) return -1
@@ -112,6 +116,10 @@ export function Layout (props) {
                       <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
                     </div>
                     <div className='header-search-systems-list-items'>
+                      <div className='header-search-systems-list-item'>
+                        <div className='header-search-systems-list-item-name'>Alle</div>
+                        <div className={`header-search-systems-list-item-switch ${selectedSystems.length === systems.length ? 'selected' : ''}`} onClick={() => { selectAllSystemSwitch(!(selectedSystems.length === systems.length)) }} />
+                      </div>
                       {
                       systems.map(function (item, index) {
                         return (
