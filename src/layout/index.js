@@ -42,7 +42,7 @@ export function Layout (props) {
     setSelectedSystems(sortedSystems)
   }
 
-  function selectAllSystemSwitch(enable) {
+  function selectAllSystemSwitch (enable) {
     setSelectedSystems(enable ? systems : [])
   }
 
