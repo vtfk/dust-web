@@ -1,8 +1,12 @@
+import { useEffect, useState } from 'react'
 import { useSession } from '@vtfk/react-msal'
 import { SearchField } from '@vtfk/components'
 
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+
 import './styles.scss'
-import { useEffect, useState } from 'react'
+
 import { APP } from '../../config'
 
 export const SearchTest = () => {
@@ -27,9 +31,9 @@ export const SearchTest = () => {
         value={query}
         rounded
       />
-      <pre>
+      <SyntaxHighlighter language='json' className='code' style={docco}>
         {JSON.stringify(searchResult, null, 2)}
-      </pre>
+      </SyntaxHighlighter>
     </div>
   )
 }

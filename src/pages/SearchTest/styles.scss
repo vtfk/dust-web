@@ -7,6 +7,8 @@
   width: 80%;
 }
 
-pre {
+.code {
   margin-top: 20px;
+  background: none !important;
+  padding: $baseUnit * 2 !important;
 }
