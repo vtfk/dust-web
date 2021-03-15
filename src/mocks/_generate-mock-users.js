@@ -30,7 +30,7 @@ const getUser = (fregPerson, employee = false) => {
     id: randomId(),
     samAccountName: username,
     displayName: titleCase(fregPerson.visningnavn),
-    givenName: titleCase(fregPerson.fornavn),
+    givenName: `${titleCase(fregPerson.fornavn)}${fregPerson.mellomnavn ? ' ' + titleCase(fregPerson.mellomnavn) : ''}`,
     surName: titleCase(fregPerson.etternavn),
     mail,
     userPrincipalName: mail,
