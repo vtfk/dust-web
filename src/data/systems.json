@@ -1,13 +1,5 @@
 [
   {
-    "name": "Visma",
-    "short": "visma"
-  },
-  {
-    "name": "Extens",
-    "short": "pifu"
-  },
-  {
     "name": "AD",
     "short": "ad"
   },
@@ -16,11 +8,19 @@
     "short": "aad"
   },
   {
-    "name": "SDS Teams",
-    "short": "sds"
+    "name": "Extens",
+    "short": "pifu"
   },
   {
     "name": "FEIDE",
     "short": "feide"
+  },
+  {
+    "name": "SDS Teams",
+    "short": "sds"
+  },
+  {
+    "name": "Visma",
+    "short": "visma"
   }
 ]
