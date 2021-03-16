@@ -15,6 +15,17 @@ const randomId = () => {
   }).toLowerCase()
 }
 
+const getProxyAddresses = (mail, fregPerson, employee) => {
+  const proxy = []
+  if (getRandom(0, 50) !== 42) proxy.push(`SMTP:${mail}`)
+  if (getRandom(0, 50) === 42) proxy.push(`SMTP:${mail}`)
+  if (employee) {
+    if (getRandom(0, 50) > 25 && fregPerson.mellomnavn) proxy.push(`smtp:${replaceIllegalChars(`${fregPerson.fornavn} ${fregPerson.etternavn}@vtfk.no`, '.')}`)
+    if (getRandom(0, 50) > 25 && fregPerson.kommunenrNavn) proxy.push(`smtp:${mail.replace('vtfk.no', (parseInt(fregPerson.kommunenrNavn) < 3806 ? 'vfk.no' : 't-fk.no'))}`)
+  }
+  return proxy
+}
+
 const persons = []
 const getUser = (fregPerson, employee = false) => {
   // Generate username
@@ -34,7 +45,7 @@ const getUser = (fregPerson, employee = false) => {
     surName: titleCase(fregPerson.etternavn),
     mail,
     userPrincipalName: mail,
-    proxyAddresses: [`SMTP:${mail}`],
+    proxyAddresses: getProxyAddresses(mail, fregPerson, employee),
     domain: employee ? 'login' : 'skole',
     employeeNumber: fregPerson.id,
     timestamp: new Date().toISOString(),
