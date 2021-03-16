@@ -4,13 +4,6 @@ import { APP } from '../config'
 
 import users from './mock-users.json'
 
-export const generateResponseObject = (response) => {
-  return {
-    data: response,
-    count: response.length || undefined
-  }
-}
-
 export const generateErrorObject = (statusCode, message, innerError) => {
   return {
     error: {
@@ -27,11 +20,11 @@ export const handlers = [
     const top = parseInt(req.url.searchParams.get('top')) || 20
 
     const userSearch = new QuickScore(users, ['employeeNumber', 'samAccountName', 'mail', 'displayName'])
-    const searchResult = userSearch.search(query).splice(0, top)
+    const searchResult = userSearch.search(query).splice(0, top).map(result => result.item)
 
     return res(
       ctx.status(200),
-      ctx.json(generateResponseObject(searchResult))
+      ctx.json(searchResult)
     )
   })
 ]
