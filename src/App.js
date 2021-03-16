@@ -6,6 +6,7 @@ import { useSession } from '@vtfk/react-msal'
 import { AUTH, APP } from './config'
 
 import { Home } from './pages/Home'
+import { SearchTest } from './pages/SearchTest'
 import { Detail } from './pages/Detail'
 import { PageNotFound } from './pages/PageNotFound'
 
@@ -15,6 +16,7 @@ const AppContent = () => {
       <div className='app'>
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/searchtest' component={SearchTest} />
           <Route exact path='/detail/:id' component={Detail} />
           <Route exact path='*' component={PageNotFound} />
         </Switch>
