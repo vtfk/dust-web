@@ -13,6 +13,6 @@ export const Home = () => {
   const location = useLocation()
 
   return (
-    <Layout fullHeightHeader={true}></Layout>
+    <Layout fullHeightHeader />
   )
 }

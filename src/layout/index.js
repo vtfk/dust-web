@@ -49,20 +49,18 @@ export function Layout (props) {
   }, [query])
 
   useEffect(() => {
-    function onKeyup(e) {
+    function onKeyup (e) {
       if (e.key === 'ArrowUp') {
         pressKeyUp()
-      }
-      else if (e.key === 'ArrowDown') {
+      } else if (e.key === 'ArrowDown') {
         pressKeyDown()
-      }
-      else if (e.key === 'Enter') {
+      } else if (e.key === 'Enter') {
         window.location = `/detail/${searchResult[searchResultSelectedIndex].id}`
       }
     }
-    window.addEventListener('keyup', onKeyup);
-    return () => window.removeEventListener('keyup', onKeyup);
-  }, [pressKeyUp, pressKeyDown]);
+    window.addEventListener('keyup', onKeyup)
+    return () => window.removeEventListener('keyup', onKeyup)
+  }, [pressKeyUp, pressKeyDown])
 
   function pressKeyUp () {
     if (
@@ -144,19 +142,19 @@ export function Layout (props) {
           <div>
             {
               props.fullHeightHeader &&
-              <>
-                <Heading2 as='h1' className='header-title'>Debug User Status Tool</Heading2>
-                <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange systemer, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
-              </>
+                <>
+                  <Heading2 as='h1' className='header-title'>Debug User Status Tool</Heading2>
+                  <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange systemer, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
+                </>
             }
             <div className='header-search-text'>
-              <div className="header-search-fieldselect">
+              <div className='header-search-fieldselect'>
                 <select>
-                  <option value="1">Alle felter</option>
-                  <option value="2">Fullt navn</option>
-                  <option value="3">Fødselsnr</option>
+                  <option value='1'>Alle felter</option>
+                  <option value='2'>Fullt navn</option>
+                  <option value='3'>Fødselsnr</option>
                 </select>
-                <Icon onClick={() => { setOpenSystemsSelect(!openSystemsSelect) }} name='chevronDown' size='xsmall' />
+                <Icon name='chevronDown' size='xsmall' />
               </div>
               <SearchField
                 onChange={e => setQuery(e.target.value)}
@@ -164,21 +162,21 @@ export function Layout (props) {
                 rounded
                 style={
                   searchInputFocused && searchResult.length > 0
-                  ? { boxShadow: 'none', paddingRight: 200, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, borderColor: '#979797' }
-                  : { boxShadow: 'none', paddingRight: 200, borderColor: '#979797' }
+                    ? { boxShadow: 'none', paddingRight: 200, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, borderColor: '#979797' }
+                    : { boxShadow: 'none', paddingRight: 200, borderColor: '#979797' }
                 }
                 onFocus={() => { setSearchInputFocused(true) }}
                 onBlur={() => { setSearchInputFocused(false) }}
-                placeholder="Din søketekst.."
+                placeholder='Din søketekst..'
               />
 
               {
                 searchInputFocused &&
                 searchResult.length > 0 &&
-                <div className="header-search-result">
-                  <ul className="header-search-result-list">
-                    {
-                      searchResult.map(function(item, index) {
+                  <div className='header-search-result'>
+                    <ul className='header-search-result-list'>
+                      {
+                      searchResult.map(function (item, index) {
                         return (
                           <li key={index} className={`header-search-result-list-item ${index === searchResultSelectedIndex ? 'active' : ''}`}>
                             <Paragraph><a href={`/detail/${item.id}`}>{item.displayName}</a></Paragraph>
@@ -186,12 +184,12 @@ export function Layout (props) {
                         )
                       })
                     }
-                  </ul>
-                </div>
+                    </ul>
+                  </div>
               }
             </div>
 
-            <div className="header-search-type-systems">
+            <div className='header-search-type-systems'>
               <div className='header-search-type'>
                 <RadioButton name='name' value='value-1' label='Søk blant ansatte' checked onChange={(e) => { console.log(e.target.value) }} />
                 <RadioButton name='name' value='value-2' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
