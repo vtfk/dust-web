@@ -28,14 +28,15 @@ export function Layout (props) {
   const [selectedSystems, setSelectedSystems] = useState(systems)
   const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
   const { apiGet } = useSession()
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('a')
   const [searchResult, setSearchResult] = useState([])
-  const [searchInputFocused, setSearchInputFocused] = useState(false)
+  const [searchInputFocused, setSearchInputFocused] = useState(true)
   const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
 
   useEffect(() => {
     const search = async q => {
       const res = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
+      console.log(res)
       if (res) setSearchResult(res)
     }
 
@@ -174,17 +175,19 @@ export function Layout (props) {
                 searchInputFocused &&
                 searchResult.length > 0 &&
                   <div className='header-search-result'>
-                    <ul className='header-search-result-list'>
+                    <table className='header-search-result-table'>
                       {
                       searchResult.map(function (item, index) {
                         return (
-                          <li key={index} className={`header-search-result-list-item ${index === searchResultSelectedIndex ? 'active' : ''}`}>
-                            <Paragraph><a href={`/detail/${item.id}`}>{item.displayName}</a></Paragraph>
-                          </li>
+                          <tr onClick={() => { window.location = `/detail/${item.id}` }} key={index} className={`header-search-result-table-row ${index === searchResultSelectedIndex ? 'active' : ''}`}>
+                            <td><Paragraph>{item.displayName}</Paragraph></td>
+                            <td><Paragraph size="small">{item.samAccountName}</Paragraph></td>
+                            <td><Paragraph size="small">{item.office}</Paragraph></td>
+                          </tr>
                         )
                       })
                     }
-                    </ul>
+                    </table>
                   </div>
               }
             </div>
