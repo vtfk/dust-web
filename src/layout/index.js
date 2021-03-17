@@ -28,9 +28,9 @@ export function Layout (props) {
   const [selectedSystems, setSelectedSystems] = useState(systems)
   const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
   const { apiGet } = useSession()
-  const [query, setQuery] = useState('a')
+  const [query, setQuery] = useState('')
   const [searchResult, setSearchResult] = useState([])
-  const [searchInputFocused, setSearchInputFocused] = useState(true)
+  const [searchInputFocused, setSearchInputFocused] = useState(false)
   const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
 
   useEffect(() => {
