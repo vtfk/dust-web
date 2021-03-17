@@ -42,35 +42,6 @@ export const Detail = () => {
     { label: 'FEIDE', errorCount: 0 }
   ]
 
-  const jsonError = `{
-    "data": [{
-      "type": "articles",
-      "id": "1",
-      "attributes": {
-        "title": "JSON:API paints my bikeshed!",
-        "body": "The shortest article. Ever.",
-        "created": "2015-05-22T14:56:29.000Z",
-        "updated": "2015-05-22T14:56:28.000Z"
-      },
-      "relationships": {
-        "author": {
-          "data": {"id": "42", "type": "people"}
-        }
-      }
-    }],
-    "included": [
-      {
-        "type": "people",
-        "id": "42",
-        "attributes": {
-          "name": "John",
-          "age": 80,
-          "gender": "male"
-        }
-      }
-    ]
-  }`
-
   function expand (itemIndex) {
     if (!loading) {
       if (itemIndex === expandedItemIndex) {
@@ -205,7 +176,7 @@ export const Detail = () => {
         >
           <ModalBody>
             <SyntaxHighlighter language='json' className='error-modal-code' style={docco}>
-              {jsonError}
+              {'{}'}
             </SyntaxHighlighter>
           </ModalBody>
           <ModalSideActions>
