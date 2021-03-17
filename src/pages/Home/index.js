@@ -13,10 +13,6 @@ export const Home = () => {
   const location = useLocation()
 
   return (
-    <Layout>
-      <div className='home'>
-        <div className='container' />
-      </div>
-    </Layout>
+    <Layout fullHeightHeader={true}></Layout>
   )
 }
