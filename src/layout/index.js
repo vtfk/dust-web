@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSession } from '@vtfk/react-msal'
 import { useLocation, Link } from 'react-router-dom'
 import {
@@ -15,7 +15,7 @@ import {
 } from '@vtfk/components'
 import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 
-import { ROUTES } from '../config'
+import { ROUTES, APP } from '../config'
 
 import systems from '../data/systems.json'
 
@@ -27,6 +27,61 @@ export function Layout (props) {
   const location = useLocation()
   const [selectedSystems, setSelectedSystems] = useState(systems)
   const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
+  const { apiGet } = useSession()
+  const [query, setQuery] = useState('')
+  const [searchResult, setSearchResult] = useState([])
+  const [searchInputFocused, setSearchInputFocused] = useState(false)
+  const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
+
+  useEffect(() => {
+    const search = async q => {
+      const res = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
+      console.log(res)
+      if (res) setSearchResult(res)
+    }
+
+    if (query) {
+      search(query)
+    } else {
+      setSearchResult([])
+    }
+
+    setSearchResultSelectedIndex(0)
+  }, [query])
+
+  useEffect(() => {
+    function onKeyup (e) {
+      if (e.key === 'ArrowUp') {
+        pressKeyUp()
+      } else if (e.key === 'ArrowDown') {
+        pressKeyDown()
+      } else if (e.key === 'Enter') {
+        window.location = `/detail/${searchResult[searchResultSelectedIndex].id}`
+      }
+    }
+    window.addEventListener('keyup', onKeyup)
+    return () => window.removeEventListener('keyup', onKeyup)
+  }, [pressKeyUp, pressKeyDown])
+
+  function pressKeyUp () {
+    if (
+      searchInputFocused &&
+      searchResult.length > 0 &&
+      searchResultSelectedIndex > 0
+    ) {
+      setSearchResultSelectedIndex(searchResultSelectedIndex - 1)
+    }
+  }
+
+  function pressKeyDown () {
+    if (
+      searchInputFocused &&
+      searchResult.length > 0 &&
+      searchResultSelectedIndex < searchResult.length - 1
+    ) {
+      setSearchResultSelectedIndex(searchResultSelectedIndex + 1)
+    }
+  }
 
   function clickSystemsSwitch (item) {
     let tmpSystems = [...selectedSystems]
@@ -55,7 +110,7 @@ export function Layout (props) {
   }
 
   return (
-    <div className='layout'>
+    <div className={`layout ${props.fullHeightHeader ? 'full-height' : ''}`}>
       <SkipLink href='#main-content'>Hopp til hovedinnhold</SkipLink>
 
       <div className='header'>
@@ -84,55 +139,97 @@ export function Layout (props) {
           </div>
         </div>
 
-        <div className='container'>
-          <Heading2 as='h1' className='header-title'>Debug User Status Tool</Heading2>
-          <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange systemer, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
-          <div className='header-search-text'>
-            <SearchField
-              placeholder='Søk på visningsnavn, brukernavn, e-post eller personnummer..'
-              value=''
-              onSearch={() => console.log('onSearch!')}
-              rounded
-            />
-          </div>
-          <div className='header-search-type'>
-            <RadioButton name='name' value='value-1' label='Søk blant ansatte' checked onChange={(e) => { console.log(e.target.value) }} />
-            <RadioButton name='name' value='value-2' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
-          </div>
-          <div className='header-search-systems'>
-            <Paragraph size='small'>
-              <strong>Søker i systemene:</strong>
+        <div className='container header-content'>
+          <div>
+            {
+              props.fullHeightHeader &&
+                <>
+                  <Heading2 as='h1' className='header-title'>Debug User Status Tool</Heading2>
+                  <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange systemer, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
+                </>
+            }
+            <div className='header-search-text'>
+              <div className='header-search-fieldselect'>
+                <select>
+                  <option value='1'>Alle felter</option>
+                  <option value='2'>Fullt navn</option>
+                  <option value='3'>Fødselsnr</option>
+                </select>
+                <Icon name='chevronDown' size='xsmall' />
+              </div>
+              <SearchField
+                onChange={e => setQuery(e.target.value)}
+                value={query}
+                rounded
+                style={
+                  searchInputFocused && searchResult.length > 0
+                    ? { boxShadow: 'none', paddingRight: 200, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, borderColor: '#979797' }
+                    : { boxShadow: 'none', paddingRight: 200, borderColor: '#979797' }
+                }
+                onFocus={() => { setSearchInputFocused(true) }}
+                onBlur={() => { setSearchInputFocused(false) }}
+                placeholder='Din søketekst..'
+              />
+
               {
-                systems.map(system => selectedSystems.some(s => s.name === system.name) ? <span>{system.name}</span> : <span className='system-disabled'>{system.name}</span>)
-              }
-            </Paragraph>
-            <div className='header-search-systems-toggle'>
-              <Icon onClick={() => { setOpenSystemsSelect(!openSystemsSelect) }} name='chevronDown' size='xsmall' />
-              {
-                openSystemsSelect &&
-                  <div className='header-search-systems-list'>
-                    <div className='header-search-systems-list-header'>
-                      <div className='header-search-systems-list-header-title'>Valgte systemer</div>
-                      <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
-                    </div>
-                    <div className='header-search-systems-list-items'>
-                      <div className='header-search-systems-list-item'>
-                        <div className='header-search-systems-list-item-name'>Alle</div>
-                        <div className={`header-search-systems-list-item-switch ${selectedSystems.length === systems.length ? 'selected' : ''}`} onClick={() => { selectAllSystemSwitch(!(selectedSystems.length === systems.length)) }} />
-                      </div>
+                searchInputFocused &&
+                searchResult.length > 0 &&
+                  <div className='header-search-result'>
+                    <table className='header-search-result-table'>
                       {
-                      systems.map(function (item, index) {
+                      searchResult.map(function (item, index) {
                         return (
-                          <div key={index} className='header-search-systems-list-item'>
-                            <div className='header-search-systems-list-item-name'>{item.name}</div>
-                            <div className={`header-search-systems-list-item-switch ${selectedSystems.some(s => s.name === item.name) ? 'selected' : ''}`} onClick={() => { clickSystemsSwitch(item) }} />
-                          </div>
+                          <tr onClick={() => { window.location = `/detail/${item.id}` }} key={index} className={`header-search-result-table-row ${index === searchResultSelectedIndex ? 'active' : ''}`}>
+                            <td onClick={() => { window.location = `/detail/${item.id}` }}><Paragraph>{item.displayName}</Paragraph></td>
+                            <td onClick={() => { window.location = `/detail/${item.id}` }}><Paragraph size="small">{item.samAccountName}</Paragraph></td>
+                            <td onClick={() => { window.location = `/detail/${item.id}` }}><Paragraph size="small">{item.office}</Paragraph></td>
+                          </tr>
                         )
                       })
                     }
-                    </div>
+                    </table>
                   </div>
               }
+            </div>
+
+            <div className='header-search-type-systems'>
+              <div className='header-search-type'>
+                <RadioButton name='name' value='value-1' label='Søk blant ansatte' checked onChange={(e) => { console.log(e.target.value) }} />
+                <RadioButton name='name' value='value-2' label='Søk blant elever' onChange={(e) => { console.log(e.target.value) }} />
+              </div>
+              <div className='header-search-systems'>
+                <Paragraph size='small'>
+                  <strong>{selectedSystems.length === systems.length ? 'Søker i alle systemer' : `Søker i ${selectedSystems.length} ${selectedSystems.length === 1 ? 'system' : 'systemer'}`}</strong>
+                </Paragraph>
+                <div className='header-search-systems-toggle'>
+                  <Icon onClick={() => { setOpenSystemsSelect(!openSystemsSelect) }} name='chevronDown' size='xsmall' />
+                  {
+                    openSystemsSelect &&
+                      <div className='header-search-systems-list'>
+                        <div className='header-search-systems-list-header'>
+                          <div className='header-search-systems-list-header-title'>Valgte systemer</div>
+                          <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
+                        </div>
+                        <div className='header-search-systems-list-items'>
+                          <div className='header-search-systems-list-item'>
+                            <div className='header-search-systems-list-item-name'>Alle</div>
+                            <div className={`header-search-systems-list-item-switch ${selectedSystems.length === systems.length ? 'selected' : ''}`} onClick={() => { selectAllSystemSwitch(!(selectedSystems.length === systems.length)) }} />
+                          </div>
+                          {
+                          systems.map(function (item, index) {
+                            return (
+                              <div key={index} className='header-search-systems-list-item'>
+                                <div className='header-search-systems-list-item-name'>{item.name}</div>
+                                <div className={`header-search-systems-list-item-switch ${selectedSystems.some(s => s.name === item.name) ? 'selected' : ''}`} onClick={() => { clickSystemsSwitch(item) }} />
+                              </div>
+                            )
+                          })
+                        }
+                        </div>
+                      </div>
+                  }
+                </div>
+              </div>
             </div>
           </div>
         </div>
