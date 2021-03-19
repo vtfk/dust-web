@@ -1,0 +1,391 @@
+[
+  [
+    {
+      "name": "ad",
+      "query": {
+        "domain": "login",
+        "displayName": "Mats Andreassen"
+      },
+      "data": {
+        "company": "Brukerbehov, digitalisering og kommunikasjon",
+        "department": "Teknologi og digitalisering",
+        "displayName": "Mats Andreassen",
+        "distinguishedName": "CN=mat0101,OU=AUTO USERS,OU=USERS,OU=VTFK,DC=login,DC=top,DC=no",
+        "employeeNumber": "01010112345",
+        "enabled": true,
+        "extensionAttribute6": "BDK-TEK",
+        "givenName": "Mats",
+        "lockedOut": false,
+        "mail": "mats.andreassen@vtfk.no",
+        "name": "mat0101",
+        "proxyAddresses": [
+          "SMTP:mats.andreassen@vtfk.no"
+        ],
+        "pwdLastSet": "2038-08-11T16:49:19.4719235+02:00",
+        "samAccountName": "mat0101",
+        "sn": "Andreassen",
+        "userPrincipalName": "mats.andreassen@vtfk.no",
+        "whenChanged": "2021-03-16T09:59:42+01:00",
+        "whenCreated": "2019-02-12T20:51:41+01:00"
+      },
+      "tests": [
+        {
+          "id": "ad-01",
+          "title": "Kontoen er aktivert",
+          "description": "Sjekker at kontoen er aktivert i AD",
+          "result": {
+            "status": "ok",
+            "message": "Kontoen er aktivert",
+            "raw": {
+              "enabled": true
+            }
+          }
+        },
+        {
+          "id": "ad-02",
+          "title": "Kontoen er ulåst",
+          "description": "Sjekker at kontoen ikke er sperret for pålogging i AD",
+          "result": {
+            "status": "ok",
+            "message": "Kontoen er ikke sperret for pålogging",
+            "raw": {
+              "lockedOut": false
+            }
+          }
+        },
+        {
+          "id": "ad-03",
+          "title": "UPN er lik e-postadressen",
+          "description": "Sjekker at UPN-et er lik e-postadressen i AD",
+          "result": {
+            "status": "ok",
+            "message": "UPN er lik e-postadressen",
+            "raw": {
+              "mail": "mats.andreassen@vtfk.no",
+              "userPrincipalName": "mats.andreassen@vtfk.no"
+            }
+          }
+        },
+        {
+          "id": "ad-04",
+          "title": "UPN er korrekt",
+          "description": "Sjekker at UPN er @vtfk.no for ansatte, og @skole.vtfk.no for elever",
+          "result": {
+            "status": "ok",
+            "message": "UPN er korrekt",
+            "raw": {
+              "userPrincipalName": "mats.andreassen@vtfk.no"
+            }
+          }
+        },
+        {
+          "id": "ad-05",
+          "title": "OU er korrekt",
+          "description": "Sjekker at bruker ligger i riktig OU",
+          "result": {
+            "status": "ok",
+            "message": "OU er korrekt",
+            "raw": {
+              "distinguishedName": "CN=mat0101,OU=AUTO USERS,OU=USERS,OU=VTFK,DC=login,DC=top,DC=no"
+            }
+          }
+        },
+        {
+          "id": "ad-05",
+          "title": "Fødselsnummer er korrekt lengde",
+          "description": "Sjekker at fødselsnummeret er 11 tegn",
+          "result": {
+            "status": "ok",
+            "message": "Fødselsnummer er korrekt lengde",
+            "raw": {
+              "employeeNumber": "01010112345"
+            }
+          }
+        },
+        {
+          "id": "ad-06",
+          "title": "extensionAttribute6 er satt",
+          "description": "Sjekker at extensionAttribute6 er satt",
+          "result": {
+            "status": "ok",
+            "message": "extensionAttribute6 er satt",
+            "raw": {
+              "extensionAttribute6": "BDK-TEK"
+            }
+          }
+        },
+        {
+          "id": "ad-07",
+          "title": "Har kun èn primær e-postadresse",
+          "description": "Sjekker at brukeren har kun èn primær e-postadresse",
+          "result": {
+            "status": "ok",
+            "message": "Har kun 1 primær e-postadresse",
+            "raw": {
+              "proxyAddresses": [
+                "SMTP:mats.andreassen@vtfk.no"
+              ],
+              "primary": [
+                "SMTP:mats.andreassen@vtfk.no"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "feide",
+      "query": {
+        "displayName": "Mats Andreassen"
+      },
+      "data": {
+        "displayName": "Mats Andreassen",
+        "distinguishedName": "CN=mat0101,OU=People,OU=Feide,DC=vtfk,DC=no",
+        "eduPersonAffiliation": [
+          "employee",
+          "member",
+          "faculty"
+        ],
+        "eduPersonEntitlement": [],
+        "eduPersonOrgDN": "O=Vestfold og Telemark fylkeskommune,DC=vtfk,DC=no",
+        "eduPersonOrgUnitDN": [],
+        "eduPersonPrincipalName": "mat0101@vtfk.no",
+        "enabled": true,
+        "givenName": "Mats",
+        "lastLogonDate": "2021-03-05T12:07:21.0686183+01:00",
+        "lockedOut": false,
+        "mail": "mats.andreassen@vtfk.no",
+        "name": "mat0101",
+        "norEduPersonAuthnMethod": [
+          "urn:mace:feide.no:auth:method:ga eyJhbGciO label=mat0101"
+        ],
+        "norEduPersonNIN": "01010112345",
+        "passwordLastSet": "2020-04-15T20:34:18.8277405+02:00",
+        "surname": "Andreassen",
+        "uid": [
+          "mat0101"
+        ],
+        "whenChanged": "2021-03-05T12:09:46+01:00",
+        "whenCreated": "2019-08-21T21:37:07+02:00"
+      },
+      "tests": [
+        {
+          "id": "feide-01",
+          "title": "Kontoen er aktivert",
+          "description": "Sjekker at kontoen er aktivert i FEIDE",
+          "result": {
+            "status": "ok",
+            "message": "Kontoen er aktivert",
+            "raw": {
+              "enabled": true
+            }
+          }
+        },
+        {
+          "id": "feide-02",
+          "title": "Kontoen er ulåst",
+          "description": "Sjekker at kontoen ikke er sperret for pålogging i FEIDE",
+          "result": {
+            "status": "ok",
+            "message": "Kontoen er ikke sperret for pålogging",
+            "raw": {
+              "lockedOut": false
+            }
+          }
+        },
+        {
+          "id": "feide-03",
+          "title": "Fødselsnummer er angitt",
+          "description": "Sjekker at fødselsnummeret er angitt",
+          "result": {
+            "status": "ok",
+            "message": "Fødselsnummer er angitt",
+            "raw": {
+              "norEduPersonNIN": "01010112345"
+            }
+          }
+        },
+        {
+          "id": "feide-04",
+          "title": "Fødselsnummer er korrekt lengde",
+          "description": "Sjekker at fødselsnummeret er 11 tegn",
+          "result": {
+            "status": "ok",
+            "message": "Fødselsnummer er korrekt lengde",
+            "raw": {
+              "norEduPersonNIN": "01010112345"
+            }
+          }
+        },
+        {
+          "id": "feide-05",
+          "title": "Fødselsnummer er likt i AD",
+          "description": "Sjekker at fødselsnummeret er likt i AD og FEIDE",
+          "result": {
+            "status": "no-data",
+            "message": "Venter på data..."
+          }
+        },
+        {
+          "id": "feide-06",
+          "title": "Passord synkronisert til FEIDE",
+          "description": "Sjekker at passordet er synkronisert til FEIDE innenfor 5 minutter",
+          "result": {
+            "status": "no-data",
+            "message": "Venter på data..."
+          }
+        },
+        {
+          "id": "feide-07",
+          "title": "Brukernavn er angitt",
+          "description": "Sjekker at brukernavnet er angitt",
+          "result": {
+            "status": "ok",
+            "message": "Brukernavn er angitt",
+            "raw": {
+              "name": "mat0101"
+            }
+          }
+        },
+        {
+          "id": "feide-08",
+          "title": "Brukernavn er likt i AD",
+          "description": "Sjekker at brukernavnet er likt i AD og FEIDE",
+          "result": {
+            "status": "no-data",
+            "message": "Venter på data..."
+          }
+        },
+        {
+          "id": "feide-09",
+          "title": "UID er angitt",
+          "description": "Sjekker at UID er angitt",
+          "result": {
+            "status": "ok",
+            "message": "UID er angitt",
+            "raw": {
+              "uid": [
+                "mat0101"
+              ]
+            }
+          }
+        },
+        {
+          "id": "feide-10",
+          "title": "UID er likt brukernavn",
+          "description": "Sjekker at UID er likt brukernavn",
+          "result": {
+            "status": "ok",
+            "message": "UID er likt brukernavn",
+            "raw": {
+              "uid": [
+                "mat0101"
+              ],
+              "name": "mat0101"
+            }
+          }
+        },
+        {
+          "id": "feide-11",
+          "title": "PrincipalName er satt",
+          "description": "Sjekker at PrincipalName er satt",
+          "result": {
+            "status": "ok",
+            "message": "PrincipalName er satt",
+            "raw": {
+              "eduPersonPrincipalName": "mat0101@vtfk.no"
+            }
+          }
+        },
+        {
+          "id": "feide-12",
+          "title": "PrincipalName er lik 'uid@vtfk.no'",
+          "description": "Sjekker at PrincipalName er lik 'uid@vtfk.no'",
+          "result": {
+            "status": "ok",
+            "message": "PrincipalName er riktig",
+            "raw": {
+              "eduPersonPrincipalName": "mat0101@vtfk.no"
+            }
+          }
+        },
+        {
+          "id": "feide-13",
+          "title": "E-postadresse er lik UPN",
+          "description": "Sjekker at e-postadresse er lik UPN",
+          "result": {
+            "status": "no-data",
+            "message": "Venter på data..."
+          }
+        },
+        {
+          "id": "feide-14",
+          "title": "Har knyttning til en skole",
+          "description": "Sjekker at det finnes knyttning til minst èn skole",
+          "result": {
+            "status": "warning",
+            "message": "Ingen knyttning til skole funnet. Dersom dette er en manuelt opprettet FEIDE-bruker eller en administrativ ansatt, er dette korrekt",
+            "raw": {
+              "eduPersonOrgUnitDN": []
+            }
+          }
+        },
+        {
+          "id": "feide-15",
+          "title": "Har satt opp MFA",
+          "description": "Sjekker at MFA er satt opp",
+          "result": {
+            "status": "ok",
+            "message": "MFA for Godkjenner/Authenticator app er satt opp",
+            "raw": {
+              "norEduPersonAuthnMethod": [
+                "urn:mace:feide.no:auth:method:ga"
+              ]
+            }
+          }
+        },
+        {
+          "id": "feide-16",
+          "title": "Organisasjon er riktig",
+          "description": "Sjekker at organisasjon er riktig",
+          "result": {
+            "status": "ok",
+            "message": "Organisasjon er riktig",
+            "raw": {
+              "eduPersonOrgDN": "O=Vestfold og Telemark fylkeskommune,DC=vtfk,DC=no",
+              "expectedOrgDN": "O=Vestfold og Telemark fylkeskommune,DC=vtfk,DC=no"
+            }
+          }
+        },
+        {
+          "id": "feide-17",
+          "title": "Har riktig tilhørighet",
+          "description": "Sjekker at det er satt riktig tilhørighet",
+          "result": {
+            "status": "ok",
+            "message": "Tilhørighet er riktig",
+            "raw": {
+              "eduPersonAffiliation": [
+                "employee",
+                "member",
+                "faculty"
+              ]
+            }
+          }
+        },
+        {
+          "id": "feide-18",
+          "title": "Har grupperettigheter",
+          "description": "Sjekker at det er satt grupperettigheter",
+          "result": {
+            "status": "error",
+            "message": "Grupperettigheter er feil",
+            "raw": {
+              "eduPersonEntitlement": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+]
