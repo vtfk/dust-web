@@ -56,7 +56,7 @@ export function Layout (props) {
         setSearchResultSelectedIndex(searchResultSelectedIndex - 1)
       }
     }
-  
+
     const pressKeyDown = () => {
       if (
         searchInputFocused &&
