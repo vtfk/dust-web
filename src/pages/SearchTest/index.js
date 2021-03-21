@@ -21,7 +21,7 @@ export const SearchTest = () => {
     }
 
     if (query) search(query)
-  }, [query])
+  }, [query, apiGet])
 
   return (
     <div className='search'>
