@@ -47,10 +47,30 @@ export function Layout (props) {
     }
 
     setSearchResultSelectedIndex(0)
-  }, [query])
+  }, [query, apiGet])
 
   useEffect(() => {
-    function onKeyup (e) {
+    const pressKeyUp = () => {
+      if (
+        searchInputFocused &&
+        searchResult.length > 0 &&
+        searchResultSelectedIndex > 0
+      ) {
+        setSearchResultSelectedIndex(searchResultSelectedIndex - 1)
+      }
+    }
+  
+    const pressKeyDown = () => {
+      if (
+        searchInputFocused &&
+        searchResult.length > 0 &&
+        searchResultSelectedIndex < searchResult.length - 1
+      ) {
+        setSearchResultSelectedIndex(searchResultSelectedIndex + 1)
+      }
+    }
+
+    const onKeyup = e => {
       if (e.key === 'ArrowUp') {
         pressKeyUp()
       } else if (e.key === 'ArrowDown') {
@@ -61,27 +81,7 @@ export function Layout (props) {
     }
     window.addEventListener('keyup', onKeyup)
     return () => window.removeEventListener('keyup', onKeyup)
-  }, [pressKeyUp, pressKeyDown])
-
-  function pressKeyUp () {
-    if (
-      searchInputFocused &&
-      searchResult.length > 0 &&
-      searchResultSelectedIndex > 0
-    ) {
-      setSearchResultSelectedIndex(searchResultSelectedIndex - 1)
-    }
-  }
-
-  function pressKeyDown () {
-    if (
-      searchInputFocused &&
-      searchResult.length > 0 &&
-      searchResultSelectedIndex < searchResult.length - 1
-    ) {
-      setSearchResultSelectedIndex(searchResultSelectedIndex + 1)
-    }
-  }
+  }, [searchInputFocused, searchResult, searchResultSelectedIndex])
 
   function clickSystemsSwitch (item) {
     let tmpSystems = [...selectedSystems]
