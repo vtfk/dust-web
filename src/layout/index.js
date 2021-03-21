@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useSession } from '@vtfk/react-msal'
-import { useLocation, Link } from 'react-router-dom'
 import {
   Heading2,
   Logo,
@@ -13,9 +12,8 @@ import {
   RadioButton,
   SkipLink
 } from '@vtfk/components'
-import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 
-import { ROUTES, APP } from '../config'
+import { APP } from '../config'
 
 import systems from '../data/systems.json'
 
@@ -24,7 +22,6 @@ import './base-styles.scss'
 
 export function Layout (props) {
   const { user, logout } = useSession()
-  const location = useLocation()
   const [selectedSystems, setSelectedSystems] = useState(systems)
   const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
   const { apiGet } = useSession()

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useSession } from '@vtfk/react-msal'
 import { useLocation, useParams } from 'react-router-dom'
 import {
-  Heading2,
   Heading3,
   Heading4,
   Paragraph,
@@ -20,7 +19,6 @@ import {
 
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import './styles.scss'
 import { Layout } from '../../layout'
