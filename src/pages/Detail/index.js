@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { useSession } from '@vtfk/react-msal'
-import { useLocation, useParams } from 'react-router-dom'
 import {
   Heading3,
   Heading4,
@@ -24,10 +22,7 @@ import './styles.scss'
 import { Layout } from '../../layout'
 
 export const Detail = () => {
-  const { user, logout } = useSession()
-  const location = useLocation()
-  const { id } = useParams()
-  const [loading, setLoading] = useState(false)
+  const [loading] = useState(false) // const [loading, setLoading] = useState(false)
   const [expandedItemIndex, setExpandedItemIndex] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
 
