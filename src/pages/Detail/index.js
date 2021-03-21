@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useSession } from '@vtfk/react-msal'
 import { useLocation, useParams } from 'react-router-dom'
 import {
@@ -111,17 +111,21 @@ export const Detail = () => {
                 const open = expandedItemIndex === index
 
                 return (
-                  <>
+                  <React.Fragment key={index}>
                     <div onClick={() => { expand(index) }} className={`result-table-row ${open ? 'open' : ''} ${loading ? 'loading' : ''}`}>
                       <div className='result-table-row-summary'>
                         {
                           loading
-                            ? <div className={`result-table-row-status ${loading ? '' : item.errorCount > 0 ? 'error' : 'ok'}`}>
-                              <Spinner size='auto' />
-                            </div>
-                            : <div className={`result-table-row-status ${item.errorCount === 0 ? 'ok' : 'error'}`}>
-                              {item.errorCount === 0 ? 'OK' : item.errorCount}
-                            </div>
+                            ? (
+                              <div className={`result-table-row-status ${loading ? '' : item.errorCount > 0 ? 'error' : 'ok'}`}>
+                                <Spinner size='auto' />
+                              </div>
+                              )
+                            : (
+                              <div className={`result-table-row-status ${item.errorCount === 0 ? 'ok' : 'error'}`}>
+                                {item.errorCount === 0 ? 'OK' : item.errorCount}
+                              </div>
+                              )
                         }
                         <div className='result-table-row-name'>
                           {item.label}
@@ -161,7 +165,7 @@ export const Detail = () => {
                           </>
                       }
                     </div>
-                  </>
+                  </React.Fragment>
                 )
               })
             }

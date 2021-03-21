@@ -181,8 +181,8 @@ export function Layout (props) {
                         return (
                           <tr onClick={() => { window.location = `/detail/${item.id}` }} key={index} className={`header-search-result-table-row ${index === searchResultSelectedIndex ? 'active' : ''}`}>
                             <td onClick={() => { window.location = `/detail/${item.id}` }}><Paragraph>{item.displayName}</Paragraph></td>
-                            <td onClick={() => { window.location = `/detail/${item.id}` }}><Paragraph size="small">{item.samAccountName}</Paragraph></td>
-                            <td onClick={() => { window.location = `/detail/${item.id}` }}><Paragraph size="small">{item.office}</Paragraph></td>
+                            <td onClick={() => { window.location = `/detail/${item.id}` }}><Paragraph size='small'>{item.samAccountName}</Paragraph></td>
+                            <td onClick={() => { window.location = `/detail/${item.id}` }}><Paragraph size='small'>{item.office}</Paragraph></td>
                           </tr>
                         )
                       })
