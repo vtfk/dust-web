@@ -93,7 +93,7 @@ export const Detail = () => {
                 !loading &&
                   <IconButtonLink
                     className='person-information-action-button'
-                    onClick={() => { alert('WIP') }}
+                    onClick={() => { window.alert('WIP') }}
                     icon='add'
                     type='transparent-bordered'
                   >
@@ -185,7 +185,7 @@ export const Detail = () => {
           </ModalBody>
           <ModalSideActions>
             <div className='action'>
-              <Button onClick={() => { alert('WIP') }} type='primary'>Generer rapport</Button>
+              <Button onClick={() => { window.alert('WIP') }} type='primary'>Generer rapport</Button>
             </div>
             <div className='action'>
               <Link onClick={() => setModalOpen(false)}>Lukk</Link>
