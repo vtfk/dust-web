@@ -4,24 +4,24 @@
       "name": "ad",
       "timestamp": "2021-03-23T11:53:44.5808764Z",
       "data": {
-        "company": "Brukerbehov, digitalisering og kommunikasjon",
+        "company": "Bruker, papirifisering og destruksjon",
         "department": "Teknologi og digitalisering",
-        "displayName": "Mats Andreassen",
-        "distinguishedName": "CN=mat0101,OU=AUTO USERS,OU=USERS,OU=VTFK,DC=login,DC=top,DC=no",
+        "displayName": "ALVORLIG KJERNE",
+        "distinguishedName": "CN=alv0101,OU=AUTO USERS,OU=USERS,OU=VTFK,DC=login,DC=top,DC=no",
         "employeeNumber": "01010112345",
         "enabled": true,
         "extensionAttribute6": "BDK-TEK",
-        "givenName": "Mats",
+        "givenName": "ALVORLIG",
         "lockedOut": false,
-        "mail": "mats.andreassen@vtfk.no",
-        "name": "mat0101",
+        "mail": "ALVORLIG.KJERNE@vtfk.no",
+        "name": "alv0101",
         "proxyAddresses": [
-          "SMTP:mats.andreassen@vtfk.no"
+          "SMTP:ALVORLIG.KJERNE@vtfk.no"
         ],
         "pwdLastSet": "2038-08-11T16:49:19.4719235+02:00",
-        "samAccountName": "mat0101",
-        "sn": "Andreassen",
-        "userPrincipalName": "mats.andreassen@vtfk.no",
+        "samAccountName": "alv0101",
+        "sn": "KJERNE",
+        "userPrincipalName": "ALVORLIG.KJERNE@vtfk.no",
         "whenChanged": "2021-03-16T09:59:42+01:00",
         "whenCreated": "2019-02-12T20:51:41+01:00"
       },
@@ -59,8 +59,8 @@
             "status": "ok",
             "message": "UPN er lik e-postadressen",
             "raw": {
-              "mail": "mats.andreassen@vtfk.no",
-              "userPrincipalName": "mats.andreassen@vtfk.no"
+              "mail": "ALVORLIG.KJERNE@vtfk.no",
+              "userPrincipalName": "ALVORLIG.KJERNE@vtfk.no"
             }
           }
         },
@@ -72,7 +72,7 @@
             "status": "ok",
             "message": "UPN er korrekt",
             "raw": {
-              "userPrincipalName": "mats.andreassen@vtfk.no"
+              "userPrincipalName": "ALVORLIG.KJERNE@vtfk.no"
             }
           }
         },
@@ -84,7 +84,7 @@
             "status": "ok",
             "message": "OU er korrekt",
             "raw": {
-              "distinguishedName": "CN=mat0101,OU=AUTO USERS,OU=USERS,OU=VTFK,DC=login,DC=top,DC=no"
+              "distinguishedName": "CN=alv0101,OU=AUTO USERS,OU=USERS,OU=VTFK,DC=login,DC=top,DC=no"
             }
           }
         },
@@ -121,10 +121,10 @@
             "message": "Har kun 1 primær e-postadresse",
             "raw": {
               "proxyAddresses": [
-                "SMTP:mats.andreassen@vtfk.no"
+                "SMTP:ALVORLIG.KJERNE@vtfk.no"
               ],
               "primary": [
-                "SMTP:mats.andreassen@vtfk.no"
+                "SMTP:ALVORLIG.KJERNE@vtfk.no"
               ]
             }
           }
@@ -135,8 +135,8 @@
       "name": "feide",
       "timestamp": "2021-03-23T11:53:46.810667Z",
       "data": {
-        "displayName": "Mats Andreassen",
-        "distinguishedName": "CN=mat0101,OU=People,OU=Feide,DC=vtfk,DC=no",
+        "displayName": "ALVORLIG KJERNE",
+        "distinguishedName": "CN=alv0101,OU=People,OU=Feide,DC=vtfk,DC=no",
         "eduPersonAffiliation": [
           "employee",
           "member",
@@ -145,21 +145,21 @@
         "eduPersonEntitlement": [],
         "eduPersonOrgDN": "O=Vestfold og Telemark fylkeskommune,DC=vtfk,DC=no",
         "eduPersonOrgUnitDN": [],
-        "eduPersonPrincipalName": "mat0101@vtfk.no",
+        "eduPersonPrincipalName": "alv0101@vtfk.no",
         "enabled": true,
-        "givenName": "Mats",
+        "givenName": "ALVORLIG",
         "lastLogonDate": "2021-03-05T12:07:21.0686183+01:00",
         "lockedOut": false,
-        "mail": "mats.andreassen@vtfk.no",
-        "name": "mat0101",
+        "mail": "ALVORLIG.KJERNE@vtfk.no",
+        "name": "alv0101",
         "norEduPersonAuthnMethod": [
-          "urn:mace:feide.no:auth:method:ga eyJhbGciO label=mat0101"
+          "urn:mace:feide.no:auth:method:ga eyJhbGciO label=alv0101"
         ],
         "norEduPersonNIN": "01010112345",
         "passwordLastSet": "2020-04-15T20:34:18.8277405+02:00",
-        "surname": "Andreassen",
+        "surname": "KJERNE",
         "uid": [
-          "mat0101"
+          "alv0101"
         ],
         "whenChanged": "2021-03-05T12:09:46+01:00",
         "whenCreated": "2019-08-21T21:37:07+02:00"
@@ -192,39 +192,39 @@
         },
         {
           "id": "feide-03",
-          "title": "Fødselsnummer er angitt",
-          "description": "Sjekker at fødselsnummeret er angitt",
+          "title": "Har gyldig fødselsnummer",
+          "description": "Sjekker at fødselsnummer er gyldig",
           "result": {
             "status": "ok",
-            "message": "Fødselsnummer er angitt",
+            "message": "Har gyldig Fødselsnummer",
             "raw": {
-              "norEduPersonNIN": "01010112345"
+              "norEduPersonNIN": "01010112345",
+              "fnr": {
+                "valid": true,
+                "type": "Fødselsnummer"
+              }
             }
           }
         },
         {
           "id": "feide-04",
-          "title": "Fødselsnummer er korrekt lengde",
-          "description": "Sjekker at fødselsnummeret er 11 tegn",
+          "title": "Fødselsnummer er likt i AD",
+          "description": "Sjekker at fødselsnummeret er likt i AD og FEIDE",
           "result": {
             "status": "ok",
-            "message": "Fødselsnummer er korrekt lengde",
+            "message": "Fødselsnummer er likt i AD og FEIDE",
             "raw": {
-              "norEduPersonNIN": "01010112345"
+              "feide": {
+                "norEduPersonNIN": "01010112345"
+              },
+              "ad": {
+                "employeeNumber": "01010112345"
+              }
             }
           }
         },
         {
           "id": "feide-05",
-          "title": "Fødselsnummer er likt i AD",
-          "description": "Sjekker at fødselsnummeret er likt i AD og FEIDE",
-          "result": {
-            "status": "no-data",
-            "message": "Venter på data..."
-          }
-        },
-        {
-          "id": "feide-06",
           "title": "Passord synkronisert til FEIDE",
           "description": "Sjekker at passordet er synkronisert til FEIDE innenfor 5 minutter",
           "result": {
@@ -233,19 +233,19 @@
           }
         },
         {
-          "id": "feide-07",
+          "id": "feide-06",
           "title": "Brukernavn er angitt",
           "description": "Sjekker at brukernavnet er angitt",
           "result": {
             "status": "ok",
             "message": "Brukernavn er angitt",
             "raw": {
-              "name": "mat0101"
+              "name": "alv0101"
             }
           }
         },
         {
-          "id": "feide-08",
+          "id": "feide-07",
           "title": "Brukernavn er likt i AD",
           "description": "Sjekker at brukernavnet er likt i AD og FEIDE",
           "result": {
@@ -254,7 +254,7 @@
           }
         },
         {
-          "id": "feide-09",
+          "id": "feide-08",
           "title": "UID er angitt",
           "description": "Sjekker at UID er angitt",
           "result": {
@@ -262,13 +262,13 @@
             "message": "UID er angitt",
             "raw": {
               "uid": [
-                "mat0101"
+                "alv0101"
               ]
             }
           }
         },
         {
-          "id": "feide-10",
+          "id": "feide-09",
           "title": "UID er likt brukernavn",
           "description": "Sjekker at UID er likt brukernavn",
           "result": {
@@ -276,38 +276,38 @@
             "message": "UID er likt brukernavn",
             "raw": {
               "uid": [
-                "mat0101"
+                "alv0101"
               ],
-              "name": "mat0101"
+              "name": "alv0101"
             }
           }
         },
         {
-          "id": "feide-11",
+          "id": "feide-10",
           "title": "PrincipalName er satt",
           "description": "Sjekker at PrincipalName er satt",
           "result": {
             "status": "ok",
             "message": "PrincipalName er satt",
             "raw": {
-              "eduPersonPrincipalName": "mat0101@vtfk.no"
+              "eduPersonPrincipalName": "alv0101@vtfk.no"
             }
           }
         },
         {
-          "id": "feide-12",
+          "id": "feide-11",
           "title": "PrincipalName er lik 'uid@vtfk.no'",
           "description": "Sjekker at PrincipalName er lik 'uid@vtfk.no'",
           "result": {
             "status": "ok",
             "message": "PrincipalName er riktig",
             "raw": {
-              "eduPersonPrincipalName": "mat0101@vtfk.no"
+              "eduPersonPrincipalName": "alv0101@vtfk.no"
             }
           }
         },
         {
-          "id": "feide-13",
+          "id": "feide-12",
           "title": "E-postadresse er lik UPN",
           "description": "Sjekker at e-postadresse er lik UPN",
           "result": {
@@ -316,7 +316,7 @@
           }
         },
         {
-          "id": "feide-14",
+          "id": "feide-13",
           "title": "Har knyttning til en skole",
           "description": "Sjekker at det finnes knyttning til minst èn skole",
           "result": {
@@ -328,7 +328,7 @@
           }
         },
         {
-          "id": "feide-15",
+          "id": "feide-14",
           "title": "Har satt opp MFA",
           "description": "Sjekker at MFA er satt opp",
           "result": {
@@ -342,7 +342,7 @@
           }
         },
         {
-          "id": "feide-16",
+          "id": "feide-15",
           "title": "Organisasjon er riktig",
           "description": "Sjekker at organisasjon er riktig",
           "result": {
@@ -355,7 +355,7 @@
           }
         },
         {
-          "id": "feide-17",
+          "id": "feide-16",
           "title": "Har riktig tilhørighet",
           "description": "Sjekker at det er satt riktig tilhørighet",
           "result": {
@@ -371,7 +371,7 @@
           }
         },
         {
-          "id": "feide-18",
+          "id": "feide-17",
           "title": "Har grupperettigheter",
           "description": "Sjekker at det er satt grupperettigheter",
           "result": {
