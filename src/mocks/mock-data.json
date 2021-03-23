@@ -2,10 +2,6 @@
   [
     {
       "name": "ad",
-      "query": {
-        "domain": "login",
-        "displayName": "Mats Andreassen"
-      },
       "data": {
         "company": "Brukerbehov, digitalisering og kommunikasjon",
         "department": "Teknologi og digitalisering",
@@ -135,9 +131,6 @@
     },
     {
       "name": "feide",
-      "query": {
-        "displayName": "Mats Andreassen"
-      },
       "data": {
         "displayName": "Mats Andreassen",
         "distinguishedName": "CN=mat0101,OU=People,OU=Feide,DC=vtfk,DC=no",
