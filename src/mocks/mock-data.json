@@ -2,6 +2,7 @@
   [
     {
       "name": "ad",
+      "timestamp": "2021-03-23T11:53:44.5808764Z",
       "data": {
         "company": "Brukerbehov, digitalisering og kommunikasjon",
         "department": "Teknologi og digitalisering",
@@ -24,6 +25,7 @@
         "whenChanged": "2021-03-16T09:59:42+01:00",
         "whenCreated": "2019-02-12T20:51:41+01:00"
       },
+      "statusCode": 200,
       "tests": [
         {
           "id": "ad-01",
@@ -131,6 +133,7 @@
     },
     {
       "name": "feide",
+      "timestamp": "2021-03-23T11:53:46.810667Z",
       "data": {
         "displayName": "Mats Andreassen",
         "distinguishedName": "CN=mat0101,OU=People,OU=Feide,DC=vtfk,DC=no",
@@ -161,6 +164,7 @@
         "whenChanged": "2021-03-05T12:09:46+01:00",
         "whenCreated": "2019-08-21T21:37:07+02:00"
       },
+      "statusCode": 200,
       "tests": [
         {
           "id": "feide-01",
