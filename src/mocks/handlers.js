@@ -95,6 +95,7 @@ export const handlers = [
       },
       body: {
         id: report._id,
+        status: 202,
         statusQueryGetUri: `${APP.API_URL}/report/${report._id}`
       }
     }
@@ -121,7 +122,10 @@ export const handlers = [
     if (isReportCompleted(report)) {
       return res(
         ctx.status(200),
-        ctx.json(report)
+        ctx.json({
+          status: 200,
+          ...report
+        })
       )
     }
 
@@ -147,7 +151,10 @@ export const handlers = [
     // Sett retry-after og location
     return res(
       ctx.status(202),
-      ctx.json(report),
+      ctx.json({
+        status: 202,
+        ...report
+      }),
       ctx.set({
         Location: `${APP.API_URL}/report/${report._id}`,
         'Retry-After': 3000
