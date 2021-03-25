@@ -34,7 +34,6 @@ export function Layout (props) {
   useEffect(() => {
     const search = async q => {
       const result = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
-      console.log(result)
       if (result) setSearchResult(result)
     }
 
@@ -107,16 +106,13 @@ export function Layout (props) {
     })
   }
 
-  async function selectSearchResult(item) {
+  async function selectSearchResult (item) {
     const result = await apiPost(`${APP.API_URL}/report`, {
       user: {
         ...item,
         expectedType: searchType
       }
     })
-
-    console.log('item', item)
-    console.log('result', result)
 
     if (result?.body?.id) {
       window.location = `/detail/${result.body.id}`
@@ -195,21 +191,21 @@ export function Layout (props) {
               {
                 searchInputFocused &&
                 searchResult.length > 0 &&
-                <div className='header-search-result'>
-                  <div className='search-results'>
-                    {
+                  <div className='header-search-result'>
+                    <div className='search-results'>
+                      {
                     searchResult.map(function (item, index) {
                       return (
                         <div onMouseDown={() => { selectSearchResult(item) }} key={index} className={`search-results-item ${index === searchResultSelectedIndex ? 'active' : ''}`}>
-                          <Paragraph className="search-results-item-name">{item.displayName}</Paragraph>
-                          <Paragraph className="search-results-item-sam" size='small'>{item.samAccountName}</Paragraph>
-                          <Paragraph className="search-results-item-office" size='small'>{item.office}</Paragraph>
+                          <Paragraph className='search-results-item-name'>{item.displayName}</Paragraph>
+                          <Paragraph className='search-results-item-sam' size='small'>{item.samAccountName}</Paragraph>
+                          <Paragraph className='search-results-item-office' size='small'>{item.office}</Paragraph>
                         </div>
                       )
                     })
                   }
+                    </div>
                   </div>
-                </div>
               }
             </div>
 

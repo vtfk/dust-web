@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useSession } from '@vtfk/react-msal'
-import { useParams } from "react-router-dom"
+import { useParams } from 'react-router-dom'
 
 import {
   Heading3,
@@ -42,37 +42,34 @@ export const Detail = () => {
     getReport()
   }, [])
 
-  async function getReport() {
+  async function getReport () {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`
-
     const result = await axios.get(`${APP.API_URL}/report/${id}`)
-    console.log('result', result)
-    console.log('user', result.data.user)
 
     if (result.status === 200) {
       setLoading(false)
       normalizeAndSetResults(result.data.data)
       setUser(result.data.user)
     } else if (result.status === 202) {
-      setTimeout(function() {
+      setTimeout(function () {
         getReport()
       }, RETRY_MS)
     }
   }
 
-  function normalizeAndSetResults(data) {
-    let normalizedResults = []
+  function normalizeAndSetResults (data) {
+    const normalizedResults = []
 
-    for (var i = 0; i < data.length; i++) {
-      let normalizedItem = {...data[i]}
-      let errorTests = []
+    for (let i = 0; i < data.length; i++) {
+      const normalizedItem = { ...data[i] }
+      const errorTests = []
       let errorCount = 0
-      let warningTests = []
+      const warningTests = []
       let warningCount = 0
-      let okTests = []
+      const okTests = []
       let okCount = 0
 
-      for (var j = 0; j < normalizedItem.tests.length; j++) {
+      for (let j = 0; j < normalizedItem.tests.length; j++) {
         if (normalizedItem.tests[j].result.status === 'error') {
           errorTests.push(normalizedItem.tests[j])
           errorCount++
@@ -95,8 +92,6 @@ export const Detail = () => {
       normalizedResults.push(normalizedItem)
     }
 
-    console.log('normalizedResults', normalizedResults)
-
     setResults(normalizedResults)
   }
 
@@ -110,12 +105,10 @@ export const Detail = () => {
     }
   }
 
-  function openDetailModal(testItem) {
-    setRawDetails(JSON.stringify(testItem.result.raw, null, "  "))
+  function openDetailModal (testItem) {
+    setRawDetails(JSON.stringify(testItem.result.raw, null, '  '))
     setModalOpen(true)
   }
-
-  console.log('results', results)
 
   return (
     <Layout>
@@ -156,64 +149,49 @@ export const Detail = () => {
                 </Paragraph>
               </div>
             </div>
-            <div className='person-information-actions'>
-              {
-                /*
-                !loading &&
-                  <IconButtonLink
-                    className='person-information-action-button'
-                    onClick={() => { window.alert('WIP') }}
-                    icon='add'
-                    type='transparent-bordered'
-                  >
-                    Generere rapport
-                  </IconButtonLink>
-                  */
-              }
-            </div>
           </div>
 
           <div className='result-table'>
             {
               loading &&
-              <React.Fragment>
-                <div className='result-table-row loading'>
-                  <div className='result-table-row-summary'>
-                    <div className='result-table-row-status '>
-                      <Spinner size='auto' />
-                    </div>
-                    <div className='result-table-row-name'>
-                      <div className='result-table-row-name-loading'>Henter status...</div>
-                    </div>
-                  </div>
-                </div>
-                <div className='result-table-row loading'>
-                  <div className='result-table-row-summary'>
-                    <div className='result-table-row-status '>
-                      <Spinner size='auto' />
-                    </div>
-                    <div className='result-table-row-name'>
-                      <div className='result-table-row-name-loading'>Henter status...</div>
+                <>
+                  <div className='result-table-row loading'>
+                    <div className='result-table-row-summary'>
+                      <div className='result-table-row-status '>
+                        <Spinner size='auto' />
+                      </div>
+                      <div className='result-table-row-name'>
+                        <div className='result-table-row-name-loading'>Henter status...</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className='result-table-row loading'>
-                  <div className='result-table-row-summary'>
-                    <div className='result-table-row-status '>
-                      <Spinner size='auto' />
-                    </div>
-                    <div className='result-table-row-name'>
-                      <div className='result-table-row-name-loading'>Henter status...</div>
+                  <div className='result-table-row loading'>
+                    <div className='result-table-row-summary'>
+                      <div className='result-table-row-status '>
+                        <Spinner size='auto' />
+                      </div>
+                      <div className='result-table-row-name'>
+                        <div className='result-table-row-name-loading'>Henter status...</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </React.Fragment>
+                  <div className='result-table-row loading'>
+                    <div className='result-table-row-summary'>
+                      <div className='result-table-row-status '>
+                        <Spinner size='auto' />
+                      </div>
+                      <div className='result-table-row-name'>
+                        <div className='result-table-row-name-loading'>Henter status...</div>
+                      </div>
+                    </div>
+                  </div>
+                </>
             }
 
             {
               !loading &&
               results &&
-              <Heading3 className='result-title'>Status på data:</Heading3>
+                <Heading3 className='result-title'>Status på data:</Heading3>
             }
 
             {
@@ -244,13 +222,13 @@ export const Detail = () => {
                         <div className='result-table-row-detail'>
                           {
                             item.errorCount > 0 &&
-                            item.errorTests.map(function(testItem) {
+                            item.errorTests.map(function (testItem) {
                               return (
                                 <div className='result-table-row-detail-error'>
                                   <Paragraph><strong>Feil</strong>: {testItem.title}</Paragraph>
                                   {
                                     testItem.result?.raw &&
-                                    <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
+                                      <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
                                   }
                                 </div>
                               )
@@ -259,7 +237,7 @@ export const Detail = () => {
 
                           {
                             item.warningCount > 0 &&
-                            item.warningTests.map(function(testItem) {
+                            item.warningTests.map(function (testItem) {
                               return (
                                 <div className='result-table-row-detail-warning'>
                                   <Paragraph><strong>Advarsel</strong>: {testItem.title}</Paragraph>
@@ -271,7 +249,7 @@ export const Detail = () => {
 
                           {
                             item.okCount > 0 &&
-                            item.okTests.map(function(testItem) {
+                            item.okTests.map(function (testItem) {
                               return (
                                 <div className='result-table-row-detail-ok'>
                                   <Paragraph><strong>OK</strong>: {testItem.title}</Paragraph>
@@ -285,9 +263,9 @@ export const Detail = () => {
                             item.errorCount === 0 &&
                             item.warningCount === 0 &&
                             item.okCount === 0 &&
-                            <div className='result table-row-detail-ok'>
-                              <Paragraph>Alt ser bra ut, men det er ingen tester å vise.</Paragraph>
-                            </div>
+                              <div className='result table-row-detail-ok'>
+                                <Paragraph>Alt ser bra ut, men det er ingen tester å vise.</Paragraph>
+                              </div>
                           }
                         </div>
                     }
@@ -305,7 +283,7 @@ export const Detail = () => {
           className='detail-modal'
         >
           <ModalBody>
-            <SyntaxHighlighter language='json' className='detail-modal-code' style={docco} wrapLongLines={true} wrapLines={true} showInlineLineNumbers={true}>
+            <SyntaxHighlighter language='json' className='detail-modal-code' style={docco} wrapLongLines wrapLines showInlineLineNumbers>
               {rawDetails}
             </SyntaxHighlighter>
           </ModalBody>
