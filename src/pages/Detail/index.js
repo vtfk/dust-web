@@ -33,29 +33,32 @@ export const Detail = () => {
   const [modalOpen, setModalOpen] = useState(false)
   const [results, setResults] = useState(null)
   const [user, setUser] = useState(null)
+  const [systems, setSystems] = useState(null)
   const [rawDetails, setRawDetails] = useState(null)
   const { token } = useSession()
   const { id } = useParams()
-  const RETRY_MS = 3000
 
   useEffect(() => {
-    getReport()
-  }, [])
-
-  async function getReport () {
-    axios.defaults.headers.common.Authorization = `Bearer ${token}`
-    const result = await axios.get(`${APP.API_URL}/report/${id}`)
-
-    if (result.status === 200) {
-      setLoading(false)
-      normalizeAndSetResults(result.data.data)
-      setUser(result.data.user)
-    } else if (result.status === 202) {
-      setTimeout(function () {
-        getReport()
-      }, RETRY_MS)
+    async function getReport () {
+      axios.defaults.headers.common.Authorization = `Bearer ${token}`
+      const { data, headers, status } = await axios.get(`${APP.API_URL}/report/${id}`)
+  
+      if (status === 200) {
+        setLoading(false)
+        normalizeAndSetResults(data.data)
+        setUser(data.user)
+      } else if (status === 202) {
+        const retryMs = headers['retry-after']
+        setUser(data.user)
+        setSystems(data.systems)
+        setTimeout(function () {
+          getReport()
+        }, retryMs)
+      }
     }
-  }
+
+    getReport()
+  }, [id, token])
 
   function normalizeAndSetResults (data) {
     const normalizedResults = []
@@ -117,8 +120,7 @@ export const Detail = () => {
           <div className='person-information'>
             <div className='image'>
               {
-                !user ||
-                loading
+                !user
                   ? <Skeleton variant='circle'><InitialsBadge size='large' /></Skeleton>
                   : <InitialsBadge firstName={user.givenName} lastName={user.surName} size='large' />
               }
@@ -126,26 +128,24 @@ export const Detail = () => {
             <div className='text-wrapper'>
               <Heading3 className='name'>
                 {
-                  !user ||
-                  loading
+                  !user
                     ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[50, 100]} />
                     : user.displayName
                 }
               </Heading3>
               <Heading4>
                 {
-                  !user ||
-                  loading
+                  !user
                     ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[50, 100]} />
                     : user.userPrincipalName
                 }
               </Heading4>
               <div className='other'>
                 <Paragraph>
-                  {!user || loading ? <Skeleton style={{ marginBottom: 5 }} width='200px' /> : user.office}
+                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='200px' /> : user.office}
                 </Paragraph>
                 <Paragraph>
-                  {!user || loading ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : user.samAccountName}
+                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : user.samAccountName}
                 </Paragraph>
               </div>
             </div>
@@ -153,39 +153,21 @@ export const Detail = () => {
 
           <div className='result-table'>
             {
-              loading &&
-                <>
-                  <div className='result-table-row loading'>
-                    <div className='result-table-row-summary'>
-                      <div className='result-table-row-status '>
-                        <Spinner size='auto' />
-                      </div>
-                      <div className='result-table-row-name'>
-                        <div className='result-table-row-name-loading'>Henter status...</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='result-table-row loading'>
-                    <div className='result-table-row-summary'>
-                      <div className='result-table-row-status '>
-                        <Spinner size='auto' />
-                      </div>
-                      <div className='result-table-row-name'>
-                        <div className='result-table-row-name-loading'>Henter status...</div>
+              loading && systems &&
+                systems.map((system, index) => {
+                  return (
+                    <div key={index} className='result-table-row loading'>
+                      <div className='result-table-row-summary'>
+                        <div className='result-table-row-status '>
+                          <Spinner size='auto' />
+                        </div>
+                        <div className='result-table-row-name'>
+                          <div className='result-table-row-name-loading'>Henter status for {system}...</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className='result-table-row loading'>
-                    <div className='result-table-row-summary'>
-                      <div className='result-table-row-status '>
-                        <Spinner size='auto' />
-                      </div>
-                      <div className='result-table-row-name'>
-                        <div className='result-table-row-name-loading'>Henter status...</div>
-                      </div>
-                    </div>
-                  </div>
-                </>
+                  )
+                })
             }
 
             {
