@@ -87,8 +87,6 @@ export const handlers = [
       user,
       systems,
       started: new Date().toISOString(),
-      lastUpdated: new Date().toISOString(),
-      data: []
     }
 
     // Legg rapport i session storage, så vi finner den seinere
@@ -150,7 +148,6 @@ export const handlers = [
     report.data = shuffled[0]
 
     // Slett lastUpdated og sett finished date
-    delete report.lastUpdated
     report.finished = new Date().toISOString()
 
     // Oppdatert sessionStorage
