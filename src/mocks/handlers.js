@@ -36,6 +36,12 @@ const getRandomObjectId = () => {
   }).toLowerCase()
 }
 
+const getRandomSystems = () => {
+  const systems = ['ad', 'visma', 'extens', 'aad', 'sds', 'feide']
+  const systemCount = ((Math.random() * (systems.length) | 0) + 1)
+  return systems.slice(0, systemCount)
+}
+
 const getUser = incompleteUser => {
   let user = null
   if (incompleteUser.displayName) user = users.find(usr => usr.displayName.toLowerCase() === incompleteUser.displayName.toLowerCase())
@@ -73,7 +79,7 @@ export const handlers = [
 
     // Set default values
     if (!user.expectedType) user.expectedType = 'employee'
-    if (!systems || !Array.isArray(systems)) systems = ['ad', 'visma', 'extens', 'aad', 'sds', 'feide']
+    if (!systems || !Array.isArray(systems)) systems = getRandomSystems()
 
     // Create report object
     const report = {
