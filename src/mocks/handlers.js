@@ -85,6 +85,7 @@ export const handlers = [
     const report = {
       _id: getRandomObjectId(),
       user,
+      systems,
       started: new Date().toISOString(),
       lastUpdated: new Date().toISOString(),
       data: []
@@ -101,7 +102,9 @@ export const handlers = [
       },
       body: {
         id: report._id,
-        statusQueryGetUri: `${APP.API_URL}/report/${report._id}`
+        statusQueryGetUri: `${APP.API_URL}/report/${report._id}`,
+        user,
+        systems
       }
     }
 
@@ -125,6 +128,9 @@ export const handlers = [
 
     // Om rapporten er ferdig returnes den som den er (200)
     if (isReportCompleted(report)) {
+      // Fjern systems da denne ikke trengs i dataene
+      delete report.systems
+
       return res(
         ctx.status(200),
         ctx.json(report)
