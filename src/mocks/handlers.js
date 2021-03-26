@@ -153,6 +153,10 @@ export const handlers = [
     // Oppdatert sessionStorage
     updateItem(report)
 
+    // Trenger ikke disse i body (kun i objektet som lagres i SessionStorage)
+    delete report.data
+    delete report.finished
+
     // Sett retry-after og location
     return res(
       ctx.status(202),
