@@ -107,6 +107,7 @@ export function Layout (props) {
   }
 
   async function selectSearchResult (item) {
+    const { body } = await apiPost(`${APP.API_URL}/report`, {
       systems: systems.map(system => system.short), // TODO: Må endres til selectedSystems før prod
       user: {
         ...item,
@@ -114,8 +115,8 @@ export function Layout (props) {
       }
     })
 
-    if (result?.body?.id) {
-      window.location = `/detail/${result.body.id}`
+    if (body?.id) {
+      window.location = `/detail/${body.id}`
     } else {
       alert('Det skjedde noe feil.')
     }
