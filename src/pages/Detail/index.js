@@ -51,6 +51,7 @@ export const Detail = () => {
         const retryMs = headers['retry-after']
         if (data.user) setUser(data.user)
         if (data.systems) setSystems(data.systems)
+        setTimeout(getReport, retryMs)
       }
     }
 
