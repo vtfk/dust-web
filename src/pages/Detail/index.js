@@ -41,7 +41,7 @@ export const Detail = () => {
   useEffect(() => {
     async function getReport () {
       axios.defaults.headers.common.Authorization = `Bearer ${token}`
-      const { data, headers, status } = await axios.get(`${APP.API_URL}/report/${id}`)
+      const { data, headers, status } = await axios.get(`${APP.API_URL}/status/${id}`)
   
       if (status === 200) {
         setLoading(false)
