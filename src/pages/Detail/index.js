@@ -49,11 +49,8 @@ export const Detail = () => {
         setUser(data.user)
       } else if (status === 202) {
         const retryMs = headers['retry-after']
-        setUser(data.user)
-        setSystems(data.systems)
-        setTimeout(function () {
-          getReport()
-        }, retryMs)
+        if (data.user) setUser(data.user)
+        if (data.systems) setSystems(data.systems)
       }
     }
 
