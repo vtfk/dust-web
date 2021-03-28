@@ -107,7 +107,7 @@ export function Layout (props) {
   }
 
   async function selectSearchResult (item) {
-    const result = await apiPost(`${APP.API_URL}/report`, {
+      systems: systems.map(system => system.short), // TODO: Må endres til selectedSystems før prod
       user: {
         ...item,
         expectedType: searchType
