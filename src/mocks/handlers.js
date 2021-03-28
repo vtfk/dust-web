@@ -69,7 +69,9 @@ export const handlers = [
 
     return res(
       ctx.status(200),
-      ctx.json(searchResult)
+      ctx.json({
+        result: searchResult // Workaround for axios som ikke takler at body kun er et array
+      })
     )
   }),
   rest.post(`${APP.API_URL}/report`, (req, res, ctx) => {

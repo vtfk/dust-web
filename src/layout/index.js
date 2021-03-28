@@ -33,7 +33,7 @@ export function Layout (props) {
 
   useEffect(() => {
     const search = async q => {
-      const result = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
+      const { result } = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
       if (result) setSearchResult(result)
     }
 
