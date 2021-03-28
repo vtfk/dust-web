@@ -94,14 +94,14 @@ export const handlers = [
       _id: getRandomObjectId(),
       user,
       systems,
-      started: new Date().toISOString(),
+      started: new Date().toISOString()
     }
 
     // Legg rapport i session storage, så vi finner den seinere
     addItem(report)
 
     const response = {
-      status: 202,
+      status: 200,
       headers: {
         Location: `${APP.API_URL}/report/${report._id}`,
         'Retry-After': 3000
