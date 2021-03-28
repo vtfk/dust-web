@@ -36,6 +36,12 @@ const getRandomObjectId = () => {
   }).toLowerCase()
 }
 
+const getRandomExpectedType = () => {
+  const types = ['employee', 'student']
+  const typeNum = Math.random() * types.length | 0
+  return types[typeNum]
+}
+
 const getRandomSystems = () => {
   const systems = ['ad', 'visma', 'extens', 'aad', 'sds', 'feide']
   const systemCount = ((Math.random() * (systems.length) | 0) + 1)
@@ -78,7 +84,7 @@ export const handlers = [
     }
 
     // Set default values
-    if (!user.expectedType) user.expectedType = 'employee'
+    if (!user.expectedType) user.expectedType = getRandomExpectedType()
     if (!systems || !Array.isArray(systems)) systems = getRandomSystems()
 
     // Create report object
