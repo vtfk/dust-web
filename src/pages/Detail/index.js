@@ -74,6 +74,8 @@ export const Detail = () => {
       let okCount = 0
 
       for (let j = 0; j < normalizedItem.tests.length; j++) {
+        if (!normalizedItem.tests[j].result) continue
+
         if (normalizedItem.tests[j].result.status === 'error') {
           errorTests.push(normalizedItem.tests[j])
           errorCount++
