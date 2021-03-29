@@ -118,7 +118,7 @@ export function Layout (props) {
     if (body?.id) {
       window.location = `/detail/${body.id}`
     } else {
-      alert('Det skjedde noe feil.')
+      window.alert('Det skjedde noe feil.')
     }
   }
 
@@ -195,7 +195,7 @@ export function Layout (props) {
                   <div className='header-search-result'>
                     <div className='search-results'>
                       {
-                    searchResult.map(function (item, index) {
+                    searchResult.map((item, index) => {
                       return (
                         <div onMouseDown={() => { selectSearchResult(item) }} key={index} className={`search-results-item ${index === searchResultSelectedIndex ? 'active' : ''}`}>
                           <Paragraph className='search-results-item-name'>{item.displayName}</Paragraph>
@@ -243,7 +243,7 @@ export function Layout (props) {
                               <div className={`header-search-systems-list-item-switch ${selectedSystems.length === systems.length ? 'selected' : ''}`} onClick={() => { selectAllSystemSwitch(!(selectedSystems.length === systems.length)) }} />
                             </div>
                             {
-                            systems.map(function (item, index) {
+                            systems.map((item, index) => {
                               return (
                                 <div key={index} className='header-search-systems-list-item'>
                                   <div className='header-search-systems-list-item-name'>{item.name}</div>

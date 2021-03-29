@@ -42,7 +42,7 @@ export const Detail = () => {
     async function getReport () {
       axios.defaults.headers.common.Authorization = `Bearer ${token}`
       const { data, headers, status } = await axios.get(`${APP.API_URL}/status/${id}`)
-  
+
       if (status === 200) {
         setLoading(false)
         normalizeAndSetResults(data.data)
@@ -177,7 +177,7 @@ export const Detail = () => {
             {
               !loading &&
               results &&
-              results.map(function (item, index) {
+              results.map((item, index) => {
                 const open = expandedItemIndex === index
 
                 return (
@@ -202,9 +202,9 @@ export const Detail = () => {
                         <div className='result-table-row-detail'>
                           {
                             item.errorCount > 0 &&
-                            item.errorTests.map(function (testItem) {
+                            item.errorTests.map((testItem, index) => {
                               return (
-                                <div className='result-table-row-detail-error'>
+                                <div key={index} className='result-table-row-detail-error'>
                                   <Paragraph><strong>Feil</strong>: {testItem.title}</Paragraph>
                                   {
                                     testItem.result?.raw &&
@@ -217,9 +217,9 @@ export const Detail = () => {
 
                           {
                             item.warningCount > 0 &&
-                            item.warningTests.map(function (testItem) {
+                            item.warningTests.map((testItem, index) => {
                               return (
-                                <div className='result-table-row-detail-warning'>
+                                <div key={index} className='result-table-row-detail-warning'>
                                   <Paragraph><strong>Advarsel</strong>: {testItem.title}</Paragraph>
                                   <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
                                 </div>
@@ -229,9 +229,9 @@ export const Detail = () => {
 
                           {
                             item.okCount > 0 &&
-                            item.okTests.map(function (testItem) {
+                            item.okTests.map((testItem, index) => {
                               return (
-                                <div className='result-table-row-detail-ok'>
+                                <div key={index} className='result-table-row-detail-ok'>
                                   <Paragraph><strong>OK</strong>: {testItem.title}</Paragraph>
                                   <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
                                 </div>
