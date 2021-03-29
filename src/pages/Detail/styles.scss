@@ -79,6 +79,7 @@
 
     .result-table-row {
       border: 1px solid #fff;
+      user-select: none;
 
       .result-table-row-summary {
         display: flex;
@@ -111,9 +112,10 @@
             background: #fff;
           }
 
-          // &.warning {
-          //   border: 4px solid #FFBA33;
-          // }
+          &.warning {
+            border: 4px solid #FFBA33;
+            background: #fff;
+          }
         }
 
         .result-table-row-name {
@@ -129,6 +131,7 @@
             margin-left: auto;
             padding-right: $baseUnit;
             margin-top: 4px;
+            opacity: 0.4;
           }
         }
 
@@ -141,7 +144,9 @@
       .result-table-row-detail {
         padding: ($baseUnit * 2) ($baseUnit * 3) ($baseUnit * 5) ($baseUnit * 3);
 
-        .result-table-row-detail-error {
+        .result-table-row-detail-error,
+        .result-table-row-detail-warning,
+        .result-table-row-detail-ok {
           display: flex;
           align-items: flex-start;
           flex: 1;
@@ -173,6 +178,18 @@
 
           &:last-child {
             margin-bottom: 0;
+          }
+
+          &.result-table-row-detail-warning {
+            &:before {
+              border-color: #FFBA33;
+            }
+          }
+
+          &.result-table-row-detail-ok {
+            &:before {
+              border-color: #52D120;
+            }
           }
         }
       }
@@ -212,9 +229,16 @@
     }
   }
 
-  .error-modal {
+  .detail-modal {
+    .modal-content {
+      padding-top: $baseUnit * 4 !important;
+    }
+
     .modal-body {
-      .error-modal-code {
+      padding-top: 0;
+
+
+      .detail-modal-code {
         background: none !important;
         padding: $baseUnit * 2 !important;
       }

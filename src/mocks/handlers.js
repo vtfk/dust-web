@@ -36,6 +36,18 @@ const getRandomObjectId = () => {
   }).toLowerCase()
 }
 
+const getRandomExpectedType = () => {
+  const types = ['employee', 'student']
+  const typeNum = Math.random() * types.length | 0
+  return types[typeNum]
+}
+
+const getRandomSystems = () => {
+  const systems = ['ad', 'visma', 'extens', 'aad', 'sds', 'feide']
+  const systemCount = ((Math.random() * (systems.length) | 0) + 1)
+  return systems.slice(0, systemCount)
+}
+
 const getUser = incompleteUser => {
   let user = null
   if (incompleteUser.displayName) user = users.find(usr => usr.displayName.toLowerCase() === incompleteUser.displayName.toLowerCase())
@@ -57,7 +69,9 @@ export const handlers = [
 
     return res(
       ctx.status(200),
-      ctx.json(searchResult)
+      ctx.json({
+        result: searchResult // Workaround for axios som ikke takler at body kun er et array
+      })
     )
   }),
   rest.post(`${APP.API_URL}/report`, (req, res, ctx) => {
@@ -72,30 +86,31 @@ export const handlers = [
     }
 
     // Set default values
-    if (!user.expectedType) user.expectedType = 'employee'
-    if (!systems || !Array.isArray(systems)) systems = ['ad', 'visma', 'extens', 'aad', 'sds', 'feide']
+    if (!user.expectedType) user.expectedType = getRandomExpectedType()
+    if (!systems || !Array.isArray(systems)) systems = getRandomSystems()
 
     // Create report object
     const report = {
       _id: getRandomObjectId(),
       user,
-      started: new Date().toISOString(),
-      lastUpdated: new Date().toISOString(),
-      data: []
+      systems,
+      started: new Date().toISOString()
     }
 
     // Legg rapport i session storage, så vi finner den seinere
     addItem(report)
 
     const response = {
-      status: 202,
+      status: 200,
       headers: {
         Location: `${APP.API_URL}/report/${report._id}`,
         'Retry-After': 3000
       },
       body: {
         id: report._id,
-        statusQueryGetUri: `${APP.API_URL}/report/${report._id}`
+        statusQueryGetUri: `${APP.API_URL}/report/${report._id}`,
+        user,
+        systems
       }
     }
 
@@ -119,6 +134,9 @@ export const handlers = [
 
     // Om rapporten er ferdig returnes den som den er (200)
     if (isReportCompleted(report)) {
+      // Fjern systems da denne ikke trengs i dataene
+      delete report.systems
+
       return res(
         ctx.status(200),
         ctx.json(report)
@@ -138,11 +156,14 @@ export const handlers = [
     report.data = shuffled[0]
 
     // Slett lastUpdated og sett finished date
-    delete report.lastUpdated
     report.finished = new Date().toISOString()
 
     // Oppdatert sessionStorage
     updateItem(report)
+
+    // Trenger ikke disse i body (kun i objektet som lagres i SessionStorage)
+    delete report.data
+    delete report.finished
 
     // Sett retry-after og location
     return res(

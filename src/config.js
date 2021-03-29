@@ -1,5 +1,5 @@
 export const APP = {
-  IS_MOCK: process.env.REACT_APP_IS_MOCK || false,
+  IS_MOCK: (process.env.REACT_APP_IS_MOCK && process.env.REACT_APP_IS_MOCK === 'true') || false,
   API_URL: process.env.REACT_APP_API_URL || 'https://api.dust.no'
 }
 
