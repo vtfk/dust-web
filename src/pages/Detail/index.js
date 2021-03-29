@@ -35,6 +35,7 @@ export const Detail = () => {
   const [user, setUser] = useState(null)
   const [systems, setSystems] = useState(null)
   const [rawDetails, setRawDetails] = useState(null)
+  const [rawDetailsTitle, setRawDetailsTitle] = useState('Lukk')
   const { token } = useSession()
   const { id } = useParams()
 
@@ -108,6 +109,7 @@ export const Detail = () => {
 
   function openDetailModal (testItem) {
     setRawDetails(JSON.stringify(testItem.result.raw, null, '  '))
+    setRawDetailsTitle(testItem.description || 'Lukk')
     setModalOpen(true)
   }
 
@@ -258,7 +260,7 @@ export const Detail = () => {
 
         <Modal
           open={modalOpen}
-          title='Lukk'
+          title={rawDetailsTitle}
           onDismiss={() => { setModalOpen(false) }}
           className='detail-modal'
         >
