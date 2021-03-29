@@ -25,7 +25,7 @@
         "whenChanged": "2021-03-16T09:59:42+01:00",
         "whenCreated": "2019-02-12T20:51:41+01:00"
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "ad-01",
@@ -164,7 +164,7 @@
         "whenChanged": "2021-03-05T12:09:46+01:00",
         "whenCreated": "2019-08-21T21:37:07+02:00"
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "feide-01",
@@ -409,7 +409,7 @@
         "whenChanged": "2021-03-18T02:42:48+00:00",
         "whenCreated": "2021-03-04T03:08:36+00:00"
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "ad-01",
@@ -610,7 +610,7 @@
         "whenChanged": "2021-03-23T03:34:05+00:00",
         "whenCreated": "2021-03-04T03:18:29+00:00"
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "feide-01",
@@ -899,7 +899,7 @@
       "name": "sds",
       "timestamp": "2021-03-23T11:53:48.5651393Z",
       "data": [],
-      "statusCode": 200,
+      "status": 200,
       "tests": []
     },
     {
@@ -1002,7 +1002,7 @@
           }
         ]
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "pifu-01",
@@ -1619,7 +1619,7 @@
         },
         "ssn": "01010112345"
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "visma-01",
@@ -2048,7 +2048,7 @@
         ],
         "authenticationMethods": []
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "aad-01",
@@ -2121,7 +2121,7 @@
         "whenChanged": "2021-03-21T15:29:48+00:00",
         "whenCreated": "2019-02-12T19:52:07+00:00"
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "ad-01",
@@ -2267,7 +2267,7 @@
         "whenChanged": "2021-03-05T10:19:11+00:00",
         "whenCreated": "2019-06-04T21:06:41+00:00"
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "feide-01",
@@ -2564,14 +2564,14 @@
       "name": "sds",
       "timestamp": "2021-03-23T14:11:04.1487112Z",
       "data": [],
-      "statusCode": 200,
+      "status": 200,
       "tests": []
     },
     {
       "name": "pifu",
       "timestamp": "2021-03-23T14:11:07.1432541Z",
       "data": [],
-      "statusCode": 200,
+      "status": 200,
       "tests": []
     },
     {
@@ -2835,7 +2835,7 @@
         },
         "ssn": "02023311111"
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "visma-01",
@@ -3486,7 +3486,7 @@
           }
         ]
       },
-      "statusCode": 200,
+      "status": 200,
       "tests": [
         {
           "id": "aad-01",
