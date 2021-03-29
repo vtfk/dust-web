@@ -196,7 +196,7 @@ export const Detail = () => {
                     <div className='result-table-row-summary' onClick={() => { expand(index) }}>
 
                       <div className={`result-table-row-status ${item.errorCount > 0 ? 'error' : item.warningCount > 0 ? 'warning' : 'ok'}`}>
-                        {item.errorCount === 0 && item.errorCount === 0 ? 'OK' : item.errorCount > 0 ? item.errorCount : item.warningCount}
+                        {item.errorCount === 0 && item.warningCount === 0 ? 'OK' : item.errorCount > 0 ? item.errorCount : item.warningCount}
                       </div>
 
                       <div className='result-table-row-name'>
