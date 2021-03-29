@@ -24,6 +24,8 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 import { APP } from '../../config'
 
+import systemsList from '../../data/systems.json'
+
 import './styles.scss'
 import { Layout } from '../../layout'
 
@@ -113,6 +115,11 @@ export const Detail = () => {
     setModalOpen(true)
   }
 
+  function repackSystemName (name) {
+    const repack = systemsList.filter(system => system.short === name.toLowerCase())
+    return repack.length > 0 ? repack[0].name : name.toUpperCase()
+  }
+
   return (
     <Layout>
       <div className='detail'>
@@ -191,7 +198,7 @@ export const Detail = () => {
                       </div>
 
                       <div className='result-table-row-name'>
-                        {item.name.toUpperCase()}
+                        {repackSystemName(item.name)}
                       </div>
 
                       <div className='result-table-row-toggle'>
