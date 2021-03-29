@@ -182,7 +182,7 @@ export const Detail = () => {
             {
               !loading &&
               results &&
-                <Heading3 className='result-title'>Status på data:</Heading3>
+                <Heading3 className='result-title'>Status på data</Heading3>
             }
 
             {
@@ -216,7 +216,7 @@ export const Detail = () => {
                             item.errorTests.map((testItem, index) => {
                               return (
                                 <div key={index} className='result-table-row-detail-error'>
-                                  <Paragraph><strong>Feil</strong>: {testItem.title}</Paragraph>
+                                  <Paragraph><strong>Feil</strong>: {testItem.result.message}</Paragraph>
                                   {
                                     testItem.result?.raw &&
                                       <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
@@ -231,7 +231,7 @@ export const Detail = () => {
                             item.warningTests.map((testItem, index) => {
                               return (
                                 <div key={index} className='result-table-row-detail-warning'>
-                                  <Paragraph><strong>Advarsel</strong>: {testItem.title}</Paragraph>
+                                  <Paragraph><strong>Advarsel</strong>: {testItem.result.message}</Paragraph>
                                   <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
                                 </div>
                               )
