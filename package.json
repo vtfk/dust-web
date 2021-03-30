@@ -26,7 +26,7 @@
     "test:watch": "react-scripts test",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "refresh": "rm -rf node_modules && rm package-lock.json && npm i",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i --force",
     "standard-fix": "standard --fix"
   },
   "eslintConfig": {
