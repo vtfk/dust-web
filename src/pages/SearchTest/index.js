@@ -16,8 +16,8 @@ export const SearchTest = () => {
 
   useEffect(() => {
     const search = async q => {
-      const res = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
-      if (res) setSearchResult(res)
+      const { result } = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
+      if (result) setSearchResult(result)
     }
 
     if (query) search(query)
