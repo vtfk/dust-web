@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import { useSession } from '@vtfk/react-msal'
 import { useParams } from 'react-router-dom'
 
@@ -38,13 +37,12 @@ export const Detail = () => {
   const [systems, setSystems] = useState(null)
   const [rawDetails, setRawDetails] = useState(null)
   const [rawDetailsTitle, setRawDetailsTitle] = useState('Lukk')
-  const { token } = useSession()
+  const { apiGet } = useSession()
   const { id } = useParams()
 
   useEffect(() => {
     async function getReport () {
-      axios.defaults.headers.common.Authorization = `Bearer ${token}`
-      const { data, headers, status } = await axios.get(`${APP.API_URL}/report/${id}`)
+      const { data, headers, status } = await apiGet(`${APP.API_URL}/report/${id}`, true)
 
       if (status === 200) {
         setLoading(false)
@@ -59,7 +57,7 @@ export const Detail = () => {
     }
 
     getReport()
-  }, [id, token])
+  }, [id, apiGet])
 
   function normalizeAndSetResults (data) {
     const normalizedResults = []
