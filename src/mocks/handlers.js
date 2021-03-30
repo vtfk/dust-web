@@ -70,7 +70,7 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.json({
-        result: searchResult // Workaround for axios som ikke takler at body kun er et array
+        result: searchResult // Workaround for Azure Functions v2 som ikke takler at body kun er et array
       })
     )
   }),
