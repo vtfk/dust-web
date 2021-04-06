@@ -117,7 +117,7 @@ export const handlers = [
     return res(
       ctx.status(response.status),
       ctx.set(response.headers),
-      ctx.json(response)
+      ctx.json(response.body)
     )
   }),
   rest.get(`${APP.API_URL}/report/:id`, (req, res, ctx) => {
