@@ -170,6 +170,7 @@ export const handlers = [
       ctx.status(202),
       ctx.json(report),
       ctx.set({
+        'Content-Type': 'application/json; charset=utf-8',
         Location: `${APP.API_URL}/report/${report._id}`,
         'Retry-After': 3000
       })
