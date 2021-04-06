@@ -110,9 +110,7 @@ export const handlers = [
       },
       body: {
         id: report._id,
-        statusQueryGetUri: `${APP.API_URL}/report/${report._id}`,
-        user,
-        systems
+        statusQueryGetUri: `${APP.API_URL}/report/${report._id}`
       }
     }
 
