@@ -57,7 +57,8 @@ export const Detail = () => {
     }
 
     getReport()
-  }, [id, apiGet])
+    // eslint-disable-next-line
+  }, [id]) // apiGet can't be set as a dependency because it changes with each render which will cause double or tripple calls to backend
 
   function normalizeAndSetResults (data) {
     const normalizedResults = []
