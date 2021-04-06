@@ -59,6 +59,8 @@ const getUser = incompleteUser => {
 const isReportCompleted = report => !!report.finished
 const isFullUserObject = report => !!(report.user && report.user.domain)
 
+const sessionStorageKey = 'dust-mock__items'
+
 export const handlers = [
   rest.get(`${APP.API_URL}/search`, (req, res, ctx) => {
     const query = req.url.searchParams.get('q')
@@ -76,7 +78,7 @@ export const handlers = [
   }),
   rest.post(`${APP.API_URL}/report`, (req, res, ctx) => {
     let { user, systems } = req.body
-    const { addItem } = useSessionStorage('dust-mock__items')
+    const { addItem } = useSessionStorage(sessionStorageKey)
 
     if (!user || !(user.samAccountName || user.employeeNumber || user.userPrincipalName)) {
       return res(
@@ -122,7 +124,7 @@ export const handlers = [
   }),
   rest.get(`${APP.API_URL}/report/:id`, (req, res, ctx) => {
     const { id } = req.params
-    const { getItem, updateItem } = useSessionStorage('dust-mock__items')
+    const { getItem, updateItem } = useSessionStorage(sessionStorageKey)
 
     const report = getItem(id)
     if (!report) {
