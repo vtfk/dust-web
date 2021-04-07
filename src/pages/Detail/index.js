@@ -110,9 +110,9 @@ export const Detail = () => {
     }
   }
 
-  function openDetailModal (testItem) {
-    setRawDetails(JSON.stringify(testItem.result.raw, null, '  '))
-    setRawDetailsTitle(testItem.description || 'Lukk')
+  function openDetailModal (raw, description) {
+    setRawDetails(JSON.stringify(raw, null, '  '))
+    setRawDetailsTitle(description || 'Lukk')
     setModalOpen(true)
   }
 
@@ -218,7 +218,7 @@ export const Detail = () => {
                                   <Paragraph><strong>Feil</strong>: {testItem.result.message}</Paragraph>
                                   {
                                     testItem.result?.raw &&
-                                      <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
+                                      <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
                                   }
                                 </div>
                               )
@@ -231,7 +231,7 @@ export const Detail = () => {
                               return (
                                 <div key={index} className='result-table-row-detail-warning'>
                                   <Paragraph><strong>Advarsel</strong>: {testItem.result.message}</Paragraph>
-                                  <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
+                                  <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
                                 </div>
                               )
                             })
@@ -243,7 +243,7 @@ export const Detail = () => {
                               return (
                                 <div key={index} className='result-table-row-detail-ok'>
                                   <Paragraph><strong>OK</strong>: {testItem.title}</Paragraph>
-                                  <Link size='small' onClick={() => { openDetailModal(testItem) }}>Se data</Link>
+                                  <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
                                 </div>
                               )
                             })
@@ -256,6 +256,13 @@ export const Detail = () => {
                               <div className='result table-row-detail-ok'>
                                 <Paragraph>Alt ser bra ut, men det er ingen tester å vise.</Paragraph>
                               </div>
+                          }
+
+                          {
+                            <div className='result-table-row-detail-raw'>
+                              <Paragraph></Paragraph>
+                              <Link size='small' onClick={() => { openDetailModal(item.data, repackSystemName(item.name)) }}>Se raw-data</Link>
+                            </div>
                           }
                         </div>
                     }

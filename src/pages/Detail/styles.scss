@@ -146,7 +146,8 @@
 
         .result-table-row-detail-error,
         .result-table-row-detail-warning,
-        .result-table-row-detail-ok {
+        .result-table-row-detail-ok,
+        .result-table-row-detail-raw {
           display: flex;
           align-items: flex-start;
           flex: 1;
@@ -189,6 +190,12 @@
           &.result-table-row-detail-ok {
             &:before {
               border-color: #52D120;
+            }
+          }
+
+          &.result-table-row-detail-raw {
+            &:before {
+              border-color: #FFFFFF;
             }
           }
         }
