@@ -106,10 +106,6 @@ export function Layout (props) {
     })
   }
 
-  function reportCheck(body) {
-
-  }
-
   async function generateReport (userData) {
     const body = await apiPost(`${APP.API_URL}/report`, {
       systems: systems.map(system => system.short), // TODO: Må endres til selectedSystems før prod
