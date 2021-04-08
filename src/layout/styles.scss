@@ -129,6 +129,31 @@
         }
       }
 
+      .search-alternatives {
+        padding: 0px 24px 16px 24px;
+        border: 1px solid #979797;
+        border-width: 0;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        background: #fff;
+        font-size: 13px;
+        color: #555;
+
+        a {
+          color: #111;
+          padding: 3px 5px;
+          background: #f0f0f0;
+          // border-radius: 3px;
+          display: inline-block;
+          margin: 0 1px;
+          cursor: pointer;
+
+          &:hover {
+            background: #D6EDF4;
+          }
+        }
+      }
+
       .header-search-result {
         position: absolute;
         top: calc(100% - 1px);
@@ -163,7 +188,7 @@
               cursor: pointer;
 
               &.search-results-item-name {
-                width: 240px;
+                width: 260px;
               }
 
               &.search-results-item-sam {
@@ -187,13 +212,28 @@
               background: #D6EDF4;
             }
           }
+
+          .search-results-item-message {
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            .paragraph {
+              padding: 15px 24px 0 24px;
+              text-decoration: none;
+              color: inherit;
+              cursor: pointer;
+              font-style: italic;
+            }
+          }
+
         }
       }
     }
 
     .header-search-type-systems {
       max-width: 650px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -321,7 +361,7 @@
     }
 
     .header-content {
-      padding-top: $baseUnit * 20;
+      padding-top: $baseUnit * 12;
     }
   }
 }
