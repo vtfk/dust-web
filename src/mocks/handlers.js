@@ -80,7 +80,7 @@ export const handlers = [
     let { user, systems } = req.body
     const { addItem } = useSessionStorage(sessionStorageKey)
 
-    if (!user || !(user.samAccountName || user.employeeNumber || user.userPrincipalName)) {
+    if (!user || !(user.samAccountName || user.employeeNumber || user.userPrincipalName || user.displayName)) {
       return res(
         ctx.status(400),
         ctx.json({ error: 'Invalid user object provided', user })
