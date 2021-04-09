@@ -8,7 +8,7 @@ import {
   IconDropdownNav,
   IconDropdownNavItem,
   SearchField,
-  Icon,
+  // Icon,
   RadioButton,
   SkipLink
 } from '@vtfk/components'
@@ -22,13 +22,13 @@ import './base-styles.scss'
 
 export function Layout (props) {
   const { user, logout } = useSession()
-  const [selectedSystems, setSelectedSystems] = useState(systems)
-  const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
+  // const [selectedSystems, setSelectedSystems] = useState(systems)
+  // const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
   const { apiGet, apiPost } = useSession()
   const [query, setQuery] = useState('')
+  const [searchInputFocused, setSearchInputFocused] = useState(false)
   const [searchType, setSearchType] = useState('employee')
   const [searchResult, setSearchResult] = useState([])
-  const [searchInputFocused, setSearchInputFocused] = useState(false)
   const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
 
   useEffect(() => {
@@ -73,14 +73,15 @@ export function Layout (props) {
       } else if (e.key === 'ArrowDown') {
         pressKeyDown()
       } else if (e.key === 'Enter') {
-        selectSearchResult(searchResult[searchResultSelectedIndex])
+        generateReport(searchResult[searchResultSelectedIndex])
       }
     }
     window.addEventListener('keyup', onKeyup)
     return () => window.removeEventListener('keyup', onKeyup)
+    // eslint-disable-next-line
   }, [searchInputFocused, searchResult, searchResultSelectedIndex])
 
-  function clickSystemsSwitch (item) {
+  /*function clickSystemsSwitch (item) {
     let tmpSystems = [...selectedSystems]
     const exists = tmpSystems.some(s => s.name === item.name)
 
@@ -104,13 +105,13 @@ export function Layout (props) {
       if (a.name > b.name) return 1
       return 0
     })
-  }
+  }*/
 
-  async function selectSearchResult (item) {
+  async function generateReport (userData) {
     const body = await apiPost(`${APP.API_URL}/report`, {
       systems: systems.map(system => system.short), // TODO: Må endres til selectedSystems før prod
       user: {
-        ...item,
+        ...userData,
         expectedType: searchType
       }
     })
@@ -161,65 +162,12 @@ export function Layout (props) {
                   <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange systemer, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
                 </>
             }
-            <div className='header-search-text'>
-              {
-                /*
-                Temporary hidden
-                <div className='header-search-fieldselect'>
-                  <select>
-                    <option value='1'>Alle felter</option>
-                    <option value='2'>Fullt navn</option>
-                    <option value='3'>Fødselsnr</option>
-                  </select>
-                  <Icon name='chevronDown' size='xsmall' />
-                </div>
-                */
-              }
-              <SearchField
-                onChange={e => setQuery(e.target.value)}
-                value={query}
-                rounded
-                style={
-                  searchInputFocused && searchResult.length > 0
-                    ? { boxShadow: 'none', paddingRight: 200, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, borderColor: '#979797' }
-                    : { boxShadow: 'none', paddingRight: 200, borderColor: '#979797' }
-                }
-                onFocus={() => { setSearchInputFocused(true) }}
-                onBlur={() => { setSearchInputFocused(false) }}
-                placeholder='Din søketekst..'
-              />
-
-              {
-                searchInputFocused &&
-                searchResult.length > 0 &&
-                  <div className='header-search-result'>
-                    <div className='search-results'>
-                      {
-                    searchResult.map((item, index) => {
-                      return (
-                        <div onMouseDown={() => { selectSearchResult(item) }} key={index} className={`search-results-item ${index === searchResultSelectedIndex ? 'active' : ''}`}>
-                          <Paragraph className='search-results-item-name'>{item.displayName}</Paragraph>
-                          <Paragraph className='search-results-item-sam' size='small'>{item.samAccountName}</Paragraph>
-                          <Paragraph className='search-results-item-office' size='small'>{item.office}</Paragraph>
-                        </div>
-                      )
-                    })
-                  }
-                    </div>
-                  </div>
-              }
-            </div>
 
             <div className='header-search-type-systems'>
-              {
-                /*
-                Temporary hidden
-                <div className='header-search-type'>
-                  <RadioButton name='searchType' value='employee' label='Søk blant ansatte' checked={searchType === 'employee'} onChange={(e) => { setSearchType(e.target.value) }} />
-                  <RadioButton name='searchType' value='student' label='Søk blant elever' checked={searchType === 'student'} onChange={(e) => { setSearchType(e.target.value) }} />
-                </div>
-                */
-              }
+              <div className='header-search-type'>
+                <RadioButton name='searchType' value='employee' label='Søk blant ansatte' checked={searchType === 'employee'} onChange={(e) => { setSearchType(e.target.value) }} />
+                <RadioButton name='searchType' value='student' label='Søk blant elever' checked={searchType === 'student'} onChange={(e) => { setSearchType(e.target.value) }} />
+              </div>
 
               {
                 /*
@@ -260,6 +208,69 @@ export function Layout (props) {
                 */
               }
             </div>
+
+            <div className='header-search-text'>
+              {
+                /*
+                Temporary hidden
+                <div className='header-search-fieldselect'>
+                  <select>
+                    <option value='1'>Alle felter</option>
+                    <option value='2'>Fullt navn</option>
+                    <option value='3'>Fødselsnr</option>
+                  </select>
+                  <Icon name='chevronDown' size='xsmall' />
+                </div>
+                */
+              }
+              <SearchField
+                onChange={e => setQuery(e.target.value)}
+                autocomplete={false}
+                value={query}
+                rounded
+                style={
+                  searchInputFocused && query !== ''
+                    ? { boxShadow: 'none', paddingRight: 200, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, borderColor: '#979797', borderBottomWidth: 0 }
+                    : { boxShadow: 'none', paddingRight: 200, borderColor: '#979797' }
+                }
+                onFocus={() => { setSearchInputFocused(true) }}
+                onBlur={() => { setSearchInputFocused(false) }}
+                placeholder='Din søketekst..'
+              />
+
+              {
+                searchInputFocused &&
+                query !== '' &&
+                  <>
+                    <div className='header-search-result'>
+                      <div className='search-results'>
+                        {
+                          searchResult.length > 0 &&
+                          searchResult.map((item, index) => {
+                            return (
+                              <div onMouseDown={() => { generateReport(item) }} key={index} className={`search-results-item ${index === searchResultSelectedIndex ? 'active' : ''}`}>
+                                <Paragraph className='search-results-item-name'>{item.displayName}</Paragraph>
+                                <Paragraph className='search-results-item-sam' size='small'>{item.samAccountName}</Paragraph>
+                                <Paragraph className='search-results-item-office' size='small'>{item.office}</Paragraph>
+                              </div>
+                            )
+                          })
+                        }
+
+                        {
+                          searchResult.length === 0 &&
+                          <div className='search-results-item-message search-alternatives'>
+                            <Paragraph>
+                              Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({displayName: query}) }}>fullt navn</button> eller <button onMouseDown={() => { generateReport({employeeNumber: query}) }}>fødselsnummer</button>
+                            </Paragraph>
+                          </div>
+                        }
+                      </div>
+                    </div>
+                  </>
+              }
+            </div>
+
           </div>
         </div>
       </div>
