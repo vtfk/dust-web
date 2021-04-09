@@ -53,6 +53,7 @@ const getUser = incompleteUser => {
   if (incompleteUser.displayName) user = users.find(usr => usr.displayName.toLowerCase() === incompleteUser.displayName.toLowerCase())
   if (incompleteUser.samAccountName) user = users.find(usr => usr.samAccountName.toLowerCase() === incompleteUser.samAccountName.toLowerCase())
   if (incompleteUser.userPrincipalName) user = users.find(usr => usr.userPrincipalName.toLowerCase() === incompleteUser.userPrincipalName.toLowerCase())
+  if (incompleteUser.employeeNumber) user = users.find(usr => usr.employeeNumber === incompleteUser.employeeNumber)
   return user || incompleteUser
 }
 
