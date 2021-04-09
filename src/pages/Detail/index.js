@@ -9,13 +9,10 @@ import {
   Link,
   Skeleton,
   InitialsBadge,
-  IconButtonLink,
   Icon,
   Spinner,
   Modal,
-  ModalBody,
-  ModalSideActions,
-  Button
+  ModalBody
 } from '@vtfk/components'
 
 import SyntaxHighlighter from 'react-syntax-highlighter'

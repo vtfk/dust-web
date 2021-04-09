@@ -8,7 +8,7 @@ import {
   IconDropdownNav,
   IconDropdownNavItem,
   SearchField,
-  Icon,
+  // Icon,
   RadioButton,
   SkipLink
 } from '@vtfk/components'
@@ -22,8 +22,8 @@ import './base-styles.scss'
 
 export function Layout (props) {
   const { user, logout } = useSession()
-  const [selectedSystems, setSelectedSystems] = useState(systems)
-  const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
+  // const [selectedSystems, setSelectedSystems] = useState(systems)
+  // const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
   const { apiGet, apiPost } = useSession()
   const [query, setQuery] = useState('')
   const [searchInputFocused, setSearchInputFocused] = useState(false)
@@ -78,9 +78,10 @@ export function Layout (props) {
     }
     window.addEventListener('keyup', onKeyup)
     return () => window.removeEventListener('keyup', onKeyup)
+    // eslint-disable-next-line
   }, [searchInputFocused, searchResult, searchResultSelectedIndex])
 
-  function clickSystemsSwitch (item) {
+  /*function clickSystemsSwitch (item) {
     let tmpSystems = [...selectedSystems]
     const exists = tmpSystems.some(s => s.name === item.name)
 
@@ -104,7 +105,7 @@ export function Layout (props) {
       if (a.name > b.name) return 1
       return 0
     })
-  }
+  }*/
 
   async function generateReport (userData) {
     const body = await apiPost(`${APP.API_URL}/report`, {
@@ -244,6 +245,7 @@ export function Layout (props) {
                     <div className="search-alternatives">
                       { searchResult.length > 0 ? 'Velg en i listen under eller s' : 'S' }øk ved kun <button onMouseDown={() => { generateReport({displayName: query}) }}>fullt navn</button> eller <button onMouseDown={() => { generateReport({employeeNumber: query}) }}>fødselsnummer</button>
                     </div>
+
                     <div className='header-search-result'>
                       <div className='search-results'>
                         {
@@ -261,8 +263,10 @@ export function Layout (props) {
 
                         {
                           searchResult.length === 0 &&
-                          <div className='search-results-item-message'>
-                            <Paragraph>Ingen treff.</Paragraph>
+                          <div className='search-results-item-message search-alternatives'>
+                            <Paragraph>
+                              Bruker ikke funnet i AD. Søk med <a onMouseDown={() => { generateReport({displayName: query}) }}>fullt navn</a> eller <a onMouseDown={() => { generateReport({employeeNumber: query}) }}>fødselsnummer</a>
+                            </Paragraph>
                           </div>
                         }
                       </div>

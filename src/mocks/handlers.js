@@ -53,6 +53,7 @@ const getUser = incompleteUser => {
   if (incompleteUser.displayName) user = users.find(usr => usr.displayName.toLowerCase() === incompleteUser.displayName.toLowerCase())
   if (incompleteUser.samAccountName) user = users.find(usr => usr.samAccountName.toLowerCase() === incompleteUser.samAccountName.toLowerCase())
   if (incompleteUser.userPrincipalName) user = users.find(usr => usr.userPrincipalName.toLowerCase() === incompleteUser.userPrincipalName.toLowerCase())
+  if (incompleteUser.employeeNumber) user = users.find(usr => usr.employeeNumber === incompleteUser.employeeNumber)
   return user || incompleteUser
 }
 
@@ -80,7 +81,7 @@ export const handlers = [
     let { user, systems } = req.body
     const { addItem } = useSessionStorage(sessionStorageKey)
 
-    if (!user || !(user.samAccountName || user.employeeNumber || user.userPrincipalName)) {
+    if (!user || !(user.samAccountName || user.employeeNumber || user.userPrincipalName || user.displayName)) {
       return res(
         ctx.status(400),
         ctx.json({ error: 'Invalid user object provided', user })
