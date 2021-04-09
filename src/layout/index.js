@@ -242,9 +242,6 @@ export function Layout (props) {
                 searchInputFocused &&
                 query !== '' &&
                   <>
-                    <div className="search-alternatives">
-                      { searchResult.length > 0 ? 'Velg en i listen under eller s' : 'S' }øk ved kun <a onMouseDown={() => { generateReport({displayName: query}) }}>fullt navn</a> eller <a onMouseDown={() => { generateReport({employeeNumber: query}) }}>fødselsnummer</a>
-                    </div>
                     <div className='header-search-result'>
                       <div className='search-results'>
                         {
@@ -262,8 +259,10 @@ export function Layout (props) {
 
                         {
                           searchResult.length === 0 &&
-                          <div className='search-results-item-message'>
-                            <Paragraph>Ingen treff.</Paragraph>
+                          <div className='search-results-item-message search-alternatives'>
+                            <Paragraph>
+                              Bruker ikke funnet i AD. Søk med <a onMouseDown={() => { generateReport({displayName: query}) }}>fullt navn</a> eller <a onMouseDown={() => { generateReport({employeeNumber: query}) }}>fødselsnummer</a>
+                            </Paragraph>
                           </div>
                         }
                       </div>
