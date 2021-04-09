@@ -242,7 +242,7 @@ export function Layout (props) {
                 query !== '' &&
                   <>
                     <div className="search-alternatives">
-                      { searchResult.length > 0 ? 'Velg en i listen under eller s' : 'S' }øk ved kun <a onMouseDown={() => { generateReport({displayName: query}) }}>fullt navn</a> eller <a onMouseDown={() => { generateReport({employeeNumber: query}) }}>fødselsnummer</a>
+                      { searchResult.length > 0 ? 'Velg en i listen under eller s' : 'S' }øk ved kun <button onMouseDown={() => { generateReport({displayName: query}) }}>fullt navn</button> eller <button onMouseDown={() => { generateReport({employeeNumber: query}) }}>fødselsnummer</button>
                     </div>
                     <div className='header-search-result'>
                       <div className='search-results'>
