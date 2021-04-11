@@ -81,7 +81,7 @@ export function Layout (props) {
     // eslint-disable-next-line
   }, [searchInputFocused, searchResult, searchResultSelectedIndex])
 
-  /*function clickSystemsSwitch (item) {
+  /* function clickSystemsSwitch (item) {
     let tmpSystems = [...selectedSystems]
     const exists = tmpSystems.some(s => s.name === item.name)
 
@@ -105,7 +105,7 @@ export function Layout (props) {
       if (a.name > b.name) return 1
       return 0
     })
-  }*/
+  } */
 
   async function generateReport (userData) {
     const body = await apiPost(`${APP.API_URL}/report`, {
@@ -259,11 +259,11 @@ export function Layout (props) {
 
                         {
                           searchResult.length === 0 &&
-                          <div className='search-results-item-message search-alternatives'>
-                            <Paragraph>
-                              Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({displayName: query}) }}>fullt navn</button> eller <button onMouseDown={() => { generateReport({employeeNumber: query}) }}>fødselsnummer</button>
-                            </Paragraph>
-                          </div>
+                            <div className='search-results-item-message search-alternatives'>
+                              <Paragraph>
+                                Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({ displayName: query }) }}>fullt navn</button> eller <button onMouseDown={() => { generateReport({ employeeNumber: query }) }}>fødselsnummer</button>
+                              </Paragraph>
+                            </div>
                         }
                       </div>
                     </div>

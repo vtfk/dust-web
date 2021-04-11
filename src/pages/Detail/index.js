@@ -255,12 +255,10 @@ export const Detail = () => {
                               </div>
                           }
 
-                          {
-                            <div className='result-table-row-detail-raw'>
-                              <Paragraph></Paragraph>
-                              <Link size='small' onClick={() => { openDetailModal(item.data, repackSystemName(item.name)) }}>Se raw-data</Link>
-                            </div>
-                          }
+                          <div className='result-table-row-detail-raw'>
+                            <Paragraph />
+                            <Link size='small' onClick={() => { openDetailModal(item.data, repackSystemName(item.name)) }}>Se raw-data</Link>
+                          </div>
                         </div>
                     }
                   </div>
