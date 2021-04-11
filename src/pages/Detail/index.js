@@ -212,7 +212,7 @@ export const Detail = () => {
                             item.errorTests.map((testItem, index) => {
                               return (
                                 <div key={index} className='result-table-row-detail-error'>
-                                  <Paragraph><strong>Feil</strong>: {testItem.result.message}</Paragraph>
+                                  <Paragraph><strong>Feil</strong>: {testItem.result?.message || testItem.description}</Paragraph>
                                   {
                                     testItem.result?.raw &&
                                       <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
@@ -227,8 +227,7 @@ export const Detail = () => {
                             item.warningTests.map((testItem, index) => {
                               return (
                                 <div key={index} className='result-table-row-detail-warning'>
-                                  <Paragraph><strong>Advarsel</strong>: {testItem.result.message}</Paragraph>
-                                  <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
+                                  <Paragraph><strong>Advarsel</strong>: {testItem.result?.message || testItem.description}</Paragraph>
                                 </div>
                               )
                             })
@@ -239,8 +238,7 @@ export const Detail = () => {
                             item.okTests.map((testItem, index) => {
                               return (
                                 <div key={index} className='result-table-row-detail-ok'>
-                                  <Paragraph><strong>OK</strong>: {testItem.title}</Paragraph>
-                                  <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
+                                  <Paragraph><strong>OK</strong>: {testItem.result?.message || testItem.description}</Paragraph>
                                 </div>
                               )
                             })
