@@ -53,7 +53,8 @@ const getUser = (fregPerson, employee = false) => {
     ou: getRandom(0, 100) === 42 ? 'AUTO DISABLED USERS' : 'AUTO USERS',
     departmentShort: employee ? department.extensionAttribute6 : department.department,
     departmentAdditional: null,
-    office: employee ? department.physicalDeliveryOfficeName : department.company
+    office: employee ? department.physicalDeliveryOfficeName : department.company,
+    company: department.company
   }
 
   persons.push(pers)
