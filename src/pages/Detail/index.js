@@ -70,7 +70,7 @@ export const Detail = () => {
       let okCount = 0
 
       for (let j = 0; j < normalizedItem.tests.length; j++) {
-        if (!normalizedItem.tests[j].result) continue
+        if (!normalizedItem.tests[j].result || normalizedItem.tests[j].result.status === 'no-data' || normalizedItem.tests[j].result.message === 'Har data') continue
 
         if (normalizedItem.tests[j].result.status === 'error') {
           errorTests.push(normalizedItem.tests[j])
