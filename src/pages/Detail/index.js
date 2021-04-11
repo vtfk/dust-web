@@ -228,6 +228,10 @@ export const Detail = () => {
                               return (
                                 <div key={index} className='result-table-row-detail-warning'>
                                   <Paragraph><strong>Advarsel</strong>: {testItem.result?.message || testItem.description}</Paragraph>
+                                  {
+                                    testItem.result?.raw &&
+                                      <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
+                                  }
                                 </div>
                               )
                             })
@@ -239,6 +243,10 @@ export const Detail = () => {
                               return (
                                 <div key={index} className='result-table-row-detail-ok'>
                                   <Paragraph><strong>OK</strong>: {testItem.result?.message || testItem.description}</Paragraph>
+                                  {
+                                    testItem.result?.raw &&
+                                    <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
+                                  }
                                 </div>
                               )
                             })
