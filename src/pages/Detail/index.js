@@ -38,6 +38,16 @@ export const Detail = () => {
   const { id } = useParams()
 
   useEffect(() => {
+    // close modal on escape
+    const handleKeyPress = event => {
+      if (event.key === 'Escape') closeDetailModal()
+    }
+
+    document.addEventListener('keyup', handleKeyPress)
+    return () => document.removeEventListener('keyup', handleKeyPress)
+  }, [])
+  
+  useEffect(() => {
     async function getReport () {
       const { data, headers, status } = await apiGet(`${APP.API_URL}/report/${id}`, true)
 
@@ -111,6 +121,10 @@ export const Detail = () => {
     setRawDetails(JSON.stringify(raw, null, '  '))
     setRawDetailsTitle(description || 'Lukk')
     setModalOpen(true)
+  }
+
+  function closeDetailModal () {
+    setModalOpen(false)
   }
 
   function repackSystemName (name) {
@@ -277,7 +291,7 @@ export const Detail = () => {
         <Modal
           open={modalOpen}
           title={rawDetailsTitle}
-          onDismiss={() => { setModalOpen(false) }}
+          onDismiss={() => { closeDetailModal() }}
           className='detail-modal'
         >
           <ModalBody>
