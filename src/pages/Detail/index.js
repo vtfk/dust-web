@@ -46,6 +46,11 @@ export const Detail = () => {
     return `${padDate(date.getDate())}.${padDate(date.getMonth() + 1)}.${date.getFullYear()} ${padDate(date.getHours())}:${padDate(date.getMinutes())}:${padDate(date.getSeconds())}`
   }
 
+  function getUserDomain (user) {
+    const expected = user.initialExpectedType ? user.initialExpectedType : user.expectedType
+    return expected === 'employee' ? 'login' : 'skole'
+  }
+
   useEffect(() => {
     // close modal on escape
     const handleKeyPress = event => {
@@ -174,7 +179,7 @@ export const Detail = () => {
                   {!user ? <Skeleton style={{ marginBottom: 5 }} width='200px' /> : user.office}
                 </Paragraph>
                 <Paragraph>
-                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : user.samAccountName}
+                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : `${getUserDomain(user)}\\${user.samAccountName}`}
                 </Paragraph>
               </div>
             </div>
