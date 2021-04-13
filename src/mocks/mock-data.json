@@ -2585,7 +2585,10 @@
           "initials": "BAR0202",
           "userId": "0000",
           "username": "MORFAR, BARMHJERTIG",
-          "alias": "BAR0202"
+          "alias": [
+            "BAR0202",
+            "BARMHJERTIG.MORFAR@VTFK.NO"
+          ]
         },
         "careerInfo": {
           "jobTitle": "Konsul",
@@ -3298,11 +3301,20 @@
           "title": "Brukernavn er likt brukernavnet i AD",
           "description": "Sjekker at brukernavnet i HRM er likt samAccountName i lokalt AD",
           "result": {
-            "status": "ok",
-            "message": "Brukernavnene i AD og HRM er like",
+            "status": "warning",
+            "message": "Noen brukernavn i HRM er like i AD",
             "raw": {
               "ad": "bar0202",
-              "hrm": "BAR0202"
+              "hrm": [
+                {
+                  "name": "BAR0202",
+                  "result": true
+                },
+                {
+                  "name": "BARMHJERTIG.MORFAR@VTFK.no",
+                  "result": false
+                }
+              ]
             }
           }
         }
