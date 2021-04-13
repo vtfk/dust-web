@@ -82,8 +82,23 @@ export const Detail = () => {
     // eslint-disable-next-line
   }, [id]) // apiGet can't be set as a dependency because it changes with each render which will cause double or tripple calls to backend
 
+  function sortSystems (systems) {
+    return systems.sort((a, b) => {
+      const a1 = a.name[0].toLowerCase(), a2 = a.name[1].toLowerCase()
+      const b1 = b.name[0].toLowerCase(), b2 = b.name[1].toLowerCase()
+      if (a1 < b1) return -1
+      if (a1 > b1) return 1
+      if (a1 === b1) {
+        if (a2 < b2) return 1
+        if (a2 > b2) return -1
+      }
+      return 0
+    })
+  }
+
   function normalizeAndSetResults (data) {
     const normalizedResults = []
+    data = sortSystems(data)
 
     for (let i = 0; i < data.length; i++) {
       const normalizedItem = { ...data[i] }
