@@ -36,6 +36,8 @@ const getRandomObjectId = () => {
   }).toLowerCase()
 }
 
+const getMockDate = () => ({ lastRunTime: new Date(new Date().setHours(7)) })
+
 const getRandomExpectedType = () => {
   const types = ['employee', 'student']
   const typeNum = Math.random() * types.length | 0
@@ -97,7 +99,8 @@ export const handlers = [
       _id: getRandomObjectId(),
       user,
       systems,
-      started: new Date().toISOString()
+      started: new Date().toISOString(),
+      vigobas: getMockDate()
     }
 
     // Legg rapport i session storage, så vi finner den seinere
@@ -165,6 +168,7 @@ export const handlers = [
     // Trenger ikke disse i body (kun i objektet som lagres i SessionStorage)
     delete report.data
     delete report.finished
+    delete report.vigobas
 
     // Sett retry-after og location
     return res(

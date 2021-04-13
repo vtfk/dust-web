@@ -32,10 +32,19 @@ export const Detail = () => {
   const [results, setResults] = useState(null)
   const [user, setUser] = useState(null)
   const [systems, setSystems] = useState(null)
+  const [vigoBasStamp, setVigoBasStamp] = useState(null)
   const [rawDetails, setRawDetails] = useState(null)
   const [rawDetailsTitle, setRawDetailsTitle] = useState('Lukk')
   const { apiGet } = useSession()
   const { id } = useParams()
+
+  function padDate (num) {
+    return num >= 10 ? num : `0${num}`
+  }
+  
+  function prettifyDate (date) {
+    return `${padDate(date.getDate())}.${padDate(date.getMonth() + 1)}.${date.getFullYear()} ${padDate(date.getHours())}:${padDate(date.getMinutes())}:${padDate(date.getSeconds())}`
+  }
 
   useEffect(() => {
     // close modal on escape
@@ -53,6 +62,7 @@ export const Detail = () => {
 
       if (status === 200) {
         setLoading(false)
+        setVigoBasStamp(prettifyDate(new Date(data.vigobas.lastRunTime)))
         normalizeAndSetResults(data.data)
         setUser(data.user)
       } else if (status === 202) {
@@ -192,7 +202,7 @@ export const Detail = () => {
             {
               !loading &&
               results &&
-                <Heading3 className='result-title'>Status på data</Heading3>
+                <Heading3 className='result-title'><strong>{(vigoBasStamp && `Siste kjøring av VigoBas:`) || 'Status på data'}</strong> {(vigoBasStamp !== null ? vigoBasStamp : '')}</Heading3>
             }
 
             {
