@@ -16,7 +16,7 @@
     "react-scripts": "4.0.3",
     "react-syntax-highlighter": "15.4.3",
     "sass": "1.32.8",
-    "use-debounce": "^6.0.1"
+    "use-debounce": "6.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
