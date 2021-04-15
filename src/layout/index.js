@@ -118,7 +118,7 @@ export function Layout (props) {
     })
   } */
 
-  function onQueryType(query) {
+  function onQueryType (query) {
     setSearching(true)
     setQuery(query)
   }
