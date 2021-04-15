@@ -217,6 +217,7 @@ export const Detail = () => {
             {
               !loading &&
               results &&
+              user &&
                 <Heading3 className='result-title'>
                   {
                     user.initialExpectedType &&
