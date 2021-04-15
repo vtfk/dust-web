@@ -83,7 +83,7 @@ export function Layout (props) {
         pressKeyUp()
       } else if (e.key === 'ArrowDown') {
         pressKeyDown()
-      } else if (e.key === 'Enter') {
+      } else if (e.key === 'Enter' && searchResult && searchResult.length > 0) {
         generateReport(searchResult[searchResultSelectedIndex])
       }
     }
