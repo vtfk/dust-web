@@ -54,6 +54,7 @@ export function Layout (props) {
     }
 
     setSearchResultSelectedIndex(0)
+    // eslint-disable-next-line
   }, [searchTriggerQuery, apiGet])
 
   useEffect(() => {
