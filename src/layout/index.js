@@ -162,6 +162,7 @@ export function Layout (props) {
               <InitialsBadge className='user-image' firstName={user.givenName} lastName={user.surname} />
               <div className='user-menu'>
                 <IconDropdownNav>
+                  <IconDropdownNavItem onClick={() => window.location = '/help'} title='Hjelp' />
                   <IconDropdownNavItem onClick={() => logout()} title='Logg ut' />
                 </IconDropdownNav>
               </div>

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { useSession } from '@vtfk/react-msal'
 import { AUTH, APP } from './config'
 
+import { Help } from './pages/Help'
 import { Home } from './pages/Home'
 import { Detail } from './pages/Detail'
 import { PageNotFound } from './pages/PageNotFound'
@@ -15,6 +16,7 @@ const AppContent = () => {
       <div className='app'>
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/help' component={Help} />
           <Route exact path='/detail/:id' component={Detail} />
           <Route exact path='*' component={PageNotFound} />
         </Switch>

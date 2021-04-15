@@ -1,0 +1,33 @@
+@import "~@vtfk/components/src/ui/Tokens/tokens.scss";
+
+.help {
+  padding: ($baseUnit * 5) 0;
+  max-width: 900px;
+  margin: 0 auto;
+
+  .page-title {
+    margin-bottom: $baseUnit * 7;
+
+    @media(max-width: 1000px) {
+      margin-bottom: $baseUnit * 3;
+    }
+  }
+
+  .help-section-title {
+    margin-top: $baseUnit * 5;
+    margin-bottom: $baseUnit * 3;
+    font-weight: 700;
+  }
+
+  .help-question-block {
+    margin-bottom: $baseUnit * 2;
+  }
+  
+  .help-section-question {
+    font-weight: 700;
+  }
+
+  .help-text-block {
+    margin-bottom: $baseUnit;
+  }
+}
