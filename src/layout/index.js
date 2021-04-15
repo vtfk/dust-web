@@ -139,6 +139,10 @@ export function Layout (props) {
     }
   }
 
+  function help () {
+    window.location = '/help'
+  }
+
   return (
     <div className={`layout ${props.fullHeightHeader ? 'full-height' : ''}`}>
       <SkipLink href='#main-content'>Hopp til hovedinnhold</SkipLink>
@@ -162,7 +166,7 @@ export function Layout (props) {
               <InitialsBadge className='user-image' firstName={user.givenName} lastName={user.surname} />
               <div className='user-menu'>
                 <IconDropdownNav>
-                  <IconDropdownNavItem onClick={() => window.location = '/help'} title='Hjelp' />
+                  <IconDropdownNavItem onClick={() => help()} title='Hjelp' />
                   <IconDropdownNavItem onClick={() => logout()} title='Logg ut' />
                 </IconDropdownNav>
               </div>
