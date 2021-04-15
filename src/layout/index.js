@@ -13,6 +13,8 @@ import {
   SkipLink
 } from '@vtfk/components'
 
+import { useDebounce } from 'use-debounce'
+
 import { APP } from '../config'
 
 import systems from '../data/systems.json'
@@ -25,7 +27,11 @@ export function Layout (props) {
   // const [selectedSystems, setSelectedSystems] = useState(systems)
   // const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
   const { apiGet, apiPost } = useSession()
+
   const [query, setQuery] = useState('')
+  const [searchTriggerQuery] = useDebounce(query, 1000)
+  const [searching, setSearching] = useState(false)
+
   const [searchInputFocused, setSearchInputFocused] = useState(false)
   const [searchType, setSearchType] = useState('employee')
   const [searchResult, setSearchResult] = useState([])
@@ -34,7 +40,11 @@ export function Layout (props) {
   useEffect(() => {
     const search = async q => {
       const { result } = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
-      if (result) setSearchResult(result)
+
+      if (result) {
+        setSearchResult(result)
+      }
+      setSearching(false)
     }
 
     if (query) {
@@ -44,7 +54,8 @@ export function Layout (props) {
     }
 
     setSearchResultSelectedIndex(0)
-  }, [query, apiGet])
+    // eslint-disable-next-line
+  }, [searchTriggerQuery, apiGet])
 
   useEffect(() => {
     const pressKeyUp = () => {
@@ -106,6 +117,11 @@ export function Layout (props) {
       return 0
     })
   } */
+
+  function onQueryType(query) {
+    setSearching(true)
+    setQuery(query)
+  }
 
   async function generateReport (userData) {
     const body = await apiPost(`${APP.API_URL}/report`, {
@@ -224,7 +240,7 @@ export function Layout (props) {
                 */
               }
               <SearchField
-                onChange={e => setQuery(e.target.value)}
+                onChange={e => onQueryType(e.target.value)}
                 autocomplete={false}
                 value={query}
                 rounded
@@ -258,10 +274,20 @@ export function Layout (props) {
                         }
 
                         {
+                          !searching &&
                           searchResult.length === 0 &&
                             <div className='search-results-item-message search-alternatives'>
                               <Paragraph>
                                 Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({ displayName: query }) }}>fullt navn</button> eller <button onMouseDown={() => { generateReport({ employeeNumber: query }) }}>fødselsnummer</button>
+                              </Paragraph>
+                            </div>
+                        }
+
+                        {
+                          searching &&
+                            <div className='search-results-item-message search-alternatives'>
+                              <Paragraph>
+                                Søker...
                               </Paragraph>
                             </div>
                         }
