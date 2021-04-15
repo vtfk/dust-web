@@ -222,7 +222,6 @@ export const Detail = () => {
                   {
                     user.initialExpectedType &&
                     <span>
-                      <br />
                       Søk utført blant {user.initialExpectedType === 'employee' ? 'ansatte' : 'elever'}, men funnet som en {user.expectedType === 'employee' ? 'ansatt' : 'elev'}
                     </span>
                   }
