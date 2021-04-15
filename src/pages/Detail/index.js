@@ -326,8 +326,9 @@ export const Detail = () => {
             {
               !loading &&
               results &&
+              vigoBasStamp &&
                 <Heading4 className='info-timestamp'>
-                  <strong>{(vigoBasStamp && `Siste kjøring av VigoBas:`) || 'Status på data'}</strong> {(vigoBasStamp !== null ? vigoBasStamp : '')}
+                  <strong>Siste kjøring av VigoBas:</strong> {vigoBasStamp}
                 </Heading4>
             }
           </div>
