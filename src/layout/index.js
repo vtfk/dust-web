@@ -8,7 +8,6 @@ import {
   IconDropdownNav,
   IconDropdownNavItem,
   SearchField,
-  RadioButton,
   SkipLink
 } from '@vtfk/components'
 
@@ -30,7 +29,6 @@ export function Layout (props) {
   const [searching, setSearching] = useState(false)
 
   const [searchInputFocused, setSearchInputFocused] = useState(false)
-  const [searchType, setSearchType] = useState('employee')
   const [searchResult, setSearchResult] = useState([])
   const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
 
@@ -99,7 +97,7 @@ export function Layout (props) {
       systems: systems.map(system => system.short),
       user: {
         ...userData,
-        expectedType: searchType
+        expectedType: userData?.domain || 'employee'
       }
     })
 
@@ -154,13 +152,6 @@ export function Layout (props) {
                   <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange systemer, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
                 </>
             }
-
-            <div className='header-search-type-systems'>
-              <div className='header-search-type'>
-                <RadioButton name='searchType' value='employee' label='Søk blant ansatte' checked={searchType === 'employee'} onChange={(e) => { setSearchType(e.target.value) }} />
-                <RadioButton name='searchType' value='student' label='Søk blant elever' checked={searchType === 'student'} onChange={(e) => { setSearchType(e.target.value) }} />
-              </div>
-            </div>
 
             <div className='header-search-text'>
               <SearchField
