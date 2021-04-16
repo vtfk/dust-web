@@ -8,8 +8,6 @@ import {
   IconDropdownNav,
   IconDropdownNavItem,
   SearchField,
-  // Icon,
-  RadioButton,
   SkipLink
 } from '@vtfk/components'
 
@@ -24,8 +22,6 @@ import './base-styles.scss'
 
 export function Layout (props) {
   const { user, logout } = useSession()
-  // const [selectedSystems, setSelectedSystems] = useState(systems)
-  // const [openSystemsSelect, setOpenSystemsSelect] = useState(false)
   const { apiGet, apiPost } = useSession()
 
   const [query, setQuery] = useState('')
@@ -33,7 +29,6 @@ export function Layout (props) {
   const [searching, setSearching] = useState(false)
 
   const [searchInputFocused, setSearchInputFocused] = useState(false)
-  const [searchType, setSearchType] = useState('employee')
   const [searchResult, setSearchResult] = useState([])
   const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
 
@@ -92,32 +87,6 @@ export function Layout (props) {
     // eslint-disable-next-line
   }, [searchInputFocused, searchResult, searchResultSelectedIndex])
 
-  /* function clickSystemsSwitch (item) {
-    let tmpSystems = [...selectedSystems]
-    const exists = tmpSystems.some(s => s.name === item.name)
-
-    if (exists) {
-      tmpSystems = tmpSystems.filter((c) => { return c !== item })
-    } else {
-      tmpSystems.push(item)
-    }
-
-    const sortedSystems = sortSystems(tmpSystems)
-    setSelectedSystems(sortedSystems)
-  }
-
-  function selectAllSystemSwitch (enable) {
-    setSelectedSystems(enable ? systems : [])
-  }
-
-  function sortSystems (systems) {
-    return systems.sort((a, b) => {
-      if (a.name < b.name) return -1
-      if (a.name > b.name) return 1
-      return 0
-    })
-  } */
-
   function onQueryType (query) {
     setSearching(true)
     setQuery(query)
@@ -125,10 +94,10 @@ export function Layout (props) {
 
   async function generateReport (userData) {
     const body = await apiPost(`${APP.API_URL}/report`, {
-      systems: systems.map(system => system.short), // TODO: Må endres til selectedSystems før prod
+      systems: systems.map(system => system.short),
       user: {
         ...userData,
-        expectedType: searchType
+        expectedType: userData?.domain || 'employee'
       }
     })
 
@@ -184,66 +153,7 @@ export function Layout (props) {
                 </>
             }
 
-            <div className='header-search-type-systems'>
-              <div className='header-search-type'>
-                <RadioButton name='searchType' value='employee' label='Søk blant ansatte' checked={searchType === 'employee'} onChange={(e) => { setSearchType(e.target.value) }} />
-                <RadioButton name='searchType' value='student' label='Søk blant elever' checked={searchType === 'student'} onChange={(e) => { setSearchType(e.target.value) }} />
-              </div>
-
-              {
-                /*
-                Temporary hidden
-                <div className='header-search-systems'>
-                  <Paragraph size='small' onClick={() => { setOpenSystemsSelect(!openSystemsSelect) }}>
-                    <strong>{selectedSystems.length === systems.length ? 'Søker i alle systemer' : `Søker i ${selectedSystems.length} ${selectedSystems.length === 1 ? 'system' : 'systemer'}`}</strong>
-                  </Paragraph>
-                  <div className='header-search-systems-toggle'>
-                    <Icon onClick={() => { setOpenSystemsSelect(!openSystemsSelect) }} name='chevronDown' size='xsmall' />
-                    {
-                      openSystemsSelect &&
-                        <div className='header-search-systems-list'>
-                          <div className='header-search-systems-list-header'>
-                            <div className='header-search-systems-list-header-title'>Valgte systemer</div>
-                            <Icon name='close' size='xsmall' onClick={() => { setOpenSystemsSelect(false) }} />
-                          </div>
-                          <div className='header-search-systems-list-items'>
-                            <div className='header-search-systems-list-item'>
-                              <div className='header-search-systems-list-item-name'>Alle</div>
-                              <div className={`header-search-systems-list-item-switch ${selectedSystems.length === systems.length ? 'selected' : ''}`} onClick={() => { selectAllSystemSwitch(!(selectedSystems.length === systems.length)) }} />
-                            </div>
-                            {
-                            systems.map((item, index) => {
-                              return (
-                                <div key={index} className='header-search-systems-list-item'>
-                                  <div className='header-search-systems-list-item-name'>{item.name}</div>
-                                  <div className={`header-search-systems-list-item-switch ${selectedSystems.some(s => s.name === item.name) ? 'selected' : ''}`} onClick={() => { clickSystemsSwitch(item) }} />
-                                </div>
-                              )
-                            })
-                          }
-                          </div>
-                        </div>
-                    }
-                  </div>
-                </div>
-                */
-              }
-            </div>
-
             <div className='header-search-text'>
-              {
-                /*
-                Temporary hidden
-                <div className='header-search-fieldselect'>
-                  <select>
-                    <option value='1'>Alle felter</option>
-                    <option value='2'>Fullt navn</option>
-                    <option value='3'>Fødselsnr</option>
-                  </select>
-                  <Icon name='chevronDown' size='xsmall' />
-                </div>
-                */
-              }
               <SearchField
                 onChange={e => onQueryType(e.target.value)}
                 autocomplete={false}
