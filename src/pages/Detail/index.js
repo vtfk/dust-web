@@ -41,7 +41,7 @@ export const Detail = () => {
   function padDate (num) {
     return num >= 10 ? num : `0${num}`
   }
-  
+
   function prettifyDate (date) {
     return `${padDate(date.getDate())}.${padDate(date.getMonth() + 1)}.${date.getFullYear()} ${padDate(date.getHours())}:${padDate(date.getMinutes())}:${padDate(date.getSeconds())}`
   }
@@ -55,7 +55,7 @@ export const Detail = () => {
     document.addEventListener('keyup', handleKeyPress)
     return () => document.removeEventListener('keyup', handleKeyPress)
   }, [])
-  
+
   useEffect(() => {
     async function getReport () {
       const { data, headers, status } = await apiGet(`${APP.API_URL}/report/${id}`, true)
@@ -79,8 +79,10 @@ export const Detail = () => {
 
   function sortSystems (systems) {
     return systems.sort((a, b) => {
-      const a1 = a.name[0].toLowerCase(), a2 = a.name[1].toLowerCase()
-      const b1 = b.name[0].toLowerCase(), b2 = b.name[1].toLowerCase()
+      const a1 = a.name[0].toLowerCase()
+      const a2 = a.name[1].toLowerCase()
+      const b1 = b.name[0].toLowerCase()
+      const b2 = b.name[1].toLowerCase()
       if (a1 < b1) return -1
       if (a1 > b1) return 1
       if (a1 === b1) {
@@ -292,7 +294,7 @@ export const Detail = () => {
                                   <Paragraph><strong>OK</strong>: {testItem.result?.message || testItem.description}</Paragraph>
                                   {
                                     testItem.result?.raw &&
-                                    <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
+                                      <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
                                   }
                                 </div>
                               )

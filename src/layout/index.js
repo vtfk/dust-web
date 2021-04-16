@@ -118,7 +118,7 @@ export function Layout (props) {
     })
   } */
 
-  function onQueryType(query) {
+  function onQueryType (query) {
     setSearching(true)
     setQuery(query)
   }
@@ -137,6 +137,10 @@ export function Layout (props) {
     } else {
       window.alert('Det skjedde noe feil.')
     }
+  }
+
+  function help () {
+    window.location = '/help'
   }
 
   return (
@@ -162,6 +166,7 @@ export function Layout (props) {
               <InitialsBadge className='user-image' firstName={user.givenName} lastName={user.surname} />
               <div className='user-menu'>
                 <IconDropdownNav>
+                  <IconDropdownNavItem onClick={() => help()} title='Hjelp' />
                   <IconDropdownNavItem onClick={() => logout()} title='Logg ut' />
                 </IconDropdownNav>
               </div>
