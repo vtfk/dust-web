@@ -43,12 +43,12 @@ export function Help () {
         </QuestionBlock>
 
         <QuestionBlock question='UID'>
-          FEIDE-brukernavn
+          FEIDE-brukernavn<br />
           Eksempel: <code>bja0101</code>
         </QuestionBlock>
 
         <QuestionBlock question='PrincipalName'>
-          Fullt FEIDE-navn
+          Fullt FEIDE-navn<br />
           Eksempel: <code>bja0101@vtfk.no</code>
         </QuestionBlock>
 
