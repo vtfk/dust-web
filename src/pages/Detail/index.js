@@ -188,10 +188,13 @@ export const Detail = () => {
               </Heading4>
               <div className='other'>
                 <Paragraph>
+                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : user.samAccountName}
+                </Paragraph>
+                <Paragraph>
                   {!user ? <Skeleton style={{ marginBottom: 5 }} width='200px' /> : user.office}
                 </Paragraph>
                 <Paragraph>
-                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : user.samAccountName}
+                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : user.domain === 'login' ? user.title : 'Elev'}
                 </Paragraph>
               </div>
             </div>
@@ -223,9 +226,9 @@ export const Detail = () => {
                 <Heading3 className='result-title'>
                   {
                     user.initialExpectedType &&
-                    <span>
-                      Søk utført blant {user.initialExpectedType === 'employee' ? 'ansatte' : 'elever'}, men funnet som en {user.expectedType === 'employee' ? 'ansatt' : 'elev'}
-                    </span>
+                      <span>
+                        Søk utført blant {user.initialExpectedType === 'employee' ? 'ansatte' : 'elever'}, men funnet som en {user.expectedType === 'employee' ? 'ansatt' : 'elev'}
+                      </span>
                   }
                 </Heading3>
             }

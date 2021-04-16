@@ -54,7 +54,8 @@ const getUser = (fregPerson, employee = false) => {
     departmentShort: employee ? department.extensionAttribute6 : department.department,
     departmentAdditional: null,
     office: employee ? department.physicalDeliveryOfficeName : department.company,
-    company: department.company
+    company: department.company,
+    title: department.title || undefined
   }
 
   persons.push(pers)
