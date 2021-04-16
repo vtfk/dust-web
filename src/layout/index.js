@@ -266,7 +266,7 @@ export function Layout (props) {
                             return (
                               <div onMouseDown={() => { generateReport(item) }} key={index} className={`search-results-item ${index === searchResultSelectedIndex ? 'active' : ''}`}>
                                 <Paragraph className='search-results-item-name'>{item.displayName}</Paragraph>
-                                <Paragraph className='search-results-item-sam' size='small'>{`${item.samAccountName} ${item.domain === 'login' ? '🥸' : '🎓'}`}</Paragraph>
+                                <Paragraph className='search-results-item-sam' size='small'>{`${item.samAccountName} ${item.domain === 'login' ? '🤓' : '🎓'}`}</Paragraph>
                                 <Paragraph className='search-results-item-office' size='small'>{item.office}</Paragraph>
                               </div>
                             )
