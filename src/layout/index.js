@@ -97,7 +97,7 @@ export function Layout (props) {
       systems: systems.map(system => system.short),
       user: {
         ...userData,
-        expectedType: userData?.domain || 'employee'
+        expectedType: (userData?.domain === 'login' ? 'employee' : 'student') || 'employee'
       }
     })
 
