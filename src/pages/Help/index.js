@@ -43,11 +43,13 @@ export function Help () {
         </QuestionBlock>
 
         <QuestionBlock question='UID'>
-          FEIDE sin versjon av SamAccountName
+          FEIDE-brukernavn
+          Eksempel: <code>bja0101</code>
         </QuestionBlock>
 
         <QuestionBlock question='PrincipalName'>
           Fullt FEIDE-navn
+          Eksempel: <code>bja0101@vtfk.no</code>
         </QuestionBlock>
 
         <QuestionBlock question='MFA'>
