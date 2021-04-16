@@ -223,10 +223,9 @@ export const Detail = () => {
                 <Heading3 className='result-title'>
                   {
                     user.initialExpectedType &&
-                      <span>
-                        <br />
-                        Søk utført blant {user.initialExpectedType === 'employee' ? 'ansatte' : 'elever'}, men funnet som en {user.expectedType === 'employee' ? 'ansatt' : 'elev'}
-                      </span>
+                    <span>
+                      Søk utført blant {user.initialExpectedType === 'employee' ? 'ansatte' : 'elever'}, men funnet som en {user.expectedType === 'employee' ? 'ansatt' : 'elev'}
+                    </span>
                   }
                 </Heading3>
             }
@@ -328,8 +327,9 @@ export const Detail = () => {
             {
               !loading &&
               results &&
+              vigoBasStamp &&
                 <Heading4 className='info-timestamp'>
-                  <strong>{(vigoBasStamp && `Siste kjøring av VigoBas:`) || 'Status på data'}</strong> {(vigoBasStamp !== null ? vigoBasStamp : '')}
+                  <strong>Siste kjøring av VigoBas:</strong> {vigoBasStamp}
                 </Heading4>
             }
           </div>
