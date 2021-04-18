@@ -55,5 +55,8 @@
     "msw": "0.28.1",
     "quick-score": "0.0.11",
     "standard": "16.0.3"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
