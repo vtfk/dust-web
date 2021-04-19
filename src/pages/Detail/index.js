@@ -327,7 +327,7 @@ export const Detail = () => {
                             item.data &&
                               <div className='result-table-row-detail-raw'>
                                 <Paragraph />
-                                <Link size='small' onClick={() => { openDetailModal(item.data, repackSystemName(item.name)) }}>Se raw-data</Link>
+                                <Link size='small' onClick={() => { openDetailModal(item.data, `${repackSystemName(item.name)} raw-data`) }}>Se raw-data</Link>
                               </div>
                           }
                         </div>
