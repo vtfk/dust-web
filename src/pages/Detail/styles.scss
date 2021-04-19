@@ -71,13 +71,13 @@
     }
   }
 
-  .result-table {
-    .result-title {
-      margin-top: $baseUnit * 8;
-      margin-bottom: $baseUnit * 2;
-      padding-left: $baseUnit * 2;
-    }
+  .result-title {
+    margin-top: $baseUnit * 6;
+    margin-bottom: $baseUnit * 2;
+    padding-left: $baseUnit * 2;
+  }
 
+  .result-table {
     .result-table-row {
       border: 1px solid #fff;
       user-select: none;
@@ -202,7 +202,7 @@
         }
       }
 
-      &:nth-child(even) {
+      &:nth-child(odd) {
         border: 1px solid #F8F6F0;
 
         .result-table-row-summary {

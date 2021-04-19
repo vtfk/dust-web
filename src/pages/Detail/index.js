@@ -212,6 +212,18 @@ export const Detail = () => {
             </div>
           </div>
 
+          {
+            !loading &&
+            results &&
+            user &&
+            user.initialExpectedType &&
+              <Heading3 className='result-title'>
+                <span>
+                  Søk utført blant {user.initialExpectedType === 'employee' ? 'ansatte' : 'elever'}, men funnet som en {user.expectedType === 'employee' ? 'ansatt' : 'elev'}
+                </span>
+              </Heading3>
+          }
+
           <div className='result-table'>
             {
               loading && systems &&
@@ -229,20 +241,6 @@ export const Detail = () => {
                     </div>
                   )
                 })
-            }
-
-            {
-              !loading &&
-              results &&
-              user &&
-                <Heading3 className='result-title'>
-                  {
-                    user.initialExpectedType &&
-                      <span>
-                        Søk utført blant {user.initialExpectedType === 'employee' ? 'ansatte' : 'elever'}, men funnet som en {user.expectedType === 'employee' ? 'ansatt' : 'elev'}
-                      </span>
-                  }
-                </Heading3>
             }
 
             {
