@@ -193,7 +193,7 @@ export function Layout (props) {
                           searchResult.length === 0 &&
                             <div className='search-results-item-message search-alternatives'>
                               <Paragraph>
-                                Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({ displayName: query }) }}>fullt navn</button> eller <button onMouseDown={() => { generateReport({ employeeNumber: query }) }}>fødselsnummer</button>
+                                Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({ displayName: query }) }}>fullt navn</button>, <button onMouseDown={() => { generateReport({ samAccountName: query }) }}>brukernavn</button> eller <button onMouseDown={() => { generateReport({ employeeNumber: query }) }}>fødselsnummer</button>
                               </Paragraph>
                             </div>
                         }
