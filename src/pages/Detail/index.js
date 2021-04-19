@@ -355,7 +355,7 @@ export const Detail = () => {
           className='detail-modal'
         >
           <ModalBody>
-            <SyntaxHighlighter language='json' className='detail-modal-code' style={docco} wrapLongLines wrapLines showInlineLineNumbers>
+            <SyntaxHighlighter language='json' className='detail-modal-code' style={docco} wrapLines>
               {rawDetails}
             </SyntaxHighlighter>
           </ModalBody>
