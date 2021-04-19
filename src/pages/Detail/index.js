@@ -167,7 +167,7 @@ export const Detail = () => {
             <div className='image'>
               {
                 !user
-                  ? <Skeleton variant='circle'><InitialsBadge size='large' /></Skeleton>
+                  ? <Skeleton variant='circle' randomWidth={[100, 100]}><InitialsBadge size='large' firstName='' lastName='' /></Skeleton>
                   : <InitialsBadge firstName={user.givenName} lastName={user.surName} size='large' />
               }
             </div>
@@ -175,26 +175,38 @@ export const Detail = () => {
               <Heading3 className='name'>
                 {
                   !user
-                    ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[50, 100]} />
+                    ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[25, 50]} />
                     : user.displayName
                 }
               </Heading3>
               <Heading4>
                 {
                   !user
-                    ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[50, 100]} />
+                    ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[25, 50]} />
                     : user.userPrincipalName
                 }
               </Heading4>
               <div className='other'>
                 <Paragraph>
-                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : user.samAccountName}
+                  {
+                    !user
+                      ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[20, 40]} />
+                      : user.samAccountName
+                  }
                 </Paragraph>
                 <Paragraph>
-                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='200px' /> : user.office}
+                  {
+                    !user
+                      ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[25, 50]} />
+                      : user.office
+                  }
                 </Paragraph>
                 <Paragraph>
-                  {!user ? <Skeleton style={{ marginBottom: 5 }} width='180px' /> : user.domain === 'login' ? user.title : 'Elev'}
+                  {
+                    !user
+                      ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[20, 40]} />
+                      : user.domain === 'login' ? user.title : 'Elev'
+                  }
                 </Paragraph>
               </div>
             </div>
