@@ -7,8 +7,8 @@
   @media(max-width: 1000px) {
     padding-left: 0;
     padding-bottom: $baseUnit * 3;
-    display: flex;
-    flex-wrap: nowrap;
+    // display: flex;
+    // flex-wrap: nowrap;
     overflow: hidden;
     position: relative;
   }
