@@ -1,3 +1,5 @@
+const { APP: { IS_MOCK } } = require('../config')
+
 const validateDate = digits => {
   const day = digits.substring(0, 2)
   const month = digits.substring(2, 4)
@@ -34,6 +36,7 @@ const validateChecksum = digits => {
  */
 module.exports = digits => {
   if (!digits || digits.length !== 11) return { valid: false, error: 'Fødselsnummeret har ugyldig lengde' }
+  if (IS_MOCK && Number.isInteger(Number.parseInt(digits))) return { valid: true, type: 'Mock-nummer' }
 
   const isDnr = parseInt(digits.substring(0, 1)) > 3
   const isVnr = isDnr && parseInt(digits.substring(6, 8)) === 99
