@@ -22,6 +22,8 @@ import { APP } from '../../config'
 
 import systemsList from '../../data/systems.json'
 
+import maskData from '../../lib/mask-data'
+
 import './styles.scss'
 import { Layout } from '../../layout'
 
@@ -59,6 +61,11 @@ export const Detail = () => {
   useEffect(() => {
     async function getReport () {
       const { data, headers, status } = await apiGet(`${APP.API_URL}/report/${id}`, true)
+      maskData(data, {
+        ssn: {
+          char: '*'
+        }
+      })
 
       if (status === 200) {
         setLoading(false)
