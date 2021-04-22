@@ -59,11 +59,9 @@ module.exports = (data, options) => {
 
   if (typeof data === 'object' && data !== null && data !== undefined) {
     if (options.ssn) data = maskSSNInObject(data, (Number.isInteger(options.ssn.start) && options.ssn.start > -1 ? options.ssn.start : 6), (Number.isInteger(options.ssn.end) && options.ssn.end > -1 ? options.ssn.end : 11), options.ssn.char)
-  }
-  else if (Array.isArray(data)) {
+  } else if (Array.isArray(data)) {
     if (options.ssn) data = maskSSNInArray(data, (Number.isInteger(options.ssn.start) && options.ssn.start > -1 ? options.ssn.start : 6), (Number.isInteger(options.ssn.end) && options.ssn.end > -1 ? options.ssn.end : 11), options.ssn.char)
-  }
-  else if (typeof data === 'string') {
+  } else if (typeof data === 'string') {
     if (options.ssn && isValidFnr(data).valid) data = maskText(data, (Number.isInteger(options.ssn.start) && options.ssn.start > -1 ? options.ssn.start : 6), (Number.isInteger(options.ssn.end) && options.ssn.end > -1 ? options.ssn.end : 11), options.ssn.char)
   }
 
