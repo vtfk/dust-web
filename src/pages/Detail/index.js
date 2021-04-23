@@ -212,7 +212,7 @@ export const Detail = () => {
                   {
                     !user
                       ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[20, 40]} />
-                      : user.domain === 'login' ? user.title : 'Elev'
+                      : user.domain ? user.domain === 'login' ? user.title : 'Elev' : ''
                   }
                 </Paragraph>
               </div>
