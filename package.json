@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "msw": "0.28.2",
-    "quick-score": "0.0.11",
+    "quick-score": "0.0.12",
     "standard": "16.0.3"
   },
   "msw": {
