@@ -31,6 +31,7 @@ export const Detail = () => {
   const [loading, setLoading] = useState(true)
   const [expandedItemIndex, setExpandedItemIndex] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
+  const [resultError, setResultError] = useState(null)
   const [results, setResults] = useState(null)
   const [user, setUser] = useState(null)
   const [systems, setSystems] = useState(null)
@@ -67,7 +68,20 @@ export const Detail = () => {
         }
       })
 
-      if (status === 200) {
+      if (data === undefined && headers === undefined && status === undefined) {
+        // something went wrong
+        setLoading(false)
+        setResultError('Noe gikk galt. Siden kan ikke vises')
+        setResults(null)
+        setUser({
+          givenName: 'Not',
+          surName: 'Available',
+          displayName: 'Ikke tilgjengelig',
+          userPrincipalName: 'ikke.tilgjengelig@vtfk.no',
+          samAccountName: 'ikk4242',
+          office: 'Syndebukk'
+        })
+      } else if (status === 200) {
         setLoading(false)
         setVigoBasStamp(prettifyDate(new Date(data.vigobas.lastRunTime)))
         normalizeAndSetResults(data.data)
@@ -351,6 +365,13 @@ export const Detail = () => {
                 <Heading4 className='info-timestamp'>
                   <strong>Siste kjøring av VigoBas:</strong> {vigoBasStamp}
                 </Heading4>
+            }
+
+            {
+              !loading &&
+              !results &&
+              resultError &&
+                <Heading3>{resultError}</Heading3>
             }
           </div>
         </div>
