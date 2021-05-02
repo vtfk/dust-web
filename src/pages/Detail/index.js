@@ -89,7 +89,7 @@ export const Detail = () => {
       } else if (status === 202) {
         const retryMs = headers['retry-after']
         if (data.user) setUser(data.user)
-        if (data.systems) setSystems(data.systems.filter(system => system !== 'vigobas'))
+        if (data.systems) setSystems(data.systems)
         setTimeout(getReport, retryMs)
       }
     }
