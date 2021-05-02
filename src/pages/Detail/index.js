@@ -291,6 +291,14 @@ export const Detail = () => {
                       open &&
                         <div className='result-table-row-detail'>
                           {
+                            item.error &&
+                            <div className='result-table-row-detail-error'>
+                              <Paragraph><strong>Feil</strong>: {item.error.error}</Paragraph>
+                            </div>
+                          }
+
+                          {
+                            item.data &&
                             item.errorCount > 0 &&
                             item.errorTests.map((testItem, index) => {
                               return (
@@ -306,6 +314,7 @@ export const Detail = () => {
                           }
 
                           {
+                            item.data &&
                             item.warningCount > 0 &&
                             item.warningTests.map((testItem, index) => {
                               return (
@@ -321,6 +330,7 @@ export const Detail = () => {
                           }
 
                           {
+                            item.data &&
                             item.okCount > 0 &&
                             item.okTests.map((testItem, index) => {
                               return (
@@ -336,6 +346,7 @@ export const Detail = () => {
                           }
 
                           {
+                            item.data &&
                             item.errorCount === 0 &&
                             item.warningCount === 0 &&
                             item.okCount === 0 &&
