@@ -31,6 +31,7 @@ export const Detail = () => {
   const [loading, setLoading] = useState(true)
   const [expandedItemIndex, setExpandedItemIndex] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
+  const [resultError, setResultError] = useState(null)
   const [results, setResults] = useState(null)
   const [user, setUser] = useState(null)
   const [systems, setSystems] = useState(null)
@@ -67,7 +68,20 @@ export const Detail = () => {
         }
       })
 
-      if (status === 200) {
+      if (data === undefined && headers === undefined && status === undefined) {
+        // something went wrong
+        setLoading(false)
+        setResultError('Noe gikk galt. Siden kan ikke vises')
+        setResults(null)
+        setUser({
+          givenName: 'Not',
+          surName: 'Available',
+          displayName: 'Ikke tilgjengelig',
+          userPrincipalName: 'ikke.tilgjengelig@vtfk.no',
+          samAccountName: 'ikk4242',
+          office: 'Syndebukk'
+        })
+      } else if (status === 200) {
         setLoading(false)
         setVigoBasStamp(prettifyDate(new Date(data.vigobas.lastRunTime)))
         normalizeAndSetResults(data.data)
@@ -75,7 +89,7 @@ export const Detail = () => {
       } else if (status === 202) {
         const retryMs = headers['retry-after']
         if (data.user) setUser(data.user)
-        if (data.systems) setSystems(data.systems.filter(system => system !== 'vigobas'))
+        if (data.systems) setSystems(data.systems)
         setTimeout(getReport, retryMs)
       }
     }
@@ -277,6 +291,14 @@ export const Detail = () => {
                       open &&
                         <div className='result-table-row-detail'>
                           {
+                            item.error &&
+                            <div className='result-table-row-detail-error'>
+                              <Paragraph><strong>Feil</strong>: {item.error.error}</Paragraph>
+                            </div>
+                          }
+
+                          {
+                            item.data &&
                             item.errorCount > 0 &&
                             item.errorTests.map((testItem, index) => {
                               return (
@@ -292,6 +314,7 @@ export const Detail = () => {
                           }
 
                           {
+                            item.data &&
                             item.warningCount > 0 &&
                             item.warningTests.map((testItem, index) => {
                               return (
@@ -307,6 +330,7 @@ export const Detail = () => {
                           }
 
                           {
+                            item.data &&
                             item.okCount > 0 &&
                             item.okTests.map((testItem, index) => {
                               return (
@@ -322,6 +346,7 @@ export const Detail = () => {
                           }
 
                           {
+                            item.data &&
                             item.errorCount === 0 &&
                             item.warningCount === 0 &&
                             item.okCount === 0 &&
@@ -351,6 +376,13 @@ export const Detail = () => {
                 <Heading4 className='info-timestamp'>
                   <strong>Siste kjøring av VigoBas:</strong> {vigoBasStamp}
                 </Heading4>
+            }
+
+            {
+              !loading &&
+              !results &&
+              resultError &&
+                <Heading3>{resultError}</Heading3>
             }
           </div>
         </div>
