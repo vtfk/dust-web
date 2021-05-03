@@ -299,9 +299,9 @@ export const Detail = () => {
                         <div className='result-table-row-detail'>
                           {
                             item.error &&
-                            <div className='result-table-row-detail-error'>
-                              <Paragraph><strong>Feil</strong>: {item.error.error}</Paragraph>
-                            </div>
+                              <div className='result-table-row-detail-error'>
+                                <Paragraph><strong>Feil</strong>: {item.error.error}</Paragraph>
+                              </div>
                           }
 
                           {
