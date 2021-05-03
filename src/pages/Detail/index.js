@@ -41,6 +41,11 @@ export const Detail = () => {
   const { apiGet } = useSession()
   const { id } = useParams()
 
+  const callFailed = (data, headers, status) => data === undefined && headers === undefined && status === undefined
+  const isUserEmpty = user => user && typeof user === 'object' && Object.getOwnPropertyNames(user).length === 2
+  const isDataEmpty = data => data && data.filter(system => system.data && system.data.length > 0).length === 0
+  const callHasNoData = (user, data) => isUserEmpty(user) && isDataEmpty(data)
+
   function padDate (num) {
     return num >= 10 ? num : `0${num}`
   }
@@ -68,19 +73,21 @@ export const Detail = () => {
         }
       })
 
-      if (data === undefined && headers === undefined && status === undefined) {
+      if (callFailed(data, headers, status) || callHasNoData(data?.user, data?.data)) {
         // something went wrong
         setLoading(false)
-        setResultError('Noe gikk galt. Siden kan ikke vises')
+        setResultError(isUserEmpty(data?.user) ? 'Bruker ikke funnet' : isDataEmpty(data?.data) ? 'Brukerdata ikke funnet' : 'Noe gikk galt')
         setResults(null)
-        setUser({
-          givenName: 'Not',
-          surName: 'Available',
-          displayName: 'Ikke tilgjengelig',
-          userPrincipalName: 'ikke.tilgjengelig@vtfk.no',
-          samAccountName: 'ikk4242',
-          office: 'Syndebukk'
-        })
+        setUser(!data || !data.user || isUserEmpty(data.user)
+          ? {
+              givenName: 'Not',
+              surName: 'Available',
+              displayName: data?.user?.displayName || 'Ikke tilgjengelig',
+              userPrincipalName: data?.user?.userPrincipalName || 'ikke.tilgjengelig@vtfk.no',
+              samAccountName: data?.user?.samAccountName || 'ikk4242',
+              office: 'Syndebukk'
+            }
+          : data.user)
       } else if (status === 200) {
         setLoading(false)
         setVigoBasStamp(prettifyDate(new Date(data.vigobas.lastRunTime)))
