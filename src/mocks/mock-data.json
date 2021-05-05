@@ -383,6 +383,62 @@
           }
         }
       ]
+    },
+    {
+      "name": "sync",
+      "timestamp": "2021-05-05T13:31:33.352915Z",
+      "data": {
+        "vigobas": {
+          "lastRunTime": "2021-05-05T04:35:03.0852857+02:00"
+        },
+        "aadSync": {
+          "lastAzureADSyncTime": "2021-05-05T13:27:05Z"
+        }
+      },
+      "status": 200,
+      "tests": [
+        {
+          "id": "sync-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "sync-02",
+          "title": "Har vigobas lastRunTime",
+          "description": "Sjekker siste kjøringstidspunkt for Vigobas",
+          "result": {
+            "status": "ok",
+            "message": "Kjøretidspunkt for Vigobas er gyldig",
+            "raw": {
+              "lastRunTime": "2021-05-05T04:35:03.0852857+02:00",
+              "check": {
+                "result": true,
+                "seconds": 39393.613
+              }
+            }
+          }
+        },
+        {
+          "id": "sync-03",
+          "title": "Har aad lastAzureADSyncTime",
+          "description": "Sjekker siste synkroniseringstidspunkt for Azure AD",
+          "result": {
+            "status": "ok",
+            "message": "Synkroniseringstidspunkt for Azure AD er gyldig",
+            "raw": {
+              "lastAzureADSyncTime": "2021-05-05T13:27:05Z",
+              "check": {
+                "result": true,
+                "seconds": 271.698
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   [
@@ -2088,6 +2144,62 @@
           }
         }
       ]
+    },
+    {
+      "name": "sync",
+      "timestamp": "2021-05-05T13:31:33.352915Z",
+      "data": {
+        "vigobas": {
+          "lastRunTime": "2021-05-05T04:35:03.0852857+02:00"
+        },
+        "aadSync": {
+          "lastAzureADSyncTime": "2021-05-05T13:27:05Z"
+        }
+      },
+      "status": 200,
+      "tests": [
+        {
+          "id": "sync-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "sync-02",
+          "title": "Har vigobas lastRunTime",
+          "description": "Sjekker siste kjøringstidspunkt for Vigobas",
+          "result": {
+            "status": "ok",
+            "message": "Kjøretidspunkt for Vigobas er gyldig",
+            "raw": {
+              "lastRunTime": "2021-05-05T04:35:03.0852857+02:00",
+              "check": {
+                "result": true,
+                "seconds": 39393.613
+              }
+            }
+          }
+        },
+        {
+          "id": "sync-03",
+          "title": "Har aad lastAzureADSyncTime",
+          "description": "Sjekker siste synkroniseringstidspunkt for Azure AD",
+          "result": {
+            "status": "ok",
+            "message": "Synkroniseringstidspunkt for Azure AD er gyldig",
+            "raw": {
+              "lastAzureADSyncTime": "2021-05-05T13:27:05Z",
+              "check": {
+                "result": true,
+                "seconds": 271.698
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   [
@@ -3534,6 +3646,62 @@
             "message": "UPN er korrekt",
             "raw": {
               "userPrincipalName": "barmhjertig.morfar@vtfk.no"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "sync",
+      "timestamp": "2021-05-05T13:31:33.352915Z",
+      "data": {
+        "vigobas": {
+          "lastRunTime": "2021-05-05T04:35:03.0852857+02:00"
+        },
+        "aadSync": {
+          "lastAzureADSyncTime": "2021-05-05T13:27:05Z"
+        }
+      },
+      "status": 200,
+      "tests": [
+        {
+          "id": "sync-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "sync-02",
+          "title": "Har vigobas lastRunTime",
+          "description": "Sjekker siste kjøringstidspunkt for Vigobas",
+          "result": {
+            "status": "ok",
+            "message": "Kjøretidspunkt for Vigobas er gyldig",
+            "raw": {
+              "lastRunTime": "2021-05-05T04:35:03.0852857+02:00",
+              "check": {
+                "result": true,
+                "seconds": 39393.613
+              }
+            }
+          }
+        },
+        {
+          "id": "sync-03",
+          "title": "Har aad lastAzureADSyncTime",
+          "description": "Sjekker siste synkroniseringstidspunkt for Azure AD",
+          "result": {
+            "status": "ok",
+            "message": "Synkroniseringstidspunkt for Azure AD er gyldig",
+            "raw": {
+              "lastAzureADSyncTime": "2021-05-05T13:27:05Z",
+              "check": {
+                "result": true,
+                "seconds": 271.698
+              }
             }
           }
         }

@@ -35,7 +35,7 @@ export const Detail = () => {
   const [results, setResults] = useState(null)
   const [user, setUser] = useState(null)
   const [systems, setSystems] = useState(null)
-  const [vigoBasStamp, setVigoBasStamp] = useState(null)
+  const [vigoBasStamp, setVigoBasStamp] = useState(null) // this is needed to support legacy data (vigobas at root of document)
   const [rawDetails, setRawDetails] = useState(null)
   const [rawDetailsTitle, setRawDetailsTitle] = useState('Lukk')
   const { apiGet } = useSession()
@@ -90,7 +90,7 @@ export const Detail = () => {
           : data.user)
       } else if (status === 200) {
         setLoading(false)
-        setVigoBasStamp(prettifyDate(new Date(data.vigobas.lastRunTime)))
+        if (data?.vigobas?.lastRunTime) setVigoBasStamp(prettifyDate(new Date(data.vigobas.lastRunTime)))
         normalizeAndSetResults(data.data)
         setUser(data.user)
       } else if (status === 202) {

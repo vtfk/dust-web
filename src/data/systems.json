@@ -20,6 +20,10 @@
     "short": "sds"
   },
   {
+    "name": "Synkronisering",
+    "short": "sync"
+  },
+  {
     "name": "Visma",
     "short": "visma"
   }

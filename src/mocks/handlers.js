@@ -5,6 +5,8 @@ import { APP } from '../config'
 import users from './mock-users.json'
 import mockdata from './mock-data.json'
 
+import systemsList from '../data/systems.json'
+
 export const generateErrorObject = (statusCode, message, innerError) => {
   return {
     error: {
@@ -36,18 +38,10 @@ const getRandomObjectId = () => {
   }).toLowerCase()
 }
 
-const getMockDate = () => ({ lastRunTime: new Date(new Date().setHours(7)) })
-
 const getRandomExpectedType = () => {
   const types = ['employee', 'student']
   const typeNum = Math.random() * types.length | 0
   return types[typeNum]
-}
-
-const getRandomSystems = () => {
-  const systems = ['ad', 'visma', 'extens', 'aad', 'sds', 'feide']
-  const systemCount = ((Math.random() * (systems.length) | 0) + 1)
-  return systems.slice(0, systemCount)
 }
 
 const getUser = incompleteUser => {
@@ -92,15 +86,14 @@ export const handlers = [
 
     // Set default values
     if (!user.expectedType) user.expectedType = getRandomExpectedType()
-    if (!systems || !Array.isArray(systems)) systems = getRandomSystems()
+    if (!systems || !Array.isArray(systems)) systems = systemsList.map(system => system.short)
 
     // Create report object
     const report = {
       _id: getRandomObjectId(),
       user,
       systems,
-      started: new Date().toISOString(),
-      vigobas: getMockDate()
+      started: new Date().toISOString()
     }
 
     // Legg rapport i session storage, så vi finner den seinere
@@ -168,7 +161,6 @@ export const handlers = [
     // Trenger ikke disse i body (kun i objektet som lagres i SessionStorage)
     delete report.data
     delete report.finished
-    delete report.vigobas
 
     // Sett retry-after og location
     return res(
