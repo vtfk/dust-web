@@ -265,7 +265,7 @@ export const Detail = () => {
                           <Spinner size='auto' />
                         </div>
                         <div className='result-table-row-name'>
-                          <div className='result-table-row-name-loading'>Henter status for {system}...</div>
+                          <div className='result-table-row-name-loading'>Henter status for {repackSystemName(system)}...</div>
                         </div>
                       </div>
                     </div>
