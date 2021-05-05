@@ -107,15 +107,17 @@ export const Detail = () => {
 
   function sortSystems (systems) {
     return systems.sort((a, b) => {
-      const a1 = a.name[0].toLowerCase()
-      const a2 = a.name[1].toLowerCase()
-      const b1 = b.name[0].toLowerCase()
-      const b2 = b.name[1].toLowerCase()
+      const dnA = systemsList.filter(system => system.short === a.name)[0] || a
+      const dnB = systemsList.filter(system => system.short === b.name)[0] || b
+      const a1 = dnA.name[0].toLowerCase()
+      const a2 = dnA.name[1].toLowerCase()
+      const b1 = dnB.name[0].toLowerCase()
+      const b2 = dnB.name[1].toLowerCase()
       if (a1 < b1) return -1
       if (a1 > b1) return 1
       if (a1 === b1) {
-        if (a2 < b2) return 1
-        if (a2 > b2) return -1
+        if (a2 < b2) return -1
+        if (a2 > b2) return 1
       }
       return 0
     })
