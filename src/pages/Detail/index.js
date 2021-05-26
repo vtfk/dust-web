@@ -302,7 +302,7 @@ export const Detail = () => {
                           {
                             item.error &&
                               <div className='result-table-row-detail-error'>
-                                <Paragraph><strong>Feil</strong>: {item.error.error}</Paragraph>
+                                <Paragraph><strong>Feil</strong>: {item.error.error || item.error}</Paragraph>
                               </div>
                           }
 
