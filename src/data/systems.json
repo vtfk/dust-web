@@ -8,10 +8,6 @@
     "short": "aad"
   },
   {
-    "name": "Extens",
-    "short": "pifu"
-  },
-  {
     "name": "FEIDE",
     "short": "feide"
   },
@@ -26,5 +22,9 @@
   {
     "name": "Visma",
     "short": "visma"
+  },
+  {
+    "name": "Visma InSchool",
+    "short": "vis"
   }
 ]
