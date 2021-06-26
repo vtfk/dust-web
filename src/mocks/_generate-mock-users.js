@@ -51,6 +51,7 @@ const getUser = (fregPerson, employee = false) => {
     timestamp: new Date().toISOString(),
     enabled: getRandom(0, 100) !== 42,
     ou: getRandom(0, 100) === 42 ? 'AUTO DISABLED USERS' : 'AUTO USERS',
+    extensionAttribute7: employee ? getRandom(0, 100) !== 42 ? 'OF-ALLE' : null : null,
     departmentShort: employee ? department.extensionAttribute6 : department.department,
     departmentAdditional: null,
     office: employee ? department.physicalDeliveryOfficeName : department.company,
