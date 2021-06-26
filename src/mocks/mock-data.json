@@ -959,191 +959,264 @@
       "tests": []
     },
     {
-      "name": "pifu",
+      "name": "vis",
       "timestamp": "2021-03-23T11:53:51.6544597Z",
       "data": {
         "person": {
-          "sourcedid": {
-            "source": "TFK",
-            "id": "01010112345"
+          "navn": {
+            "fornavn": "FALSK",
+            "mellomnavn": null,
+            "etternavn": "TORSK"
           },
-          "userid": [
-            {
-              "text": "01010112345",
-              "useridtype": "personNIN"
-            },
-            {
-              "text": "FATO1",
-              "useridtype": "username"
-            },
-            {
-              "text": "FATO1",
-              "useridtype": "workforceID"
-            }
-          ],
-          "name": {
-            "fn": "FALSK TORSK",
-            "n": {
-              "family": "TORSK",
-              "given": "FALSK TORSK"
-            }
+          "kontaktinformasjon": {
+            "epostadresse": null,
+            "mobiltelefonnummer": "01010112345",
+            "telefonnummer": "01010112345"
           },
-          "demographics": {
-            "gender": 1,
-            "bday": "2000-10-18"
+          "fodselsdato": "2001-01-01T00:00:00Z",
+          "fodselsnummer": {
+            "identifikatorverdi": "01010112345"
           },
-          "email": "fal0101@hotmail.no",
-          "tel": {
-            "text": "+4712345678",
-            "teltype": "3"
+          "kjonn": {
+            "kode": "2"
           },
-          "adr": {
-            "street": "Veienveien 96",
-            "locality": "NOTODDEN",
-            "pcode": 3678
+          "bostedsadresse": {
+            "adresselinje": [
+              "Veien 78611"
+            ],
+            "postnummer": "9999",
+            "poststed": "BORDPLATE"
           },
-          "extension": {
-            "pifu_email": {
-              "text": "fal0101@hotmail.no",
-              "type": "personEmailPrivate"
+          "elev": null,
+          "personalressurs": {
+            "ansettelsesperiode": {
+              "start": "2009-02-16T00:00:00Z",
+              "slutt": null
             },
-            "pifu_tel": {
-              "text": "+4712345678",
-              "type": "personMobileAtOrg"
-            },
-            "pifu_adr": {
-              "type": "personPostalAddressPrivate",
-              "adr": {
-                "street": "Veienveien 96",
-                "locality": "NOTODDEN",
-                "pcode": 3678
-              }
-            }
-          }
-        },
-        "memberships": [
-          {
-            "sourcedid": {
-              "source": "TFK",
-              "id": "NOTVS@38006"
-            },
-            "member": {
-              "sourcedid": {
-                "source": "TFK",
-                "id": "01010112345"
+            "arbeidsforhold": [
+              {
+                "stillingstittel": "Sensor",
+                "ansettelsesprosent": 0,
+                "gyldighetsperiode": {
+                  "start": "2020-01-01T00:00:00Z",
+                  "slutt": "2020-08-31T23:59:59Z"
+                },
+                "undervisningsforhold": [
+                  {
+                    "navn": "3STG/HIS1002",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  },
+                  {
+                    "navn": "3STG/NOR1211",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  },
+                  {
+                    "navn": "3STG/KRO1006",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  }
+                ]
               },
-              "idtype": 1,
-              "role": {
-                "roletype": "04",
-                "status": 1
-              }
-            }
-          },
-          {
-            "sourcedid": {
-              "source": "TFK",
-              "id": "00000000008"
-            },
-            "member": {
-              "sourcedid": {
-                "source": "TFK",
-                "id": "01010112345"
+              {
+                "stillingstittel": "Adjunkt",
+                "ansettelsesprosent": 10000,
+                "gyldighetsperiode": {
+                  "start": "2020-09-01T00:00:00Z",
+                  "slutt": null
+                },
+                "undervisningsforhold": [
+                  {
+                    "navn": "3STG/HIS1002",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  },
+                  {
+                    "navn": "3STG/NOR1211",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  },
+                  {
+                    "navn": "3STG/KRO1006",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  }
+                ]
               },
-              "idtype": 1,
-              "role": {
-                "roletype": "02",
-                "status": 1
+              {
+                "stillingstittel": "Sensor",
+                "ansettelsesprosent": 0,
+                "gyldighetsperiode": {
+                  "start": "2020-09-01T00:00:00Z",
+                  "slutt": null
+                },
+                "undervisningsforhold": [
+                  {
+                    "navn": "3STG/HIS1002",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  },
+                  {
+                    "navn": "3STG/NOR1211",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  },
+                  {
+                    "navn": "3STG/KRO1006",
+                    "periode": [
+                      {
+                        "start": "2020-08-17T00:00:00Z",
+                        "slutt": "2021-06-18T00:00:00Z"
+                      }
+                    ],
+                    "skolear": {
+                      "navn": "20202021"
+                    },
+                    "skole": {
+                      "navn": "Porsgrunn videregående skole"
+                    }
+                  }
+                ]
               }
-            }
+            ]
           }
-        ]
+        }
       },
       "status": 200,
       "tests": [
         {
-          "id": "pifu-01",
-          "title": "Har et person-objekt",
-          "description": "Sjekker at det finnes et person-objekt",
+          "id": "vis-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
           "result": {
             "status": "ok",
-            "message": "Har et person-objekt",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "vis-02",
+          "title": "Har aktivt forhold",
+          "description": "Sjekker at bruker har aktivt forhold",
+          "result": {
+            "status": "ok",
+            "message": "Bruker har aktivt ansattforhold",
             "raw": {
-              "person": {
-                "sourcedid": {
-                  "source": "TFK",
-                  "id": "01010112345"
+              "employee": {
+                "active": true,
+                "ansettelsesperiode": {
+                  "start": "2005-08-12T00:00:00Z",
+                  "slutt": null
                 },
-                "userid": [
+                "arbeidsforhold": [
                   {
-                    "text": "01010112345",
-                    "useridtype": "personNIN"
+                    "stillingstittel": "Konsulent",
+                    "ansettelsesprosent": 10000,
+                    "gyldighetsperiode": {
+                      "start": "2020-05-22T00:00:00Z",
+                      "slutt": "2020-08-31T23:59:59Z"
+                    },
+                    "undervisningsforhold": null
                   },
                   {
-                    "text": "FATO1",
-                    "useridtype": "username"
-                  },
-                  {
-                    "text": "FATO1",
-                    "useridtype": "workforceID"
+                    "stillingstittel": "Konsulent",
+                    "ansettelsesprosent": 10000,
+                    "gyldighetsperiode": {
+                      "start": "2020-09-01T00:00:00Z",
+                      "slutt": null
+                    },
+                    "undervisningsforhold": null
                   }
-                ],
-                "name": {
-                  "fn": "FALSK TORSK",
-                  "n": {
-                    "family": "TORSK",
-                    "given": "FALSK TORSK"
-                  }
-                },
-                "demographics": {
-                  "gender": 1,
-                  "bday": "2000-10-18"
-                },
-                "email": "fal0101@hotmail.no",
-                "tel": {
-                  "text": "+4712345678",
-                  "teltype": "3"
-                },
-                "adr": {
-                  "street": "Veienveien 96",
-                  "locality": "NOTODDEN",
-                  "pcode": 3678
-                },
-                "extension": {
-                  "pifu_email": {
-                    "text": "fal0101@hotmail.no",
-                    "type": "personEmailPrivate"
-                  },
-                  "pifu_tel": {
-                    "text": "+4712345678",
-                    "type": "personMobileAtOrg"
-                  },
-                  "pifu_adr": {
-                    "type": "personPostalAddressPrivate",
-                    "adr": {
-                      "street": "Veienveien 96",
-                      "locality": "NOTODDEN",
-                      "pcode": 3678
-                    }
-                  }
-                }
+                ]
+              },
+              "student": {
+                "active": false
               }
             }
           }
         },
         {
-          "id": "pifu-02",
-          "title": "Har riktig person-type",
-          "description": "Sjekker at det er riktig person-type",
-          "result": {
-            "status": "error",
-            "message": "Person-objekt har feil person-type",
-            "raw": [
-              "workforceID"
-            ]
-          }
-        },
-        {
-          "id": "pifu-03",
+          "id": "vis-03",
           "title": "Har gyldig fødselsnummer",
           "description": "Sjekker at fødselsnummer er gyldig",
           "result": {
@@ -1159,14 +1232,14 @@
           }
         },
         {
-          "id": "pifu-04",
+          "id": "vis-04",
           "title": "Fødselsnummer er likt i AD",
-          "description": "Sjekker at fødselsnummeret er likt i AD og Extens",
+          "description": "Sjekker at fødselsnummeret er likt i AD og ViS",
           "result": {
             "status": "ok",
-            "message": "Fødselsnummer er likt i AD og Extens",
+            "message": "Fødselsnummer er likt i AD og ViS",
             "raw": {
-              "pifu": {
+              "vis": {
                 "id": "01010112345"
               },
               "ad": {
@@ -1176,321 +1249,30 @@
           }
         },
         {
-          "id": "pifu-05",
-          "title": "Har aktive gruppemedlemskap",
-          "description": "Sjekker at det finnes aktive gruppemedlemskap",
+          "id": "vis-05",
+          "title": "Har gruppemedlemskap",
+          "description": "Sjekker at det finnes gruppemedlemskap",
           "result": {
-            "status": "error",
-            "message": "Har ingen aktive gruppemedlemskap",
-            "raw": {
-              "person": {
-                "sourcedid": {
-                  "source": "TFK",
-                  "id": "01010112345"
-                },
-                "userid": [
-                  {
-                    "text": "01010112345",
-                    "useridtype": "personNIN"
-                  },
-                  {
-                    "text": "FATO1",
-                    "useridtype": "username"
-                  },
-                  {
-                    "text": "FATO1",
-                    "useridtype": "workforceID"
-                  }
-                ],
-                "name": {
-                  "fn": "FALSK TORSK",
-                  "n": {
-                    "family": "TORSK",
-                    "given": "FALSK TORSK"
-                  }
-                },
-                "demographics": {
-                  "gender": 1,
-                  "bday": "2000-10-18"
-                },
-                "email": "fal0101@hotmail.no",
-                "tel": {
-                  "text": "+4712345678",
-                  "teltype": "3"
-                },
-                "adr": {
-                  "street": "Veienveien 96",
-                  "locality": "NOTODDEN",
-                  "pcode": 3678
-                },
-                "extension": {
-                  "pifu_email": {
-                    "text": "fal0101@hotmail.no",
-                    "type": "personEmailPrivate"
-                  },
-                  "pifu_tel": {
-                    "text": "+4712345678",
-                    "type": "personMobileAtOrg"
-                  },
-                  "pifu_adr": {
-                    "type": "personPostalAddressPrivate",
-                    "adr": {
-                      "street": "Veienveien 96",
-                      "locality": "NOTODDEN",
-                      "pcode": 3678
-                    }
-                  }
-                }
-              },
-              "memberships": [
-                {
-                  "sourcedid": {
-                    "source": "TFK",
-                    "id": "NOTVS@38006"
-                  },
-                  "member": {
-                    "sourcedid": {
-                      "source": "TFK",
-                      "id": "01010112345"
-                    },
-                    "idtype": 1,
-                    "role": {
-                      "roletype": "04",
-                      "status": 1
-                    }
-                  }
-                },
-                {
-                  "sourcedid": {
-                    "source": "TFK",
-                    "id": "00000000008"
-                  },
-                  "member": {
-                    "sourcedid": {
-                      "source": "TFK",
-                      "id": "01010112345"
-                    },
-                    "idtype": 1,
-                    "role": {
-                      "roletype": "02",
-                      "status": 1
-                    }
-                  }
-                }
-              ]
-            }
+            "status": "no-data",
+            "message": "Har ingen gruppemedlemskap"
           }
         },
         {
-          "id": "pifu-06",
-          "title": "Har riktig rolletype",
-          "description": "Sjekker at det er riktig rolletype i gruppemedlemskapene",
+          "id": "vis-06",
+          "title": "Gruppemedlemskap er inaktive",
+          "description": "Sjekker om noen gruppemedlemskap er inaktive",
           "result": {
-            "status": "error",
-            "message": "Har ingen aktive gruppemedlemskap",
-            "raw": {
-              "person": {
-                "sourcedid": {
-                  "source": "TFK",
-                  "id": "01010112345"
-                },
-                "userid": [
-                  {
-                    "text": "01010112345",
-                    "useridtype": "personNIN"
-                  },
-                  {
-                    "text": "FATO1",
-                    "useridtype": "username"
-                  },
-                  {
-                    "text": "FATO1",
-                    "useridtype": "workforceID"
-                  }
-                ],
-                "name": {
-                  "fn": "FALSK TORSK",
-                  "n": {
-                    "family": "TORSK",
-                    "given": "FALSK TORSK"
-                  }
-                },
-                "demographics": {
-                  "gender": 1,
-                  "bday": "2000-10-18"
-                },
-                "email": "fal0101@hotmail.no",
-                "tel": {
-                  "text": "+4712345678",
-                  "teltype": "3"
-                },
-                "adr": {
-                  "street": "Veienveien 96",
-                  "locality": "NOTODDEN",
-                  "pcode": 3678
-                },
-                "extension": {
-                  "pifu_email": {
-                    "text": "fal0101@hotmail.no",
-                    "type": "personEmailPrivate"
-                  },
-                  "pifu_tel": {
-                    "text": "+4712345678",
-                    "type": "personMobileAtOrg"
-                  },
-                  "pifu_adr": {
-                    "type": "personPostalAddressPrivate",
-                    "adr": {
-                      "street": "Veienveien 96",
-                      "locality": "NOTODDEN",
-                      "pcode": 3678
-                    }
-                  }
-                }
-              },
-              "memberships": [
-                {
-                  "sourcedid": {
-                    "source": "TFK",
-                    "id": "NOTVS@38006"
-                  },
-                  "member": {
-                    "sourcedid": {
-                      "source": "TFK",
-                      "id": "01010112345"
-                    },
-                    "idtype": 1,
-                    "role": {
-                      "roletype": "04",
-                      "status": 1
-                    }
-                  }
-                },
-                {
-                  "sourcedid": {
-                    "source": "TFK",
-                    "id": "00000000008"
-                  },
-                  "member": {
-                    "sourcedid": {
-                      "source": "TFK",
-                      "id": "01010112345"
-                    },
-                    "idtype": 1,
-                    "role": {
-                      "roletype": "02",
-                      "status": 1
-                    }
-                  }
-                }
-              ]
-            }
+            "status": "no-data",
+            "message": "Har ingen avsluttede gruppemedlemskap"
           }
         },
         {
-          "id": "pifu-07",
-          "title": "Gruppemedlemskapet er gyldig",
-          "description": "Sjekker at gruppemedlemskapene ikke er avlsuttet",
+          "id": "vis-07",
+          "title": "Gruppemedlemskap er aktive",
+          "description": "Sjekker at gruppemedlemskap er aktive",
           "result": {
-            "status": "error",
-            "message": "Har ingen aktive gruppemedlemskap",
-            "raw": {
-              "person": {
-                "sourcedid": {
-                  "source": "TFK",
-                  "id": "01010112345"
-                },
-                "userid": [
-                  {
-                    "text": "01010112345",
-                    "useridtype": "personNIN"
-                  },
-                  {
-                    "text": "FATO1",
-                    "useridtype": "username"
-                  },
-                  {
-                    "text": "FATO1",
-                    "useridtype": "workforceID"
-                  }
-                ],
-                "name": {
-                  "fn": "FALSK TORSK",
-                  "n": {
-                    "family": "TORSK",
-                    "given": "FALSK TORSK"
-                  }
-                },
-                "demographics": {
-                  "gender": 1,
-                  "bday": "2000-10-18"
-                },
-                "email": "fal0101@hotmail.no",
-                "tel": {
-                  "text": "+4712345678",
-                  "teltype": "3"
-                },
-                "adr": {
-                  "street": "Veienveien 96",
-                  "locality": "NOTODDEN",
-                  "pcode": 3678
-                },
-                "extension": {
-                  "pifu_email": {
-                    "text": "fal0101@hotmail.no",
-                    "type": "personEmailPrivate"
-                  },
-                  "pifu_tel": {
-                    "text": "+4712345678",
-                    "type": "personMobileAtOrg"
-                  },
-                  "pifu_adr": {
-                    "type": "personPostalAddressPrivate",
-                    "adr": {
-                      "street": "Veienveien 96",
-                      "locality": "NOTODDEN",
-                      "pcode": 3678
-                    }
-                  }
-                }
-              },
-              "memberships": [
-                {
-                  "sourcedid": {
-                    "source": "TFK",
-                    "id": "NOTVS@38006"
-                  },
-                  "member": {
-                    "sourcedid": {
-                      "source": "TFK",
-                      "id": "01010112345"
-                    },
-                    "idtype": 1,
-                    "role": {
-                      "roletype": "04",
-                      "status": 1
-                    }
-                  }
-                },
-                {
-                  "sourcedid": {
-                    "source": "TFK",
-                    "id": "00000000008"
-                  },
-                  "member": {
-                    "sourcedid": {
-                      "source": "TFK",
-                      "id": "01010112345"
-                    },
-                    "idtype": 1,
-                    "role": {
-                      "roletype": "02",
-                      "status": 1
-                    }
-                  }
-                }
-              ]
-            }
+            "status": "no-data",
+            "message": "Har ingen aktive gruppemedlemskap"
           }
         }
       ]
@@ -2680,7 +2462,7 @@
       "tests": []
     },
     {
-      "name": "pifu",
+      "name": "vis",
       "timestamp": "2021-03-23T14:11:07.1432541Z",
       "data": [],
       "status": 200,
