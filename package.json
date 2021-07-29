@@ -13,7 +13,7 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
     "react-syntax-highlighter": "15.4.4",
-    "sass": "1.32.13",
+    "sass": "1.36.0",
     "use-debounce": "7.0.0"
   },
   "scripts": {
