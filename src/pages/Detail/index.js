@@ -184,6 +184,12 @@ export const Detail = () => {
     setModalOpen(false)
   }
 
+  function getOffice () {
+    if (user.domain && user.domain === 'login' && user.state) return `${user.state} - ${user.office}`
+    else if (user.domain && user.domain === 'skole' && user.departmentShort) return `${user.departmentShort.split(':')[1]} - ${user.office}`
+    return user.office
+  }
+
   function repackSystemName (name) {
     const repack = systemsList.filter(system => system.short === name.toLowerCase())
     return repack.length > 0 ? repack[0].name : name.toUpperCase()
@@ -228,7 +234,7 @@ export const Detail = () => {
                   {
                     !user
                       ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[25, 50]} />
-                      : user.office
+                      : getOffice()
                   }
                 </Paragraph>
                 <Paragraph>

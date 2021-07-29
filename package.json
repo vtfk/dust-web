@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sentry/react": "6.3.6",
-    "@sentry/tracing": "6.3.6",
+    "@sentry/react": "6.10.0",
+    "@sentry/tracing": "6.10.0",
     "@vtfk/components": "0.2.1",
     "@vtfk/react-msal": "2.0.0",
     "prop-types": "15.7.2",
@@ -12,9 +12,9 @@
     "react-dom": "17.0.2",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
-    "react-syntax-highlighter": "15.4.3",
-    "sass": "1.32.13",
-    "use-debounce": "6.0.1"
+    "react-syntax-highlighter": "15.4.4",
+    "sass": "1.36.0",
+    "use-debounce": "7.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,7 +46,7 @@
     ]
   },
   "devDependencies": {
-    "msw": "0.29.0",
+    "msw": "0.33.0",
     "quick-score": "0.0.12",
     "standard": "16.0.3"
   },
