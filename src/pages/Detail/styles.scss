@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "~@vtfk/components/src/ui/Tokens/tokens.scss";
 
 .detail {
@@ -43,7 +44,8 @@
       }
 
       .other {
-        margin-top: $baseUnit / 2;
+        /* Changed from "$baseUnit / 2". Division by '/' is deprecated and will be removed in sass 2.x */
+        margin-top: math.div($baseUnit, 2);
       }
     }
 
