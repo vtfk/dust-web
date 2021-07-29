@@ -228,7 +228,7 @@ export const Detail = () => {
                   {
                     !user
                       ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[25, 50]} />
-                      : user.domain ? user.domain === 'login' ? `${user.state} - ${user.office}` : user.office : user.office
+                      : user.domain && user.domain === 'login' && user.state ? `${user.state} - ${user.office}` : user.office
                   }
                 </Paragraph>
                 <Paragraph>
