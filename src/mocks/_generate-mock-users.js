@@ -53,9 +53,11 @@ const getUser = (fregPerson, employee = false) => {
     ou: getRandom(0, 100) === 42 ? 'AUTO DISABLED USERS' : 'AUTO USERS',
     departmentShort: employee ? department.extensionAttribute6 : department.department,
     departmentAdditional: null,
+    extensionAttribute7: employee ? department.extensionAttribute7 : undefined,
     office: employee ? department.physicalDeliveryOfficeName : department.company,
     company: department.company,
-    title: department.title || undefined
+    title: department.title || undefined,
+    state: employee ? department.state : undefined
   }
 
   persons.push(pers)
@@ -66,4 +68,4 @@ const users = []
 fregansatte.forEach(ansatt => users.push(getUser(ansatt, true)))
 fregelever.forEach(elev => users.push(getUser(elev)))
 
-writeFileSync('./mock-users.json', JSON.stringify(users, null, 2))
+writeFileSync('./mock-users-new.json', JSON.stringify(users, null, 2))

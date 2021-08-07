@@ -1,13355 +1,18505 @@
 
-// Generated using cmdlet: .\VTFK-Toolbox\AD\Get-VTFKADUser.ps1 -Domain login.top.no -OnlyAutoUsers -Properties department,extensionAttribute6,physicalDeliveryOfficeName,company,title | Where { $_.physicalDeliveryOfficeName } | Select department,ext*,physical*,company,title -Unique | ConvertTo-Json | Out-File -FilePath $env:USERPROFILE\Desktop\login_mock.json -Encoding utf8 -NoNewline
+// Generated using cmdlet: .\VTFK-Toolbox\AD\Get-VTFKADUser.ps1 -Domain login.top.no -OnlyAutoUsers -Properties department,extensionAttribute6,physicalDeliveryOfficeName,company,title,extensionAttribute7,state | Where { $_.physicalDeliveryOfficeName } | Select department,ext*,physical*,company,title,state -Unique | ConvertTo-Json | Out-File -FilePath $env:USERPROFILE\Desktop\login_mock.json -Encoding utf8 -NoNewline
 
 module.exports.ansattDep = [
   {
-    department: 'Bø vgs språk, samfunn og økonomi',
+    department: 'Bø vidaregåande skule',
     extensionAttribute6: 'OF-BOV-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-BOV'
   },
   {
     department: 'Haugar tannklinikk 2. etg',
     extensionAttribute6: 'TF-HAT2',
     physicalDeliveryOfficeName: 'Haugar tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Sandefjord vgs idrett',
     extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-SFV'
   },
   {
     department: 'Kompetansebyggeren studieforberedende og FF',
     extensionAttribute6: 'OF-KB-STUD-FF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-KB'
   },
   {
     department: 'Holmestrand vgs realfag',
     extensionAttribute6: 'OF-HOLV-REALFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Thor Heyerdahl vgs elevtjenesten',
     extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-THV'
   },
   {
     department: 'Sandefjord vgs norsk',
     extensionAttribute6: 'OF-SFV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl vgs salg, service og reiseliv',
     extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Færder vgs kunst design og arkitektur',
     extensionAttribute6: 'OF-FRV-KUNST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Team Nord-Jarlsberg',
     extensionAttribute6: 'BDK-IT-NORD',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'BDK'
   },
   {
     department: 'Porsgrunn vgs drift',
     extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-POV'
   },
   {
     department: 'Skogmo vgs TIP og realfag',
     extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Hjalmar Johansen vgs restaurant og matfag',
     extensionAttribute6: 'OF-HJV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-HJV'
   },
   {
     department: 'Nome vgs elevtjenester',
     extensionAttribute6: 'OF-NOMV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
   },
   {
     department: 'Kulturarv',
     extensionAttribute6: 'KRIF-KARV',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'KRIF'
   },
   {
     department: 'Karrieresenter Vestfold og Telemark',
     extensionAttribute6: 'NIK-KARRI',
     physicalDeliveryOfficeName: 'Karrieresenter Telemark',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'NIK'
   },
   {
     department: 'Team skoleskyss, TT-kort og løyver',
     extensionAttribute6: 'SMM-KOL-SKYSS',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Team Kaupang',
+    extensionAttribute6: 'BDK-IT-KAUPANG',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Teamleder',
+    state: 'BDK'
   },
   {
     department: 'Team geodata',
     extensionAttribute6: 'SMM-DRI-geodata',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'SMM'
   },
   {
     department: 'Notodden vgs helse og oppvekst',
     extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-NOV'
   },
   {
     department: 'Thor Heyerdahl vgs  språk, samfunnsfag, økonomi',
     extensionAttribute6: 'OF-THV-ST-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
     extensionAttribute6: 'OF-SMI-VGS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
   },
   {
     department: 'Re vgs ST språk, realfag',
     extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner avd helse øst',
     extensionAttribute6: 'OF-SMI-OST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
   },
   {
     department: 'Sande vgs idrett',
     extensionAttribute6: 'OF-SANV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-SANV'
   },
   {
     department: 'Horten vgs realfag, forskerlinje',
     extensionAttribute6: 'OF-HORV-REAL-FO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl vgs teknisk drift',
     extensionAttribute6: 'OF-THV-TEKN-DRI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-THV'
   },
   {
     department: 'Teknologi og digitalisering',
     extensionAttribute6: 'BDK-TEK',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'BDK'
   },
   {
     department: 'Oppfølgingstjenesten rådgivere',
     extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Oppfølgingstjenesten',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-OT'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG1',
     extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-SKOV'
   },
   {
     department: 'Notodden vgs merkantilt',
     extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Sekretær 1'
+    title: 'Sekretær 1',
+    state: 'OF-NOV'
   },
   {
     department: 'Skien vgs musikk',
     extensionAttribute6: 'OF-SKIV-MUSIKK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SKIV'
   },
   {
     department: 'Nome vgs renhold og vaktmester',
     extensionAttribute6: 'OF-NOMV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
   },
   {
     department: 'Folkehelse og livsmestring',
     extensionAttribute6: 'OF-FHL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Pedagogisk støtte og utvikling',
     extensionAttribute6: 'OF-PED',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
-    department: 'Skien tannklinikk, avd blå',
-    extensionAttribute6: 'TF-SKT-AVD-BLA',
+    department: 'Skien tannklinikk, avd. grønn',
+    extensionAttribute6: 'TF-SKT-AVD-GRON',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Horten vgs realfag, forskerlinje',
+    extensionAttribute6: 'OF-HORV-REAL-FO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
     extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'THVS-Skiferhuset',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Sandefjord vgs musikk,dans,drama',
     extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Holmestrand vgs administrasjon',
     extensionAttribute6: 'OF-HOLV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-HOLV'
   },
   {
     department: 'Kragerø vgs drift',
     extensionAttribute6: 'OF-KRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-KRV'
   },
   {
     department: 'Horten vgs renhold',
     extensionAttribute6: 'OF-HORV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-HORV'
   },
   {
     department: 'Strategi og utvikling',
     extensionAttribute6: 'SMM-STR',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'SMM'
   },
   {
     department: 'Hjalmar Johansen vgs OIMG',
     extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HJV'
   },
   {
     department: 'Kragerø vgs studieforberedende',
     extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-KRV'
   },
   {
     department: 'Fag- og yrkesopplæring',
     extensionAttribute6: 'OF-FAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF'
   },
   {
     department: 'Horten vgs helse og oppvekst',
     extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Skien vgs dans og drama',
+    extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lektor',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Horten vgs ST språk vg2, VG3,PB',
+    extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Sande vgs helse og oppvekst',
     extensionAttribute6: 'OF-SANV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Nøtterøy vgs helse- og oppvekst',
-    extensionAttribute6: 'OF-NTV-HO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Sandefjord vgs hverdagslivstrening',
     extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
     extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-THV'
   },
   {
-    department: 'Holmestrand vgs administrasjon',
+    department: 'Vestfold fylkeskommune',
     extensionAttribute6: 'OF-HOLV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-HOLV'
   },
   {
     department: 'Re vgs ST norsk, samf.fag',
     extensionAttribute6: 'OF-REV-NO-SAMF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Team Kaupang',
     extensionAttribute6: 'BDK-IT-KAUPANG',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Førstekonsulent'
+    title: 'Førstekonsulent',
+    state: 'BDK'
   },
   {
     department: 'Bamble vgs industrifag',
     extensionAttribute6: 'OF-BAV-INDUSTRI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-BAV'
   },
   {
     department: 'Vest-Telemark vgs studiespesialiserande',
     extensionAttribute6: 'OF-VTV-STUDEIES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-VTV'
   },
   {
     department: 'Skogmo vgs TIP og realfag',
     extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Vest-Telemark vgs restaurant og matfag',
     extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Fagarbeider 1'
+    title: 'Fagarbeider 1',
+    state: 'OF-VTV'
   },
   {
     department: 'Kultur, idrett og friluftsliv',
     extensionAttribute6: 'KRIF-KIF',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'KRIF'
   },
   {
-    department: 'Skogmo vgs helse og oppvekst VG2-3',
-    extensionAttribute6: 'OF-SKOV-HO2',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærer -'
+    department: 'Pedagogisk støtte og utvikling',
+    extensionAttribute6: 'OF-PED',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Uspesifisert',
+    state: 'OF'
   },
   {
-    department: 'Nøtterøy vgs renhold',
+    department: 'Nøtterøy videregående skole',
     extensionAttribute6: 'OF-NTV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-NTV'
   },
   {
-    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
-    extensionAttribute6: 'OF-BAV-HELSE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    department: 'Sande vgs elektro',
+    extensionAttribute6: 'OF-SANV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Bamble vgs studiespesialisering',
+    extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
   },
   {
     department: 'Re vgs kontor',
     extensionAttribute6: 'OF-REV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Førstekonsulent'
+    title: 'Førstekonsulent',
+    state: 'OF-REV'
   },
   {
     department: 'Sandefjord vgs språk',
     extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Skogmo videregående skole',
     extensionAttribute6: 'OF-SKOV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKOV'
   },
   {
     department: 'Thor Heyerdahl vgs studierektor yrkesforbredende',
     extensionAttribute6: 'OF-THV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs ST norsk, samf.fag',
     extensionAttribute6: 'OF-REV-NO-SAMF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Holmestrand vgs renhold',
     extensionAttribute6: 'OF-HOLV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-HOLV'
   },
   {
     department: 'Folkevalgte',
     extensionAttribute6: 'FOLKEVALGTE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Folkevalgte',
-    title: 'Folkevalgt'
+    title: 'Folkevalgt',
+    state: 'FOLKEVALGTE'
   },
   {
     department: 'Eiendom',
     extensionAttribute6: 'OSE-EIE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OSE'
   },
   {
     department: 'Fag- og yrkesopplæring',
     extensionAttribute6: 'OF-FAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'OF'
   },
   {
     department: 'Skien vgs elevtjenester',
     extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-SKIV'
   },
   {
     department: 'Skogmo vgs bygg og anleggsfag',
     extensionAttribute6: 'OF-SKOV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Porsgrunn vgs real',
     extensionAttribute6: 'OF-POV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-POV'
   },
   {
     department: 'Notodden vgs helse og oppvekst',
     extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-NOV'
   },
   {
     department: 'Vinje tannklinikk',
     extensionAttribute6: 'TF-VIT',
     physicalDeliveryOfficeName: 'Vinje tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Borgheim tannklinikk',
     extensionAttribute6: 'TF-BOT',
     physicalDeliveryOfficeName: 'Borgheim tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
-    department: 'Horten vgs media og kommunikasjon',
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team vegforvaltning',
+    extensionAttribute6: 'SMM-FORV-vegf',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
   },
   {
     department: 'Kompetansebyggeren yrkesfag',
     extensionAttribute6: 'OF-KB-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Bamble vgs industrifag',
+    extensionAttribute6: 'OF-BAV-INDUSTRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-BAV'
   },
   {
     department: 'Nome vgs naturbruk II',
     extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-NOMV'
   },
   {
     department: 'Skien vgs dans og drama',
     extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
     extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Horten vgs helse og oppvekst',
     extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Greveskogen vgs musikk,dans,drama og innføring',
     extensionAttribute6: 'OF-GRV-MDDI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Kragerø tannklinikk',
     extensionAttribute6: 'TF-KRT',
     physicalDeliveryOfficeName: 'Kragerø tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Greveskogen vgs stab',
     extensionAttribute6: 'OF-GRV-STAB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-GRV'
   },
   {
     department: 'Holmestrand vgs basen',
     extensionAttribute6: 'OF-HOLV-BASEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-HOLV'
   },
   {
     department: 'Re vgs idrettsfag',
     extensionAttribute6: 'OF-REV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Nome videregående skole',
     extensionAttribute6: 'OF-NOMV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-NOMV'
   },
   {
     department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
     extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Fagarbeider 1'
+    title: 'Fagarbeider 1',
+    state: 'OF-POV'
   },
   {
     department: 'Bamble vgs industrifag',
     extensionAttribute6: 'OF-BAV-INDUSTRI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
   },
   {
     department: 'Notodden vgs yrkesfag',
     extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOV'
   },
   {
-    department: 'Thor Heyerdahl vgs sensor og eksamensvakter',
+    department: 'Thor Heyerdahl videregående skole',
     extensionAttribute6: 'OF-THV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Eksamensvakt'
+    title: 'Eksamensvakt',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team trafikksikkerhet og miljøvennlig transport',
+    extensionAttribute6: 'SMM-FORV-trafik',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
   },
   {
     department: 'Sandefjord vgs innemiljø',
     extensionAttribute6: 'OF-SFV-INNEMILJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-SFV'
   },
   {
     department: 'Skogmo vgs elektrofag',
     extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKOV'
   },
   {
-    department: 'Horten vgs ST språk vg2, VG3,PB',
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Skien vgs dans og drama',
     extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Horten vgs ST språk vg2, VG3,PB',
+    extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl vgs elektro og datateknologi',
     extensionAttribute6: 'OF-THV-EL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs helse og oppvekst',
     extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Holmestrand vgs norsk',
     extensionAttribute6: 'OF-HOLV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Skogmo vgs administrasjon og fellestjenester',
     extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-SKOV'
   },
   {
-    department: 'Horten vgs idrett',
-    extensionAttribute6: 'OF-HORV-IDRETT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Adjunkt'
+    department: 'Sandefjord vgs idrett',
+    extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
   },
   {
     department: 'Holmestrand vgs renhold',
     extensionAttribute6: 'OF-HOLV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-HOLV'
   },
   {
     department: 'Karrieresenter Vestfold og Telemark',
     extensionAttribute6: 'NIK-KARRI',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Leder'
+    title: 'Leder',
+    state: 'NIK'
   },
   {
     department: 'Bamble vgs studiespesialisering',
     extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BAV'
   },
   {
     department: 'Fagskolen Vestfold og Telemark',
     extensionAttribute6: 'NIK-FAGS',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'NIK'
   },
   {
     department: 'Rjukan vgs ledelse',
     extensionAttribute6: 'OF-RJV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Studieleder'
+    title: 'Studieleder',
+    state: 'OF-RJV'
   },
   {
     department: 'Kragerø vgs studieforberedende',
     extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-KRV'
   },
   {
     department: 'Skien vgs musikk',
     extensionAttribute6: 'OF-SKIV-MUSIKK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-THV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Eksamensvakt'
+    title: 'Lektor',
+    state: 'OF-SKIV'
   },
   {
     department: 'Personal og HMS',
     extensionAttribute6: 'HRMU-PERS',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'HR, mestring og utvikling',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'HRMU'
   },
   {
     department: 'Vestfold fylkeskommune',
     extensionAttribute6: 'OF-NTV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-NTV'
   },
   {
     department: 'Skogmo videregående skole',
     extensionAttribute6: 'OF-SKOV-HO2',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-SKOV'
   },
   {
     department: 'Melsom vgs gård internat',
     extensionAttribute6: 'OF-MEV-INTERNAT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Miljøarbeider'
+    title: 'Miljøarbeider',
+    state: 'OF-MEV'
   },
   {
     department: 'Re vgs ST språk, realfag',
     extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Sandefjord vgs musikk,dans,drama',
     extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Sandefjord vgs økonomi,drift',
-    extensionAttribute6: 'OF-SFV-OK-DRIFT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Økonomisjef'
+    title: 'Adjunkt',
+    state: 'OF-SFV'
   },
   {
     department: 'Færder vgs elektrofag',
     extensionAttribute6: 'OF-FRV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-FRV'
   },
   {
     department: 'Hovedtillitsvalgte',
     extensionAttribute6: 'HRMU-HTV',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'HR, mestring og utvikling',
-    title: 'Tillitsvalgt'
+    title: 'Tillitsvalgt',
+    state: 'HRMU'
   },
   {
     department: 'Strategi og utvikling',
     extensionAttribute6: 'SMM-STR',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Oppfølgingstjenesten',
     extensionAttribute6: 'OF-OT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Oppfølgingstjenesten',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'OF-OT'
   },
   {
     department: 'Vest-Telemark vgs studiespesialiserande',
     extensionAttribute6: 'OF-VTV-STUDEIES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-VTV'
   },
   {
     department: 'Skogmo videregående skole',
     extensionAttribute6: 'OF-SKOV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-SKOV'
   },
   {
     department: 'Nome vgs naturbruk I',
     extensionAttribute6: 'OF-NOMV-NAT-I',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-NOMV'
   },
   {
     department: 'Kragerø vgs sensor og eksamensvakter',
     extensionAttribute6: 'OF-KRV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-KRV'
   },
   {
     department: 'Kultur, idrett og friluftsliv',
     extensionAttribute6: 'KRIF-KIF',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'KRIF'
   },
   {
-    department: 'Melsom vgs naturbruk',
-    extensionAttribute6: 'OF-MEV-NATURBRU',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Lærer -'
+    department: 'Team geodata',
+    extensionAttribute6: 'SMM-DRI-geodata',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Notodden vgs ressurssenter',
+    extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lærer -',
+    state: 'OF-NOV'
   },
   {
     department: 'Bø vgs sensor og eksamensvakter',
     extensionAttribute6: 'OF-BOV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'OF-BOV'
   },
   {
     department: 'Thor Heyerdahl vgs musikk og dans',
     extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Thor Heyerdahl vgs teknologi og industrifag',
     extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Horten vgs media og kommunikasjon',
+    extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
     extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs ST språk, realfag',
     extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-REV'
   },
   {
     department: 'Thor Heyerdahl vgs teknisk drift',
     extensionAttribute6: 'OF-THV-TEKN-DRI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
   },
   {
-    department: 'Team konsernstøtte',
-    extensionAttribute6: 'BDK-IT-STOTTE',
-    physicalDeliveryOfficeName: 'Færder vgs',
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Kultur, idrett og friluftsliv',
     extensionAttribute6: 'KRIF-KIF',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'KRIF'
   },
   {
     department: 'Oppfølgingstjenesten',
     extensionAttribute6: 'OF-OT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Oppfølgingstjenesten',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'OF-OT'
   },
   {
     department: 'Talenthus kompetansesenter',
     extensionAttribute6: 'OF-OT-TH-KOMP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Talenthus - OT',
     company: 'Oppfølgingstjenesten',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-OT'
   },
   {
     department: 'Team Grenland',
     extensionAttribute6: 'BDK-IT-GRENLAND',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Skien vgs elevtjenester',
     extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Assistent l'
+    title: 'Assistent l',
+    state: 'OF-SKIV'
   },
   {
     department: 'Nome vgs naturbruk II',
     extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-NOMV'
   },
   {
     department: 'Stathelle tannklinikk',
     extensionAttribute6: 'TF-STAT',
     physicalDeliveryOfficeName: 'Stathelle tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
-    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
+    department: 'Porsgrunn videregående skole',
     extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Vest-Telemark vgs administrasjon og OIMG',
+    extensionAttribute6: 'OF-VTV-ADMINIST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Konsulent',
+    state: 'OF-VTV'
   },
   {
     department: 'Horten vgs helse og oppvekst',
     extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Hjalmar Johansen videregående skole',
+    extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HJV'
   },
   {
     department: 'Nome vgs internat og kantine',
     extensionAttribute6: 'OF-NOMV-INTERNA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Fagarbeider 1'
+    title: 'Fagarbeider 1',
+    state: 'OF-NOMV'
   },
   {
     department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
     extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Horten vgs helse og oppvekst',
     extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Elevassistent m/fagbrev'
-  },
-  {
-    department: 'Melsom videregående skole',
-    extensionAttribute6: 'OF-MEV-STUDIESP',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Elevassistent m/fagbrev',
+    state: 'OF-HORV'
   },
   {
     department: 'Sektorutvikling.',
     extensionAttribute6: 'OF-SEK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'OF'
   },
   {
     department: 'Horten vgs alternativ opplæring',
     extensionAttribute6: 'OF-HORV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Elevassistent m/fagbrev'
+    title: 'Elevassistent m/fagbrev',
+    state: 'OF-HORV'
   },
   {
     department: 'Pedagogisk støtte og utvikling',
     extensionAttribute6: 'OF-PED',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
+  },
+  {
+    department: 'Kragerø videregående skole',
+    extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
   },
   {
     department: 'Skogmo vgs elektrofag',
     extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKOV'
   },
   {
     department: 'Hjalmar Johansen vgs medier og kommunikasjon',
     extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-HJV'
   },
   {
     department: 'Færder vgs bygg og anleggsteknikk',
     extensionAttribute6: 'OF-FRV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-FRV'
   },
   {
     department: 'Thor Heyerdahl vgs elektro og datateknologi',
     extensionAttribute6: 'OF-THV-EL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent m/fagbrev'
+    title: 'Elevassistent m/fagbrev',
+    state: 'OF-THV'
   },
   {
     department: 'Melsom vgs arbeidslivstrening',
     extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-MEV'
   },
   {
     department: 'Nøtterøy vgs elevtjenesten',
     extensionAttribute6: 'OF-NTV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-NTV'
   },
   {
     department: 'Sande vgs idrett',
     extensionAttribute6: 'OF-SANV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Nøtterøy vgs studiespesialisering realfag,kroppsøving',
     extensionAttribute6: 'OF-NTV-REAL-KRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NTV'
   },
   {
     department: 'Nøtterøy vgs studiespesialisering samfunnsfaglig avdeling',
     extensionAttribute6: 'OF-NTV-SP-SAMF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NTV'
   },
   {
     department: 'Larvik tannklinikk',
     extensionAttribute6: 'TF-LART',
     physicalDeliveryOfficeName: 'Larvik tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Søeberg tannklinikk',
     extensionAttribute6: 'TF-SET',
     physicalDeliveryOfficeName: 'Søeberg tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Klima, miljø og internasjonalisering',
     extensionAttribute6: 'SIK-KLI',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SIK'
   },
   {
     department: 'Sektorutvikling.',
     extensionAttribute6: 'OF-SEK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
-    department: 'Vest-Telemark vgs restaurant og matfag',
-    extensionAttribute6: 'OF-VTV-RM',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Lektor 1'
+    department: 'Bø vgs realseksjon',
+    extensionAttribute6: 'OF-BOV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor 1',
+    state: 'OF-BOV'
   },
   {
     department: 'Kragerø vgs drift',
     extensionAttribute6: 'OF-KRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-KRV'
   },
   {
     department: 'Porsgrunn vgs TIP',
     extensionAttribute6: 'OF-POV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-POV'
   },
   {
     department: 'Porsgrunn vgs samfunn',
     extensionAttribute6: 'OF-POV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-POV'
   },
   {
     department: 'Sandefjord vgs innemiljø',
     extensionAttribute6: 'OF-SFV-INNEMILJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Renholdsoperatør'
+    title: 'Renholdsoperatør',
+    state: 'OF-SFV'
   },
   {
-    department: 'Sandefjord vgs idrett',
-    extensionAttribute6: 'OF-SFV-IDRETT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    department: 'Vest-Telemark vgs studiespesialiserande',
+    extensionAttribute6: 'OF-VTV-STUDEIES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs idrettsfag',
+    extensionAttribute6: 'OF-THV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Sandefjord vgs musikk,dans,drama',
     extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner avd helse øst',
     extensionAttribute6: 'OF-SMI-OST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SMI'
   },
   {
     department: 'Thor Heyerdahl vgs teknologi og industrifag',
     extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs ST språk, realfag',
     extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-REV'
   },
   {
     department: 'Thor Heyerdahl vgs teknisk drift',
     extensionAttribute6: 'OF-THV-TEKN-DRI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-THV'
   },
   {
     department: 'Mestring og utvikling',
     extensionAttribute6: 'HRMU-MES',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'HR, mestring og utvikling',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'HRMU'
   },
   {
     department: 'Notodden vgs yrkesfag',
     extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-NOV'
   },
   {
     department: 'Fagskolen elektrofag',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
   },
   {
     department: 'Rjukan vgs studiespesialisering',
     extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-RJV'
   },
   {
-    department: 'Porsgrunn vgs språk',
-    extensionAttribute6: 'OF-POV-SPRAK',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lektor'
+    department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
+    extensionAttribute6: 'OF-SMI-VGS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Notodden vgs helse og oppvekst',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOV'
   },
   {
     department: 'Porsgrunn vgs idrett',
     extensionAttribute6: 'OF-POV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-POV'
   },
   {
-    department: 'Greveskogen vgs service og samferdsel',
+    department: 'Greveskogen vgs salg, service og reiseliv',
     extensionAttribute6: 'OF-GRV-SERV-SAM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
-    department: 'Greveskogen vgs service og samferdsel',
+    department: 'Greveskogen vgs salg, service og reiseliv',
     extensionAttribute6: 'OF-GRV-SERV-SAM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Holmestrand vgs språk,samfunnsfag,økonomi',
     extensionAttribute6: 'OF-HOLV-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Holmestrand vgs arbeidslivstrening',
     extensionAttribute6: 'OF-HOLV-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HOLV'
   },
   {
     department: 'Kompetansebyggeren servicekontor',
     extensionAttribute6: 'OF-KB-SERVKTR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Kompetansebyggeren',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-KB'
   },
   {
     department: 'PP-tjenesten Nord',
     extensionAttribute6: 'OF-PPT-NOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'PP-tjenesten',
-    title: 'Pedagogisk psykologisk rådgiver'
-  },
-  {
-    department: 'Vest-Telemark vgs studiespesialiserande',
-    extensionAttribute6: 'OF-VTV-STUDEIES',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Pedagogisk psykologisk rådgiver',
+    state: 'OF-PPT'
   },
   {
     department: 'Skien vgs realfag',
     extensionAttribute6: 'OF-SKIV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-SKIV'
   },
   {
-    department: 'Nome vgs internat og kantine',
+    department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-NOMV-INTERNA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Sandefjord vgs international baccalaureate',
+    extensionAttribute6: 'OF-SFV-IB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Greveskogen vgs restaurant og matfag',
+    extensionAttribute6: 'OF-GRV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV-HO2',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKOV'
   },
   {
     department: 'Horten vgs studierektor yrkesfag',
     extensionAttribute6: 'OF-HORV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Horten vgs studierektor yrkesfag',
     extensionAttribute6: 'OF-HORV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Bibliotekar'
+    title: 'Bibliotekar',
+    state: 'OF-HORV'
   },
   {
-    department: 'Thor Heyerdahl vgs  realfag',
+    department: 'Thor Heyerdahl videregående skole',
     extensionAttribute6: 'OF-THV-REALFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs bygg- og anleggsteknikk',
     extensionAttribute6: 'OF-REV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-REV'
   },
   {
     department: 'Holmestrand vgs basen',
     extensionAttribute6: 'OF-HOLV-BASEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Horten vgs',
+    department: 'Team Kaupang',
+    extensionAttribute6: 'BDK-IT-KAUPANG',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Team eksamen',
     extensionAttribute6: 'OF-INN-EKS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Kragerø studiesenteret',
     extensionAttribute6: 'OF-KRV-STUDIESE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-KRV'
   },
   {
     department: 'Nome vgs design, håndverk, elektro og fellesfag',
     extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOMV'
   },
   {
     department: 'Arkiv og dokumenthåndtering',
     extensionAttribute6: 'BDK-ARK',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Nome videregående skole',
     extensionAttribute6: 'OF-NOMV-GARDSBRU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Fagarbeider m/fagskoleutdanning'
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-NOMV'
   },
   {
-    department: 'Nome vgs helse og oppvekstfag',
+    department: 'Nome videregående skole',
     extensionAttribute6: 'OF-NOMV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
   },
   {
     department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
     extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner avd barnevern',
+    extensionAttribute6: 'OF-SMI-BARN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Lektor',
+    state: 'OF-SMI'
   },
   {
     department: 'Kultur, idrett og friluftsliv',
     extensionAttribute6: 'KRIF-KIF',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'KRIF'
+  },
+  {
+    department: 'Vest-Telemark vgs studiespesialiserande',
+    extensionAttribute6: 'OF-VTV-STUDEIES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-VTV'
   },
   {
     department: 'Team politisk støtte',
     extensionAttribute6: 'OSE-KON-POL',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OSE'
   },
   {
     department: 'Horten vgs media og kommunikasjon',
     extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Sande vgs elektro',
     extensionAttribute6: 'OF-SANV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Fagarbeider m/fagskoleutdanning'
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Melsom vgs arbeidslivstrening',
     extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Nøtterøy vgs helse- og oppvekst',
+    extensionAttribute6: 'OF-NTV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NTV'
   },
   {
     department: 'Horten vgs alternativ opplæring',
     extensionAttribute6: 'OF-HORV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Fag- og yrkesopplæring',
     extensionAttribute6: 'OF-FAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Porsgrunn vgs kunst, design og arkitektur',
     extensionAttribute6: 'OF-POV-KUNST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-POV'
   },
   {
     department: 'Porsgrunn vgs samfunn',
     extensionAttribute6: 'OF-POV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-POV'
   },
   {
     department: 'Nome vgs design, håndverk, elektro og fellesfag',
     extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-NOMV'
   },
   {
     department: 'Hjalmar Johansen vgs OIMG',
     extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-HJV'
   },
   {
-    department: 'Horten vgs alternativ opplæring',
+    department: 'Hjalmar Johansen vgs OIMG',
+    extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'OF-HORV'
   },
   {
     department: 'Sande vgs idrett',
     extensionAttribute6: 'OF-SANV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
-    department: 'Re vgs idrettsfag',
+    department: 'Greveskogen vgs restaurant og matfag',
+    extensionAttribute6: 'OF-GRV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Re videregående skole',
     extensionAttribute6: 'OF-REV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Team prosjektstøtte',
+    extensionAttribute6: 'SMM-UTB-prosjek',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Solvang tannklinikk',
     extensionAttribute6: 'TF-SOT',
     physicalDeliveryOfficeName: 'Solvang tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'TF'
   },
   {
     department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
     extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-POV'
   },
   {
     department: 'Horten vgs service og samferdsel',
     extensionAttribute6: 'OF-HORV-SERV-SA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Sandefjord vgs musikk,dans,drama',
     extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-SFV'
   },
   {
     department: 'Lystlunden tannklinikk',
     extensionAttribute6: 'TF-LYT',
     physicalDeliveryOfficeName: 'Lystlunden tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Talenthus kompetansesenter',
     extensionAttribute6: 'OF-OT-TH-KOMP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Talenthus - OT',
     company: 'Oppfølgingstjenesten',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-OT'
   },
   {
     department: 'Bamble vgs elevtjenester og OIMG',
     extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-BAV'
   },
   {
     department: 'Porsgrunn vgs avd. Nord',
     extensionAttribute6: 'OF-POV-NORD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-POV'
   },
   {
     department: 'Kultur, idrett og friluftsliv',
     extensionAttribute6: 'KRIF-KIF',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'KRIF'
+  },
+  {
+    department: 'Fylkesdirektør',
+    extensionAttribute6: 'FD',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Fylkesdirektør',
+    title: 'Fylkesdirektør',
+    state: 'FD'
   },
   {
     department: 'Vest-Telemark vgs administrasjon og OIMG',
     extensionAttribute6: 'OF-VTV-ADMINIST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Færder vgs teknikk og industriell produksjon maritime fag',
+    extensionAttribute6: 'OF-FRV-TP-MARIT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærer -',
+    state: 'OF-FRV'
   },
   {
     department: 'Greveskogen vgs språk og samfunnsfag',
     extensionAttribute6: 'OF-GRV-SPRAK-SA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Sandefjord vgs helse, oppvekst',
     extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
   },
   {
     department: 'Greveskogen vgs økonomi- og realfag',
     extensionAttribute6: 'OF-GRV-REAL-OK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Færder vgs drift og vedlikehold',
     extensionAttribute6: 'OF-FRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Driftsleder'
+    title: 'Driftsleder',
+    state: 'OF-FRV'
   },
   {
     department: 'Horten vgs pedagogisk service og utvikling',
     extensionAttribute6: 'OF-HORV-PSU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
   },
   {
     department: 'Team konserndrift',
     extensionAttribute6: 'BDK-IT-DRIFT',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'BDK'
   },
   {
-    department: 'Skien vgs drift',
+    department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-SKIV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-SKIV'
   },
   {
     department: 'Porsgrunn vgs språk',
     extensionAttribute6: 'OF-POV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-POV'
   },
   {
     department: 'Fagskolen byggfag',
     extensionAttribute6: 'NIK-FAGS-BYGG',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'NIK'
   },
   {
     department: 'Bystrategi, bypakke og byvekstavtale',
     extensionAttribute6: 'SIK-SAM-BY',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SIK'
   },
   {
     department: 'Folkevalgte',
     extensionAttribute6: 'FOLKEVALGTE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Folkevalgte',
-    title: 'Folkevalgt'
+    title: 'Folkevalgt',
+    state: 'FOLKEVALGTE'
   },
   {
     department: 'Færder vgs teknikk og industriell produksjon',
     extensionAttribute6: 'OF-FRV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Notodden vgs studiespesialisering',
+    extensionAttribute6: 'OF-NOV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOV'
   },
   {
     department: 'Greveskogen vgs AHT',
     extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs  realfag',
+    extensionAttribute6: 'OF-THV-REALFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Horten vgs media og kommunikasjon',
     extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-HORV'
   },
   {
     department: 'Færder vgs påbygging generell studiekompetanse',
     extensionAttribute6: 'OF-FRV-PB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Færder vgs kontor,stab',
     extensionAttribute6: 'OF-FRV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-FRV'
   },
   {
     department: 'Haugar tannklinikk 2. etg',
     extensionAttribute6: 'TF-HAT2',
     physicalDeliveryOfficeName: 'Haugar tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Notodden vgs ressurssenter',
     extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOV'
   },
   {
     department: 'Skien vgs service og samferdsel',
     extensionAttribute6: 'OF-SKIV-SEV-SAM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Telemarkskanalen regionalpark',
     extensionAttribute6: 'NIK-TR',
     physicalDeliveryOfficeName: 'Telemarkskanalen',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'NIK'
   },
   {
     department: 'Skogmo videregående skole',
     extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Holmestrand vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-HOLV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-HOLV'
   },
   {
     department: 'Horten vgs teknikk og industriell produksjon',
     extensionAttribute6: 'OF-HORV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl videregående skole',
     extensionAttribute6: 'OF-THV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Sande vgs teknisk og industriell produksjon',
     extensionAttribute6: 'OF-SANV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-SANV'
   },
   {
     department: 'Sandefjord vgs helse, oppvekst',
     extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Færder vgs elevkantine',
     extensionAttribute6: 'OF-FRV-ELEVKANT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-FRV'
   },
   {
-    department: 'Færder vgs sensor og eksamensvakter',
+    department: 'Færder videregående skole',
     extensionAttribute6: 'OF-FRV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-FRV'
   },
   {
     department: 'Oppfølgingstjenesten rådgivere',
     extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Oppfølgingstjenesten',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-OT'
   },
   {
     department: 'Sande tannklinikk',
     extensionAttribute6: 'TF-SAT',
     physicalDeliveryOfficeName: 'Sande tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-HJV'
   },
   {
     department: 'Rjukan vgs administrativ stab og drift',
     extensionAttribute6: 'OF-RJV-ADM-DRIF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Vaktmester 1'
+    title: 'Vaktmester 1',
+    state: 'OF-RJV'
   },
   {
     department: 'Kragerø vgs tekniske fag',
     extensionAttribute6: 'OF-KRV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-KRV'
   },
   {
-    department: 'Fagskolen helsefag',
+    department: 'Fagskolen Vestfold og Telemark',
     extensionAttribute6: 'NIK-FAGS-HELSE',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'NIK'
+  },
+  {
+    department: 'Vest-Telemark vgs yrkesfag',
+    extensionAttribute6: 'OF-VTV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Lærer -',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Skien vgs drift',
+    extensionAttribute6: 'OF-SKIV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Sandefjord folkehøyskole undervisning',
+    extensionAttribute6: 'OF-SFH-UNDERVIS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Lærer -',
+    state: 'OF-SFH'
   },
   {
     department: 'Skien vgs dans og drama',
     extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKIV'
   },
   {
     department: 'Horten vgs helse og oppvekst',
     extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Horten vgs Elektro',
     extensionAttribute6: 'OF-HORV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl vgs  realfag',
     extensionAttribute6: 'OF-THV-REALFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sandefjord vgs idrett',
+    extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Arkiv og dokumenthåndtering',
     extensionAttribute6: 'BDK-ARK',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'PP-tjenesten Sør',
     extensionAttribute6: 'OF-PPT-SOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'PPT- Kongensgt 20A, Skien',
     company: 'PP-tjenesten',
-    title: 'Pedagogisk psykologisk rådgiver'
+    title: 'Pedagogisk psykologisk rådgiver',
+    state: 'OF-PPT'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG2-3',
     extensionAttribute6: 'OF-SKOV-HO2',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Nome vgs ledelse',
     extensionAttribute6: 'OF-NOMV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-NOMV'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG1',
     extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SKOV'
   },
   {
     department: 'Konsernstyring',
     extensionAttribute6: 'OSE-KON',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OSE'
   },
   {
     department: 'Inntak, eksamen og voksenopplæring',
     extensionAttribute6: 'OF-INN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Sandefjord vgs studierektor yrkesforbredende',
     extensionAttribute6: 'OF-SFV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Instruktør'
+    title: 'Instruktør',
+    state: 'OF-SFV'
   },
   {
     department: 'Porsgrunn vgs drift',
     extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-POV'
   },
   {
     department: 'Team utbygging øst',
     extensionAttribute6: 'SMM-UTB-ost',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Fagskolen TIP',
     extensionAttribute6: 'NIK-FAGS-TIP',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Rjukan vgs studiespesialisering',
+    extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Kompetansebyggeren servicekontor',
+    extensionAttribute6: 'OF-KB-SERVKTR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Rådgiver',
+    state: 'OF-KB'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'NIK-FAGS-HELSE',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'NIK'
   },
   {
     department: 'Sandefjord vgs helse, oppvekst',
     extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
     extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-THV'
   },
   {
-    department: 'Thor Heyerdahl vgs personal og organisasjon',
+    department: 'Thor Heyerdahl vgs organisasjonsutvikling, HR og innovasjon',
     extensionAttribute6: 'OF-THV-PERS-ORG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Personal-/org.sjef'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
   },
   {
     department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
     extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Team skoleskyss, TT-kort og løyver',
-    extensionAttribute6: 'SMM-KOL-SKYSS',
-    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Adjunkt',
+    state: 'OF-SFV'
   },
   {
     department: 'Porsgrunn vgs kontor',
     extensionAttribute6: 'OF-POV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-POV'
   },
   {
     department: 'Porsgrunn vgs språk',
     extensionAttribute6: 'OF-POV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Skien vgs elevtjenester',
-    extensionAttribute6: 'OF-SKIV-ELEVTJE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Miljøterapeut'
+    title: 'Avdelingsleder',
+    state: 'OF-POV'
   },
   {
     department: 'Haugar tannklinikk 2. etg',
     extensionAttribute6: 'TF-HAT2',
     physicalDeliveryOfficeName: 'Haugar tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Skien vgs kontor',
     extensionAttribute6: 'OF-SKIV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Folkevalgte',
+    extensionAttribute6: 'FOLKEVALGTE',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Folkevalgte',
+    title: 'Folkevalgt',
+    state: 'FOLKEVALGTE'
+  },
+  {
+    department: 'Færder vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-FRV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Diverse',
+    state: 'OF-FRV'
   },
   {
     department: 'Sandefjord vgs elevtjenester',
     extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Horten vgs Elektro',
     extensionAttribute6: 'OF-HORV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Sande vgs AHT',
     extensionAttribute6: 'OF-SANV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Team helhetlig styring',
     extensionAttribute6: 'OSE-KON-HEL',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OSE'
   },
   {
     department: 'Team konsernstøtte',
     extensionAttribute6: 'BDK-IT-STOTTE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Oppfølgingstjenesten rådgivere',
     extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'OT Horten',
     company: 'Oppfølgingstjenesten',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-OT'
   },
   {
     department: 'Kragerø vgs studieforberedende',
     extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-KRV'
   },
   {
     department: 'Fagskolen elektrofag',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'NIK'
   },
   {
     department: 'Nome vgs naturbruk I',
     extensionAttribute6: 'OF-NOMV-NAT-I',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
   },
   {
-    department: 'Sandefjord vgs helse, oppvekst',
-    extensionAttribute6: 'OF-SFV-HO',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærer -'
+    department: 'Re vgs helse og oppvekst',
+    extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-REV'
   },
   {
     department: 'Nome vgs renhold og vaktmester',
     extensionAttribute6: 'OF-NOMV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-NOMV'
   },
   {
     department: 'Team budsjett og strategi',
     extensionAttribute6: 'OSE-OKO-BUDS',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OSE'
   },
   {
-    department: 'Vest-Telemark vgs studiespesialiserande',
-    extensionAttribute6: 'OF-VTV-STUDEIES',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Lærer -'
+    department: 'Vinje tannklinikk',
+    extensionAttribute6: 'TF-VIT',
+    physicalDeliveryOfficeName: 'Vinje tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Skien vgs dans og drama',
     extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SKIV'
   },
   {
     department: 'Sandefjord vgs samfunnsfag',
     extensionAttribute6: 'OF-SFV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Horten vgs pedagogisk service og utvikling',
     extensionAttribute6: 'OF-HORV-PSU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Saksbehandler'
+    title: 'Saksbehandler',
+    state: 'OF-HORV'
   },
   {
     department: 'Sandefjord vgs arbeidslivstrening',
     extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-SFV'
   },
   {
     department: 'Sandefjord vgs læringssenteret',
     extensionAttribute6: 'OF-SFV-L-SENTER',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Bibliotekar'
+    title: 'Bibliotekar',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl vgs teknisk drift',
     extensionAttribute6: 'OF-THV-TEKN-DRI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Ledende renholder'
+    title: 'Ledende renholder',
+    state: 'OF-THV'
   },
   {
     department: 'Team anskaffelser',
     extensionAttribute6: 'OSE-KON-ANS',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Porsgrunn vgs idrett',
-    extensionAttribute6: 'OF-POV-IDRETT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt'
+    title: 'Rådgiver',
+    state: 'OSE'
   },
   {
     department: 'Notodden vgs ressurssenter',
     extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-NOV'
   },
   {
     department: 'Notodden vgs merkantilt',
     extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-NOV'
   },
   {
-    department: 'Nome vgs naturbruk I',
+    department: 'Nome videregående skole',
     extensionAttribute6: 'OF-NOMV-NAT-I',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-NOMV'
   },
   {
     department: 'Nøtterøy vgs studiespesialisering språkfaglig avdeling',
     extensionAttribute6: 'OF-NTV-SP-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NTV'
   },
   {
-    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
+    department: 'Bamble videregående skole',
     extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Klima, miljø og internasjonalisering',
+    extensionAttribute6: 'SIK-KLI',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samfunnsutvikling, internasjonalisering og klima',
+    title: 'Rådgiver',
+    state: 'SIK'
   },
   {
     department: 'Klima, miljø og internasjonalisering',
     extensionAttribute6: 'SIK-KLI',
     physicalDeliveryOfficeName: 'Åmot - Vinje kommune',
     company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SIK'
   },
   {
     department: 'Horten vgs teknikk og industriell produksjon',
     extensionAttribute6: 'OF-HORV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Elevassistent m/fagbrev'
+    title: 'Elevassistent m/fagbrev',
+    state: 'OF-HORV'
   },
   {
     department: 'Sandefjord vgs arbeidslivstrening',
     extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Horten vgs realfag, forskerlinje',
     extensionAttribute6: 'OF-HORV-REAL-FO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Sandefjord vgs idrett',
-    extensionAttribute6: 'OF-SFV-IDRETT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Nøtterøy vgs kontor',
     extensionAttribute6: 'OF-NTV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-NTV'
   },
   {
     department: 'Nome vgs elevtjenester',
     extensionAttribute6: 'OF-NOMV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOMV'
   },
   {
-    department: 'Notodden vgs helse og oppvekst',
+    department: 'Notodden videregående skole',
     extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-NOV'
   },
   {
     department: 'Skien tannklinikk',
     extensionAttribute6: 'TF-SKT',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Hjalmar Johansen vgs restaurant og matfag',
     extensionAttribute6: 'OF-HJV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-HJV'
   },
   {
     department: 'Re vgs renhold',
     extensionAttribute6: 'OF-REV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-REV'
   },
   {
     department: 'Melsom vgs administrasjon',
     extensionAttribute6: 'OF-MEV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
+    extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor',
+    state: 'OF-POV'
   },
   {
     department: 'Færder vgs elektrofag',
     extensionAttribute6: 'OF-FRV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Sandefjord videregående skole',
     extensionAttribute6: 'OF-SFV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl videregående skole',
     extensionAttribute6: 'OF-THV-STUDR-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs bygg- og anleggsteknikk',
     extensionAttribute6: 'OF-REV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-REV'
   },
   {
     department: 'Holmestrand vgs restaurant og matfag',
     extensionAttribute6: 'OF-HOLV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Greveskogen vgs restaurant og matfag',
-    extensionAttribute6: 'OF-GRV-RM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Horten vgs  personal og økonomi',
     extensionAttribute6: 'OF-HORV-PERS-OK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-HORV'
   },
   {
     department: 'Skogmo vgs bygg og anleggsfag',
     extensionAttribute6: 'OF-SKOV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKOV'
   },
   {
-    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
+    department: 'Bamble videregående skole',
     extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-BAV'
   },
   {
     department: 'Midt-Telemark tannklinikk',
     extensionAttribute6: 'TF-MIT',
     physicalDeliveryOfficeName: 'Midt-Telemark tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Rjukan vgs yrkesfag',
+    extensionAttribute6: 'OF-RJV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Lektor',
+    state: 'OF-RJV'
   },
   {
     department: 'Kompetansebyggeren  helsefagarbeider',
     extensionAttribute6: 'OF-KB-HELSEFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-KB'
   },
   {
     department: 'Greveskogen vgs kroppsøving',
     extensionAttribute6: 'OF-GRV-KROPPSOV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner felles',
     extensionAttribute6: 'OF-SMI-FELLES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Administrasjonsleder'
+    title: 'Administrasjonsleder',
+    state: 'OF-SMI'
   },
   {
     department: 'Horten vgs pedagogisk service og utvikling',
     extensionAttribute6: 'OF-HORV-PSU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Studiekoordinator'
+    title: 'Studiekoordinator',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl vgs musikk og dans',
     extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
     department: 'Færder vgs påbygging generell studiekompetanse',
     extensionAttribute6: 'OF-FRV-PB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Borgejordet tannklinikk',
     extensionAttribute6: 'TF-BORT',
     physicalDeliveryOfficeName: 'Borgejordet tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Vest-Telemark vgs - helse og oppvekst',
     extensionAttribute6: 'OF-VTV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-VTV'
   },
   {
     department: 'Hjalmar Johansen vgs kontor og drift',
     extensionAttribute6: 'OF-HJV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-HJV'
   },
   {
     department: 'Bamble vgs studiespesialisering',
     extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-BAV'
   },
   {
     department: 'Bamble vgs elevtjenester og OIMG',
     extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Sekretær 1'
+    title: 'Sekretær 1',
+    state: 'OF-BAV'
   },
   {
     department: 'Sandefjord vgs musikk,dans,drama',
     extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
   },
   {
     department: 'Holmestrand vgs studierektor',
     extensionAttribute6: 'OF-HOLV-SR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-HOLV'
   },
   {
     department: 'Team Fjell',
     extensionAttribute6: 'BDK-IT-FJELL',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-BAV'
   },
   {
     department: 'Re videregående skole',
     extensionAttribute6: 'OF-REV-NO-SAMF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-REV'
   },
   {
     department: 'Sandefjord vgs international baccalaureate',
     extensionAttribute6: 'OF-SFV-IB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Sandefjord vgs hverdagslivstrening',
     extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
   },
   {
     department: 'Sandefjord vgs norsk',
     extensionAttribute6: 'OF-SFV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Færder vgs drift og vedlikehold',
     extensionAttribute6: 'OF-FRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Ledende renholder'
+    title: 'Ledende renholder',
+    state: 'OF-FRV'
   },
   {
     department: 'Advokater',
     extensionAttribute6: 'OSE-ADV',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Advokat'
+    title: 'Advokat',
+    state: 'OSE'
   },
   {
     department: 'Hjalmar Johansen vgs medier og kommunikasjon',
     extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Hovedtillitsvalgte',
+    extensionAttribute6: 'HRMU-HTV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'HR, mestring og utvikling',
+    title: 'Tillitsvalgt',
+    state: 'HRMU'
   },
   {
     department: 'Fagskolen TIP',
     extensionAttribute6: 'NIK-FAGS-TIP',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
   },
   {
     department: 'Skogmo vgs elektrofag',
     extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Midt-Telemark tannklinikk',
     extensionAttribute6: 'TF-MIT',
     physicalDeliveryOfficeName: 'Midt-Telemark tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Re videregående skole',
     extensionAttribute6: 'OF-KB-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Eksamensvakt'
+    title: 'Eksamensvakt',
+    state: 'OF-KB'
   },
   {
-    department: 'Kompetansebyggeren  helsefagarbeider',
+    department: 'Vestfold fylkeskommune',
     extensionAttribute6: 'OF-KB-HELSEFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-KB'
   },
   {
     department: 'Horten vgs studierektor studieforbredende',
     extensionAttribute6: 'OF-HORV-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Horten vgs alternativ opplæring',
     extensionAttribute6: 'OF-HORV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Nome vgs kontor, bibliotek og IKT',
     extensionAttribute6: 'OF-NOMV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Arbeidsleder'
+    title: 'Arbeidsleder',
+    state: 'OF-NOMV'
   },
   {
     department: 'Team Grenland',
     extensionAttribute6: 'BDK-IT-GRENLAND',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'BDK'
   },
   {
     department: 'Skien vgs elevtjenester',
     extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Vernepleier'
+    title: 'Vernepleier',
+    state: 'OF-SKIV'
   },
   {
     department: 'Treungen tannklinikk',
     extensionAttribute6: 'TF-TRT',
     physicalDeliveryOfficeName: 'Treungen tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier 1'
+    title: 'Tannpleier 1',
+    state: 'TF'
   },
   {
     department: 'Sandefjord vgs helse, oppvekst',
     extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
   },
   {
     department: 'Kompetansebyggeren  helsefagarbeider',
     extensionAttribute6: 'OF-KB-HELSEFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-KB'
   },
   {
-    department: 'Melsom vgs naturbruk',
+    department: 'Melsom videregående skole',
     extensionAttribute6: 'OF-MEV-NATURBRU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-MEV'
   },
   {
     department: 'Kompetansebyggeren studieforberedende og FF',
     extensionAttribute6: 'OF-KB-STUD-FF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-KB'
   },
   {
     department: 'Melsom vgs naturbruk',
     extensionAttribute6: 'OF-MEV-NATURBRU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-MEV'
   },
   {
     department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
     extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
     department: 'Horten vgs teknisk',
     extensionAttribute6: 'OF-HORV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Vaktmester'
+    title: 'Vaktmester',
+    state: 'OF-HORV'
   },
   {
     department: 'Skogmo vgs administrasjon og fellestjenester',
     extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Administrativ leder'
+    title: 'Administrativ leder',
+    state: 'OF-SKOV'
   },
   {
     department: 'Kragerø vgs helse- og oppvekstfag',
     extensionAttribute6: 'OF-KRV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-KRV'
   },
   {
     department: 'Nome vgs naturbruk II',
     extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
   },
   {
     department: 'Service',
     extensionAttribute6: 'OSE-SER',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OSE'
   },
   {
     department: 'Kompetanseutvikling og inkludering',
     extensionAttribute6: 'NIK-KOMP',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'NIK'
   },
   {
     department: 'Nøtterøy vgs helse- og oppvekst',
     extensionAttribute6: 'OF-NTV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NTV'
   },
   {
-    department: 'Notodden vgs ressurssenter',
+    department: 'Hjalmar Johansen vgs OIMG',
+    extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Assistent',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Kompetansebyggeren servicekontor',
+    extensionAttribute6: 'OF-KB-SERVKTR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Konsulent',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Notodden videregående skole',
     extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-NOV'
   },
   {
     department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
     extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
     department: 'Sande vgs st.spes norsk,språk,samf',
     extensionAttribute6: 'OF-SANV-NO-SPR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Nøtterøy vgs studiespesialisering språkfaglig avdeling',
     extensionAttribute6: 'OF-NTV-SP-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-NTV'
   },
   {
     department: 'Nøtterøy vgs studiespesialisering samfunnsfaglig avdeling',
     extensionAttribute6: 'OF-NTV-SP-SAMF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-NTV'
   },
   {
     department: 'Færder vgs drift og vedlikehold',
     extensionAttribute6: 'OF-FRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-FRV'
   },
   {
     department: 'Borgejordet tannklinikk',
     extensionAttribute6: 'TF-BORT',
     physicalDeliveryOfficeName: 'Borgejordet tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Skogmo vgs TIP og realfag',
     extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKOV'
   },
   {
     department: 'Skogmo vgs fellesfag',
     extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Hjalmar Johansen vgs idrett',
     extensionAttribute6: 'OF-HJV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HJV'
   },
   {
     department: 'Bamble vgs service og samferdsel',
     extensionAttribute6: 'OF-BAV-SERVICE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BAV'
   },
   {
     department: 'Porsgrunn tannklinikk',
     extensionAttribute6: 'TF-POT',
     physicalDeliveryOfficeName: 'Porsgrunn tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG2-3',
     extensionAttribute6: 'OF-SKOV-HO2',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SKOV'
   },
   {
     department: 'Re vgs toppidrett fotball og håndball',
     extensionAttribute6: 'OF-REV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
+    extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Assistent',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl vgs studierektor yrkesforbredende',
     extensionAttribute6: 'OF-THV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Hjalmar Johansen videregående skole',
+    extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Sande videregående skole',
+    extensionAttribute6: 'OF-SANV-NO-SPR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Sande vgs st.spes realfag',
     extensionAttribute6: 'OF-SANV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Greveskogen vgs AHT',
     extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Miljøarbeider'
+    title: 'Miljøarbeider',
+    state: 'OF-GRV'
   },
   {
     department: 'Horten vgs teknisk',
     extensionAttribute6: 'OF-HORV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-HORV'
   },
   {
     department: 'Analyse og metodeutvikling',
     extensionAttribute6: 'VTPLUSS-ANALYSE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'VT pluss',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'VTPLUSS'
   },
   {
     department: 'Rjukan vgs yrkesfag',
     extensionAttribute6: 'OF-RJV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-RJV'
   },
   {
     department: 'Skien vgs elevtjenester',
     extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Bø vgs språk, samfunn og økonomi',
     extensionAttribute6: 'OF-BOV-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-BOV'
   },
   {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-THV-EL',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Horten vgs helse og oppvekst',
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-HORV'
   },
   {
     department: 'Samfunn og plan',
     extensionAttribute6: 'SIK-SAM',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Kompetansebyggeren servicekontor',
-    extensionAttribute6: 'OF-KB-SERVKTR',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Rådgiver'
+    title: 'Uspesifisert',
+    state: 'SIK'
   },
   {
     department: 'Service',
     extensionAttribute6: 'OSE-SER',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Økonomi, styring og eierskap',
-    title: 'Teknisk assistent'
+    title: 'Teknisk assistent',
+    state: 'OSE'
   },
   {
     department: 'Thor Heyerdahl vgs studierektor studieforbredende',
     extensionAttribute6: 'OF-THV-STUDR-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-THV'
   },
   {
     department: 'Holmestrand vgs teknisk industriell produksjon',
     extensionAttribute6: 'OF-HOLV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HOLV'
   },
   {
     department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
     extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'THVS-Skiferhuset',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-THV'
   },
   {
-    department: 'Borgejordet tannklinikk',
-    extensionAttribute6: 'TF-BORT',
-    physicalDeliveryOfficeName: 'Borgejordet tannklinikk',
+    department: 'Lardal tannklinikk',
+    extensionAttribute6: 'TF-LAT',
+    physicalDeliveryOfficeName: 'Lardal tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Solvang tannklinikk',
     extensionAttribute6: 'TF-SOT',
     physicalDeliveryOfficeName: 'Solvang tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Oppfølgingstjenesten fagkoordinator',
     extensionAttribute6: 'OF-OT-FAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Oppfølgingstjenesten',
-    title: 'Leder'
+    title: 'Leder',
+    state: 'OF-OT'
   },
   {
     department: 'Skien vgs musikk',
     extensionAttribute6: 'OF-SKIV-MUSIKK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKIV'
   },
   {
     department: 'Bamble vgs studiespesialisering',
     extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-BAV'
   },
   {
     department: 'Vinje tannklinikk',
     extensionAttribute6: 'TF-VIT',
     physicalDeliveryOfficeName: 'Vinje tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Vinje tannklinikk',
-    extensionAttribute6: 'TF-VIT',
-    physicalDeliveryOfficeName: 'Vinje tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Team vegforvaltning',
-    extensionAttribute6: 'SMM-FORV-vegf',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Nøtterøy vgs helse- og oppvekst',
     extensionAttribute6: 'OF-NTV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-NTV'
   },
   {
-    department: 'Færder vgs studieforberedende',
-    extensionAttribute6: 'OF-FRV-STUDIEF',
+    department: 'Færder vgs kunst design og arkitektur',
+    extensionAttribute6: 'OF-FRV-KUNST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Studierektor'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs restaurant og matfag',
+    extensionAttribute6: 'OF-HJV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HJV'
   },
   {
     department: 'Skogmo vgs administrasjon og fellestjenester',
     extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-SKOV'
   },
   {
     department: 'Team utbygging Bypakke Grenland',
     extensionAttribute6: 'SMM-UTB-bypakke',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Bø vgs administrasjon',
     extensionAttribute6: 'OF-BOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-BOV'
   },
   {
     department: 'Team Fjell',
     extensionAttribute6: 'BDK-IT-FJELL',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Hjalmar Johansen vgs kontor og drift',
     extensionAttribute6: 'OF-HJV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-HJV'
   },
   {
     department: 'Sande videregående skole',
     extensionAttribute6: 'OF-SANV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Miljøarbeider'
+    title: 'Miljøarbeider',
+    state: 'OF-SANV'
   },
   {
     department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
     extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Melsom vgs studiespesialisering',
     extensionAttribute6: 'OF-MEV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-MEV'
   },
   {
     department: 'Færder vgs drift og vedlikehold',
     extensionAttribute6: 'OF-FRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Vaktmester'
+    title: 'Vaktmester',
+    state: 'OF-FRV'
   },
   {
     department: 'Team regnskap og rapportering',
     extensionAttribute6: 'OSE-OKO-REGN',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Økonomi, styring og eierskap',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OSE'
   },
   {
     department: 'Nome vgs elevtjenester',
     extensionAttribute6: 'OF-NOMV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Miljøterapeut'
+    title: 'Miljøterapeut',
+    state: 'OF-NOMV'
   },
   {
     department: 'Porsgrunn vgs drift',
     extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-POV'
   },
   {
     department: 'Skien vgs drift',
     extensionAttribute6: 'OF-SKIV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-SKIV'
   },
   {
     department: 'Hjalmar Johansen vgs medier og kommunikasjon',
     extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-HJV'
   },
   {
     department: 'Team driftskontrakter vest',
     extensionAttribute6: 'SMM-DRI-vest',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Næring, innovasjon og kompetanse',
-    extensionAttribute6: 'NIK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Thor Heyerdahl vgs idrettsfag',
-    extensionAttribute6: 'OF-THV-IDRETT',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Sande vgs idrett',
-    extensionAttribute6: 'OF-SANV-IDRETT',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Nøtterøy vgs studiespesialisering realfag,kroppsøving',
-    extensionAttribute6: 'OF-NTV-REAL-KRO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Porsgrunn vgs samfunn',
-    extensionAttribute6: 'OF-POV-SAMFUNN',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt'
+    title: 'Konsulent',
+    state: 'SMM'
   },
   {
     department: 'Personal og HMS',
     extensionAttribute6: 'HRMU-PERS',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'HR, mestring og utvikling',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'HRMU'
+  },
+  {
+    department: 'Næring, innovasjon og kompetanse',
+    extensionAttribute6: 'NIK',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Uspesifisert',
+    state: 'NIK'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sande vgs idrett',
+    extensionAttribute6: 'OF-SANV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Diverse',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Nøtterøy vgs studiespesialisering realfag,kroppsøving',
+    extensionAttribute6: 'OF-NTV-REAL-KRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Porsgrunn vgs samfunn',
+    extensionAttribute6: 'OF-POV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-POV'
   },
   {
     department: 'Sektorutvikling-',
     extensionAttribute6: 'TF-SEK',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Tannhelse og forebygging',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'TF'
   },
   {
     department: 'Horten vgs pedagogisk service og utvikling',
     extensionAttribute6: 'OF-HORV-PSU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-HORV'
   },
   {
     department: 'Samfunn og plan',
     extensionAttribute6: 'SIK-SAM',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SIK'
   },
   {
-    department: 'Lystlunden tannklinikk',
-    extensionAttribute6: 'TF-LYT',
-    physicalDeliveryOfficeName: 'Lystlunden tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    department: 'Skogmo vgs fellesfag',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-SKOV'
   },
   {
     department: 'Team regnskap og rapportering',
     extensionAttribute6: 'OSE-OKO-REGN',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Økonomikonsulent'
+    title: 'Økonomikonsulent',
+    state: 'OSE'
   },
   {
     department: 'Sande vgs helse og oppvekst',
     extensionAttribute6: 'OF-SANV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-SANV'
   },
   {
     department: 'Færder vgs teknikk og industriell produksjon',
     extensionAttribute6: 'OF-FRV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Re vgs idrettsfag',
+    extensionAttribute6: 'OF-REV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-REV'
   },
   {
     department: 'Lardal tannklinikk',
     extensionAttribute6: 'TF-LAT',
     physicalDeliveryOfficeName: 'Lardal tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'TF'
   },
   {
     department: 'Bø vgs administrasjon',
     extensionAttribute6: 'OF-BOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Konsulent l'
+    title: 'Konsulent l',
+    state: 'OF-BOV'
   },
   {
     department: 'Hjalmar Johansen vgs OIMG',
     extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-HJV'
   },
   {
     department: 'Skien videregående skole',
     extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKIV'
   },
   {
     department: 'Skien vgs elevtjenester',
     extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Miljøarbeider',
+    state: 'OF-SKIV'
   },
   {
     department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-HORV'
   },
   {
-    department: 'Skogmo vgs tilrettelagt opplæring',
+    department: 'Skogmo videregående skole',
     extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Miljøarbeider'
+    title: 'Miljøarbeider',
+    state: 'OF-SKOV'
   },
   {
     department: 'Hjalmar Johansen vgs OIMG',
     extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-HJV'
   },
   {
     department: 'Sande vgs st.spes norsk,språk,samf',
     extensionAttribute6: 'OF-SANV-NO-SPR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-SANV'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-KRV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-KRV'
   },
   {
     department: 'Kompetansebyggeren yrkesfag',
     extensionAttribute6: 'OF-KB-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-KB'
   },
   {
     department: 'Horten vgs ST språk vg2, VG3,PB',
     extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
-    department: 'Sandefjord vgs idrett',
+    department: 'Sandefjord videregående skole',
     extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Horten vgs Elektro',
     extensionAttribute6: 'OF-HORV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-TEKN-DRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Renholder',
+    state: 'OF-THV'
   },
   {
     department: 'Skien vgs elevtjenester',
     extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Bamble vgs driftspersonell',
     extensionAttribute6: 'OF-BAV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-BAV'
   },
   {
     department: 'Nome vgs bygg- og anlegg, TIP',
     extensionAttribute6: 'OF-NOMV-BA-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
   },
   {
     department: 'Bamble vgs service og samferdsel',
     extensionAttribute6: 'OF-BAV-SERVICE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-BAV'
   },
   {
     department: 'Mestring og utvikling',
     extensionAttribute6: 'HRMU-MES',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'HR, mestring og utvikling',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'HRMU'
   },
   {
     department: 'Skien tannklinikk, avd. grønn',
     extensionAttribute6: 'TF-SKT-AVD-GRON',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
     extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-SFV'
   },
   {
     department: 'Skogmo videregående skole',
     extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-SKOV'
   },
   {
     department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
     extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs idrett',
+    extensionAttribute6: 'OF-HJV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HJV'
   },
   {
     department: 'Skien vgs dans og drama',
     extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-SKIV'
   },
   {
-    department: 'Sande vgs st.spes norsk,språk,samf',
+    department: 'Sande videregående skole',
     extensionAttribute6: 'OF-SANV-NO-SPR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-SANV'
   },
   {
     department: 'Team prosjektstøtte',
     extensionAttribute6: 'SMM-UTB-prosjek',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'SMM'
   },
   {
     department: 'Sande vgs st.spes norsk,språk,samf',
     extensionAttribute6: 'OF-SANV-NO-SPR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SANV'
   },
   {
     department: 'Greveskogen vgs økonomi- og realfag',
     extensionAttribute6: 'OF-GRV-REAL-OK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-GRV'
   },
   {
     department: 'Sande vgs elektro',
     extensionAttribute6: 'OF-SANV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Horten vgs service og informasjon',
     extensionAttribute6: 'OF-HORV-SERV-IN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-HORV'
   },
   {
     department: 'Haugar tannklinikk 3. etg.',
     extensionAttribute6: 'TF-HAT',
     physicalDeliveryOfficeName: 'Haugar tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Holmestrand tannklinikk',
-    extensionAttribute6: 'TF-HOLT',
-    physicalDeliveryOfficeName: 'Holmestrand tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Sande tannklinikk',
     extensionAttribute6: 'TF-SAT',
     physicalDeliveryOfficeName: 'Sande tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Bamble vgs driftspersonell',
     extensionAttribute6: 'OF-BAV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Servicemedarbeider'
+    title: 'Servicemedarbeider',
+    state: 'OF-BAV'
   },
   {
     department: 'Porsgrunn vgs språk',
     extensionAttribute6: 'OF-POV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-POV'
   },
   {
-    department: 'Hjalmar Johansen vgs Skien fengsel',
-    extensionAttribute6: 'OF-HJV-FENGSEL',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor'
+    department: 'Skogmo vgs opplæring i kriminalomsorgen',
+    extensionAttribute6: 'OF-SKOV-OKRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lektor',
+    state: 'OF-SKOV'
   },
   {
     department: 'PP-tjenesten Sør',
     extensionAttribute6: 'OF-PPT-SOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'PPT- Kongensgt 20A, Skien',
     company: 'PP-tjenesten',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'OF-PPT'
+  },
+  {
+    department: 'Notodden vgs ressurssenter',
+    extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOV'
   },
   {
     department: 'Notodden vgs merkantilt',
     extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-NOV'
   },
   {
-    department: 'Telemark fylkeskommune',
-    extensionAttribute6: 'OF-NOV-STUDIESP',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Uspesifisert'
+    department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
+    extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Søeberg tannklinikk',
     extensionAttribute6: 'TF-SET',
     physicalDeliveryOfficeName: 'Søeberg tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Horten vgs elevtjenesten',
     extensionAttribute6: 'OF-HORV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl vgs idrettsfag',
     extensionAttribute6: 'OF-THV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-THV'
   },
   {
     department: 'Fagskolen elektrofag',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'NIK'
   },
   {
     department: 'Skogmo vgs administrasjon og fellestjenester',
     extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Konsulent l'
+    title: 'Konsulent l',
+    state: 'OF-SKOV'
   },
   {
     department: 'Skien vgs kontor',
     extensionAttribute6: 'OF-SKIV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elevadministrasjon',
+    extensionAttribute6: 'OF-THV-ELEVADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Rådgiver',
+    state: 'OF-THV'
   },
   {
     department: 'Thor Heyerdahl vgs  språk, samfunnsfag, økonomi',
     extensionAttribute6: 'OF-THV-ST-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Færder vgs bygg og anleggsteknikk',
     extensionAttribute6: 'OF-FRV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-FRV'
   },
   {
     department: 'Færder vgs teknikk og industriell produksjon',
     extensionAttribute6: 'OF-FRV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Thor Heyerdahl vgs teknisk drift',
     extensionAttribute6: 'OF-THV-TEKN-DRI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Renholdsoperatør'
+    title: 'Renholdsoperatør',
+    state: 'OF-THV'
   },
   {
     department: 'Folkehelse og livsmestring',
     extensionAttribute6: 'OF-FHL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Borgheim tannklinikk',
     extensionAttribute6: 'TF-BOT',
     physicalDeliveryOfficeName: 'Borgheim tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Kragerø studiesenteret',
     extensionAttribute6: 'OF-KRV-STUDIESE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Bamble vgs industrifag',
-    extensionAttribute6: 'OF-BAV-INDUSTRI',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt 1',
+    state: 'OF-KRV'
   },
   {
     department: 'Arkiv og dokumenthåndtering',
     extensionAttribute6: 'BDK-ARK',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent l'
+    title: 'Konsulent l',
+    state: 'BDK'
   },
   {
     department: 'Notodden vgs ressurssenter',
     extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-NOV'
   },
   {
     department: 'Notodden vgs yrkesfag',
     extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-NOV'
   },
   {
     department: 'Fagskolen administrasjon',
     extensionAttribute6: 'NIK-FAGS-ADM',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'NIK'
   },
   {
     department: 'Sektorutvikling',
     extensionAttribute6: 'SMM-SEK',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
-    department: 'Arkiv og dokumenthåndtering',
-    extensionAttribute6: 'BDK-ARK',
+    department: 'Teknologi og digitalisering',
+    extensionAttribute6: 'BDK-TEK',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'BDK'
   },
   {
-    department: 'Sande vgs elektro',
+    department: 'Sande videregående skole',
     extensionAttribute6: 'OF-SANV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Karrieresenter Vestfold og Telemark',
+    extensionAttribute6: 'NIK-KARRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Leder',
+    state: 'NIK'
   },
   {
     department: 'Fagskolen maritim utdanning',
     extensionAttribute6: 'NIK-FAGS-MARITI',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'NIK'
   },
   {
     department: 'Strategi og utvikling',
     extensionAttribute6: 'SMM-STR',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Kompetansebyggeren studieforberedende og FF',
     extensionAttribute6: 'OF-KB-STUD-FF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-KB'
   },
   {
     department: 'Nome vgs naturbruk I',
     extensionAttribute6: 'OF-NOMV-NAT-I',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-NOMV'
   },
   {
     department: 'Nøtterøy videregående skole',
     extensionAttribute6: 'OF-NTV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-NTV'
   },
   {
     department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
     extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Horten vgs alternativ opplæring',
     extensionAttribute6: 'OF-HORV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Vernepleier'
+    title: 'Vernepleier',
+    state: 'OF-HORV'
   },
   {
-    department: 'Horten vgs alternativ opplæring',
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-HORV'
   },
   {
     department: 'Teknologi og digitalisering',
     extensionAttribute6: 'BDK-TEK',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'BDK'
   },
   {
     department: 'Samfunn og plan',
     extensionAttribute6: 'SIK-SAM',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SIK'
   },
   {
     department: 'Notodden vgs studiespesialisering',
     extensionAttribute6: 'OF-NOV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-NOV'
   },
   {
     department: 'Notodden vgs merkantilt',
     extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-NOV'
   },
   {
     department: 'Skien vgs service og samferdsel',
     extensionAttribute6: 'OF-SKIV-SEV-SAM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKIV'
   },
   {
     department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
     extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
   },
   {
     department: 'Team arealforvaltning',
     extensionAttribute6: 'SMM-FORV-areal',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Sandefjord folkehøyskole skoleassistent',
     extensionAttribute6: 'OF-SFH-SK-ASS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
     company: 'Sandefjord folkehøyskole',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-SFH'
   },
   {
     department: 'Skogmo vgs tilrettelagt opplæring',
     extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-SKOV'
   },
   {
     department: 'Vest-Telemark vidaregåande skule',
     extensionAttribute6: 'OF-VTV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Administrativ leder'
+    title: 'Administrativ leder',
+    state: 'OF-VTV'
   },
   {
     department: 'Service',
     extensionAttribute6: 'OSE-SER',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Økonomi, styring og eierskap',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OSE'
   },
   {
     department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
     extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl videregående skole',
     extensionAttribute6: 'OF-THV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-THV'
   },
   {
     department: 'Team mobilitetstjenester',
     extensionAttribute6: 'SMM-KOL-MOB',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Greveskogen vgs restaurant og matfag',
-    extensionAttribute6: 'OF-GRV-RM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Fagskolen elektrofag',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'NIK'
   },
   {
     department: 'Kompetansebyggeren studierektor',
     extensionAttribute6: 'OF-KB-ST-REKTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Færder vgs kunst design og arkitektur',
-    extensionAttribute6: 'OF-FRV-KUNST',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Avdelingsleder',
+    state: 'OF-KB'
   },
   {
     department: 'Pedagogisk støtte og utvikling',
     extensionAttribute6: 'OF-PED',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Kulturarv',
     extensionAttribute6: 'KRIF-KARV',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'KRIF'
   },
   {
     department: 'Notodden vgs ressurssenter',
     extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Bamble vgs elevtjenester og OIMG',
     extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-BAV'
   },
   {
     department: 'Notodden vgs yrkesfag',
     extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-NOV'
   },
   {
     department: 'Vest-Telemark vgs restaurant og matfag',
     extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-VTV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner avd helse øst',
     extensionAttribute6: 'OF-SMI-OST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-SMI'
   },
   {
-    department: 'Klima, miljø og internasjonalisering',
-    extensionAttribute6: 'SIK-KLI',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Rådgiver'
+    department: 'Skogmo vgs tilrettelagt opplæring',
+    extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-SKOV'
   },
   {
     department: 'Team driftskontrakter vest',
     extensionAttribute6: 'SMM-DRI-vest',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'SMM'
   },
   {
     department: 'Sandefjord vgs elevtjenester',
     extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Vakt'
+    title: 'Vakt',
+    state: 'OF-SFV'
   },
   {
-    department: 'Sande vgs kontor',
-    extensionAttribute6: 'OF-SANV-KONTOR',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Stabsleder'
+    department: 'Horten vgs idrett',
+    extensionAttribute6: 'OF-HORV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Thor Heyerdahl vgs  realfag',
     extensionAttribute6: 'OF-THV-REALFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-THV'
   },
   {
     department: 'Porsgrunn vgs bibliotek',
     extensionAttribute6: 'OF-POV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Bibliotekar'
+    title: 'Bibliotekar',
+    state: 'OF-POV'
   },
   {
-    department: 'Horten vgs ST språk vg2, VG3,PB',
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Team bruvedlikehold',
     extensionAttribute6: 'SMM-DRI-bru',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Melsom videregående skole',
+    extensionAttribute6: 'OF-MEV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-MEV'
   },
   {
     department: 'Nøtterøy vgs studiespesialisering språkfaglig avdeling',
     extensionAttribute6: 'OF-NTV-SP-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NTV'
   },
   {
     department: 'Færder vgs drift og vedlikehold',
     extensionAttribute6: 'OF-FRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Renholdsoperatør'
+    title: 'Renholdsoperatør',
+    state: 'OF-FRV'
   },
   {
     department: 'Horten vgs nettskolen i Vestfold',
     extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-HORV'
   },
   {
     department: 'Porsgrunn vgs real',
     extensionAttribute6: 'OF-POV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-POV'
   },
   {
-    department: 'Bamble vgs studiespesialisering',
+    department: 'Bamble videregående skole',
     extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
   },
   {
     department: 'Treungen tannklinikk',
     extensionAttribute6: 'TF-TRT',
     physicalDeliveryOfficeName: 'Treungen tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'TF'
   },
   {
-    department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
+    department: 'Sandefjord videregående skole',
     extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Team inntak',
     extensionAttribute6: 'OF-INN-INN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Arkiv og dokumenthåndtering',
     extensionAttribute6: 'BDK-ARK',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'BDK'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
+    extensionAttribute6: 'OF-SMI-VGS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Adjunkt',
+    state: 'OF-SMI'
   },
   {
     department: 'Bø vgs idrettsseksjon',
     extensionAttribute6: 'OF-BOV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-BOV'
   },
   {
     department: 'Team driftskontrakter øst',
     extensionAttribute6: 'SMM-DRI-ost',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'SMM'
   },
   {
     department: 'Thor Heyerdahl vgs salg, service og reiseliv',
     extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-THV'
   },
   {
     department: 'Sandefjord vgs økonomi, resepsjon og kantine',
     extensionAttribute6: 'OF-SFV-OK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-SFV'
   },
   {
     department: 'Sandefjord vgs personal',
     extensionAttribute6: 'OF-SFV-PERS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Larvik tannklinikk',
-    extensionAttribute6: 'TF-LART',
-    physicalDeliveryOfficeName: 'Larvik tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Skien vgs realfag',
-    extensionAttribute6: 'OF-SKIV-REAL',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
-    extensionAttribute6: 'OF-HJV-MK',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Borgheim tannklinikk',
-    extensionAttribute6: 'TF-BOT',
-    physicalDeliveryOfficeName: 'Borgheim tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
+    title: 'Rådgiver',
+    state: 'OF-SFV'
   },
   {
     department: 'Lardal tannklinikk',
     extensionAttribute6: 'TF-LAT',
     physicalDeliveryOfficeName: 'Lardal tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Skien vgs realfag',
+    extensionAttribute6: 'OF-SKIV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
+    extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lektor',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Borgheim tannklinikk',
+    extensionAttribute6: 'TF-BOT',
+    physicalDeliveryOfficeName: 'Borgheim tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
   },
   {
     department: 'Kompetanseutvikling og inkludering',
     extensionAttribute6: 'NIK-KOMP',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'NIK'
   },
   {
     department: 'Kragerø tannklinikk',
     extensionAttribute6: 'TF-KRT',
     physicalDeliveryOfficeName: 'Kragerø tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Nome vgs ledelse',
     extensionAttribute6: 'OF-NOMV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Administrativ leder'
+    title: 'Administrativ leder',
+    state: 'OF-NOMV'
   },
   {
-    department: 'Færder vgs elevtjenesten',
+    department: 'Færder videregående skole',
     extensionAttribute6: 'OF-FRV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Horten vgs media og kommunikasjon',
     extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Sektorutvikling',
-    extensionAttribute6: 'SMM-SEK',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Seksjonsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
   },
   {
     department: 'Notodden vgs landslinje yrkessjåfør',
     extensionAttribute6: 'OF-NOV-LANDLINJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-NOV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner felles',
     extensionAttribute6: 'OF-SMI-FELLES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-SMI'
   },
   {
     department: 'Porsgrunn videregående skole',
     extensionAttribute6: 'OF-POV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-POV'
   },
   {
     department: 'Team driftskontrakter øst',
     extensionAttribute6: 'SMM-DRI-ost',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Melsom vgs naturbruk',
     extensionAttribute6: 'OF-MEV-NATURBRU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-MEV'
   },
   {
     department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Horten vgs idrett',
+    extensionAttribute6: 'OF-HORV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Greveskogen vgs stab',
     extensionAttribute6: 'OF-GRV-STAB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-GRV'
   },
   {
     department: 'Greveskogen vgs renhold',
     extensionAttribute6: 'OF-GRV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-GRV'
   },
   {
     department: 'Team konsernstøtte',
     extensionAttribute6: 'BDK-IT-STOTTE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'BDK'
   },
   {
     department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
     extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-POV'
   },
   {
     department: 'Notodden vgs studiespesialisering',
     extensionAttribute6: 'OF-NOV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOV'
   },
   {
     department: 'Bamble vgs driftspersonell',
     extensionAttribute6: 'OF-BAV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-BAV'
   },
   {
     department: 'Team helhetlig styring',
     extensionAttribute6: 'OSE-KON-HEL',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OSE'
   },
   {
     department: 'Talenthus kompetansesenter',
     extensionAttribute6: 'OF-OT-TH-KOMP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Talenthus - OT',
     company: 'Oppfølgingstjenesten',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-OT'
   },
   {
     department: 'Karrieresenter Vestfold og Telemark',
     extensionAttribute6: 'NIK-KARRI',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'NIK'
   },
   {
     department: 'Melsom vgs arbeidslivstrening',
     extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Barne- og ungdomsarbeider'
+    title: 'Barne- og ungdomsarbeider',
+    state: 'OF-MEV'
   },
   {
     department: 'Rjukan videregående skole',
     extensionAttribute6: 'OF-RJV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-RJV'
   },
   {
-    department: 'Skien tannklinikk, avd. grønn',
-    extensionAttribute6: 'TF-SKT-AVD-GRON',
+    department: 'Skien tannklinikk, avd grå',
+    extensionAttribute6: 'TF-SKT-AVD-GRA',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Melsom vgs naturbruk',
+    extensionAttribute6: 'OF-MEV-NATURBRU',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Lærer -',
+    state: 'OF-MEV'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-SKIV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-SKIV'
   },
   {
     department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
     extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
   },
   {
     department: 'Nome videregående skole',
     extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOMV'
   },
   {
     department: 'Re vgs ST språk, realfag',
     extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-REV'
   },
   {
     department: 'Greveskogen vgs stab',
     extensionAttribute6: 'OF-GRV-STAB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-GRV'
   },
   {
     department: 'Sandefjord vgs studierektor yrkesforbredende',
     extensionAttribute6: 'OF-SFV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-SFV'
   },
   {
     department: 'Porsgrunn vgs samfunn',
     extensionAttribute6: 'OF-POV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-POV'
   },
   {
     department: 'Hjalmar Johansen vgs medier og kommunikasjon',
     extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HJV'
   },
   {
-    department: 'Hjalmar Johansen vgs Skien fengsel',
-    extensionAttribute6: 'OF-HJV-FENGSEL',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor 1'
+    department: 'Skogmo vgs opplæring i kriminalomsorgen',
+    extensionAttribute6: 'OF-SKOV-OKRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SKOV'
   },
   {
     department: 'Kommunikasjon',
     extensionAttribute6: 'BDK-KOM',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'BDK'
   },
   {
     department: 'Klima, miljø og internasjonalisering',
     extensionAttribute6: 'SIK-KLI',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SIK'
   },
   {
     department: 'Færder vgs teknikk og industriell produksjon',
     extensionAttribute6: 'OF-FRV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Elevassistent m/fagbrev'
+    title: 'Elevassistent m/fagbrev',
+    state: 'OF-FRV'
   },
   {
     department: 'Nome vgs naturbruk I',
     extensionAttribute6: 'OF-NOMV-NAT-I',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-NOMV'
   },
   {
     department: 'Thor Heyerdahl vgs studierektor yrkesforbredende',
     extensionAttribute6: 'OF-THV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Pedagogisk støtte og utvikling',
-    extensionAttribute6: 'OF-PED',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Uspesifisert'
+    title: 'Diverse',
+    state: 'OF-THV'
   },
   {
     department: 'Sande vgs st.spes realfag',
     extensionAttribute6: 'OF-SANV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Sande vgs renhold',
     extensionAttribute6: 'OF-SANV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-SANV'
   },
   {
     department: 'Thor Heyerdahl vgs musikk og dans',
     extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
     extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-POV'
   },
   {
     department: 'Nome vgs kontor, bibliotek og IKT',
     extensionAttribute6: 'OF-NOMV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-NOMV'
   },
   {
     department: 'Bamble videregående skole',
     extensionAttribute6: 'OF-BAV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Studieleder'
+    title: 'Studieleder',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Porsgrunn vgs idrett',
+    extensionAttribute6: 'OF-POV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-POV'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG2-3',
     extensionAttribute6: 'OF-SKOV-HO2',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKOV'
   },
   {
     department: 'Team skoleskyss, TT-kort og løyver',
     extensionAttribute6: 'SMM-KOL-SKYSS',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Oppfølgingstjenesten rådgivere',
     extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Talenthus - OT',
     company: 'Oppfølgingstjenesten',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-OT'
   },
   {
     department: 'Thor Heyerdahl vgs elektro og datateknologi',
     extensionAttribute6: 'OF-THV-EL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
     department: 'Notodden vgs bibliotek',
     extensionAttribute6: 'OF-NOV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'OF-NOV'
   },
   {
     department: 'Horten vgs opplæring i kriminalomsorgen',
     extensionAttribute6: 'OF-HORV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
   },
   {
-    department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
+    department: 'Thor Heyerdahl videregående skole',
     extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team skoleskyss, TT-kort og løyver',
+    extensionAttribute6: 'SMM-KOL-SKYSS',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Kompetansebyggeren studieforberedende og FF',
     extensionAttribute6: 'OF-KB-STUD-FF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-KB'
   },
   {
     department: 'Færder vgs elektrofag',
     extensionAttribute6: 'OF-FRV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Sandefjord vgs språk',
     extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-SFV'
   },
   {
     department: 'Lystlunden tannklinikk',
     extensionAttribute6: 'TF-LYT',
     physicalDeliveryOfficeName: 'Lystlunden tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Bø vgs administrasjon',
     extensionAttribute6: 'OF-BOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-BOV'
   },
   {
     department: 'Bø vgs administrasjon',
     extensionAttribute6: 'OF-BOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-BOV'
   },
   {
     department: 'Vest-Telemark vgs - helse og oppvekst',
     extensionAttribute6: 'OF-VTV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Team regnskap og rapportering',
-    extensionAttribute6: 'OSE-OKO-REGN',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Konsulent'
+    title: 'Adjunkt',
+    state: 'OF-VTV'
   },
   {
     department: 'Nome vgs renhold og vaktmester',
     extensionAttribute6: 'OF-NOMV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Fagarbeider m/fagskoleutdanning'
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Larvik tannklinikk',
+    extensionAttribute6: 'TF-LART',
+    physicalDeliveryOfficeName: 'Larvik tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Nome videregående skole',
+    extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-NOMV'
   },
   {
     department: 'Thor Heyerdahl vgs elevtjenesten',
     extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Notodden vgs studiespesialisering',
+    extensionAttribute6: 'OF-NOV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Holmestrand tannklinikk',
+    extensionAttribute6: 'TF-HOLT',
+    physicalDeliveryOfficeName: 'Holmestrand tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Re vgs idrettsfag',
     extensionAttribute6: 'OF-REV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Team asfalt og vegoppmerking',
     extensionAttribute6: 'SMM-DRI-asfalt',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Fagskolen byggfag',
     extensionAttribute6: 'NIK-FAGS-BYGG',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'NIK'
   },
   {
     department: 'Færder vgs læringssenter',
     extensionAttribute6: 'OF-FRV-LAERINGS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Bibliotekar'
+    title: 'Bibliotekar',
+    state: 'OF-FRV'
   },
   {
     department: 'Thor Heyerdahl vgs salg, service og reiseliv',
     extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
     department: 'Bamble vgs elevtjenester og OIMG',
     extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-BAV'
   },
   {
     department: 'Bø vgs idrettsseksjon',
     extensionAttribute6: 'OF-BOV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Arkiv og dokumenthåndtering',
-    extensionAttribute6: 'BDK-ARK',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
+    title: 'Adjunkt 1',
+    state: 'OF-BOV'
   },
   {
     department: 'Porsgrunn vgs sensor og eksamensvakter',
     extensionAttribute6: 'OF-POV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'OF-POV'
   },
   {
     department: 'Nome vgs naturbruk I',
     extensionAttribute6: 'OF-NOMV-NAT-I',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOMV'
   },
   {
     department: 'Re vgs elevtjenesten',
     extensionAttribute6: 'OF-REV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-REV'
   },
   {
     department: 'Sandefjord vgs teknisk',
     extensionAttribute6: 'OF-SFV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
   },
   {
     department: 'Team utbygging vest',
     extensionAttribute6: 'SMM-UTB-vest',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Skien vgs sensor og eksamensvakter',
     extensionAttribute6: 'OF-SKIV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'OF-SKIV'
   },
   {
     department: 'Porsgrunn vgs idrett',
     extensionAttribute6: 'OF-POV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-POV'
   },
   {
-    department: 'Horten vgs ST språk vg2, VG3,PB',
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lærer'
+    title: 'Lærer -',
+    state: 'OF-HORV'
   },
   {
     department: 'Team asfalt og vegoppmerking',
     extensionAttribute6: 'SMM-DRI-asfalt',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
     extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV-MDDI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
     extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-SFV'
   },
   {
     department: 'Horten vgs nettskolen i Vestfold',
     extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Skogmo vgs TIP og realfag',
     extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKOV'
   },
   {
     department: 'Hjalmar Johansen vgs idrett',
     extensionAttribute6: 'OF-HJV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-HJV'
   },
   {
-    department: 'Nome vgs design, håndverk, elektro og fellesfag',
-    extensionAttribute6: 'OF-NOMV-DH-EL-F',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    department: 'Nome videregående skole',
+    extensionAttribute6: 'OF-NOMV-NAT-I',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Kragerø vgs spesialundervisning',
+    extensionAttribute6: 'OF-KRV-SPES-UND',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Vernepleier',
+    state: 'OF-KRV'
   },
   {
     department: 'Team bruvedlikehold',
     extensionAttribute6: 'SMM-DRI-bru',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Team regnskap og rapportering',
+    extensionAttribute6: 'OSE-OKO-REGN',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Konsulent',
+    state: 'OSE'
   },
   {
     department: 'Greveskogen vgs stab',
     extensionAttribute6: 'OF-GRV-STAB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Re videregående skole',
     extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-REV'
   },
   {
     department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
     extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-THV'
   },
   {
     department: 'Nome vgs bygg- og anlegg, TIP',
     extensionAttribute6: 'OF-NOMV-BA-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Holmestrand vgs arbeidslivstrening',
     extensionAttribute6: 'OF-HOLV-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Greveskogen vgs renhold',
     extensionAttribute6: 'OF-GRV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Melsom vgs kontor',
-    extensionAttribute6: 'OF-MEV-KONTOR',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Strategi og utvikling',
-    extensionAttribute6: 'SMM-STR',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Renholder',
+    state: 'OF-GRV'
   },
   {
     department: 'Team Fjell',
     extensionAttribute6: 'BDK-IT-FJELL',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Skien vgs ledelse',
     extensionAttribute6: 'OF-SKIV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SKIV'
   },
   {
     department: 'Bamble videregående skole',
     extensionAttribute6: 'OF-BAV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
   },
   {
     department: 'Holmestrand vgs basen',
     extensionAttribute6: 'OF-HOLV-BASEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Vernepleier'
+    title: 'Vernepleier',
+    state: 'OF-HOLV'
   },
   {
     department: 'Greveskogen vgs AHT',
     extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl vgs musikk og dans',
     extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
   },
   {
     department: 'Holmestrand vgs norsk',
     extensionAttribute6: 'OF-HOLV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Kollektiv og mobilitet',
     extensionAttribute6: 'SMM-KOL',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'SMM'
   },
   {
     department: 'Greveskogen vgs musikk,dans,drama og innføring',
     extensionAttribute6: 'OF-GRV-MDDI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-GRV'
   },
   {
     department: 'Horten vgs media og kommunikasjon',
     extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Melsom vgs naturbruk',
     extensionAttribute6: 'OF-MEV-NATURBRU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-MEV'
   },
   {
-    department: 'Færder vgs elektrofag',
-    extensionAttribute6: 'OF-FRV-ELEKTRO',
+    department: 'Færder vgs teknikk og industriell produksjon',
+    extensionAttribute6: 'OF-FRV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-FRV'
   },
   {
     department: 'Horten vgs renhold',
     extensionAttribute6: 'OF-HORV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Renholdsoperatør'
+    title: 'Renholdsoperatør',
+    state: 'OF-HORV'
   },
   {
     department: 'Sandefjord vgs teknisk',
     extensionAttribute6: 'OF-SFV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avd leder'
+    title: 'Avd leder',
+    state: 'OF-SFV'
   },
   {
     department: 'Hjalmar Johansen vgs restaurant og matfag',
     extensionAttribute6: 'OF-HJV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HJV'
   },
   {
     department: 'Skien vgs musikk',
     extensionAttribute6: 'OF-SKIV-MUSIKK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-SFV'
   },
   {
     department: 'Porsgrunn videregående skole',
     extensionAttribute6: 'OF-POV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'OF-POV'
   },
   {
     department: 'Sandefjord vgs norsk',
     extensionAttribute6: 'OF-SFV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-SFV'
   },
   {
     department: 'Greveskogen vgs økonomi- og realfag',
     extensionAttribute6: 'OF-GRV-REAL-OK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Revetal tannklinikk',
     extensionAttribute6: 'TF-RET',
     physicalDeliveryOfficeName: 'Revevtal tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Skien vgs service og samferdsel',
     extensionAttribute6: 'OF-SKIV-SEV-SAM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKIV'
   },
   {
     department: 'Horten vgs Design og håndverk',
     extensionAttribute6: 'OF-HORV-DH',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Porsgrunn vgs språk',
+    extensionAttribute6: 'OF-POV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-POV'
   },
   {
     department: 'Kompetansebyggeren',
     extensionAttribute6: 'OF-KB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Kompetansebyggeren',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-KB'
   },
   {
     department: 'Strategi og kompetanseledelse',
     extensionAttribute6: 'HRMU-STR',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'HR, mestring og utvikling',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'HRMU'
   },
   {
     department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
     extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-THV'
   },
   {
-    department: 'Horten vgs ST språk vg2, VG3,PB',
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-HORV'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'NIK-FAGS-HELSE',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'NIK'
+  },
+  {
+    department: 'Færder videregående skole',
+    extensionAttribute6: 'OF-FRV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
     extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
   },
   {
     department: 'Færder vgs opplæring innen kriminalomsorgen',
     extensionAttribute6: 'OF-FRV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Re vgs helse og oppvekst',
-    extensionAttribute6: 'OF-REV-HO',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Porsgrunn vgs frisør,blomster, interiør og eksponeringsdesign',
     extensionAttribute6: 'OF-POV-DH',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-POV'
   },
   {
     department: 'Kragerø vgs drift',
     extensionAttribute6: 'OF-KRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Arbeidsleder'
+    title: 'Arbeidsleder',
+    state: 'OF-KRV'
   },
   {
-    department: 'Hjalmar Johansen vgs Skien fengsel',
-    extensionAttribute6: 'OF-HJV-FENGSEL',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    department: 'Skogmo vgs opplæring i kriminalomsorgen',
+    extensionAttribute6: 'OF-SKOV-OKRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Kragerø vgs studieforberedende',
     extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Fagskolen elektrofag',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor',
+    state: 'NIK'
   },
   {
     department: 'Notodden tannklinikk',
     extensionAttribute6: 'TF-NOT',
     physicalDeliveryOfficeName: 'Notodden tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Bamble vgs elevtjenester og OIMG',
     extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Helsesøster'
+    title: 'Helsesøster',
+    state: 'OF-BAV'
   },
   {
-    department: 'Greveskogen vgs restaurant og matfag',
+    department: 'Greveskogen videregående skole',
     extensionAttribute6: 'OF-GRV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Miljøarbeider'
+    title: 'Miljøarbeider',
+    state: 'OF-GRV'
   },
   {
     department: 'Horten vgs studierektor studieforbredende',
     extensionAttribute6: 'OF-HORV-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-HORV'
   },
   {
     department: 'Hjalmar Johansen vgs restaurant og matfag',
     extensionAttribute6: 'OF-HJV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV-MDDI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lærer -',
+    state: 'OF-GRV'
   },
   {
     department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
     extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
     department: 'Team utbygging øst',
     extensionAttribute6: 'SMM-UTB-ost',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Notodden videregående skole',
-    extensionAttribute6: 'OF-NOV-RESSURSS',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Lærer -'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Sektorutvikling',
     extensionAttribute6: 'SMM-SEK',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Thor Heyerdahl vgs idrettsfag',
     extensionAttribute6: 'OF-THV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Thor Heyerdahl vgs idrettsfag',
     extensionAttribute6: 'OF-THV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Kompetansebyggeren administrasjon og drift',
+    extensionAttribute6: 'OF-KB-ADM-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-KB'
   },
   {
     department: 'Færder vgs bygg og anleggsteknikk',
     extensionAttribute6: 'OF-FRV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Vest-Telemark vgs yrkesfag',
-    extensionAttribute6: 'OF-VTV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Lærer -'
+    title: 'Elevassistent',
+    state: 'OF-FRV'
   },
   {
     department: 'Bø vgs realseksjon',
     extensionAttribute6: 'OF-BOV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-BOV'
   },
   {
     department: 'Team voksenopplæring',
     extensionAttribute6: 'OF-INN-VOK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'HRMU pensjon',
     extensionAttribute6: 'HRMU-PENS',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'HR, mestring og utvikling',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Hjalmar Johansen videregående skole',
-    extensionAttribute6: 'OF-HJV-IDRETT',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Sande vgs st.spes realfag',
-    extensionAttribute6: 'OF-SANV-REAL',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Horten vgs opplæring i kriminalomsorgen',
-    extensionAttribute6: 'OF-HORV-KRIMOMS',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team prosjektstøtte',
-    extensionAttribute6: 'SMM-UTB-prosjek',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Fylkesbibliotek',
-    extensionAttribute6: 'KRIF-FB',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Sandefjord vgs læringssenteret',
-    extensionAttribute6: 'OF-SFV-L-SENTER',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Holmestrand vgs elevtjenesten',
-    extensionAttribute6: 'OF-HOLV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Sande vgs helse og oppvekst',
-    extensionAttribute6: 'OF-SANV-HO',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Horten vgs  personal og økonomi',
-    extensionAttribute6: 'OF-HORV-PERS-OK',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Horten vgs nettskolen i Vestfold',
-    extensionAttribute6: 'OF-HORV-NETTSKO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Team eksamen',
-    extensionAttribute6: 'OF-INN-EKS',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Konsulent'
+    title: 'Uspesifisert',
+    state: 'HRMU'
   },
   {
     department: 'Skien tannklinikk, avd blå',
     extensionAttribute6: 'TF-SKT-AVD-BLA',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Horten vgs opplæring i kriminalomsorgen',
+    extensionAttribute6: 'OF-HORV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Rjukan videregående skole',
+    extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Lærer -',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Team prosjektstøtte',
+    extensionAttribute6: 'SMM-UTB-prosjek',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Fylkesbibliotek',
+    extensionAttribute6: 'KRIF-FB',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Rådgiver',
+    state: 'KRIF'
+  },
+  {
+    department: 'Sandefjord vgs læringssenteret',
+    extensionAttribute6: 'OF-SFV-L-SENTER',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Holmestrand vgs elevtjenesten',
+    extensionAttribute6: 'OF-HOLV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Sande vgs helse og oppvekst',
+    extensionAttribute6: 'OF-SANV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Horten vgs  personal og økonomi',
+    extensionAttribute6: 'OF-HORV-PERS-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Konsulent',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Horten vgs nettskolen i Vestfold',
+    extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Teamleder',
+    state: 'BDK'
+  },
+  {
+    department: 'Team eksamen',
+    extensionAttribute6: 'OF-INN-EKS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Konsulent',
+    state: 'OF'
+  },
+  {
+    department: 'Skien tannklinikk, avd blå',
+    extensionAttribute6: 'TF-SKT-AVD-BLA',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Team driftskontrakter vest',
     extensionAttribute6: 'SMM-DRI-vest',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
-    department: 'Haugar tannklinikk 3. etg.',
-    extensionAttribute6: 'TF-HAT',
-    physicalDeliveryOfficeName: 'Haugar tannklinikk',
+    department: 'Stokke tannklinikk',
+    extensionAttribute6: 'TF-STT',
+    physicalDeliveryOfficeName: 'Stokke tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Sandefjord vgs international baccalaureate',
     extensionAttribute6: 'OF-SFV-IB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-SFV'
   },
   {
     department: 'Thor Heyerdahl vgs elevtjenesten',
     extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs ST norsk, samf.fag',
     extensionAttribute6: 'OF-REV-NO-SAMF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-REV'
   },
   {
     department: 'Nome vgs elevtjenester',
     extensionAttribute6: 'OF-NOMV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOMV'
   },
   {
     department: 'Bø vidaregåande skule',
     extensionAttribute6: 'OF-BOV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-BOV'
   },
   {
     department: 'Nome vgs gardsbruk',
     extensionAttribute6: 'OF-NOMV-GARDSBRU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
   },
   {
     department: 'Horten vgs Design og håndverk',
     extensionAttribute6: 'OF-HORV-DH',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HORV'
   },
   {
     department: 'Team Kaupang',
     extensionAttribute6: 'BDK-IT-KAUPANG',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'BDK'
   },
   {
     department: 'Sande vgs st.spes norsk,språk,samf',
     extensionAttribute6: 'OF-SANV-NO-SPR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Team vegforvaltning',
     extensionAttribute6: 'SMM-FORV-vegf',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
-    department: 'Bamble vgs studiespesialisering',
+    department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-BAV'
   },
   {
     department: 'Horten vgs Design og håndverk',
     extensionAttribute6: 'OF-HORV-DH',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
-    extensionAttribute6: 'OF-SMI-VGS',
-    physicalDeliveryOfficeName: 'SMI-skolen',
-    company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lærer',
+    state: 'OF-HORV'
   },
   {
     department: 'Melsom vgs naturbruk',
     extensionAttribute6: 'OF-MEV-NATURBRU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-MEV'
   },
   {
     department: 'Færder vgs bygg og anleggsteknikk',
     extensionAttribute6: 'OF-FRV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Team Nord-Jarlsberg',
     extensionAttribute6: 'BDK-IT-NORD',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Fagskolen administrasjon',
     extensionAttribute6: 'NIK-FAGS-ADM',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'NIK'
   },
   {
     department: 'Skien vgs elevtjenester',
     extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-SKIV'
   },
   {
     department: 'Kragerø studiesenteret',
     extensionAttribute6: 'OF-KRV-STUDIESE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-KRV'
   },
   {
     department: 'Bamble videregående skole',
     extensionAttribute6: 'OF-BAV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Bamble videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-BAV'
   },
   {
-    department: 'Fagskolen elektrofag',
+    department: 'Fagskolen Vestfold og Telemark',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Holmestrand vgs norsk',
+    extensionAttribute6: 'OF-HOLV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Holmestrand vgs administrasjon',
+    extensionAttribute6: 'OF-HOLV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lærling',
+    state: 'OF-HOLV'
   },
   {
     department: 'Team geodata',
     extensionAttribute6: 'SMM-DRI-geodata',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
     extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-SFV'
   },
   {
     department: 'Sandefjord vgs servicekontor',
     extensionAttribute6: 'OF-SFV-SERVKTR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-SFV'
   },
   {
     department: 'Re vgs idrettsfag',
     extensionAttribute6: 'OF-REV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-REV'
   },
   {
     department: 'Kragerø vgs spesialundervisning',
     extensionAttribute6: 'OF-KRV-SPES-UND',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-KRV'
   },
   {
     department: 'Team konserndrift',
     extensionAttribute6: 'BDK-IT-DRIFT',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'BDK'
   },
   {
     department: 'Sande videregående skole',
     extensionAttribute6: 'OF-SANV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-SANV'
   },
   {
-    department: 'Team Kaupang',
-    extensionAttribute6: 'BDK-IT-KAUPANG',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    department: 'Horten vgs realfag, forskerlinje',
+    extensionAttribute6: 'OF-HORV-REAL-FO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team konsernstøtte',
+    extensionAttribute6: 'BDK-IT-STOTTE',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Holmestrand vgs kroppsøving',
     extensionAttribute6: 'OF-HOLV-KROPPSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-HOLV'
   },
   {
     department: 'Verdensarvkoordinator',
     extensionAttribute6: 'KRIF-VAK',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'KRIF'
   },
   {
     department: 'Melsom vgs gård drift og administrasjon',
     extensionAttribute6: 'OF-MEV-garddrif',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Driftsleder'
+    title: 'Driftsleder',
+    state: 'OF-MEV'
   },
   {
     department: 'Team prosjektstøtte',
     extensionAttribute6: 'SMM-UTB-prosjek',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Sandefjord vgs samfunnsfag',
     extensionAttribute6: 'OF-SFV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SFV'
   },
   {
-    department: 'Sandefjord vgs elevtjenester',
-    extensionAttribute6: 'OF-SFV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Konsulent'
+    department: 'Horten vgs nettskolen i Vestfold',
+    extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Konsulent',
+    state: 'OF-HORV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner felles',
     extensionAttribute6: 'OF-SMI-FELLES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-SMI'
   },
   {
     department: 'Thor Heyerdahl vgs bibliotek',
     extensionAttribute6: 'OF-THV-BIBLIOTE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Bibliotekar'
+    title: 'Bibliotekar',
+    state: 'OF-THV'
   },
   {
     department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
     extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Nome vgs renhold og vaktmester',
+    extensionAttribute6: 'OF-NOMV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG1',
     extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKOV'
   },
   {
     department: 'Skogmo vgs bygg og anleggsfag',
     extensionAttribute6: 'OF-SKOV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-SKOV'
   },
   {
     department: 'Drangedal tannklinikk',
     extensionAttribute6: 'TF-DRT',
     physicalDeliveryOfficeName: 'Drangedal tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'NIK'
+  },
+  {
+    department: 'Eksamenskontoret sensor og eksamensvakter',
+    extensionAttribute6: 'OF-INN-SENSOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Opplæring og folkehelse',
+    title: 'Eksamensvakt',
+    state: 'OF'
+  },
+  {
+    department: 'Nome vgs internat og kantine',
+    extensionAttribute6: 'OF-NOMV-INTERNA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Greveskogen vgs AHT',
+    extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lærling',
+    state: 'OF-GRV'
   },
   {
     department: 'Team mobilitetstjenester',
     extensionAttribute6: 'SMM-KOL-MOB',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Sandefjord vgs språk',
     extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Re vgs ST norsk, samf.fag',
     extensionAttribute6: 'OF-REV-NO-SAMF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-REV'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG1',
     extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKOV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner avd barnevern',
     extensionAttribute6: 'OF-SMI-BARN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
   },
   {
-    department: 'Nome vgs design, håndverk, elektro og fellesfag',
+    department: 'Færder vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-FRV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Nome videregående skole',
     extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOMV'
   },
   {
-    department: 'Sandefjord vgs musikk,dans,drama',
-    extensionAttribute6: 'OF-SFV-MDD',
+    department: 'Sandefjord vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-SFV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lærer -'
+    title: 'Sensor',
+    state: 'OF-SFV'
   },
   {
     department: 'Rjukan vgs administrativ stab og drift',
     extensionAttribute6: 'OF-RJV-ADM-DRIF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Lektor'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-RJV'
   },
   {
     department: 'Team marked og utvikling',
     extensionAttribute6: 'SMM-KOL-marked',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Re vgs teknisk',
     extensionAttribute6: 'OF-REV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Teknisk leder'
+    title: 'Teknisk leder',
+    state: 'OF-REV'
   },
   {
     department: 'Færder vgs kunst design og arkitektur',
     extensionAttribute6: 'OF-FRV-KUNST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-FRV'
   },
   {
     department: 'Færder vgs bygg og anleggsteknikk',
     extensionAttribute6: 'OF-FRV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
-    department: 'Vest-Telemark vgs restaurant og matfag',
-    extensionAttribute6: 'OF-VTV-RM',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt 1'
+    department: 'Notodden vgs ressurssenter',
+    extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-NOV'
   },
   {
-    department: 'Hjalmar Johansen vgs OIMG',
-    extensionAttribute6: 'OF-HJV-OIMG',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Assistent'
+    department: 'Skien vgs ledelse',
+    extensionAttribute6: 'OF-SKIV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Administrativ leder',
+    state: 'OF-SKIV'
   },
   {
     department: 'Rjukan vgs ledelse',
     extensionAttribute6: 'OF-RJV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Administrativ leder'
+    title: 'Administrativ leder',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Hovedtillitsvalgte',
+    extensionAttribute6: 'HRMU-HTV',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'HR, mestring og utvikling',
+    title: 'Tillitsvalgt',
+    state: 'HRMU'
   },
   {
     department: 'Skien tannklinikk, avd grå',
     extensionAttribute6: 'TF-SKT-AVD-GRA',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
-    department: 'Thor Heyerdahl vgs  språk, samfunnsfag, økonomi',
-    extensionAttribute6: 'OF-THV-ST-SSO',
+    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-THV'
   },
   {
     department: 'Notodden vgs ressurssenter',
     extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Skien vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-KRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-KRV'
   },
   {
     department: 'Thor Heyerdahl vgs kantine',
     extensionAttribute6: 'OF-THV-KANTINE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-THV'
   },
   {
     department: 'Holmestrand vgs basen',
     extensionAttribute6: 'OF-HOLV-BASEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-HOLV'
   },
   {
     department: 'Revetal tannklinikk',
     extensionAttribute6: 'TF-RET',
     physicalDeliveryOfficeName: 'Revevtal tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Oppfølgingstjenesten rådgivere',
     extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Talenthus - OT',
     company: 'Oppfølgingstjenesten',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-OT'
   },
   {
     department: 'Porsgrunn videregående skole',
     extensionAttribute6: 'OF-POV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Administrativ leder'
+    title: 'Administrativ leder',
+    state: 'OF-POV'
   },
   {
     department: 'Skien vgs språk, samfunn og økonomi',
     extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Samferdsel, miljø og mobilitet',
     extensionAttribute6: 'SMM',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Direktør'
+    title: 'Direktør',
+    state: 'SMM'
   },
   {
     department: 'Holmestrand vgs realfag',
     extensionAttribute6: 'OF-HOLV-REALFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Hjalmar Johansen vgs idrett',
-    extensionAttribute6: 'OF-HJV-IDRETT',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Team skoleskyss, TT-kort og løyver',
-    extensionAttribute6: 'SMM-KOL-SKYSS',
-    physicalDeliveryOfficeName: 'Hotellvegen 7, Dalen',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
+    title: 'Lærer -',
+    state: 'OF-HOLV'
   },
   {
     department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
     extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
   },
   {
     department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Team arealforvaltning',
     extensionAttribute6: 'SMM-FORV-areal',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-NOMV'
   },
   {
     department: 'Holmestrand vgs helse og oppvekst',
     extensionAttribute6: 'OF-HOLV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
     extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
-    department: 'Greveskogen vgs service og samferdsel',
+    department: 'Greveskogen vgs salg, service og reiseliv',
     extensionAttribute6: 'OF-GRV-SERV-SAM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-GRV'
   },
   {
     department: 'Færder vgs opplæring innen kriminalomsorgen',
     extensionAttribute6: 'OF-FRV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-FRV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner felles',
     extensionAttribute6: 'OF-SMI-FELLES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Renholder'
-  },
-  {
-    department: 'Skien vgs drift',
-    extensionAttribute6: 'OF-SKIV-DRIFT',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Fagarbeider'
+    title: 'Renholder',
+    state: 'OF-SMI'
   },
   {
     department: 'Hjalmar Johansen vgs medier og kommunikasjon',
     extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HJV'
   },
   {
     department: 'Nome vgs design, håndverk, elektro og fellesfag',
     extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOMV'
   },
   {
     department: 'Porsgrunn vgs elevtjenester',
     extensionAttribute6: 'OF-POV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-POV'
   },
   {
     department: 'Melsom videregående skole',
     extensionAttribute6: 'OF-MEV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-MEV'
   },
   {
     department: 'Folkehelse og livsmestring',
     extensionAttribute6: 'OF-FHL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Team utbygging Bypakke Grenland',
     extensionAttribute6: 'SMM-UTB-bypakke',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
     department: 'Sandefjord vgs elevtjenester',
     extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Fagskolen maritim utdanning',
+    extensionAttribute6: 'NIK-FAGS-MARITI',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Diverse',
+    state: 'NIK'
+  },
+  {
+    department: 'Nome vgs design, håndverk, elektro og fellesfag',
+    extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
   },
   {
     department: 'Skien vgs drift',
     extensionAttribute6: 'OF-SKIV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Fagarbeider 1'
+    title: 'Fagarbeider 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Skien tannklinikk, oralkirurgisk avd.',
     extensionAttribute6: 'TF-SKT-ORALKIRU',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Team HMS og personvern',
     extensionAttribute6: 'HRMU-PERS-HMS',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'HR, mestring og utvikling',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'HRMU'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Sandefjord folkehøyskole undervisning',
     extensionAttribute6: 'OF-SFH-UNDERVIS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
     company: 'Sandefjord folkehøyskole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFH'
   },
   {
-    department: 'Skolen for sosiale og medisinske institusjoner avd barnevern',
-    extensionAttribute6: 'OF-SMI-BARN',
+    department: 'Skolen for sosiale og medisinske institusjoner avd helse øst',
+    extensionAttribute6: 'OF-SMI-OST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Kompetanseutvikling og inkludering',
-    extensionAttribute6: 'NIK-KOMP',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Prosjektleder'
+    title: 'Adjunkt',
+    state: 'OF-SMI'
   },
   {
     department: 'Skien vgs realfag',
     extensionAttribute6: 'OF-SKIV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Skien videregående skole',
     extensionAttribute6: 'OF-SKIV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Rektor'
-  },
-  {
-    department: 'Team Fjell',
-    extensionAttribute6: 'BDK-IT-FJELL',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Rektor',
+    state: 'OF-SKIV'
   },
   {
     department: 'Samfunn og plan',
     extensionAttribute6: 'SIK-SAM',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SIK'
   },
   {
-    department: 'Notodden vgs ressurssenter',
+    department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Sandefjord vgs samfunnsfag',
     extensionAttribute6: 'OF-SFV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner avd barnevern',
     extensionAttribute6: 'OF-SMI-BARN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
   },
   {
     department: 'Greveskogen vgs elevtjenesten',
     extensionAttribute6: 'OF-GRV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-GRV'
   },
   {
     department: 'Skogmo vgs tilrettelagt opplæring',
     extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
     department: 'Hjalmar Johansen vgs kontor og drift',
     extensionAttribute6: 'OF-HJV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Administrativ leder'
+    title: 'Administrativ leder',
+    state: 'OF-HJV'
   },
   {
     department: 'Re vgs sensor og eksamensvakter',
     extensionAttribute6: 'OF-REV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-REV'
   },
   {
     department: 'Hjalmar Johansen vgs idrett',
     extensionAttribute6: 'OF-HJV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Bø vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-BOV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor 1',
+    state: 'OF-BOV'
   },
   {
     department: 'Notodden vgs yrkesfag',
     extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Bamble vgs studiespesialisering',
+    extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Lektor',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Fag- og yrkesopplæring',
+    extensionAttribute6: 'OF-FAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Opplæring og folkehelse',
+    title: 'Lærling',
+    state: 'OF'
   },
   {
     department: 'Thor Heyerdahl vgs elevtjenesten',
     extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
-    department: 'Thor Heyerdahl vgs elevtjenesten',
-    extensionAttribute6: 'OF-THV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Miljøarbeider'
-  },
-  {
-    department: 'Færder vgs design og håndverk',
+    department: 'Færder videregående skole',
     extensionAttribute6: 'OF-FRV-DH',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Kragerø vgs kontor',
     extensionAttribute6: 'OF-KRV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-KRV'
   },
   {
     department: 'Greveskogen videregående skole',
     extensionAttribute6: 'OF-GRV-SPRAK-SA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Folkevalgte',
+    extensionAttribute6: 'FOLKEVALGTE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Folkevalgte',
+    title: 'Folkevalgt',
+    state: 'FOLKEVALGTE'
+  },
+  {
+    department: 'Notodden tannklinikk',
+    extensionAttribute6: 'TF-NOT',
+    physicalDeliveryOfficeName: 'Notodden tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Sandefjord vgs elevtjenester',
     extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
   },
   {
     department: 'Haugar tannklinikk 2. etg',
     extensionAttribute6: 'TF-HAT2',
     physicalDeliveryOfficeName: 'Haugar tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Psykolog'
+    title: 'Psykolog',
+    state: 'TF'
+  },
+  {
+    department: 'Re vgs teknisk',
+    extensionAttribute6: 'OF-REV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lærling',
+    state: 'OF-REV'
   },
   {
     department: 'Melsom vgs medier og kommunikasjon',
     extensionAttribute6: 'OF-MEV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-MEV'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner av helse vest',
     extensionAttribute6: 'OF-SMI-VEST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SMI'
   },
   {
     department: 'Thor Heyerdahl vgs  administrasjon',
     extensionAttribute6: 'OF-THV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Saksbehandler'
+    title: 'Saksbehandler',
+    state: 'OF-THV'
   },
   {
     department: 'Fag- og yrkesopplæring',
     extensionAttribute6: 'OF-FAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Fagskolen elektrofag',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'NIK'
   },
   {
     department: 'Kragerø vgs ledelse',
     extensionAttribute6: 'OF-KRV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-KRV'
   },
   {
     department: 'Porsgrunn tannklinikk',
     extensionAttribute6: 'TF-POT',
     physicalDeliveryOfficeName: 'Porsgrunn tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Greveskogen vgs elevtjenesten',
     extensionAttribute6: 'OF-GRV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Nøtterøy vgs studiespesialisering realfag,kroppsøving',
+    extensionAttribute6: 'OF-NTV-REAL-KRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
     extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-BAV'
   },
   {
     department: 'Team inntak',
     extensionAttribute6: 'OF-INN-INN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Vest-Telemark vgs restaurant og matfag',
     extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-VTV'
   },
   {
-    department: 'Sande tannklinikk',
-    extensionAttribute6: 'TF-SAT',
-    physicalDeliveryOfficeName: 'Sande tannklinikk',
+    department: 'Bamble vgs studiespesialisering',
+    extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Haugar tannklinikk 3. etg.',
+    extensionAttribute6: 'TF-HAT',
+    physicalDeliveryOfficeName: 'Haugar tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Team marked og utvikling',
+    extensionAttribute6: 'SMM-KOL-marked',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Nome vgs gardsbruk',
     extensionAttribute6: 'OF-NOMV-GARDSBRU',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Lærekandidat'
+    title: 'Lærekandidat',
+    state: 'OF-NOMV'
   },
   {
     department: 'Thor Heyerdahl vgs  språk, samfunnsfag, økonomi',
     extensionAttribute6: 'OF-THV-ST-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs toppidrett fotball og håndball',
     extensionAttribute6: 'OF-REV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Notodden vgs helse og oppvekst',
     extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOV'
   },
   {
     department: 'Skien vgs språk, samfunn og økonomi',
     extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SKIV'
   },
   {
     department: 'Nome vgs helse og oppvekstfag',
     extensionAttribute6: 'OF-NOMV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Lærer -'
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
   },
   {
     department: 'Bø vgs administrasjon',
     extensionAttribute6: 'OF-BOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Fagarbeider 1'
+    title: 'Fagarbeider 1',
+    state: 'OF-BOV'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG2-3',
     extensionAttribute6: 'OF-SKOV-HO2',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKOV'
   },
   {
     department: 'Thor Heyerdahl vgs elevadministrasjon',
     extensionAttribute6: 'OF-THV-ELEVADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
   },
   {
     department: 'Stathelle tannklinikk',
     extensionAttribute6: 'TF-STAT',
     physicalDeliveryOfficeName: 'Stathelle tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Service',
     extensionAttribute6: 'OSE-SER',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Økonomi, styring og eierskap',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OSE'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Folkevalgte',
     extensionAttribute6: 'FOLKEVALGTE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Folkevalgte',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Skogmo vgs fellesfag',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Uspesifisert',
+    state: 'FOLKEVALGTE'
   },
   {
     department: 'Nome vgs naturbruk I',
     extensionAttribute6: 'OF-NOMV-NAT-I',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOMV'
   },
   {
-    department: 'Notodden vgs studiespesialisering',
-    extensionAttribute6: 'OF-NOV-STUDIESP',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt'
+    department: 'Eiendom',
+    extensionAttribute6: 'OSE-EIE',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Uspesifisert',
+    state: 'OSE'
   },
   {
-    department: 'Melsom vgs gård internat',
-    extensionAttribute6: 'OF-MEV-INTERNAT',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Internatassistent'
+    department: 'Thor Heyerdahl vgs teknologi og industrifag',
+    extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sandefjord vgs hverdagslivstrening',
+    extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærling',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV-SERV-SAM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Holmestrand vgs studierektor',
     extensionAttribute6: 'OF-HOLV-SR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-HOLV'
   },
   {
-    department: 'Vest-Telemark vgs restaurant og matfag',
+    department: 'Vest-Telemark vidaregåande skule',
     extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-VTV'
   },
   {
     department: 'Nome vgs bygg- og anlegg, TIP',
     extensionAttribute6: 'OF-NOMV-BA-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Nome vgs helse og oppvekstfag',
+    extensionAttribute6: 'OF-NOMV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Lærer -',
+    state: 'OF-NOMV'
   },
   {
     department: 'Eiendom',
     extensionAttribute6: 'OSE-EIE',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OSE'
   },
   {
     department: 'Team prosjektstøtte',
     extensionAttribute6: 'SMM-UTB-prosjek',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Trainee'
+    title: 'Trainee',
+    state: 'SMM'
   },
   {
     department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
     extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
   },
   {
-    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
-    extensionAttribute6: 'OF-THV-SS',
+    department: 'Thor Heyerdahl vgs teknologi og industrifag',
+    extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
     department: 'Notodden vgs ressurssenter',
     extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
+    extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Sande vgs medier og kommunikasjon',
     extensionAttribute6: 'OF-SANV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-SANV'
   },
   {
     department: 'Drift og vedlikehold',
     extensionAttribute6: 'SMM-DRI',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Prøvenemnder',
+    extensionAttribute6: 'OF-FAG-provenem',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Opplæring og folkehelse',
+    title: 'Sensor',
+    state: 'OF'
   },
   {
     department: 'Re vgs renhold',
     extensionAttribute6: 'OF-REV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Ledende renholder'
+    title: 'Ledende renholder',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Holmestrand videregående skole',
+    extensionAttribute6: 'OF-HOLV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Melsom videregående skole (SMI)',
+    extensionAttribute6: 'OF-SMI-VGS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SMI'
   },
   {
     department: 'Melsom vgs informasjon',
     extensionAttribute6: 'OF-MEV-INFO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-MEV'
   },
   {
     department: 'Team konserndrift',
     extensionAttribute6: 'BDK-IT-DRIFT',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Fagskolen TIP',
     extensionAttribute6: 'NIK-FAGS-TIP',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'NIK'
   },
   {
     department: 'Team regnskap og rapportering',
     extensionAttribute6: 'OSE-OKO-REGN',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Kragerø vgs kontor',
+    extensionAttribute6: 'OF-KRV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lærling',
+    state: 'OF-KRV'
   },
   {
     department: 'Sande vgs st.spes norsk,språk,samf',
     extensionAttribute6: 'OF-SANV-NO-SPR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-SANV'
   },
   {
     department: 'Thor Heyerdahl vgs elevtjenesten',
     extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-THV'
   },
   {
     department: 'Re vgs toppidrett fotball og håndball',
     extensionAttribute6: 'OF-REV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-REV'
   },
   {
     department: 'Re vgs kontor',
     extensionAttribute6: 'OF-REV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-REV'
   },
   {
     department: 'Sandefjord vgs helse, oppvekst',
     extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Færder vgs påbygging generell studiekompetanse',
     extensionAttribute6: 'OF-FRV-PB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-FRV'
   },
   {
-    department: 'Bamble videregående skole',
-    extensionAttribute6: 'OF-BAV',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    department: 'Notodden videregående skole',
+    extensionAttribute6: 'OF-NOV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-NOV'
   },
   {
     department: 'Nome vgs naturbruk II',
     extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Nome videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Holmestrand tannklinikk',
+    extensionAttribute6: 'TF-HOLT',
+    physicalDeliveryOfficeName: 'Holmestrand tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
   },
   {
     department: 'Sandefjord vgs personal',
     extensionAttribute6: 'OF-SFV-PERS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Sandefjord folkehøyskole undervisning',
-    extensionAttribute6: 'OF-SFH-UNDERVIS',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Thor Heyerdahl vgs teknologi og industrifag',
-    extensionAttribute6: 'OF-THV-TP',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Thor Heyerdahl vgs bibliotek',
-    extensionAttribute6: 'OF-THV-BIBLIOTE',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Vest-Telemark vgs yrkesfag',
-    extensionAttribute6: 'OF-VTV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Færder vgs yrkesforberedende',
-    extensionAttribute6: 'OF-FRV-YF',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Kompetansebyggeren yrkesfag',
-    extensionAttribute6: 'OF-KB-YRKESFAG',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Lærer'
-  },
-  {
-    department: 'Re vgs renhold',
-    extensionAttribute6: 'OF-REV-RENHOLD',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Renholdsoperatør'
-  },
-  {
-    department: 'Kulturarv',
-    extensionAttribute6: 'KRIF-KARV',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Assistent'
-  },
-  {
-    department: 'Rjukan vgs studiespesialisering',
-    extensionAttribute6: 'OF-RJV-STUDIESP',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Rjukan vgs studiespesialisering',
-    extensionAttribute6: 'OF-RJV-STUDIESP',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Nøtterøy vgs studiespesialisering språkfaglig avdeling',
-    extensionAttribute6: 'OF-NTV-SP-SPRAK',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Melsom videregående skole',
-    extensionAttribute6: 'OF-MEV',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Team elektro og veglys',
-    extensionAttribute6: 'SMM-DRI-elektro',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Telemark fylkeskommune',
-    extensionAttribute6: 'OF-SKIV-DRIFT',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Greveskogen vgs kroppsøving',
-    extensionAttribute6: 'OF-GRV-KROPPSOV',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Vestfold fylkeskommune',
-    extensionAttribute6: 'OF-REV-HO',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team politisk støtte',
-    extensionAttribute6: 'OSE-KON-POL',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Bø vgs idrettsseksjon',
-    extensionAttribute6: 'OF-BOV-IDRETT',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Hjalmar Johansen vgs kontor og drift',
-    extensionAttribute6: 'OF-HJV-KONTOR',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Hjalmar Johansen videregående skole',
-    extensionAttribute6: 'OF-HJV',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Skien vgs språk, samfunn og økonomi',
-    extensionAttribute6: 'OF-SKIV-SSO',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Seljord tannklinikk',
-    extensionAttribute6: 'TF-SELT',
-    physicalDeliveryOfficeName: 'Seljord tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Assistent'
-  },
-  {
-    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
-    extensionAttribute6: 'OF-HJV-MK',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Færder vgs yrkesforberedende',
-    extensionAttribute6: 'OF-FRV-YF',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Sandefjord vgs norsk',
-    extensionAttribute6: 'OF-SFV-NORSK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Skogmo vgs fellesfag',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Re vgs kontor',
-    extensionAttribute6: 'OF-REV-KONTOR',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Økonomikonsulent'
-  },
-  {
-    department: 'Nøtterøy vgs bibliotek',
-    extensionAttribute6: 'OF-NTV-BIBLIO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Leder'
-  },
-  {
-    department: 'Vernetjeneste',
-    extensionAttribute6: 'HRMU-VERN',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'HR, mestring og utvikling',
-    title: 'Tillitsvalgt'
-  },
-  {
-    department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
-    extensionAttribute6: 'OF-SFV-SSRM',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Vest-Telemark vidaregåande skule',
-    extensionAttribute6: 'OF-VTV',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Kragerø studiesenteret',
-    extensionAttribute6: 'OF-KRV-STUDIESE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Saksbehandler 1'
-  },
-  {
-    department: 'Team skoleskyss, TT-kort og løyver',
-    extensionAttribute6: 'SMM-KOL-SKYSS',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Re vgs administrasjon',
-    extensionAttribute6: 'OF-REV-ADM',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Skien vgs kantine',
-    extensionAttribute6: 'OF-SKIV-KANTINE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Kompetansebyggeren studierektor',
-    extensionAttribute6: 'OF-KB-ST-REKTOR',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Næringsutvikling og entreprenørskap',
-    extensionAttribute6: 'NIK-NR',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Bamble vgs driftspersonell',
-    extensionAttribute6: 'OF-BAV-DRIFT',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Talenthus kompetansesenter',
-    extensionAttribute6: 'OF-OT-TH-KOMP',
-    physicalDeliveryOfficeName: 'Talenthus - OT',
-    company: 'Oppfølgingstjenesten',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Sandefjord vgs språk',
-    extensionAttribute6: 'OF-SFV-SPRAK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Sande videregående skole',
-    extensionAttribute6: 'OF-SANV',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Rektor'
-  },
-  {
-    department: 'Sande vgs teknisk og industriell produksjon',
-    extensionAttribute6: 'OF-SANV-TIP',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Adjunkt'
+    title: 'Studierektor',
+    state: 'OF-SFV'
   },
   {
     department: 'Re vgs helse og oppvekst',
     extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Assistent'
+    title: 'Lærer -',
+    state: 'OF-REV'
   },
   {
-    department: 'Sandefjord vgs servicekontor',
-    extensionAttribute6: 'OF-SFV-SERVKTR',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Porsgrunn videregående skole',
-    extensionAttribute6: 'OF-POV',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Rektor'
-  },
-  {
-    department: 'Rjukan vgs yrkesfag',
-    extensionAttribute6: 'OF-RJV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Teknologi og digitalisering',
-    extensionAttribute6: 'BDK-TEK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Skien tannklinikk, avd blå',
-    extensionAttribute6: 'TF-SKT-AVD-BLA',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-THV-BA',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Fagskolen administrasjon',
-    extensionAttribute6: 'NIK-FAGS-ADM',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Skien vgs språk, samfunn og økonomi',
-    extensionAttribute6: 'OF-SKIV-SSO',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Team Fjell',
-    extensionAttribute6: 'BDK-IT-FJELL',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Greveskogen vgs musikk,dans,drama og innføring',
-    extensionAttribute6: 'OF-GRV-MDDI',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Thor Heyerdahl vgs  realfag',
-    extensionAttribute6: 'OF-THV-REALFAG',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elevtjenesten',
-    extensionAttribute6: 'OF-THV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Skogmo vgs helse og oppvekst VG1',
-    extensionAttribute6: 'OF-SKOV-HO',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Re vgs teknisk',
-    extensionAttribute6: 'OF-REV-TEKNISK',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Team konsernstøtte',
-    extensionAttribute6: 'BDK-IT-STOTTE',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
-    extensionAttribute6: 'OF-SMI-VGS',
-    physicalDeliveryOfficeName: 'SMI-skolen',
-    company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Lektor'
-  },
-  {
-    department: 'Greveskogen vgs stab',
-    extensionAttribute6: 'OF-GRV-STAB',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Økonomikonsulent'
-  },
-  {
-    department: 'Oppfølgingstjenesten rådgivere',
-    extensionAttribute6: 'OF-OT-RAD',
-    physicalDeliveryOfficeName: 'OT Sandefjord',
-    company: 'Oppfølgingstjenesten',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Revetal tannklinikk',
-    extensionAttribute6: 'TF-RET',
-    physicalDeliveryOfficeName: 'Revevtal tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Kragerø vgs helse- og oppvekstfag',
-    extensionAttribute6: 'OF-KRV-HELSE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Kragerø vgs spesialundervisning',
-    extensionAttribute6: 'OF-KRV-SPES-UND',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Horten vgs idrett',
-    extensionAttribute6: 'OF-HORV-IDRETT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Skien vgs kontor',
-    extensionAttribute6: 'OF-SKIV-KONTOR',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Horten vgs idrett',
-    extensionAttribute6: 'OF-HORV-IDRETT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Team skoleskyss, TT-kort og løyver',
-    extensionAttribute6: 'SMM-KOL-SKYSS',
-    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Sandefjord folkehøyskole undervisning',
     extensionAttribute6: 'OF-SFH-UNDERVIS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
     company: 'Sandefjord folkehøyskole',
-    title: 'Adjunkt'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFH'
   },
   {
-    department: 'Sandefjord vgs læringssenteret',
-    extensionAttribute6: 'OF-SFV-L-SENTER',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Saksbehandler'
+    department: 'Thor Heyerdahl vgs teknologi og industrifag',
+    extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-THV'
   },
   {
-    department: 'Solvang tannklinikk',
-    extensionAttribute6: 'TF-SOT',
-    physicalDeliveryOfficeName: 'Solvang tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Bø vgs realseksjon',
-    extensionAttribute6: 'OF-BOV-REAL',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Diverse'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Sandefjord vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-SFV-AT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Sandefjord vgs idrett',
-    extensionAttribute6: 'OF-SFV-IDRETT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Re vgs ST språk, realfag',
-    extensionAttribute6: 'OF-REV-SPR-REAL',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Sandefjord vgs hverdagslivstrening',
-    extensionAttribute6: 'OF-SFV-HT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Bamble vgs service og samferdsel',
-    extensionAttribute6: 'OF-BAV-SERVICE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Kragerø vgs drift',
-    extensionAttribute6: 'OF-KRV-DRIFT',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Skien vgs realfag',
-    extensionAttribute6: 'OF-SKIV-REAL',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten vgs media og kommunikasjon',
-    extensionAttribute6: 'OF-HORV-MK',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Sandefjord vgs studierektor yrkesforbredende',
-    extensionAttribute6: 'OF-SFV-YF',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Studierektor'
+    department: 'Thor Heyerdahl vgs bibliotek',
+    extensionAttribute6: 'OF-THV-BIBLIOTE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Assistent',
+    state: 'OF-THV'
   },
   {
     department: 'Vest-Telemark vgs yrkesfag',
     extensionAttribute6: 'OF-VTV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Stathelle tannklinikk',
-    extensionAttribute6: 'TF-STAT',
-    physicalDeliveryOfficeName: 'Stathelle tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Fagskolen byggfag',
-    extensionAttribute6: 'NIK-FAGS-BYGG',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor 1'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-VTV'
   },
   {
     department: 'Færder videregående skole',
-    extensionAttribute6: 'OF-FRV-EKSAMEN',
+    extensionAttribute6: 'OF-FRV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Skolen for sosiale og medisinske institusjoner',
-    extensionAttribute6: 'OF-SMI',
-    physicalDeliveryOfficeName: 'SMI-skolen',
-    company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Rektor'
-  },
-  {
-    department: 'Kompetansebyggeren  helsefagarbeider',
-    extensionAttribute6: 'OF-KB-HELSEFAG',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Kompetansebyggeren',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Kompetansebyggeren administrasjon og drift',
-    extensionAttribute6: 'OF-KB-ADM-DRIFT',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Bø vgs språk, samfunn og økonomi',
-    extensionAttribute6: 'OF-BOV-SSO',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Seljord tannklinikk',
-    extensionAttribute6: 'TF-SELT',
-    physicalDeliveryOfficeName: 'Seljord tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Færder vgs teknikk og industriell produksjon maritime fag',
-    extensionAttribute6: 'OF-FRV-TP-MARIT',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Hjalmar Johansen videregående skole',
-    extensionAttribute6: 'OF-SKIV-SSO',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Skien vgs språk, samfunn og økonomi',
-    extensionAttribute6: 'OF-SKIV-SSO',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten videregående skole',
-    extensionAttribute6: 'OF-HORV',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Elevassistent m/fagbrev'
-  },
-  {
-    department: 'Porsgrunn vgs språk',
-    extensionAttribute6: 'OF-POV-SPRAK',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Greveskogen vgs service og samferdsel',
-    extensionAttribute6: 'OF-GRV-SERV-SAM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Skogmo vgs fellesfag',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Skien vgs realfag',
-    extensionAttribute6: 'OF-SKIV-REAL',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Porsgrunn vgs idrett',
-    extensionAttribute6: 'OF-POV-IDRETT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Næringsutvikling og entreprenørskap',
-    extensionAttribute6: 'NIK-NR',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Thor Heyerdahl vgs musikk og dans',
-    extensionAttribute6: 'OF-THV-MD',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Sandefjord vgs norsk',
-    extensionAttribute6: 'OF-SFV-NORSK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Skolen for sosiale og medisinske institusjoner av helse vest',
-    extensionAttribute6: 'OF-SMI-VEST',
-    physicalDeliveryOfficeName: 'SMI-skolen',
-    company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
-    extensionAttribute6: 'OF-SFV-REAL',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Hjalmar Johansen vgs kontor og drift',
-    extensionAttribute6: 'OF-HJV-KONTOR',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Sandefjord folkehøyskole kjøkken,renhold',
-    extensionAttribute6: 'OF-SFH-KJOKKEN',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Internatassistent'
-  },
-  {
-    department: 'Greveskogen vgs AHT',
-    extensionAttribute6: 'OF-GRV-AHT',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten vgs helse og oppvekst',
-    extensionAttribute6: 'OF-HORV-HO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Fagkonsulent',
+    state: 'OF-FRV'
   },
   {
     department: 'Team Nord-Jarlsberg',
     extensionAttribute6: 'BDK-IT-NORD',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Kragerø videregående skole',
-    extensionAttribute6: 'OF-KRV',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Rektor'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Thor Heyerdahl videregående skole',
     extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Uspesifisert'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
   },
   {
-    department: 'Team helhetlig styring',
-    extensionAttribute6: 'OSE-KON-HEL',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Teamleder'
+    department: 'Kompetansebyggeren yrkesfag',
+    extensionAttribute6: 'OF-KB-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Lærer',
+    state: 'OF-KB'
   },
   {
-    department: 'Porsgrunn vgs kunst, design og arkitektur',
-    extensionAttribute6: 'OF-POV-KUNST',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Horten vgs idrett',
-    extensionAttribute6: 'OF-HORV-IDRETT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Re videregående skole',
-    extensionAttribute6: 'OF-REV-EKSAMEN',
+    department: 'Re vgs renhold',
+    extensionAttribute6: 'OF-REV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Eksamensvakt'
+    title: 'Renholdsoperatør',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Kulturarv',
+    extensionAttribute6: 'KRIF-KARV',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Assistent',
+    state: 'KRIF'
+  },
+  {
+    department: 'Rjukan vgs studiespesialisering',
+    extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Rjukan vgs studiespesialisering',
+    extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Nøtterøy vgs studiespesialisering språkfaglig avdeling',
+    extensionAttribute6: 'OF-NTV-SP-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Studierektor',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Melsom videregående skole',
+    extensionAttribute6: 'OF-MEV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lærer -',
+    state: 'NIK'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Team elektro og veglys',
+    extensionAttribute6: 'SMM-DRI-elektro',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Greveskogen vgs kroppsøving',
+    extensionAttribute6: 'OF-GRV-KROPPSOV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Vestfold fylkeskommune',
+    extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Team politisk støtte',
+    extensionAttribute6: 'OSE-KON-POL',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Konsulent',
+    state: 'OSE'
+  },
+  {
+    department: 'Bø vgs idrettsseksjon',
+    extensionAttribute6: 'OF-BOV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor 1',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs kontor og drift',
+    extensionAttribute6: 'OF-HJV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Fagskolen administrasjon',
+    extensionAttribute6: 'NIK-FAGS-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Avdelingsleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Seljord tannklinikk',
+    extensionAttribute6: 'TF-SELT',
+    physicalDeliveryOfficeName: 'Seljord tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Assistent',
+    state: 'TF'
+  },
+  {
+    department: 'Færder videregående skole',
+    extensionAttribute6: 'OF-FRV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Administrasjonsleder',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
+    extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team Fjell',
+    extensionAttribute6: 'BDK-IT-FJELL',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Sandefjord vgs norsk',
+    extensionAttribute6: 'OF-SFV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Skogmo vgs fellesfag',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Re vgs kontor',
+    extensionAttribute6: 'OF-REV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Økonomikonsulent',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Nøtterøy vgs bibliotek',
+    extensionAttribute6: 'OF-NTV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Leder',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Vernetjeneste',
+    extensionAttribute6: 'HRMU-VERN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'HR, mestring og utvikling',
+    title: 'Tillitsvalgt',
+    state: 'HRMU'
+  },
+  {
+    department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
+    extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs Skien fengsel',
+    extensionAttribute6: 'OF-HJV-FENGSEL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Vest-Telemark vidaregåande skule',
+    extensionAttribute6: 'OF-VTV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Avdelingsleder',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Kragerø studiesenteret',
+    extensionAttribute6: 'OF-KRV-STUDIESE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Saksbehandler 1',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lærer -',
+    state: 'NIK'
+  },
+  {
+    department: 'Re vgs administrasjon',
+    extensionAttribute6: 'OF-REV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Studierektor',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Skien vgs kantine',
+    extensionAttribute6: 'OF-SKIV-KANTINE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Assistent',
+    state: 'OF-SKIV'
   },
   {
     department: 'Team Kaupang',
     extensionAttribute6: 'BDK-IT-KAUPANG',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Seniorrådgiver'
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Kompetansebyggeren studierektor',
+    extensionAttribute6: 'OF-KB-ST-REKTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Næringsutvikling og entreprenørskap',
+    extensionAttribute6: 'NIK-NR',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Rådgiver',
+    state: 'NIK'
+  },
+  {
+    department: 'Bamble vgs driftspersonell',
+    extensionAttribute6: 'OF-BAV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Talenthus kompetansesenter',
+    extensionAttribute6: 'OF-OT-TH-KOMP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Talenthus - OT',
+    company: 'Oppfølgingstjenesten',
+    title: 'Fagarbeider 1',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Sandefjord vgs språk',
+    extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Nome vgs gardsbruk',
+    extensionAttribute6: 'OF-NOMV-GARDSBRU',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Lærling',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Sande videregående skole',
+    extensionAttribute6: 'OF-SANV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Rektor',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Sande vgs teknisk og industriell produksjon',
+    extensionAttribute6: 'OF-SANV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Re vgs helse og oppvekst',
+    extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Assistent',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Sandefjord vgs servicekontor',
+    extensionAttribute6: 'OF-SFV-SERVKTR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Rådgiver',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Nøtterøy vgs renhold',
+    extensionAttribute6: 'OF-NTV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Renholder',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Porsgrunn videregående skole',
+    extensionAttribute6: 'OF-POV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Rektor',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Rjukan vgs yrkesfag',
+    extensionAttribute6: 'OF-RJV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Skien tannklinikk, avd blå',
+    extensionAttribute6: 'TF-SKT-AVD-BLA',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
+    extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Fagskolen administrasjon',
+    extensionAttribute6: 'NIK-FAGS-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Fagarbeider 1',
+    state: 'NIK'
+  },
+  {
+    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
+    extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Skien vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Diverse',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Greveskogen vgs musikk,dans,drama og innføring',
+    extensionAttribute6: 'OF-GRV-MDDI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Holmestrand vgs realfag',
+    extensionAttribute6: 'OF-HOLV-REALFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Vestfold fylkeskommune',
+    extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elevtjenesten',
+    extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Diverse',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Skogmo vgs helse og oppvekst VG1',
+    extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Konsulent',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Færder vgs elektrofag',
+    extensionAttribute6: 'OF-FRV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærer -',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Team konsernstøtte',
+    extensionAttribute6: 'BDK-IT-STOTTE',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
+    extensionAttribute6: 'OF-SMI-VGS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Lektor',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Greveskogen vgs stab',
+    extensionAttribute6: 'OF-GRV-STAB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Økonomikonsulent',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Oppfølgingstjenesten rådgivere',
+    extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'OT Sandefjord',
+    company: 'Oppfølgingstjenesten',
+    title: 'Rådgiver',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Revetal tannklinikk',
+    extensionAttribute6: 'TF-RET',
+    physicalDeliveryOfficeName: 'Revevtal tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Rjukan videregående skole',
+    extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Kragerø vgs helse- og oppvekstfag',
+    extensionAttribute6: 'OF-KRV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lektor',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Kragerø vgs spesialundervisning',
+    extensionAttribute6: 'OF-KRV-SPES-UND',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Horten vgs idrett',
+    extensionAttribute6: 'OF-HORV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Skien vgs kontor',
+    extensionAttribute6: 'OF-SKIV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lektor',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Horten vgs idrett',
+    extensionAttribute6: 'OF-HORV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team skoleskyss, TT-kort og løyver',
+    extensionAttribute6: 'SMM-KOL-SKYSS',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Sandefjord folkehøyskole undervisning',
+    extensionAttribute6: 'OF-SFH-UNDERVIS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Adjunkt',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Sandefjord vgs idrett',
+    extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord vgs læringssenteret',
+    extensionAttribute6: 'OF-SFV-L-SENTER',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Saksbehandler',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Solvang tannklinikk',
+    extensionAttribute6: 'TF-SOT',
+    physicalDeliveryOfficeName: 'Solvang tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Sektorutvikling-',
+    extensionAttribute6: 'TF-SEK',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Bø vgs realseksjon',
+    extensionAttribute6: 'OF-BOV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Diverse',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Renholder',
+    state: 'OSE'
+  },
+  {
+    department: 'Melsom vgs studiespesialisering',
+    extensionAttribute6: 'OF-MEV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Sandefjord vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Melsom videregående skole (SMI)',
+    extensionAttribute6: 'OF-SMI-OST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Re vgs ST språk, realfag',
+    extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Sandefjord vgs hverdagslivstrening',
+    extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Porsgrunn vgs informasjonsteknologi og medieproduksjon',
+    extensionAttribute6: 'OF-POV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Kragerø vgs drift',
+    extensionAttribute6: 'OF-KRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Skien vgs realfag',
+    extensionAttribute6: 'OF-SKIV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Horten vgs media og kommunikasjon',
+    extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Sandefjord vgs studierektor yrkesforbredende',
+    extensionAttribute6: 'OF-SFV-YF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Studierektor',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord vgs hverdagslivstrening',
+    extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Vest-Telemark vgs yrkesfag',
+    extensionAttribute6: 'OF-VTV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Adjunkt 1',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'NIK-FAGS-BYGG',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor 1',
+    state: 'NIK'
+  },
+  {
+    department: 'Færder vgs kunst design og arkitektur',
+    extensionAttribute6: 'OF-FRV-KUNST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærer -',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner',
+    extensionAttribute6: 'OF-SMI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Rektor',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Kompetansebyggeren  helsefagarbeider',
+    extensionAttribute6: 'OF-KB-HELSEFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Kompetansebyggeren',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Kompetansebyggeren administrasjon og drift',
+    extensionAttribute6: 'OF-KB-ADM-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Rådgiver',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Bø vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-BOV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Seljord tannklinikk',
+    extensionAttribute6: 'TF-SELT',
+    physicalDeliveryOfficeName: 'Seljord tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Færder vgs teknikk og industriell produksjon maritime fag',
+    extensionAttribute6: 'OF-FRV-TP-MARIT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Hjalmar Johansen videregående skole',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Diverse',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Skien vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Elevassistent m/fagbrev',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Porsgrunn videregående skole',
+    extensionAttribute6: 'OF-POV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lærer -',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Greveskogen vgs Informasjonsteknologi og medieproduksjon',
+    extensionAttribute6: 'OF-GRV-INF-MED',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Skogmo vgs fellesfag',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Skien vgs realfag',
+    extensionAttribute6: 'OF-SKIV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lektor',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Porsgrunn vgs idrett',
+    extensionAttribute6: 'OF-POV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Næringsutvikling og entreprenørskap',
+    extensionAttribute6: 'NIK-NR',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Rådgiver',
+    state: 'NIK'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sandefjord vgs norsk',
+    extensionAttribute6: 'OF-SFV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner av helse vest',
+    extensionAttribute6: 'OF-SMI-VEST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs kontor og drift',
+    extensionAttribute6: 'OF-HJV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Konsulent',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Sandefjord folkehøyskole kjøkken,renhold',
+    extensionAttribute6: 'OF-SFH-KJOKKEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Internatassistent',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Melsom videregående skole (SMI)',
+    extensionAttribute6: 'OF-SMI-OST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Greveskogen vgs AHT',
+    extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Horten vgs helse og oppvekst',
+    extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Kragerø videregående skole',
+    extensionAttribute6: 'OF-KRV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Rektor',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team helhetlig styring',
+    extensionAttribute6: 'OSE-KON-HEL',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Teamleder',
+    state: 'OSE'
+  },
+  {
+    department: 'Porsgrunn vgs kunst, design og arkitektur',
+    extensionAttribute6: 'OF-POV-KUNST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lærer',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Sandefjord vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Eksamensvakt',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Team Kaupang',
+    extensionAttribute6: 'BDK-IT-KAUPANG',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Teamleder',
+    state: 'BDK'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG2-3',
     extensionAttribute6: 'OF-SKOV-HO2',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Rjukan vgs studiespesialisering',
-    extensionAttribute6: 'OF-RJV-STUDIESP',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Lærer',
+    state: 'OF-SKOV'
   },
   {
     department: 'Hjalmar Johansen vgs OIMG',
     extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Lærer'
+    title: 'Fagarbeider 1',
+    state: 'OF-HJV'
   },
   {
     department: 'Midt-Telemark tannklinikk',
     extensionAttribute6: 'TF-MIT',
     physicalDeliveryOfficeName: 'Midt-Telemark tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
+    title: 'Klinikkleder',
+    state: 'TF'
   },
   {
     department: 'Holmestrand vgs basen',
     extensionAttribute6: 'OF-HOLV-BASEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Avd. Leder'
+    title: 'Avd. Leder',
+    state: 'OF-HOLV'
   },
   {
-    department: 'Rjukan vgs elevtjenester',
+    department: 'Rjukan videregående skole',
     extensionAttribute6: 'OF-RJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-RJV'
   },
   {
     department: 'Melsom vgs rådgivningstjeneste',
     extensionAttribute6: 'OF-MEV-RADGIV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF-MEV'
   },
   {
     department: 'Bø vgs administrasjon',
     extensionAttribute6: 'OF-BOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-BOV'
   },
   {
     department: 'Sandefjord vgs international baccalaureate',
     extensionAttribute6: 'OF-SFV-IB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
   },
   {
     department: 'Kragerø tannklinikk',
     extensionAttribute6: 'TF-KRT',
     physicalDeliveryOfficeName: 'Kragerø tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
+    title: 'Klinikkleder',
+    state: 'TF'
   },
   {
     department: 'Team asfalt og vegoppmerking',
     extensionAttribute6: 'SMM-DRI-asfalt',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'SMM'
   },
   {
     department: 'Melsom vgs arbeidslivstrening',
     extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Bø vgs realseksjon',
-    extensionAttribute6: 'OF-BOV-REAL',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Nome vgs ledelse',
-    extensionAttribute6: 'OF-NOMV-LEDELSE',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Studieleder'
+    title: 'Adjunkt',
+    state: 'OF-MEV'
   },
   {
     department: 'Nome vgs bygg- og anlegg, TIP',
     extensionAttribute6: 'OF-NOMV-BA-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-NOMV'
   },
   {
     department: 'Notodden vgs bibliotek',
     extensionAttribute6: 'OF-NOV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Notodden vgs',
     company: 'Notodden videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-NOV'
   },
   {
     department: 'Team konserndrift',
     extensionAttribute6: 'BDK-IT-DRIFT',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Porsgrunn vgs kontor',
     extensionAttribute6: 'OF-POV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'OF-POV'
   },
   {
-    department: 'Thor Heyerdahl vgs idrettsfag',
-    extensionAttribute6: 'OF-THV-IDRETT',
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
   },
   {
     department: 'Hjalmar Johansen videregående skole',
     extensionAttribute6: 'OF-HJV-FENGSEL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HJV'
   },
   {
-    department: 'Færder vgs kunst design og arkitektur',
-    extensionAttribute6: 'OF-FRV-KUNST',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Lektor'
+    department: 'Holmestrand vgs språk,samfunnsfag,økonomi',
+    extensionAttribute6: 'OF-HOLV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lektor',
+    state: 'OF-HOLV'
   },
   {
     department: 'Kragerø videregående skole',
     extensionAttribute6: 'OF-KRV-SPES-UND',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
   },
   {
     department: 'Porsgrunn vgs drift',
     extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Assistent'
+    title: 'Assistent',
+    state: 'OF-POV'
   },
   {
     department: 'Team elektro og veglys',
     extensionAttribute6: 'SMM-DRI-elektro',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
-    department: 'Thor Heyerdahl vgs teknologi og industrifag',
-    extensionAttribute6: 'OF-THV-TP',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    department: 'Kompetansebyggeren administrasjon og drift',
+    extensionAttribute6: 'OF-KB-ADM-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Renholder',
+    state: 'OF-KB'
   },
   {
     department: 'Vest-Telemark vidaregåande skule',
     extensionAttribute6: 'OF-VTV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
     company: 'Vest-Telemark vidaregåande skule',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Porsgrunn vgs språk',
+    extensionAttribute6: 'OF-POV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-POV'
   },
   {
     department: 'Kompetanseutvikling og inkludering',
     extensionAttribute6: 'NIK-KOMP',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'NIK'
   },
   {
     department: 'Greveskogen vgs AHT',
     extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-GRV'
   },
   {
     department: 'Porsgrunn vgs sensor og eksamensvakter',
     extensionAttribute6: 'OF-POV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Eksamensvakt'
+    title: 'Eksamensvakt',
+    state: 'OF-POV'
   },
   {
     department: 'Fag- og yrkesopplæring',
     extensionAttribute6: 'OF-FAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Opplæring og folkehelse',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF'
   },
   {
     department: 'Rjukan vgs yrkesfag',
     extensionAttribute6: 'OF-RJV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Lærer -'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-RJV'
   },
   {
     department: 'Pedagogisk støtte og utvikling',
     extensionAttribute6: 'OF-PED',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'OF'
   },
   {
-    department: 'Sande vgs AHT',
+    department: 'Sande videregående skole',
     extensionAttribute6: 'OF-SANV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'OF-SANV'
   },
   {
-    department: 'Horten vgs realfag, forskerlinje',
-    extensionAttribute6: 'OF-HORV-REAL-FO',
+    department: 'Horten vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-HORV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Lektor'
+    title: 'Eksamensvakt',
+    state: 'OF-HORV'
   },
   {
     department: 'Sandefjord vgs studierektor yrkesforbredende',
     extensionAttribute6: 'OF-SFV-YF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs musikk og dans',
+    extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor',
+    state: 'OF-THV'
   },
   {
     department: 'Greveskogen vgs kroppsøving',
     extensionAttribute6: 'OF-GRV-KROPPSOV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-GRV'
   },
   {
     department: 'Holmestrand vgs medier og kommunikasjon',
     extensionAttribute6: 'OF-HOLV-MK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Sandefjord vgs innemiljø',
     extensionAttribute6: 'OF-SFV-INNEMILJ',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Leder'
-  },
-  {
-    department: 'Haugar tannklinikk 3. etg.',
-    extensionAttribute6: 'TF-HAT',
-    physicalDeliveryOfficeName: 'Haugar tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
+    title: 'Leder',
+    state: 'OF-SFV'
   },
   {
     department: 'Service',
     extensionAttribute6: 'OSE-SER',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Økonomi, styring og eierskap',
-    title: 'Renholdsoperatør'
+    title: 'Renholdsoperatør',
+    state: 'OSE'
+  },
+  {
+    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Lærer -',
+    state: 'OF-BAV'
   },
   {
     department: 'Skogmo vgs fellesfag',
     extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-SKOV'
   },
   {
     department: 'Inntak, eksamen og voksenopplæring',
     extensionAttribute6: 'OF-INN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'OF'
   },
   {
-    department: 'Greveskogen vgs AHT',
+    department: 'Greveskogen videregående skole',
     extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Lærekandidat'
+    title: 'Lærekandidat',
+    state: 'OF-GRV'
   },
   {
     department: 'Team utbygging vest',
     extensionAttribute6: 'SMM-UTB-vest',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'SMM'
   },
   {
     department: 'Sandefjord folkehøyskole',
     extensionAttribute6: 'OF-SFH',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
     company: 'Sandefjord folkehøyskole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Thor Heyerdahl vgs musikk og dans',
+    extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer -',
+    state: 'OF-THV'
   },
   {
     department: 'Melsom vgs studiespesialisering',
     extensionAttribute6: 'OF-MEV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Melsom videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-MEV'
   },
   {
-    department: 'Færder vgs påbygging generell studiekompetanse',
+    department: 'Færder videregående skole',
     extensionAttribute6: 'OF-FRV-PB',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Kompetansebyggeren administrasjon og drift',
+    extensionAttribute6: 'OF-KB-ADM-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-KB'
   },
   {
     department: 'Kragerø vgs tekniske fag',
     extensionAttribute6: 'OF-KRV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-KRV'
   },
   {
     department: 'Porsgrunn vgs TIP',
     extensionAttribute6: 'OF-POV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
+    title: 'Lektor 1',
+    state: 'OF-POV'
   },
   {
     department: 'Analyse og metodeutvikling',
     extensionAttribute6: 'VTPLUSS-ANALYSE',
     physicalDeliveryOfficeName: 'Fylkesbakken Skien',
     company: 'VT pluss',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'VTPLUSS'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV-REAL-FO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Sandefjord folkehøyskole undervisning',
     extensionAttribute6: 'OF-SFH-UNDERVIS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
     company: 'Sandefjord folkehøyskole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-SFH'
   },
   {
     department: 'Hjalmar Johansen vgs kontor og drift',
     extensionAttribute6: 'OF-HJV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Leder'
+    title: 'Leder',
+    state: 'OF-HJV'
   },
   {
     department: 'Færder vgs elevtjenesten',
     extensionAttribute6: 'OF-FRV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
-    department: 'Greveskogen vgs service og samferdsel',
-    extensionAttribute6: 'OF-GRV-SERV-SAM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Studierektor'
+    department: 'Melsom vgs medier og kommunikasjon',
+    extensionAttribute6: 'OF-MEV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-MEV'
   },
   {
-    department: 'Horten vgs nettskolen i Vestfold',
+    department: 'Horten videregående skole',
     extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-HORV'
   },
   {
     department: 'Porsgrunn vgs TIP',
     extensionAttribute6: 'OF-POV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-POV'
   },
   {
     department: 'Rjukan videregående skole',
     extensionAttribute6: 'OF-RJV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-RJV'
   },
   {
     department: 'Team Grenland',
     extensionAttribute6: 'BDK-IT-GRENLAND',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Sandefjord vgs idrett',
     extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
   },
   {
     department: 'Porsgrunn vgs avd. Sør',
     extensionAttribute6: 'OF-POV-SOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Studieleder'
+    title: 'Studieleder',
+    state: 'OF-POV'
   },
   {
     department: 'Fagskolen sensor og eksamensvakter',
     extensionAttribute6: 'NIK-FAGS-EKSAME',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Diverse'
+    title: 'Diverse',
+    state: 'NIK'
   },
   {
     department: 'Holmestrand vgs kroppsøving',
     extensionAttribute6: 'OF-HOLV-KROPPSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
   },
   {
     department: 'Bamble vgs elevtjenester og OIMG',
     extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-BAV'
   },
   {
     department: 'Fagskolen byggfag',
     extensionAttribute6: 'NIK-FAGS-BYGG',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'NIK'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-NOMV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-NOMV'
   },
   {
     department: 'Notodden tannklinikk',
     extensionAttribute6: 'TF-NOT',
     physicalDeliveryOfficeName: 'Notodden tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
+    title: 'Klinikkleder',
+    state: 'TF'
   },
   {
     department: 'Team Nord-Jarlsberg',
     extensionAttribute6: 'BDK-IT-NORD',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Team Kaupang',
     extensionAttribute6: 'BDK-IT-KAUPANG',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'BDK'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner av helse vest',
     extensionAttribute6: 'OF-SMI-VEST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Horten vgs helse og oppvekst',
+    extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HORV'
   },
   {
     department: 'Re vgs helse og oppvekst',
     extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-REV'
   },
   {
     department: 'Sandefjord vgs samfunnsfag',
     extensionAttribute6: 'OF-SFV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
   },
   {
     department: 'Skien tannklinikk',
     extensionAttribute6: 'TF-SKT',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
+    title: 'Klinikkleder',
+    state: 'TF'
   },
   {
     department: 'Oppfølgingstjenesten rådgivere',
     extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Oppfølgingstjenesten',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-OT'
   },
   {
     department: 'Greveskogen vgs økonomi- og realfag',
     extensionAttribute6: 'OF-GRV-REAL-OK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-GRV'
   },
   {
     department: 'Nøtterøy vgs studiespesialisering realfag,kroppsøving',
     extensionAttribute6: 'OF-NTV-REAL-KRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-NTV'
   },
   {
     department: 'Bamble vgs kontor og IKT',
     extensionAttribute6: 'OF-BAV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Sekretær'
+    title: 'Sekretær',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Konsulent',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Færder vgs kunst design og arkitektur',
+    extensionAttribute6: 'OF-FRV-KUNST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-FRV'
   },
   {
     department: 'Eiendom',
     extensionAttribute6: 'OSE-EIE',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Økonomi, styring og eierskap',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'OSE'
   },
   {
     department: 'Team Kaupang',
     extensionAttribute6: 'BDK-IT-KAUPANG',
     physicalDeliveryOfficeName: 'Melsom vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Færder videregående skole',
     extensionAttribute6: 'OF-FRV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-FRV'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'NIK-FAGS-ADM',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Fagarbeider 1'
+    title: 'Fagarbeider 1',
+    state: 'NIK'
   },
   {
-    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
-    extensionAttribute6: 'OF-THV-SS',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
+    department: 'Re vgs ST norsk, samf.fag',
+    extensionAttribute6: 'OF-REV-NO-SAMF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lærer -',
+    state: 'OF-REV'
   },
   {
     department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
     extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-BAV'
   },
   {
     department: 'Bø vgs språk, samfunn og økonomi',
     extensionAttribute6: 'OF-BOV-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Avdelingsleder',
+    state: 'OF-BOV'
   },
   {
     department: 'Team Fjell',
     extensionAttribute6: 'BDK-IT-FJELL',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
     extensionAttribute6: 'OF-HJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Uspesifisert'
+    title: 'Uspesifisert',
+    state: 'OF-HJV'
   },
   {
     department: 'Sande vgs drift',
     extensionAttribute6: 'OF-SANV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Fagarbeider m/fagskoleutdanning'
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-SANV'
   },
   {
     department: 'Porsgrunn vgs kunst, design og arkitektur',
     extensionAttribute6: 'OF-POV-KUNST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Nome vgs internat og kantine',
-    extensionAttribute6: 'OF-NOMV-INTERNA',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Fagarbeider'
+    title: 'Lektor 1',
+    state: 'OF-POV'
   },
   {
     department: 'Sektorutvikling.',
     extensionAttribute6: 'OF-SEK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
+    title: 'Rådgiver',
+    state: 'OF'
   },
   {
     department: 'Team Grenland',
     extensionAttribute6: 'BDK-IT-GRENLAND',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV-KROPPSOV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
   },
   {
     department: 'Stokke tannklinikk',
     extensionAttribute6: 'TF-STT',
     physicalDeliveryOfficeName: 'Stokke tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Rjukan vgs yrkesfag',
     extensionAttribute6: 'OF-RJV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Fylkesbibliotek',
     extensionAttribute6: 'KRIF-FB',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Seksjonsleder'
+    title: 'Seksjonsleder',
+    state: 'KRIF'
   },
   {
     department: 'Sande vgs bibliotek',
     extensionAttribute6: 'OF-SANV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Bibliotekar'
+    title: 'Bibliotekar',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Rjukan videregående skole',
+    extensionAttribute6: 'OF-RJV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Lærer -',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Skien tannklinikk',
+    extensionAttribute6: 'TF-SKT',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Uspesifisert',
+    state: 'TF'
   },
   {
     department: 'Horten vgs elevtjenesten',
     extensionAttribute6: 'OF-HORV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Holmestrand vgs helse og oppvekst',
-    extensionAttribute6: 'OF-HOLV-HO',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Uspesifisert',
+    state: 'OF-HORV'
   },
   {
     department: 'Kragerø vgs ledelse',
     extensionAttribute6: 'OF-KRV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Skien vgs elevtjenester',
-    extensionAttribute6: 'OF-SKIV-ELEVTJE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Miljøarbeider'
+    title: 'Studieleder',
+    state: 'OF-KRV'
   },
   {
     department: 'Team Fjell',
     extensionAttribute6: 'BDK-IT-FJELL',
     physicalDeliveryOfficeName: 'Nome vgs avd Søve',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
-    department: 'Porsgrunn vgs samfunn',
+    department: 'Kompetanseutvikling og inkludering',
+    extensionAttribute6: 'NIK-KOMP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Rådgiver',
+    state: 'NIK'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner avd barnevern',
+    extensionAttribute6: 'OF-SMI-BARN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Adjunkt',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Porsgrunn videregående skole',
     extensionAttribute6: 'OF-POV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-POV'
   },
   {
     department: 'Rjukan vgs studiespesialisering',
     extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-RJV'
   },
   {
     department: 'Thor Heyerdahl vgs  administrasjon',
     extensionAttribute6: 'OF-THV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Administrasjonsleder'
-  },
-  {
-    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-THV-BA',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Administrasjonsleder',
+    state: 'OF-THV'
   },
   {
     department: 'Holmestrand vgs bibliotek',
     extensionAttribute6: 'OF-HOLV-BIBL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Bibliotekar'
+    title: 'Bibliotekar',
+    state: 'OF-HOLV'
   },
   {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    department: 'Melsom vgs kontor',
+    extensionAttribute6: 'OF-MEV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Konsulent',
+    state: 'OF-MEV'
   },
   {
-    department: 'Holmestrand vgs språk,samfunnsfag,økonomi',
-    extensionAttribute6: 'OF-HOLV-SSO',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    department: 'Søeberg tannklinikk',
+    extensionAttribute6: 'TF-SET',
+    physicalDeliveryOfficeName: 'Søeberg tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
-    department: 'Kragerø vgs studieforberedende',
+    department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Notodden vgs helse og oppvekst',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Assistent',
+    state: 'OF-NOV'
   },
   {
     department: 'Rjukan vgs studiespesialisering',
     extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Rjukan vgs',
     company: 'Rjukan videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Horten vgs realfag, forskerlinje',
-    extensionAttribute6: 'OF-HORV-REAL-FO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt',
+    state: 'OF-RJV'
   },
   {
     department: 'Horten vgs helse og oppvekst',
     extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-HORV'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG1',
     extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SKOV'
   },
   {
-    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
-    extensionAttribute6: 'OF-BAV-HELSE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Hjalmar Johansen vgs OIMG',
-    extensionAttribute6: 'OF-HJV-OIMG',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    department: 'Thor Heyerdahl vgs idrettsfag',
+    extensionAttribute6: 'OF-THV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer',
+    state: 'OF-THV'
   },
   {
     department: 'Team skoleskyss, TT-kort og løyver',
     extensionAttribute6: 'SMM-KOL-SKYSS',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'SMM'
   },
   {
-    department: 'Skien vgs språk, samfunn og økonomi',
+    department: 'Skien videregående skole',
     extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Folkehelse og livsmestring',
+    extensionAttribute6: 'OF-FHL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Uspesifisert',
+    state: 'OF'
   },
   {
     department: 'Fagskolen maritim utdanning',
     extensionAttribute6: 'NIK-FAGS-MARITI',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
   },
   {
     department: 'Sandefjord vgs musikk,dans,drama',
     extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-SFV'
   },
   {
     department: 'Kragerø vgs studieforberedende',
     extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-KRV'
   },
   {
     department: 'Hjalmar Johansen videregående skole',
     extensionAttribute6: 'OF-HJV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
     company: 'Hjalmar Johansen videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-HJV'
   },
   {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    department: 'Sandefjord vgs språk',
+    extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SFV'
   },
   {
     department: 'Sandefjord videregående skole',
     extensionAttribute6: 'OF-SFV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sandefjord vgs',
     company: 'Sandefjord videregående skole',
-    title: 'Rektor'
-  },
-  {
-    department: 'Skogmo vgs fellesfag',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærer -'
+    title: 'Rektor',
+    state: 'OF-SFV'
   },
   {
     department: 'Kragerø vgs helse- og oppvekstfag',
     extensionAttribute6: 'OF-KRV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'OF-KRV'
   },
   {
     department: 'Porsgrunn vgs idrett',
     extensionAttribute6: 'OF-POV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Hjalmar Johansen vgs OIMG',
-    extensionAttribute6: 'OF-HJV-OIMG',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Fagarbeider 1'
+    title: 'Adjunkt 1',
+    state: 'OF-POV'
   },
   {
     department: 'Nome vgs renhold og vaktmester',
     extensionAttribute6: 'OF-NOMV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-NOMV'
   },
   {
     department: 'Porsgrunn vgs real',
     extensionAttribute6: 'OF-POV-REAL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Porsgrunn vgs',
     company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-POV'
   },
   {
     department: 'Telemark fylkeskommune',
     extensionAttribute6: 'OF-SKIV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Konsulent l'
+    title: 'Konsulent l',
+    state: 'OF-SKIV'
   },
   {
     department: 'Talenthus',
     extensionAttribute6: 'OF-OT-TH',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Talenthus - OT',
     company: 'Oppfølgingstjenesten',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'OF-OT'
   },
   {
     department: 'Fagskolen elektrofag',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer -'
+    title: 'Lærer -',
+    state: 'NIK'
   },
   {
     department: 'Team Fjell',
     extensionAttribute6: 'BDK-IT-FJELL',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærling',
+    state: 'BDK'
   },
   {
     department: 'Holmestrand videregående skole',
     extensionAttribute6: 'OF-HOLV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Rektor'
+    title: 'Rektor',
+    state: 'OF-HOLV'
   },
   {
     department: 'Skien vgs service og samferdsel',
     extensionAttribute6: 'OF-SKIV-SEV-SAM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Adjunkt 1',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Talenthus kompetansesenter',
+    extensionAttribute6: 'OF-OT-TH-KOMP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Talenthus - OT',
+    company: 'Oppfølgingstjenesten',
+    title: 'Rådgiver',
+    state: 'OF-OT'
   },
   {
     department: 'Færder vgs elevtjenesten',
     extensionAttribute6: 'OF-FRV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Adjunkt'
+    title: 'Adjunkt',
+    state: 'OF-FRV'
   },
   {
-    department: 'Oppfølgingstjenesten fagkoordinator',
-    extensionAttribute6: 'OF-OT-FAG',
-    physicalDeliveryOfficeName: 'OT Sandefjord',
-    company: 'Oppfølgingstjenesten',
-    title: 'Leder'
+    department: 'Færder vgs elektrofag',
+    extensionAttribute6: 'OF-FRV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-FRV'
   },
   {
     department: 'PP-tjenesten Nord',
     extensionAttribute6: 'OF-PPT-NOR',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
     company: 'PP-tjenesten',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'OF-PPT'
   },
   {
     department: 'Skien vgs musikk',
     extensionAttribute6: 'OF-SKIV-MUSIKK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Bø vgs språk, samfunn og økonomi',
-    extensionAttribute6: 'OF-BOV-SSO',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Lektor 1'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKIV'
   },
   {
     department: 'Team Grenland',
     extensionAttribute6: 'BDK-IT-GRENLAND',
     physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Fagskolen administrasjon',
     extensionAttribute6: 'NIK-FAGS-ADM',
     physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
   },
   {
     department: 'Skien tannklinikk, avd blå',
     extensionAttribute6: 'TF-SKT-AVD-BLA',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Teamleder',
+    state: 'TF'
   },
   {
     department: 'Greveskogen vgs kroppsøving',
     extensionAttribute6: 'OF-GRV-KROPPSOV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Greveskogen vgs',
     company: 'Greveskogen videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-GRV'
   },
   {
     department: 'Kragerø videregående skole',
     extensionAttribute6: 'OF-KRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-KRV'
   },
   {
     department: 'Team Grenland',
     extensionAttribute6: 'BDK-IT-GRENLAND',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'BDK'
   },
   {
     department: 'Færder vgs opplæring innen kriminalomsorgen',
     extensionAttribute6: 'OF-FRV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor'
+    title: 'Lektor',
+    state: 'OF-FRV'
   },
   {
     department: 'Re vgs elevtjenesten',
     extensionAttribute6: 'OF-REV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Re vgs',
     company: 'Re videregående skole',
-    title: 'Barnevernpedagog'
+    title: 'Barnevernpedagog',
+    state: 'OF-REV'
   },
   {
     department: 'Thor Heyerdahl vgs  administrasjon',
     extensionAttribute6: 'OF-THV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-THV'
   },
   {
     department: 'Kragerø vgs drift',
     extensionAttribute6: 'OF-KRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Renholder'
+    title: 'Renholder',
+    state: 'OF-KRV'
   },
   {
     department: 'Bø vidaregåande skule',
     extensionAttribute6: 'OF-BOV',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bø vgs',
     company: 'Bø vidaregåande skule',
-    title: 'Studieleder'
+    title: 'Studieleder',
+    state: 'OF-BOV'
   },
   {
     department: 'Skien tannklinikk, avd. grønn',
     extensionAttribute6: 'TF-SKT-AVD-GRON',
     physicalDeliveryOfficeName: 'Skien tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'TF'
   },
   {
     department: 'Fagskolen elektrofag',
     extensionAttribute6: 'NIK-FAGS-ELEKTR',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Lærer -',
+    state: 'NIK'
   },
   {
     department: 'Skolen for sosiale og medisinske institusjoner avd helse øst',
     extensionAttribute6: 'OF-SMI-OST',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'SMI-skolen',
     company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-SMI'
   },
   {
     department: 'Fagskolen Vestfold og Telemark',
     extensionAttribute6: 'NIK-FAGS-HELSE',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'NIK'
   },
   {
     department: 'Borgheim tannklinikk',
     extensionAttribute6: 'TF-BOT',
     physicalDeliveryOfficeName: 'Borgheim tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Skogmo vgs helse og oppvekst VG1',
     extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Fagarbeider m/særalder'
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-SKOV'
   },
   {
     department: 'Kragerø vgs spesialundervisning',
     extensionAttribute6: 'OF-KRV-SPES-UND',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Fagarbeider 1'
+    title: 'Fagarbeider 1',
+    state: 'OF-KRV'
   },
   {
     department: 'Nome vgs renhold og vaktmester',
     extensionAttribute6: 'OF-NOMV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Skien tannklinikk, avd grå',
-    extensionAttribute6: 'TF-SKT-AVD-GRA',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Greveskogen vgs AHT',
-    extensionAttribute6: 'OF-GRV-AHT',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Lærling'
+    title: 'Renholder',
+    state: 'OF-NOMV'
   },
   {
     department: 'Thor Heyerdahl vgs elektro og datateknologi',
     extensionAttribute6: 'OF-THV-EL',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
   },
   {
     department: 'Thor Heyerdahl vgs teknologi og industrifag',
     extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
     company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent m/fagbrev'
+    title: 'Elevassistent m/fagbrev',
+    state: 'OF-THV'
   },
   {
     department: 'Færder vgs opplæring innen kriminalomsorgen',
     extensionAttribute6: 'OF-FRV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-FRV'
   },
   {
     department: 'Solvang tannklinikk',
     extensionAttribute6: 'TF-SOT',
     physicalDeliveryOfficeName: 'Solvang tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
+    title: 'Tannhelsesekretær',
+    state: 'TF'
   },
   {
     department: 'Nome vgs bygg- og anlegg, TIP',
     extensionAttribute6: 'OF-NOMV-BA-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
     company: 'Nome videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-NOMV'
   },
   {
     department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
     extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
     company: 'Bamble videregående skole',
-    title: 'Fagarbeider'
+    title: 'Fagarbeider',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Bamble vgs studiespesialisering',
+    extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-BAV'
   },
   {
     department: 'Skogmo vgs administrasjon og fellestjenester',
     extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Konsulent'
+    title: 'Konsulent',
+    state: 'OF-SKOV'
   },
   {
     department: 'Personal og HMS',
     extensionAttribute6: 'HRMU-PERS',
     physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
     company: 'HR, mestring og utvikling',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Notodden vgs ressurssenter',
-    extensionAttribute6: 'OF-NOV-RESSURSS',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt 1'
+    title: 'Seksjonsleder',
+    state: 'HRMU'
   },
   {
     department: 'Fagskolen helsefag',
     extensionAttribute6: 'NIK-FAGS-HELSE',
     physicalDeliveryOfficeName: 'Fagskolen VT Horten',
     company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team Kaupang',
-    extensionAttribute6: 'BDK-IT-KAUPANG',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'NIK'
   },
   {
     department: 'Sande vgs teknisk og industriell produksjon',
     extensionAttribute6: 'OF-SANV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Studierektor'
+    title: 'Studierektor',
+    state: 'OF-SANV'
   },
   {
     department: 'Kragerø vgs spesialundervisning',
     extensionAttribute6: 'OF-KRV-SPES-UND',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Kragerø vgs',
     company: 'Kragerø videregående skole',
-    title: 'Assistent l'
+    title: 'Assistent l',
+    state: 'OF-KRV'
   },
   {
     department: 'Horten vgs service og samferdsel',
     extensionAttribute6: 'OF-HORV-SERV-SA',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Elevassistent'
+    title: 'Elevassistent',
+    state: 'OF-HORV'
   },
   {
     department: 'Holmestrand vgs teknisk industriell produksjon',
     extensionAttribute6: 'OF-HOLV-TIP',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Holmestrand vgs',
     company: 'Holmestrand videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Notodden vgs ressurssenter',
-    extensionAttribute6: 'OF-NOV-RESSURSS',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Skogmo vgs TIP og realfag',
-    extensionAttribute6: 'OF-SKOV-TIP',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Sandefjord vgs studierektor studieforbredende',
-    extensionAttribute6: 'OF-SFV-SF',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Re vgs kontor',
-    extensionAttribute6: 'OF-REV-KONTOR',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Melsom vgs studiespesialisering',
-    extensionAttribute6: 'OF-MEV-STUDIESP',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Thor Heyerdahl vgs bibliotek',
-    extensionAttribute6: 'OF-THV-BIBLIOTE',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Færder vgs teknikk og industriell produksjon',
-    extensionAttribute6: 'OF-FRV-TI',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Miljøarbeider'
-  },
-  {
-    department: 'Seljord tannklinikk',
-    extensionAttribute6: 'TF-SELT',
-    physicalDeliveryOfficeName: 'Seljord tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Nøtterøy videregående skole',
-    extensionAttribute6: 'OF-NTV',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Team Kaupang',
-    extensionAttribute6: 'BDK-IT-KAUPANG',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærekandidat'
-  },
-  {
-    department: 'Skien vgs elevtjenester',
-    extensionAttribute6: 'OF-SKIV-ELEVTJE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Horten vgs nettskolen i Vestfold',
-    extensionAttribute6: 'OF-HORV-NETTSKO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Greveskogen vgs restaurant og matfag',
-    extensionAttribute6: 'OF-GRV-RM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Arbeidsleder'
-  },
-  {
-    department: 'Notodden vgs studiespesialisering',
-    extensionAttribute6: 'OF-NOV-STUDIESP',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Fagskolen elektrofag',
-    extensionAttribute6: 'NIK-FAGS-ELEKTR',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Skogmo vgs tilrettelagt opplæring',
-    extensionAttribute6: 'OF-SKOV-TILRETT',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Sandefjord vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-SFV-AT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Thor Heyerdahl vgs musikk og dans',
-    extensionAttribute6: 'OF-THV-MD',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Melsom vgs renhold',
-    extensionAttribute6: 'OF-MEV-RENHOLD',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Fagarbeider m/særalder'
-  },
-  {
-    department: 'Kragerø videregående skole',
-    extensionAttribute6: 'OF-KRV-STUDIESE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Horten vgs nettskolen i Vestfold',
-    extensionAttribute6: 'OF-HORV-NETTSKO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Kompetansebyggeren yrkesfag',
-    extensionAttribute6: 'OF-KB-YRKESFAG',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten vgs studierektor yrkesfag',
-    extensionAttribute6: 'OF-HORV-YF',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Team marked og utvikling',
-    extensionAttribute6: 'SMM-KOL-marked',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Holmestrand vgs studierektor yrkesfag',
-    extensionAttribute6: 'OF-HOLV-YF',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Team eksamen',
-    extensionAttribute6: 'OF-INN-EKS',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Lærling'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-PED',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Horten vgs idrett',
-    extensionAttribute6: 'OF-HORV-IDRETT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten vgs studierektor studieforbredende',
-    extensionAttribute6: 'OF-HORV-SF',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Greveskogen vgs språk og samfunnsfag',
-    extensionAttribute6: 'OF-GRV-SPRAK-SA',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Thor Heyerdahl vgs teknologi og industrifag',
-    extensionAttribute6: 'OF-THV-TP',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Hjalmar Johansen vgs idrett',
-    extensionAttribute6: 'OF-HJV-IDRETT',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Rjukan videregående skole',
-    extensionAttribute6: 'OF-RJV',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Færder vgs bygg og anleggsteknikk',
-    extensionAttribute6: 'OF-FRV-BA',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Horten vgs Elektro',
-    extensionAttribute6: 'OF-HORV-ELEKTRO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Notodden vgs merkantilt',
-    extensionAttribute6: 'OF-NOV-MERKANTI',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Fag- og yrkesopplæring',
-    extensionAttribute6: 'OF-FAG',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Lærling'
-  },
-  {
-    department: 'Sandefjord vgs idrett',
-    extensionAttribute6: 'OF-SFV-IDRETT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Nome vgs gardsbruk',
-    extensionAttribute6: 'OF-NOMV-GARDSBRU',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Fagarbeider m/fagskoleutdanning'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elektro og datateknologi',
-    extensionAttribute6: 'OF-THV-EL',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Horten vgs alternativ opplæring',
-    extensionAttribute6: 'OF-HORV-AHT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'PP-tjenesten',
-    extensionAttribute6: 'OF-PPT',
-    physicalDeliveryOfficeName: 'PPT- Kongensgt 20A, Skien',
-    company: 'PP-tjenesten',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
-    extensionAttribute6: 'OF-BAV-HELSE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Greveskogen vgs musikk,dans,drama og innføring',
-    extensionAttribute6: 'OF-GRV-MDDI',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
-    extensionAttribute6: 'OF-THV-SS',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Horten vgs nettskolen i Vestfold',
-    extensionAttribute6: 'OF-HORV-NETTSKO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Horten vgs Elektro',
-    extensionAttribute6: 'OF-HORV-ELEKTRO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Sande vgs medier og kommunikasjon',
-    extensionAttribute6: 'OF-SANV-MK',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
-    extensionAttribute6: 'OF-SFV-OK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Notodden vgs bibliotek',
-    extensionAttribute6: 'OF-NOV-BIBLIO',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Vest-Telemark vgs restaurant og matfag',
-    extensionAttribute6: 'OF-VTV-RM',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team anskaffelser',
-    extensionAttribute6: 'OSE-KON-ANS',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Oppfølgingstjenesten rådgivere',
-    extensionAttribute6: 'OF-OT-RAD',
-    physicalDeliveryOfficeName: 'Talenthus - OT',
-    company: 'Oppfølgingstjenesten',
-    title: 'Diverse'
-  },
-  {
-    department: 'Rjukan vgs elevtjenester',
-    extensionAttribute6: 'OF-RJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Greveskogen videregående skole',
-    extensionAttribute6: 'OF-GRV',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Rektor'
-  },
-  {
-    department: 'Greveskogen vgs AHT',
-    extensionAttribute6: 'OF-GRV-AHT',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Sandefjord vgs språk',
-    extensionAttribute6: 'OF-SFV-SPRAK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Teknisk leder'
-  },
-  {
-    department: 'Skogmo vgs administrasjon og fellestjenester',
-    extensionAttribute6: 'OF-SKOV-ADM',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Vaktmester'
-  },
-  {
-    department: 'Hjalmar Johansen vgs OIMG',
-    extensionAttribute6: 'OF-HJV-OIMG',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Fagarbeider m/særalder'
-  },
-  {
-    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-THV-BA',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Team konsernstøtte',
-    extensionAttribute6: 'BDK-IT-STOTTE',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Thor Heyerdahl vgs musikk og dans',
-    extensionAttribute6: 'OF-THV-MD',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Fagskolen administrasjon',
-    extensionAttribute6: 'NIK-FAGS-ADM',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærling'
-  },
-  {
-    department: 'Færder vgs elevtjenesten',
-    extensionAttribute6: 'OF-FRV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Nome vgs elevtjenester',
-    extensionAttribute6: 'OF-NOMV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Miljøterapeut'
-  },
-  {
-    department: 'Sandefjord folkehøyskole teknisk',
-    extensionAttribute6: 'OF-SFH-TEKNISK',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Vaktmester'
-  },
-  {
-    department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
-    extensionAttribute6: 'OF-SFV-TIP',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elevadministrasjon',
-    extensionAttribute6: 'OF-THV-ELEVADM',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Saksbehandler'
-  },
-  {
-    department: 'Skien vgs elevtjenester',
-    extensionAttribute6: 'OF-SKIV-ELEVTJE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Konsulent l'
-  },
-  {
-    department: 'Notodden vgs studiespesialisering',
-    extensionAttribute6: 'OF-NOV-STUDIESP',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
-    extensionAttribute6: 'OF-HJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten vgs service og samferdsel',
-    extensionAttribute6: 'OF-HORV-SERV-SA',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Nøtterøy vgs studiespesialisering samfunnsfaglig avdeling',
-    extensionAttribute6: 'OF-NTV-SP-SAMF',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Porsgrunn vgs drift',
-    extensionAttribute6: 'OF-POV-DRIFT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Re vgs helse og oppvekst',
-    extensionAttribute6: 'OF-REV-HO',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Vest-Telemark vgs yrkesfag',
-    extensionAttribute6: 'OF-VTV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Rjukan vgs elevtjenester',
-    extensionAttribute6: 'OF-RJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Vest-Telemark vgs - helse og oppvekst',
-    extensionAttribute6: 'OF-VTV-HELSE',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Notodden vgs merkantilt',
-    extensionAttribute6: 'OF-NOV-MERKANTI',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Team marked og utvikling',
-    extensionAttribute6: 'SMM-KOL-marked',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Tannhelse og forebygging',
-    extensionAttribute6: 'TF',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Tannhelse og forebygging',
-    title: 'Direktør'
-  },
-  {
-    department: 'Porsgrunn videregående skole',
-    extensionAttribute6: 'OF-POV-SOR',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Næring, innovasjon og kompetanse',
-    extensionAttribute6: 'NIK',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Nøtterøy vgs kontor',
-    extensionAttribute6: 'OF-NTV-KONTOR',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Stabsleder'
-  },
-  {
-    department: 'Sande vgs idrett',
-    extensionAttribute6: 'OF-SANV-IDRETT',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Kompetansebyggeren',
-    extensionAttribute6: 'OF-KB-HELSEFAG',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Bamble vgs studiespesialisering',
-    extensionAttribute6: 'OF-BAV-STUDIESP',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Team eksamen',
-    extensionAttribute6: 'OF-INN-EKS',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Horten vgs realfag, forskerlinje',
-    extensionAttribute6: 'OF-HORV-REAL-FO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Sande videregående skole',
-    extensionAttribute6: 'OF-SANV',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Nome vgs design, håndverk, elektro og fellesfag',
-    extensionAttribute6: 'OF-NOMV-DH-EL-F',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elektro og datateknologi',
-    extensionAttribute6: 'OF-THV-EL',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-THV-AHT',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Porsgrunn vgs elevtjenester',
-    extensionAttribute6: 'OF-POV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Nome vgs ledelse',
-    extensionAttribute6: 'OF-NOMV-LEDELSE',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Bø vgs idrettsseksjon',
-    extensionAttribute6: 'OF-BOV-IDRETT',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Nome vgs design, håndverk, elektro og fellesfag',
-    extensionAttribute6: 'OF-NOMV-DH-EL-F',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-THV-EL',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Team driftskontrakter øst',
-    extensionAttribute6: 'SMM-DRI-ost',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Re vgs toppidrett fotball og håndball',
-    extensionAttribute6: 'OF-REV-TI',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Porsgrunn vgs drift',
-    extensionAttribute6: 'OF-POV-DRIFT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Miljøterapeut'
-  },
-  {
-    department: 'Bø vgs idrettsseksjon',
-    extensionAttribute6: 'OF-BOV-IDRETT',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Lektor'
-  },
-  {
-    department: 'Skien tannklinikk, kjeveortopedisk avd.',
-    extensionAttribute6: 'TF-SKT-KJEVEORT',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Sandefjord vgs hverdagslivstrening',
-    extensionAttribute6: 'OF-SFV-HT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Horten vgs opplæring i kriminalomsorgen',
-    extensionAttribute6: 'OF-HORV-KRIMOMS',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Nøtterøy vgs studiespesialisering realfag,kroppsøving',
-    extensionAttribute6: 'OF-NTV-REAL-KRO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
-    extensionAttribute6: 'OF-HJV-MK',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Vest-Telemark vgs studiespesialiserande',
-    extensionAttribute6: 'OF-VTV-STUDEIES',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team Kaupang',
-    extensionAttribute6: 'BDK-IT-KAUPANG',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Thor Heyerdahl vgs studierektor yrkesforbredende',
-    extensionAttribute6: 'OF-THV-YF',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Prøvenemnder',
-    extensionAttribute6: 'OF-FAG-provenem',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Skien vgs språk, samfunn og økonomi',
-    extensionAttribute6: 'OF-SKIV-SSO',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Drangedal tannklinikk',
-    extensionAttribute6: 'TF-DRT',
-    physicalDeliveryOfficeName: 'Drangedal tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Re vgs administrasjon',
-    extensionAttribute6: 'OF-REV-ADM',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Studiekoordinator'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elevadministrasjon',
-    extensionAttribute6: 'OF-THV-ELEVADM',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Arkiv og dokumenthåndtering',
-    extensionAttribute6: 'BDK-ARK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Skolen for sosiale og medisinske institusjoner av helse vest',
-    extensionAttribute6: 'OF-SMI-VEST',
-    physicalDeliveryOfficeName: 'SMI-skolen',
-    company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Greveskogen vgs språk og samfunnsfag',
-    extensionAttribute6: 'OF-GRV-SPRAK-SA',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Skogmo vgs helse og oppvekst VG1',
-    extensionAttribute6: 'OF-SKOV-HO',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Melsom vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-MEV-AT',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Miljøterapeut'
-  },
-  {
-    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
-    extensionAttribute6: 'OF-SFV-OK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Leder'
-  },
-  {
-    department: 'Porsgrunn vgs TIP',
-    extensionAttribute6: 'OF-POV-TIP',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Kragerø vgs helse- og oppvekstfag',
-    extensionAttribute6: 'OF-KRV-HELSE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Team Fjell',
-    extensionAttribute6: 'BDK-IT-FJELL',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Fagskolen helsefag',
-    extensionAttribute6: 'NIK-FAGS-HELSE',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Færder vgs drift og vedlikehold',
-    extensionAttribute6: 'OF-FRV-DRIFT',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Nøtterøy vgs studiespesialisering samfunnsfaglig avdeling',
-    extensionAttribute6: 'OF-NTV-SP-SAMF',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Søeberg tannklinikk',
-    extensionAttribute6: 'TF-SET',
-    physicalDeliveryOfficeName: 'Søeberg tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Arkiv og dokumenthåndtering',
-    extensionAttribute6: 'BDK-ARK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Strategi og kompetanseledelse',
-    extensionAttribute6: 'HRMU-STR',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'HR, mestring og utvikling',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Notodden tannklinikk',
-    extensionAttribute6: 'TF-NOT',
-    physicalDeliveryOfficeName: 'Notodden tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Assistent'
-  },
-  {
-    department: 'Team utbygging Bypakke Grenland',
-    extensionAttribute6: 'SMM-UTB-bypakke',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Diverse'
-  },
-  {
-    department: 'Horten vgs teknisk',
-    extensionAttribute6: 'OF-HORV-TEKNISK',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Teknisk leder'
-  },
-  {
-    department: 'Re videregående skole',
-    extensionAttribute6: 'OF-REV',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Rektor'
-  },
-  {
-    department: 'Team utbygging Bypakke Grenland',
-    extensionAttribute6: 'SMM-UTB-bypakke',
-    physicalDeliveryOfficeName: 'SMM - Gjerpensgate',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Diverse'
-  },
-  {
-    department: 'Skogmo vgs administrasjon og fellestjenester',
-    extensionAttribute6: 'OF-SKOV-ADM',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Holmestrand vgs teknisk industriell produksjon',
-    extensionAttribute6: 'OF-HOLV-TIP',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Re vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-REV-BA',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Horten vgs service og informasjon',
-    extensionAttribute6: 'OF-HORV-SERV-IN',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Oppfølgingstjenesten rådgivere',
-    extensionAttribute6: 'OF-OT-RAD',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Oppfølgingstjenesten',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Fagskolen administrasjon',
-    extensionAttribute6: 'NIK-FAGS-ADM',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Bamble vgs industrifag',
-    extensionAttribute6: 'OF-BAV-INDUSTRI',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Re vgs helse og oppvekst',
-    extensionAttribute6: 'OF-REV-HO',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Hof tannklinikk',
-    extensionAttribute6: 'TF-HOT',
-    physicalDeliveryOfficeName: 'Hof tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
-    extensionAttribute6: 'OF-HJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Thor Heyerdahl vgs studierektor yrkesforbredende',
-    extensionAttribute6: 'OF-THV-YF',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Færder vgs elektrofag',
-    extensionAttribute6: 'OF-FRV-ELEKTRO',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent l'
-  },
-  {
-    department: 'Bø vgs idrettsseksjon',
-    extensionAttribute6: 'OF-BOV-IDRETT',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Nome vgs helse og oppvekstfag',
-    extensionAttribute6: 'OF-NOMV-HO',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Vest-Telemark vidaregåande skule',
-    extensionAttribute6: 'FOLKEVALGTE',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Folkevalgte',
-    title: 'Diverse'
-  },
-  {
-    department: 'Skien vgs elevtjenester',
-    extensionAttribute6: 'OF-SKIV-ELEVTJE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Barnevernpedagog'
-  },
-  {
-    department: 'Holmestrand vgs studierektor studieforberedende',
-    extensionAttribute6: 'OF-HOLV-SF',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Rjukan vgs elevtjenester',
-    extensionAttribute6: 'OF-RJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Nome vgs internat og kantine',
-    extensionAttribute6: 'OF-NOMV-INTERNA',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Notodden tannklinikk',
-    extensionAttribute6: 'TF-NOT',
-    physicalDeliveryOfficeName: 'Notodden tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Bø vgs realseksjon',
-    extensionAttribute6: 'OF-BOV-REAL',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Fag- og yrkesopplæring',
-    extensionAttribute6: 'OF-FAG',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Opplæring og folkehelse',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Greveskogen vgs AHT',
-    extensionAttribute6: 'OF-GRV-AHT',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Miljøterapeut'
-  },
-  {
-    department: 'Porsgrunn vgs idrett',
-    extensionAttribute6: 'OF-POV-IDRETT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Skogmo vgs elektrofag',
-    extensionAttribute6: 'OF-SKOV-ELEKTRO',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Skogmo vgs fellesfag',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Notodden vgs studiespesialisering',
-    extensionAttribute6: 'OF-NOV-STUDIESP',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Kragerø vgs spesialundervisning',
-    extensionAttribute6: 'OF-KRV-SPES-UND',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Færder vgs teknikk og industriell produksjon',
-    extensionAttribute6: 'OF-FRV-TI',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Fagskolen helsefag',
-    extensionAttribute6: 'NIK-FAGS-HELSE',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor'
-  },
-  {
-    department: 'Team marked og utvikling',
-    extensionAttribute6: 'SMM-KOL-marked',
-    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Lærling'
-  },
-  {
-    department: 'Notodden vgs studiespesialisering',
-    extensionAttribute6: 'OF-NOV-STUDIESP',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Team konsernstøtte',
-    extensionAttribute6: 'BDK-IT-STOTTE',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Holmestrand vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-HOLV-AT',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Nøtterøy vgs helse- og oppvekst',
-    extensionAttribute6: 'OF-NTV-HO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Sandefjord folkehøyskole kjøkken,renhold',
-    extensionAttribute6: 'OF-SFH-KJOKKEN',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-THV-BA',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Stokke tannklinikk',
-    extensionAttribute6: 'TF-STT',
-    physicalDeliveryOfficeName: 'Stokke tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Team budsjett og strategi',
-    extensionAttribute6: 'OSE-OKO-BUDS',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Rjukan vgs ledelse',
-    extensionAttribute6: 'OF-RJV-LEDELSE',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Skien vgs bibliotek',
-    extensionAttribute6: 'OF-SKIV-BIBL',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Bibliotekar'
-  },
-  {
-    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
-    extensionAttribute6: 'OF-THV-SS',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Færder vgs tekniske og allmenne fag',
-    extensionAttribute6: 'OF-FRV-TAF',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Skien vgs kantine',
-    extensionAttribute6: 'OF-SKIV-KANTINE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Greveskogen vgs stab',
-    extensionAttribute6: 'OF-GRV-STAB',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Kontorsjef'
-  },
-  {
-    department: 'Eksamenskontoret sensor og eksamensvakter',
-    extensionAttribute6: 'OF-INN-SENSOR',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Opplæring og folkehelse',
-    title: 'Sensor'
-  },
-  {
-    department: 'Notodden vgs studiespesialisering',
-    extensionAttribute6: 'OF-NOV-STUDIESP',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Porsgrunn vgs real',
-    extensionAttribute6: 'OF-POV-REAL',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Skogmo vgs fellesfag',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Thor Heyerdahl vgs  språk, samfunnsfag, økonomi',
-    extensionAttribute6: 'OF-THV-ST-SSO',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Sandefjord folkehøyskole kjøkken,renhold',
-    extensionAttribute6: 'OF-SFH-KJOKKEN',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Porsgrunn vgs språk',
-    extensionAttribute6: 'OF-POV-SPRAK',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Kragerø vgs ledelse',
-    extensionAttribute6: 'OF-KRV-LEDELSE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Administrativ leder'
-  },
-  {
-    department: 'Horten vgs idrett',
-    extensionAttribute6: 'OF-HORV-IDRETT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Notodden vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-NOV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Team arealforvaltning',
-    extensionAttribute6: 'SMM-FORV-areal',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Holmestrand vgs realfag',
-    extensionAttribute6: 'OF-HOLV-REALFAG',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'HR, mestring og utvikling',
-    extensionAttribute6: 'HRMU',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'HR, mestring og utvikling',
-    title: 'Direktør'
-  },
-  {
-    department: 'Larvik tannklinikk',
-    extensionAttribute6: 'TF-LART',
-    physicalDeliveryOfficeName: 'Larvik tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Holmestrand vgs teknisk industriell produksjon',
-    extensionAttribute6: 'OF-HOLV-TIP',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Vest-Telemark vgs restaurant og matfag',
-    extensionAttribute6: 'OF-VTV-RM',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
-    extensionAttribute6: 'OF-SFV-TIP',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Notodden vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-NOV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Drift og vedlikehold',
-    extensionAttribute6: 'SMM-DRI',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Sandefjord vgs elevtjenester',
-    extensionAttribute6: 'OF-SFV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Miljøarbeider'
-  },
-  {
-    department: 'Nome vgs elevtjenester',
-    extensionAttribute6: 'OF-NOMV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Midt-Telemark tannklinikk',
-    extensionAttribute6: 'TF-MIT',
-    physicalDeliveryOfficeName: 'Midt-Telemark tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Assistent'
-  },
-  {
-    department: 'Thor Heyerdahl vgs  realfag',
-    extensionAttribute6: 'OF-THV-REALFAG',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Skogmo vgs helse og oppvekst VG1',
-    extensionAttribute6: 'OF-SKOV-HO',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Seljord tannklinikk',
-    extensionAttribute6: 'TF-SELT',
-    physicalDeliveryOfficeName: 'Seljord tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Kultur, regional identitet, idrett og frivillighet',
-    extensionAttribute6: 'KRIF',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Kompetansebyggeren  helsefagarbeider',
-    extensionAttribute6: 'OF-KB-HELSEFAG',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Kompetansebyggeren',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Porsgrunn vgs frisør,blomster, interiør og eksponeringsdesign',
-    extensionAttribute6: 'OF-POV-DH',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Skien videregående skole',
-    extensionAttribute6: 'OF-SKIV-SSO',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Team utbygging øst',
-    extensionAttribute6: 'SMM-UTB-ost',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Vest-Telemark vgs administrasjon og OIMG',
-    extensionAttribute6: 'OF-VTV-ADMINIST',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Skogmo vgs elektrofag',
-    extensionAttribute6: 'OF-SKOV-ELEKTRO',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Hjalmar Johansen vgs Skien fengsel',
-    extensionAttribute6: 'OF-HJV-FENGSEL',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Skien vgs kontor',
-    extensionAttribute6: 'OF-SKIV-KONTOR',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Færder vgs elevtjenesten',
-    extensionAttribute6: 'OF-FRV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Miljøarbeider'
-  },
-  {
-    department: 'Kragerø studiesenteret',
-    extensionAttribute6: 'OF-KRV-STUDIESE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Skien tannklinikk, endodontisk avd.',
-    extensionAttribute6: 'TF-SKT-ENDODONT',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlegespesialist'
-  },
-  {
-    department: 'Porsgrunn tannklinikk',
-    extensionAttribute6: 'TF-POT',
-    physicalDeliveryOfficeName: 'Porsgrunn tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-THV',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Sande vgs kontor',
-    extensionAttribute6: 'OF-SANV-KONTOR',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Nome vgs ledelse',
-    extensionAttribute6: 'OF-NOMV-LEDELSE',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Fagleder'
-  },
-  {
-    department: 'Skogmo vgs administrasjon og fellestjenester',
-    extensionAttribute6: 'OF-SKOV-ADM',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Notodden vgs yrkesfag',
-    extensionAttribute6: 'OF-NOV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Notodden tannklinikk',
-    extensionAttribute6: 'TF-NOT',
-    physicalDeliveryOfficeName: 'Notodden tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier 1'
-  },
-  {
-    department: 'Skien vgs dans og drama',
-    extensionAttribute6: 'OF-SKIV-DD',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Team politisk støtte',
-    extensionAttribute6: 'OSE-KON-POL',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Greveskogen vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-GRV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Team bruvedlikehold',
-    extensionAttribute6: 'SMM-DRI-bru',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Holmestrand vgs basen',
-    extensionAttribute6: 'OF-HOLV-BASEN',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Greveskogen vgs språk og samfunnsfag',
-    extensionAttribute6: 'OF-GRV-SPRAK-SA',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten vgs service og samferdsel',
-    extensionAttribute6: 'OF-HORV-SERV-SA',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Holmestrand vgs teknisk',
-    extensionAttribute6: 'OF-HOLV-TEKNISK',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Vaktmester'
-  },
-  {
-    department: 'Holmestrand tannklinikk',
-    extensionAttribute6: 'TF-HOLT',
-    physicalDeliveryOfficeName: 'Holmestrand tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Nome vgs kontor, bibliotek og IKT',
-    extensionAttribute6: 'OF-NOMV-KONTOR',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Fagskolen administrasjon',
-    extensionAttribute6: 'NIK-FAGS-ADM',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Horten vgs media og kommunikasjon',
-    extensionAttribute6: 'OF-HORV-MK',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Horten vgs ST språk vg2, VG3,PB',
-    extensionAttribute6: 'OF-HORV-SPRAK-P',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Porsgrunn vgs drift',
-    extensionAttribute6: 'OF-POV-DRIFT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
-    extensionAttribute6: 'OF-SMI-VGS',
-    physicalDeliveryOfficeName: 'SMI-skolen',
-    company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Team skoleskyss, TT-kort og løyver',
-    extensionAttribute6: 'SMM-KOL-SKYSS',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Sandefjord videregående skole',
-    extensionAttribute6: 'OF-SFV-SSRM',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Re vgs administrasjon',
-    extensionAttribute6: 'OF-REV-ADM',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Seniorrådgiver'
-  },
-  {
-    department: 'Fagskolen maritim utdanning',
-    extensionAttribute6: 'NIK-FAGS-MARITI',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Skogmo vgs administrasjon og fellestjenester',
-    extensionAttribute6: 'OF-SKOV-ADM',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Fullmektig'
-  },
-  {
-    department: 'Re videregående skole',
-    extensionAttribute6: 'OF-REV-IDRETT',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Greveskogen videregående skole',
-    extensionAttribute6: 'OF-GRV',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Stabsleder'
-  },
-  {
-    department: 'Kommunikasjon',
-    extensionAttribute6: 'BDK-KOM',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elevtjenesten',
-    extensionAttribute6: 'OF-THV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Færder vgs opplæring innen kriminalomsorgen',
-    extensionAttribute6: 'OF-FRV-KRIMOMS',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Miljøterapeut'
-  },
-  {
-    department: 'Thor Heyerdahl vgs  administrasjon',
-    extensionAttribute6: 'OF-THV-ADM',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Rjukan vgs administrativ stab og drift',
-    extensionAttribute6: 'OF-RJV-ADM-DRIF',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Hjalmar Johansen vgs restaurant og matfag',
-    extensionAttribute6: 'OF-HJV-RM',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Skogmo vgs TIP og realfag',
-    extensionAttribute6: 'OF-SKOV-TIP',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Færder vgs opplæring innen kriminalomsorgen',
-    extensionAttribute6: 'OF-FRV-KRIMOMS',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Drift og vedlikehold',
-    extensionAttribute6: 'SMM-DRI',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elevtjenesten',
-    extensionAttribute6: 'OF-THV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Skogmo vgs tilrettelagt opplæring',
-    extensionAttribute6: 'OF-SKOV-TILRETT',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Bø vgs språk, samfunn og økonomi',
-    extensionAttribute6: 'OF-BOV-SSO',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Rjukan tannklinikk',
-    extensionAttribute6: 'TF-RJT',
-    physicalDeliveryOfficeName: 'Rjukan tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
-    extensionAttribute6: 'OF-THV-HO',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Team bruvedlikehold',
-    extensionAttribute6: 'SMM-DRI-bru',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Notodden vgs bibliotek',
-    extensionAttribute6: 'OF-NOV-BIBLIO',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Bamble vgs service og samferdsel',
-    extensionAttribute6: 'OF-BAV-SERVICE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Fagskolen Vestfold og Telemark',
-    extensionAttribute6: 'NIK-FAGS',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor'
-  },
-  {
-    department: 'Thor Heyerdahl vgs teknologi og industrifag',
-    extensionAttribute6: 'OF-THV-TP',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Folkevalgte',
-    extensionAttribute6: 'FOLKEVALGTE',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Folkevalgte',
-    title: 'Folkevalgt'
-  },
-  {
-    department: 'Notodden vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-NOV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
-    extensionAttribute6: 'OF-SMI-VGS',
-    physicalDeliveryOfficeName: 'SMI-skolen',
-    company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Fagskolen helsefag',
-    extensionAttribute6: 'NIK-FAGS-HELSE',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Skien tannklinikk, kjeveortopedisk avd.',
-    extensionAttribute6: 'TF-SKT-KJEVEORT',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlegespesialist'
-  },
-  {
-    department: 'Kragerø studiesenteret',
-    extensionAttribute6: 'OF-KRV-STUDIESE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Næring, innovasjon og kompetanse',
-    extensionAttribute6: 'NIK',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Direktør'
-  },
-  {
-    department: 'Skogmo vgs TIP og realfag',
-    extensionAttribute6: 'OF-SKOV-TIP',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
-    extensionAttribute6: 'OF-SFV-OK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Kantinebestyrer'
-  },
-  {
-    department: 'Notodden vgs helse og oppvekst',
-    extensionAttribute6: 'OF-NOV-HO',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Greveskogen vgs service og samferdsel',
-    extensionAttribute6: 'OF-GRV-SERV-SAM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Lardal tannklinikk',
-    extensionAttribute6: 'TF-LAT',
-    physicalDeliveryOfficeName: 'Lardal tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Bø vidaregåande skule',
-    extensionAttribute6: 'OF-BOV-SSO',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Kompetansebyggeren studierektor',
-    extensionAttribute6: 'OF-KB-ST-REKTOR',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Studierektor'
-  },
-  {
-    department: 'Sande vgs kontor',
-    extensionAttribute6: 'OF-SANV-KONTOR',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Førstekonsulent'
-  },
-  {
-    department: 'Færder vgs kontor,stab',
-    extensionAttribute6: 'OF-FRV-KONTOR',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Skogmo vgs fellesfag',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Bamble vgs industrifag',
-    extensionAttribute6: 'OF-BAV-INDUSTRI',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Skien videregående skole',
-    extensionAttribute6: 'OF-SKIV',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Team vegforvaltning',
-    extensionAttribute6: 'SMM-FORV-vegf',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Vest-Telemark vgs restaurant og matfag',
-    extensionAttribute6: 'OF-VTV-RM',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Vernepleier'
-  },
-  {
-    department: 'Skien tannklinikk',
-    extensionAttribute6: 'TF-SKT',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-THV-BA',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Miljøterapeut'
-  },
-  {
-    department: 'Horten vgs idrett',
-    extensionAttribute6: 'OF-HORV-IDRETT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Porsgrunn vgs drift',
-    extensionAttribute6: 'OF-POV-DRIFT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team voksenopplæring',
-    extensionAttribute6: 'OF-INN-VOK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'IT konserndrift og brukerstøtte',
-    extensionAttribute6: 'BDK-IT',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Sandefjord vgs servicekontor',
-    extensionAttribute6: 'OF-SFV-SERVKTR',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Team geodata',
-    extensionAttribute6: 'SMM-DRI-geodata',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Thor Heyerdahl vgs teknologi og industrifag',
-    extensionAttribute6: 'OF-THV-TP',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Hjalmar Johansen vgs restaurant og matfag',
-    extensionAttribute6: 'OF-HJV-RM',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Horten vgs ST språk vg2, VG3,PB',
-    extensionAttribute6: 'OF-HORV-SPRAK-P',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Team vegforvaltning',
-    extensionAttribute6: 'SMM-FORV-vegf',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Færder vgs elevkantine',
-    extensionAttribute6: 'OF-FRV-ELEVKANT',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Lærekandidat'
-  },
-  {
-    department: 'Holmestrand vgs basen',
-    extensionAttribute6: 'OF-HOLV-BASEN',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Oppfølgingstjenesten fagkoordinator',
-    extensionAttribute6: 'OF-OT-FAG',
-    physicalDeliveryOfficeName: 'OT Larvik',
-    company: 'Oppfølgingstjenesten',
-    title: 'Leder'
-  },
-  {
-    department: 'Porsgrunn vgs bibliotek',
-    extensionAttribute6: 'OF-POV-BIBLIO',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
-    extensionAttribute6: 'OF-POV-STUD-AT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Vernepleier'
-  },
-  {
-    department: 'Notodden vgs merkantilt',
-    extensionAttribute6: 'OF-NOV-MERKANTI',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Nome vgs gardsbruk',
-    extensionAttribute6: 'OF-NOMV-GARDSBRU',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Arbeider'
-  },
-  {
-    department: 'Sande vgs AHT',
-    extensionAttribute6: 'OF-SANV-AHT',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Opplæring og folkehelse',
-    extensionAttribute6: 'OF',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Direktør'
-  },
-  {
-    department: 'Hovedtillitsvalgte',
-    extensionAttribute6: 'HRMU-HTV',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'HR, mestring og utvikling',
-    title: 'Tillitsvalgt'
-  },
-  {
-    department: 'Nøtterøy vgs studiespesialisering samfunnsfaglig avdeling',
-    extensionAttribute6: 'OF-NTV-SP-SAMF',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Assistent'
-  },
-  {
-    department: 'Nome vgs naturbruk II',
-    extensionAttribute6: 'OF-NOMV-NAT-II',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Skien tannklinikk, endodontisk avd.',
-    extensionAttribute6: 'TF-SKT-ENDODONT',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannhelsesekretær'
-  },
-  {
-    department: 'Porsgrunn vgs informasjonsteknologi og medieproduksjon',
-    extensionAttribute6: 'OF-POV-MK',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Kultur, idrett og friluftsliv',
-    extensionAttribute6: 'KRIF-KIF',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Re vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-REV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Sandefjord vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-SFV-AT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Melsom vgs gård internat',
-    extensionAttribute6: 'OF-MEV-INTERNAT',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
-    extensionAttribute6: 'OF-THV-HO',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Greveskogen vgs kroppsøving',
-    extensionAttribute6: 'OF-GRV-KROPPSOV',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Folkehelse og livsmestring',
-    extensionAttribute6: 'OF-FHL',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Sande vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-SANV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Sande vgs bibliotek',
-    extensionAttribute6: 'OF-SANV-BIBLIO',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Re vgs ST norsk, samf.fag',
-    extensionAttribute6: 'OF-REV-NO-SAMF',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Færder vgs påbygging generell studiekompetanse',
-    extensionAttribute6: 'OF-FRV-PB',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Thor Heyerdahl vgs idrettsfag',
-    extensionAttribute6: 'OF-THV-IDRETT',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Kommunikasjon',
-    extensionAttribute6: 'BDK-KOM',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Teknologi og digitalisering',
-    extensionAttribute6: 'BDK-TEK',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Hof tannklinikk',
-    extensionAttribute6: 'TF-HOT',
-    physicalDeliveryOfficeName: 'Hof tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Sande vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-SANV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: null
-  },
-  {
-    department: 'Samfunnsutvikling, internasjonalisering og klima',
-    extensionAttribute6: 'SIK',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Direktør'
-  },
-  {
-    department: 'Melsom vgs studiespesialisering',
-    extensionAttribute6: 'OF-MEV-STUDIESP',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Mestring og utvikling',
-    extensionAttribute6: 'HRMU-MES',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'HR, mestring og utvikling',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Bamble vgs elevtjenester og OIMG',
-    extensionAttribute6: 'OF-BAV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Bibliotekar 1'
-  },
-  {
-    department: 'Vest-Telemark vidaregåande skule',
-    extensionAttribute6: 'OF-VTV',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Sektorutvikling',
-    extensionAttribute6: 'SMM-SEK',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Leder'
-  },
-  {
-    department: 'Borgejordet tannklinikk',
-    extensionAttribute6: 'TF-BORT',
-    physicalDeliveryOfficeName: 'Borgejordet tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
-  },
-  {
-    department: 'Team Kaupang',
-    extensionAttribute6: 'BDK-IT-KAUPANG',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Porsgrunn vgs avd. Nord',
-    extensionAttribute6: 'OF-POV-NORD',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Skogmo videregående skole',
-    extensionAttribute6: 'OF-SKOV',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Team regnskap og rapportering',
-    extensionAttribute6: 'OSE-OKO-REGN',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Førstekonsulent'
-  },
-  {
-    department: 'Skogmo vgs helse og oppvekst VG1',
-    extensionAttribute6: 'OF-SKOV-HO',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Skogmo vgs tilrettelagt opplæring',
-    extensionAttribute6: 'OF-SKOV-TILRETT',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Rjukan vgs administrativ stab og drift',
-    extensionAttribute6: 'OF-RJV-ADM-DRIF',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Holmestrand vgs norsk',
-    extensionAttribute6: 'OF-HOLV-NORSK',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Porsgrunn vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-POV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Sandefjord vgs norsk',
-    extensionAttribute6: 'OF-SFV-NORSK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Re vgs ST språk, realfag',
-    extensionAttribute6: 'OF-REV-SPR-REAL',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Miljøarbeider'
-  },
-  {
-    department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
-    extensionAttribute6: 'OF-HJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Bibliotekar'
-  },
-  {
-    department: 'PP-tjenesten',
-    extensionAttribute6: 'OF-PPT',
-    physicalDeliveryOfficeName: 'PPT- Kongensgt 20A, Skien',
-    company: 'PP-tjenesten',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
-    extensionAttribute6: 'OF-BAV-HELSE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Prosjektleder'
-  },
-  {
-    department: 'Sandefjord vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-SFV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Horten vgs service og informasjon',
-    extensionAttribute6: 'OF-HORV-SERV-IN',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Stabsleder'
-  },
-  {
-    department: 'Pedagogisk støtte og utvikling',
-    extensionAttribute6: 'OF-PED',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Opplæring og folkehelse',
-    title: 'Advokat'
-  },
-  {
-    department: 'Skogmo vgs TIP og realfag',
-    extensionAttribute6: 'OF-SKOV-TIP',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Bamble vgs kontor og IKT',
-    extensionAttribute6: 'OF-BAV-KONTOR',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Sekretær'
-  },
-  {
-    department: 'Brukerbehov, digitalisering og kommunikasjon',
-    extensionAttribute6: 'BDK',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Utviklingsleder'
-  },
-  {
-    department: 'Team arealforvaltning',
-    extensionAttribute6: 'SMM-FORV-areal',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Thor Heyerdahl vgs musikk og dans',
-    extensionAttribute6: 'OF-THV-MD',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Barne- og ungdomsarbeider'
-  },
-  {
-    department: 'Sandefjord vgs norsk',
-    extensionAttribute6: 'OF-SFV-NORSK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Notodden vgs yrkesfag',
-    extensionAttribute6: 'OF-NOV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Sandefjord vgs norsk',
-    extensionAttribute6: 'OF-SFV-NORSK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Skogmo vgs administrasjon og fellestjenester',
-    extensionAttribute6: 'OF-SKOV-ADM',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Sekretær'
-  },
-  {
-    department: 'Fagskolen helsefag',
-    extensionAttribute6: 'NIK-FAGS-HELSE',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
-    extensionAttribute6: 'OF-HJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Nome vgs design, håndverk, elektro og fellesfag',
-    extensionAttribute6: 'OF-NOMV-DH-EL-F',
-    physicalDeliveryOfficeName: 'OF-NOMV',
-    company: 'Nome videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Folkevalgte',
-    extensionAttribute6: 'FOLKEVALGTE',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Folkevalgte',
-    title: 'Diverse'
-  },
-  {
-    department: 'Melsom vgs kontor',
-    extensionAttribute6: 'OF-MEV-KONTOR',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Kontorleder'
-  },
-  {
-    department: 'Team trafikksikkerhet og miljøvennlig transport',
-    extensionAttribute6: 'SMM-FORV-trafik',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Horten vgs alternativ opplæring',
-    extensionAttribute6: 'OF-HORV-AHT',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
-    extensionAttribute6: 'OF-THV-AHT',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Porsgrunn tannklinikk',
-    extensionAttribute6: 'TF-POT',
-    physicalDeliveryOfficeName: 'Porsgrunn tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
-  },
-  {
-    department: 'Rjukan tannklinikk',
-    extensionAttribute6: 'TF-RJT',
-    physicalDeliveryOfficeName: 'Rjukan tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Fagskolen maritim utdanning',
-    extensionAttribute6: 'NIK-FAGS-MARITI',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten vgs Elektro',
-    extensionAttribute6: 'OF-HORV-ELEKTRO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Oppfølgingstjenesten rådgivere',
-    extensionAttribute6: 'OF-OT-RAD',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Oppfølgingstjenesten',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Skien tannklinikk, avd grå',
-    extensionAttribute6: 'TF-SKT-AVD-GRA',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Porsgrunn vgs drift',
-    extensionAttribute6: 'OF-POV-DRIFT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Team driftskontrakter vest',
-    extensionAttribute6: 'SMM-DRI-vest',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Bamble vgs service og samferdsel',
-    extensionAttribute6: 'OF-BAV-SERVICE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Undervisningsstilling'
-  },
-  {
-    department: 'Færder vgs teknikk og industriell produksjon',
-    extensionAttribute6: 'OF-FRV-TI',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Sande vgs st.spes realfag',
-    extensionAttribute6: 'OF-SANV-REAL',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Notodden vgs landslinje yrkessjåfør',
-    extensionAttribute6: 'OF-NOV-LANDLINJ',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Skien tannklinikk',
-    extensionAttribute6: 'TF-SKT',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Notodden videregående skole',
-    extensionAttribute6: 'OF-NOV',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Rektor'
-  },
-  {
-    department: 'Fagskolen maritim utdanning',
-    extensionAttribute6: 'NIK-FAGS-MARITI',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor'
-  },
-  {
-    department: 'Team trafikksikkerhet og miljøvennlig transport',
-    extensionAttribute6: 'SMM-FORV-trafik',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Fylkesbibliotek',
-    extensionAttribute6: 'KRIF-FB',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Sandefjord videregående skole',
-    extensionAttribute6: 'OF-SFV',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Oppfølgingstjenesten fagkoordinator',
-    extensionAttribute6: 'OF-OT-FAG',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Oppfølgingstjenesten',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Nome vgs renhold og vaktmester',
-    extensionAttribute6: 'OF-NOMV-DRIFT',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Notodden vgs ressurssenter',
-    extensionAttribute6: 'OF-NOV-RESSURSS',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Re vgs ST språk, realfag',
-    extensionAttribute6: 'OF-REV-SPR-REAL',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Sandefjord videregående skole',
-    extensionAttribute6: 'OF-SFV-AT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elektro og datateknologi',
-    extensionAttribute6: 'OF-THV-EL',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Fylkesbibliotek',
-    extensionAttribute6: 'KRIF-FB',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Spesialbibliotekar'
-  },
-  {
-    department: 'Sandefjord vgs helse, oppvekst',
-    extensionAttribute6: 'OF-SFV-HO',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Sandefjord vgs elevtjenester',
-    extensionAttribute6: 'OF-SFV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Sektorutvikling-',
-    extensionAttribute6: 'TF-SEK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Tannhelse og forebygging',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Skogmo vgs administrasjon og fellestjenester',
-    extensionAttribute6: 'OF-SKOV-ADM',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Fagarbeider m/fagskoleutdanning'
-  },
-  {
-    department: 'Bamble vgs - administrative tjenester',
-    extensionAttribute6: 'OF-BAV-ADM',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Administrativ leder'
-  },
-  {
-    department: 'Team vegforvaltning',
-    extensionAttribute6: 'SMM-FORV-vegf',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Sandefjord vgs hverdagslivstrening',
-    extensionAttribute6: 'OF-SFV-HT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærling'
-  },
-  {
-    department: 'Team anskaffelser',
-    extensionAttribute6: 'OSE-KON-ANS',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Vest-Telemark vidaregåande skule',
-    extensionAttribute6: 'OF-VTV',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Fagskolen helsefag',
-    extensionAttribute6: 'NIK-FAGS-HELSE',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Skien tannklinikk, avd. grønn',
-    extensionAttribute6: 'TF-SKT-AVD-GRON',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Bamble videregående skole',
-    extensionAttribute6: 'OF-BAV',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Rektor'
-  },
-  {
-    department: 'Team trafikksikkerhet og miljøvennlig transport',
-    extensionAttribute6: 'SMM-FORV-trafik',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-SKIV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Fylkesbibliotek',
-    extensionAttribute6: 'KRIF-FB',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Skogmo vgs bygg og anleggsfag',
-    extensionAttribute6: 'OF-SKOV-BA',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Team prosjektstøtte',
-    extensionAttribute6: 'SMM-UTB-prosjek',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Greveskogen vgs språk og samfunnsfag',
-    extensionAttribute6: 'OF-GRV-SPRAK-SA',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Greveskogen vgs AHT',
-    extensionAttribute6: 'OF-GRV-AHT',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Team driftskontrakter vest',
-    extensionAttribute6: 'SMM-DRI-vest',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Kragerø vgs tekniske fag',
-    extensionAttribute6: 'OF-KRV-TEKNISK',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Skien vgs kantine',
-    extensionAttribute6: 'OF-SKIV-KANTINE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Sektorutvikling-',
-    extensionAttribute6: 'TF-SEK',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Tannhelse og forebygging',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Sektorutvikling-',
-    extensionAttribute6: 'TF-SEK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Tannhelse og forebygging',
-    title: 'Diverse'
-  },
-  {
-    department: 'Horten videregående skole',
-    extensionAttribute6: 'OF-HORV',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Sandefjord vgs international baccalaureate',
-    extensionAttribute6: 'OF-SFV-IB',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
-    extensionAttribute6: 'OF-SFV-REAL',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
-    extensionAttribute6: 'OF-THV-HO',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Re videregående skole',
-    extensionAttribute6: 'OF-REV',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Team helhetlig styring',
-    extensionAttribute6: 'OSE-KON-HEL',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Skien vgs ledelse',
-    extensionAttribute6: 'OF-SKIV-LEDELSE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Administrativ leder'
-  },
-  {
-    department: 'Hjalmar Johansen vgs idrett',
-    extensionAttribute6: 'OF-HJV-IDRETT',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
-    extensionAttribute6: 'OF-SFV-OK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærekandidat'
-  },
-  {
-    department: 'Personal og HMS',
-    extensionAttribute6: 'HRMU-PERS',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'HR, mestring og utvikling',
-    title: 'Førstekonsulent'
-  },
-  {
-    department: 'Sande vgs teknisk og industriell produksjon',
-    extensionAttribute6: 'OF-SANV-TIP',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
-    extensionAttribute6: 'OF-POV-STUD-AT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Team elektro og veglys',
-    extensionAttribute6: 'SMM-DRI-elektro',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Greveskogen vgs økonomi- og realfag',
-    extensionAttribute6: 'OF-GRV-REAL-OK',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Hjalmar Johansen vgs OIMG',
-    extensionAttribute6: 'OF-HJV-OIMG',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Fysioterapeut'
-  },
-  {
-    department: 'Nome vgs internat og kantine',
-    extensionAttribute6: 'OF-NOMV-INTERNA',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Kokk'
-  },
-  {
-    department: 'Bamble vgs studiespesialisering',
-    extensionAttribute6: 'OF-BAV-STUDIESP',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Porsgrunn vgs TIP',
-    extensionAttribute6: 'OF-POV-TIP',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Kompetansebyggeren  helsefagarbeider',
-    extensionAttribute6: 'OF-KB-HELSEFAG',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Nøtterøy vgs bibliotek',
-    extensionAttribute6: 'OF-NTV-BIBLIO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Bibliotekar'
-  },
-  {
-    department: 'Oppfølgingstjenesten fagkoordinator',
-    extensionAttribute6: 'OF-OT-FAG',
-    physicalDeliveryOfficeName: 'OT Horten',
-    company: 'Oppfølgingstjenesten',
-    title: 'Leder'
-  },
-  {
-    department: 'Nome vgs internat og kantine',
-    extensionAttribute6: 'OF-NOMV-INTERNA',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Miljøterapeut'
-  },
-  {
-    department: 'Skien vgs kantine',
-    extensionAttribute6: 'OF-SKIV-KANTINE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Team HMS og personvern',
-    extensionAttribute6: 'HRMU-PERS-HMS',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'HR, mestring og utvikling',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Nøtterøy vgs elevtjenesten',
-    extensionAttribute6: 'OF-NTV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Fagskolen helsefag',
-    extensionAttribute6: 'NIK-FAGS-HELSE',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Bø vidaregåande skule',
-    extensionAttribute6: 'OF-BOV',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Rektor'
-  },
-  {
-    department: 'Skien videregående skole',
-    extensionAttribute6: 'OF-SKIV-ELEVTJE',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Horten vgs elevtjenesten',
-    extensionAttribute6: 'OF-HORV-ELEVTJE',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Hjalmar Johansen vgs idrett',
-    extensionAttribute6: 'OF-HJV-IDRETT',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Sektorutvikling',
-    extensionAttribute6: 'SMM-SEK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Sandefjord vgs hverdagslivstrening',
-    extensionAttribute6: 'OF-SFV-HT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Team utbygging Bypakke Grenland',
-    extensionAttribute6: 'SMM-UTB-bypakke',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Sandefjord folkehøyskole undervisning',
-    extensionAttribute6: 'OF-SFH-UNDERVIS',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Greveskogen vgs stab',
-    extensionAttribute6: 'OF-GRV-STAB',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Driftsleder teknisk'
-  },
-  {
-    department: 'Horten vgs helse og oppvekst',
-    extensionAttribute6: 'OF-HORV-HO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Sandefjord vgs språk',
-    extensionAttribute6: 'OF-SFV-SPRAK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Porsgrunn vgs real',
-    extensionAttribute6: 'OF-POV-REAL',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Økonomiseksjon',
-    extensionAttribute6: 'OSE-OKO',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Seksjonssjef'
-  },
-  {
-    department: 'Fagskolen Vestfold og Telemark',
-    extensionAttribute6: 'NIK-FAGS-EKSAME',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Fag- og yrkesopplæring',
-    extensionAttribute6: 'OF-FAG',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Notodden vgs yrkesfag',
-    extensionAttribute6: 'OF-NOV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Kragerø studiesenteret',
-    extensionAttribute6: 'OF-KRV-STUDIESE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Miljøterapeut'
-  },
-  {
-    department: 'Næringsutvikling og entreprenørskap',
-    extensionAttribute6: 'NIK-NR',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Leder'
-  },
-  {
-    department: 'Team Grenland',
-    extensionAttribute6: 'BDK-IT-GRENLAND',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Vest-Telemark vgs - helse og oppvekst',
-    extensionAttribute6: 'OF-VTV-HELSE',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
-    extensionAttribute6: 'OF-SFV-SSRM',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Skogmo vgs bygg og anleggsfag',
-    extensionAttribute6: 'OF-SKOV-BA',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Nome vgs design, håndverk, elektro og fellesfag',
-    extensionAttribute6: 'OF-NOMV-DH-EL-F',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Sandefjord folkehøyskole kontor',
-    extensionAttribute6: 'OF-SFH-KONTOR',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Nøtterøy vgs teknisk',
-    extensionAttribute6: 'OF-NTV-TEKNISK',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Fagarbeider m/særalder'
-  },
-  {
-    department: 'Fagskolen elektrofag',
-    extensionAttribute6: 'NIK-FAGS-ELEKTR',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Fagskolen Vestfold og Telemark',
-    extensionAttribute6: 'NIK-FAGS-ELEKTR',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Horten vgs Design og håndverk',
-    extensionAttribute6: 'OF-HORV-DH',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Skien vgs service og samferdsel',
-    extensionAttribute6: 'OF-SKIV-SEV-SAM',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Skogmo videregående skole',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Sandefjord vgs elevtjenester',
-    extensionAttribute6: 'OF-SFV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Bamble vgs elevtjenester og OIMG',
-    extensionAttribute6: 'OF-BAV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Sektorutvikling-',
-    extensionAttribute6: 'TF-SEK',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Tannhelse og forebygging',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Melsom vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-MEV-AT',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Holmestrand vgs språk,samfunnsfag,økonomi',
-    extensionAttribute6: 'OF-HOLV-SSO',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Nome vgs internat og kantine',
-    extensionAttribute6: 'OF-NOMV-INTERNA',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Miljøarbeider'
-  },
-  {
-    department: 'Greveskogen vgs musikk,dans,drama og innføring',
-    extensionAttribute6: 'OF-GRV-MDDI',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Hjalmar Johansen vgs Skien fengsel',
-    extensionAttribute6: 'OF-HJV-FENGSEL',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Porsgrunn vgs elevtjenester',
-    extensionAttribute6: 'OF-POV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Greveskogen vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-GRV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Melsom vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-MEV-AT',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
-    extensionAttribute6: 'OF-POV-STUD-AT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Vest-Telemark vgs media og kommunikasjon',
-    extensionAttribute6: 'OF-VTV-MEDIA',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Notodden vgs ressurssenter',
-    extensionAttribute6: 'OF-NOV-RESSURSS',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Fagleder'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elevtjenesten',
-    extensionAttribute6: 'OF-THV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Re videregående skole',
-    extensionAttribute6: 'OF-HORV',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team elektro og veglys',
-    extensionAttribute6: 'SMM-DRI-elektro',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Greveskogen vgs restaurant og matfag',
-    extensionAttribute6: 'OF-GRV-RM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Lærekandidat'
-  },
-  {
-    department: 'Stokke tannklinikk',
-    extensionAttribute6: 'TF-STT',
-    physicalDeliveryOfficeName: 'Stokke tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Assistent 1'
-  },
-  {
-    department: 'Talenthus kompetansesenter',
-    extensionAttribute6: 'OF-OT-TH-KOMP',
-    physicalDeliveryOfficeName: 'Talenthus - OT',
-    company: 'Oppfølgingstjenesten',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Klima, miljø og internasjonalisering',
-    extensionAttribute6: 'SIK-KLI',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Sandefjord folkehøyskole kjøkken,renhold',
-    extensionAttribute6: 'OF-SFH-KJOKKEN',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Leder'
-  },
-  {
-    department: 'Greveskogen vgs musikk,dans,drama og innføring',
-    extensionAttribute6: 'OF-GRV-MDDI',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Re vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-REV-BA',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Notodden vgs merkantilt',
-    extensionAttribute6: 'OF-NOV-MERKANTI',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Vest-Telemark vgs administrasjon og OIMG',
-    extensionAttribute6: 'OF-VTV-ADMINIST',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Assistent'
-  },
-  {
-    department: 'Skien tannklinikk, oralkirurgisk avd.',
-    extensionAttribute6: 'TF-SKT-ORALKIRU',
-    physicalDeliveryOfficeName: 'Skien tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlegespesialist'
-  },
-  {
-    department: 'Kultur, idrett og friluftsliv',
-    extensionAttribute6: 'KRIF-KIF',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Skolen for sosiale og medisinske institusjoner',
-    extensionAttribute6: 'OF-SMI',
-    physicalDeliveryOfficeName: 'SMI-skolen',
-    company: 'Skolen for sosiale og medisinske institusjoner',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Re vgs helse og oppvekst',
-    extensionAttribute6: 'OF-REV-HO',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Konsernstyring',
-    extensionAttribute6: 'OSE-KON',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Rjukan vgs elevtjenester',
-    extensionAttribute6: 'OF-RJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Re vgs bibliotek',
-    extensionAttribute6: 'OF-REV-BIBLIO',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Bibliotekar'
-  },
-  {
-    department: 'Skogmo vgs TIP og realfag',
-    extensionAttribute6: 'OF-SKOV-TIP',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Porsgrunn vgs kontor',
-    extensionAttribute6: 'OF-POV-KONTOR',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Konsulent l'
-  },
-  {
-    department: 'Samfunnsutvikling, internasjonalisering og klima',
-    extensionAttribute6: 'SIK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Leder'
-  },
-  {
-    department: 'Nøtterøy vgs studiespesialisering språkfaglig avdeling',
-    extensionAttribute6: 'OF-NTV-SP-SPRAK',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Næringsutvikling og entreprenørskap',
-    extensionAttribute6: 'NIK-NR',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Re vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-REV-BA',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Thor Heyerdahl vgs idrettsfag',
-    extensionAttribute6: 'OF-THV-IDRETT',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Kompetansebyggeren  helsefagarbeider',
-    extensionAttribute6: 'OF-KB-HELSEFAG',
-    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
-    company: 'Kompetansebyggeren',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Arkiv og dokumenthåndtering',
-    extensionAttribute6: 'BDK-ARK',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Vest-Telemark vgs yrkesfag',
-    extensionAttribute6: 'OF-VTV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Fagarbeider m/særalder'
-  },
-  {
-    department: 'Team prosjektstøtte',
-    extensionAttribute6: 'SMM-UTB-prosjek',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Re vgs bygg- og anleggsteknikk',
-    extensionAttribute6: 'OF-REV-BA',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Teknisk assistent'
-  },
-  {
-    department: 'Nøtterøy vgs studiespesialisering realfag,kroppsøving',
-    extensionAttribute6: 'OF-NTV-REAL-KRO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Notodden vgs helse og oppvekst',
-    extensionAttribute6: 'OF-NOV-HO',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Rjukan vgs administrativ stab og drift',
-    extensionAttribute6: 'OF-RJV-ADM-DRIF',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Færder vgs påbygging generell studiekompetanse',
-    extensionAttribute6: 'OF-FRV-PB',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Sandefjord vgs musikk,dans,drama',
-    extensionAttribute6: 'OF-SFV-MDD',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Team Nord-Jarlsberg',
-    extensionAttribute6: 'BDK-IT-NORD',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Team bruvedlikehold',
-    extensionAttribute6: 'SMM-DRI-bru',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Horten vgs teknikk og industriell produksjon',
-    extensionAttribute6: 'OF-HORV-TIP',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Skogmo vgs elektrofag',
-    extensionAttribute6: 'OF-SKOV-ELEKTRO',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Hjalmar Johansen vgs kontor og drift',
-    extensionAttribute6: 'OF-HJV-KONTOR',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Porsgrunn vgs idrett',
-    extensionAttribute6: 'OF-POV-IDRETT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Rjukan vgs yrkesfag',
-    extensionAttribute6: 'OF-RJV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
-    extensionAttribute6: 'OF-THV-SS',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Team Kaupang',
-    extensionAttribute6: 'BDK-IT-KAUPANG',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Kultur, idrett og friluftsliv',
-    extensionAttribute6: 'KRIF-KIF',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Diverse'
-  },
-  {
-    department: 'Strategi og utvikling',
-    extensionAttribute6: 'SMM-STR',
-    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Greveskogen vgs renhold',
-    extensionAttribute6: 'OF-GRV-RENHOLD',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Leder'
-  },
-  {
-    department: 'Melsom videregående skole',
-    extensionAttribute6: 'OF-MEV-RENHOLD',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Lardal tannklinikk',
-    extensionAttribute6: 'TF-LAT',
-    physicalDeliveryOfficeName: 'Lardal tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Assistent'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Kantinebestyrer'
-  },
-  {
-    department: 'Porsgrunn vgs frisør,blomster, interiør og eksponeringsdesign',
-    extensionAttribute6: 'OF-POV-DH',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Kragerø tannklinikk',
-    extensionAttribute6: 'TF-KRT',
-    physicalDeliveryOfficeName: 'Kragerø tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Fagskolen byggfag',
-    extensionAttribute6: 'NIK-FAGS-BYGG',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor'
-  },
-  {
-    department: 'Sandefjord vgs hverdagslivstrening',
-    extensionAttribute6: 'OF-SFV-HT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Larvik tannklinikk',
-    extensionAttribute6: 'TF-LART',
-    physicalDeliveryOfficeName: 'Larvik tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Assistent'
-  },
-  {
-    department: 'Fagskolen helsefag',
-    extensionAttribute6: 'NIK-FAGS-HELSE',
-    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor'
-  },
-  {
-    department: 'Fyresdal tannklinikk',
-    extensionAttribute6: 'TF-FYT',
-    physicalDeliveryOfficeName: 'Fyresdal tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Assistent'
-  },
-  {
-    department: 'Notodden vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-NOV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Fagskolen administrasjon',
-    extensionAttribute6: 'NIK-FAGS-ADM',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Leder'
-  },
-  {
-    department: 'Team inntak',
-    extensionAttribute6: 'OF-INN-INN',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Kragerø vgs studieforberedende',
-    extensionAttribute6: 'OF-KRV-SF',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Søeberg tannklinikk',
-    extensionAttribute6: 'TF-SET',
-    physicalDeliveryOfficeName: 'Søeberg tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
-  },
-  {
-    department: 'Re videregående skole',
-    extensionAttribute6: 'OF-REV-SPR-REAL',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Bø vgs realseksjon',
-    extensionAttribute6: 'OF-BOV-REAL',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Lektor'
-  },
-  {
-    department: 'Vinje tannklinikk',
-    extensionAttribute6: 'TF-VIT',
-    physicalDeliveryOfficeName: 'Vinje tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
-  },
-  {
-    department: 'Skien vgs musikk',
-    extensionAttribute6: 'OF-SKIV-MUSIKK',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
-    extensionAttribute6: 'OF-BAV-HELSE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Fagarbeider m/særalder'
-  },
-  {
-    department: 'Skien vgs dans og drama',
-    extensionAttribute6: 'OF-SKIV-DD',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
-    extensionAttribute6: 'OF-SFV-SSRM',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Bamble vgs service og samferdsel',
-    extensionAttribute6: 'OF-BAV-SERVICE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Færder vgs elektrofag',
-    extensionAttribute6: 'OF-FRV-ELEKTRO',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Team geodata',
-    extensionAttribute6: 'SMM-DRI-geodata',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Utbygging',
-    extensionAttribute6: 'SMM-UTB',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-THV-IDRETT',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Porsgrunn vgs informasjonsteknologi og medieproduksjon',
-    extensionAttribute6: 'OF-POV-MK',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Forvaltning',
-    extensionAttribute6: 'SMM-FORV',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Greveskogen vgs service og samferdsel',
-    extensionAttribute6: 'OF-GRV-SERV-SAM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Rjukan vgs elevtjenester',
-    extensionAttribute6: 'OF-RJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Team Fjell',
-    extensionAttribute6: 'BDK-IT-FJELL',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
-    extensionAttribute6: 'OF-HJV-MK',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Sande vgs drift',
-    extensionAttribute6: 'OF-SANV-DRIFT',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Teknisk leder'
-  },
-  {
-    department: 'Melsom vgs gård Kjøkken',
-    extensionAttribute6: 'OF-MEV-KJOKKEN',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Internatassistent'
-  },
-  {
-    department: 'Nome vgs naturbruk II',
-    extensionAttribute6: 'OF-NOMV-NAT-II',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Nome vgs kontor, bibliotek og IKT',
-    extensionAttribute6: 'OF-NOMV-KONTOR',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Sandefjord vgs studierektor yrkesforbredende',
-    extensionAttribute6: 'OF-SFV-YF',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Melsom vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-MEV-AT',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Re vgs toppidrett fotball og håndball',
-    extensionAttribute6: 'OF-REV-TI',
-    physicalDeliveryOfficeName: 'Re vgs',
-    company: 'Re videregående skole',
-    title: 'Lærer -'
-  },
-  {
-    department: 'Greveskogen vgs AHT',
-    extensionAttribute6: 'OF-GRV-AHT',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Bamble vgs elevtjenester og OIMG',
-    extensionAttribute6: 'OF-BAV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Greveskogen vgs restaurant og matfag',
-    extensionAttribute6: 'OF-GRV-RM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Kragerø vgs helse- og oppvekstfag',
-    extensionAttribute6: 'OF-KRV-HELSE',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Nøtterøy vgs helse- og oppvekst',
-    extensionAttribute6: 'OF-NTV-HO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Greveskogen vgs stab',
-    extensionAttribute6: 'OF-GRV-STAB',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Avdelingsleder bibliotek'
-  },
-  {
-    department: 'Hjalmar Johansen vgs restaurant og matfag',
-    extensionAttribute6: 'OF-HJV-RM',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Team politisk støtte',
-    extensionAttribute6: 'OSE-KON-POL',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Porsgrunn vgs elevtjenester',
-    extensionAttribute6: 'OF-POV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'Greveskogen vgs service og samferdsel',
-    extensionAttribute6: 'OF-GRV-SERV-SAM',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Thor Heyerdahl vgs kantine',
-    extensionAttribute6: 'OF-THV-KANTINE',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Kantinebestyrer'
-  },
-  {
-    department: 'Holmestrand vgs administrasjon',
-    extensionAttribute6: 'OF-HOLV-ADM',
-    physicalDeliveryOfficeName: 'Holmestrand vgs',
-    company: 'Holmestrand videregående skole',
-    title: 'Avd leder'
-  },
-  {
-    department: 'Service',
-    extensionAttribute6: 'OSE-SER',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Teknisk leder'
-  },
-  {
-    department: 'Midt-Telemark tannklinikk',
-    extensionAttribute6: 'TF-MIT',
-    physicalDeliveryOfficeName: 'Midt-Telemark tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Notodden vgs landslinje yrkessjåfør',
-    extensionAttribute6: 'OF-NOV-LANDLINJ',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Fagskolen Vestfold og Telemark',
-    extensionAttribute6: 'NIK-FAGS',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Sandefjord folkehøyskole kjøkken,renhold',
-    extensionAttribute6: 'OF-SFH-KJOKKEN',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Team regnskap og rapportering',
-    extensionAttribute6: 'OSE-OKO-REGN',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Skogmo vgs fellesfag',
-    extensionAttribute6: 'OF-SKOV-FELLES',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Team Fjell',
-    extensionAttribute6: 'BDK-IT-FJELL',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Porsgrunn vgs frisør,blomster, interiør og eksponeringsdesign',
-    extensionAttribute6: 'OF-POV-DH',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Team anskaffelser',
-    extensionAttribute6: 'OSE-KON-ANS',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Team mobilitetstjenester',
-    extensionAttribute6: 'SMM-KOL-MOB',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Horten videregående skole',
-    extensionAttribute6: 'OF-HORV',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Notodden vgs helse og oppvekst',
-    extensionAttribute6: 'OF-NOV-HO',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Vernepleier'
-  },
-  {
-    department: 'IT konserndrift og brukerstøtte',
-    extensionAttribute6: 'BDK-IT',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
-    extensionAttribute6: 'OF-SFV-OK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Oppfølgingstjenesten fagkoordinator',
-    extensionAttribute6: 'OF-OT-FAG',
-    physicalDeliveryOfficeName: 'Talenthus - OT',
-    company: 'Oppfølgingstjenesten',
-    title: 'Leder'
-  },
-  {
-    department: 'Porsgrunn tannklinikk',
-    extensionAttribute6: 'TF-POT',
-    physicalDeliveryOfficeName: 'Porsgrunn tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Psykolog'
-  },
-  {
-    department: 'Team asfalt og vegoppmerking',
-    extensionAttribute6: 'SMM-DRI-asfalt',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Notodden vgs bibliotek',
-    extensionAttribute6: 'OF-NOV-BIBLIO',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Sande vgs medier og kommunikasjon',
-    extensionAttribute6: 'OF-SANV-MK',
-    physicalDeliveryOfficeName: 'Sande vgs',
-    company: 'Sande videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Økonomi, styring og eierskap',
-    extensionAttribute6: 'OSE',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Direktør'
-  },
-  {
-    department: 'Porsgrunn vgs real',
-    extensionAttribute6: 'OF-POV-REAL',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Team marked og utvikling',
-    extensionAttribute6: 'SMM-KOL-marked',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Strategi og kompetanseledelse',
-    extensionAttribute6: 'HRMU-STR',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'HR, mestring og utvikling',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Bø vgs idrettsseksjon',
-    extensionAttribute6: 'OF-BOV-IDRETT',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Team marked og utvikling',
-    extensionAttribute6: 'SMM-KOL-marked',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Teknologi og digitalisering',
-    extensionAttribute6: 'BDK-TEK',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Diverse'
-  },
-  {
-    department: 'Bamble vgs studiespesialisering',
-    extensionAttribute6: 'OF-BAV-STUDIESP',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Lærer'
-  },
-  {
-    department: 'Færder vgs design og håndverk',
-    extensionAttribute6: 'OF-FRV-DH',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Færder vgs elevkantine',
-    extensionAttribute6: 'OF-FRV-ELEVKANT',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Kokk'
-  },
-  {
-    department: 'Team politisk støtte',
-    extensionAttribute6: 'OSE-KON-POL',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Kragerø vgs kontor',
-    extensionAttribute6: 'OF-KRV-KONTOR',
-    physicalDeliveryOfficeName: 'Kragerø vgs',
-    company: 'Kragerø videregående skole',
-    title: 'Bibliotekar'
-  },
-  {
-    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
-    extensionAttribute6: 'OF-SFV-OK',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Sandefjord vgs elevtjenester',
-    extensionAttribute6: 'OF-SFV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Melsom vgs gård Kjøkken',
-    extensionAttribute6: 'OF-MEV-KJOKKEN',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Sektorutvikling',
-    extensionAttribute6: 'SMM-SEK',
-    physicalDeliveryOfficeName: 'SMM - Gjerpensgate',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Nome vgs ledelse',
-    extensionAttribute6: 'OF-NOMV-LEDELSE',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Studieleder'
-  },
-  {
-    department: 'Team marked og utvikling',
-    extensionAttribute6: 'SMM-KOL-marked',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Leder'
-  },
-  {
-    department: 'Telemarkskanalen regionalpark',
-    extensionAttribute6: 'NIK-TR',
-    physicalDeliveryOfficeName: 'Telemarkskanalen',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Fylkesrådmann',
-    extensionAttribute6: 'FRM',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Fylkesrådmann',
-    title: 'Fylkesrådmann'
-  },
-  {
-    department: 'Bamble vgs kontor og IKT',
-    extensionAttribute6: 'OF-BAV-KONTOR',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
-    company: 'Bamble videregående skole',
-    title: 'Sekretær 1'
-  },
-  {
-    department: 'Sektorutvikling.',
-    extensionAttribute6: 'OF-SEK',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Opplæring og folkehelse',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Nome vgs helse og oppvekstfag',
-    extensionAttribute6: 'OF-NOMV-HO',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Nome videregående skole',
-    title: 'Adjunkt 1'
-  },
-  {
-    department: 'VT pluss',
-    extensionAttribute6: 'VTPLUSS',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'VT pluss',
-    title: 'Utviklingsleder'
-  },
-  {
-    department: 'Notodden vgs bibliotek',
-    extensionAttribute6: 'OF-NOV-BIBLIO',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Notodden vgs yrkesfag',
-    extensionAttribute6: 'OF-NOV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Assistent'
-  },
-  {
-    department: 'Team konsernstøtte',
-    extensionAttribute6: 'BDK-IT-STOTTE',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Kultur, regional identitet, idrett og frivillighet',
-    extensionAttribute6: 'KRIF',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Direktør'
-  },
-  {
-    department: 'Fagskolen administrasjon',
-    extensionAttribute6: 'NIK-FAGS-ADM',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Diverse'
-  },
-  {
-    department: 'Skogmo vgs administrasjon og fellestjenester',
-    extensionAttribute6: 'OF-SKOV-ADM',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Fagarbeider m/særalder'
-  },
-  {
-    department: 'Team konserndrift',
-    extensionAttribute6: 'BDK-IT-DRIFT',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Strategi og utvikling',
-    extensionAttribute6: 'SMM-STR',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Greveskogen vgs sensor og eksamensvakter',
-    extensionAttribute6: 'OF-GRV-EKSAMEN',
-    physicalDeliveryOfficeName: 'Greveskogen vgs',
-    company: 'Greveskogen videregående skole',
-    title: 'Eksamensvakt'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-THV',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Seniorrådgiver'
-  },
-  {
-    department: 'Notodden vgs yrkesfag',
-    extensionAttribute6: 'OF-NOV-YRKESFAG',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
-    extensionAttribute6: 'OF-POV-STUD-AT',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Lektor 1'
-  },
-  {
-    department: 'Kollektiv og mobilitet',
-    extensionAttribute6: 'SMM-KOL',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Horten vgs nettskolen i Vestfold',
-    extensionAttribute6: 'OF-HORV-NETTSKO',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Team HMS og personvern',
-    extensionAttribute6: 'HRMU-PERS-HMS',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'HR, mestring og utvikling',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Kulturarv',
-    extensionAttribute6: 'KRIF-KARV',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Kultur, regional identitet, idrett og frivillighet',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Bø vidaregåande skule',
-    extensionAttribute6: 'OF-BOV',
-    physicalDeliveryOfficeName: 'Bø vgs',
-    company: 'Bø vidaregåande skule',
-    title: 'Administrativ leder'
-  },
-  {
-    department: 'Notodden tannklinikk',
-    extensionAttribute6: 'TF-NOT',
-    physicalDeliveryOfficeName: 'Notodden tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Melsom vgs gård drift og administrasjon',
-    extensionAttribute6: 'OF-MEV-garddrif',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Folkehelse og livsmestring',
-    extensionAttribute6: 'OF-FHL',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Opplæring og folkehelse',
-    title: 'Folkehelsekoordinator'
-  },
-  {
-    department: 'Samfunn og plan',
-    extensionAttribute6: 'SIK-SAM',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Samfunnsutvikling, internasjonalisering og klima',
-    title: 'Seksjonsleder'
-  },
-  {
-    department: 'Rjukan vgs elevtjenester',
-    extensionAttribute6: 'OF-RJV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Horten vgs  personal og økonomi',
-    extensionAttribute6: 'OF-HORV-PERS-OK',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Stabsleder'
-  },
-  {
-    department: 'Drangedal tannklinikk',
-    extensionAttribute6: 'TF-DRT',
-    physicalDeliveryOfficeName: 'Drangedal tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elevtjenesten',
-    extensionAttribute6: 'OF-THV-ELEVTJ',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Team konsernstøtte',
-    extensionAttribute6: 'BDK-IT-STOTTE',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Fagskolen elektrofag',
-    extensionAttribute6: 'NIK-FAGS-ELEKTR',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'IT konserndrift og brukerstøtte',
-    extensionAttribute6: 'BDK-IT',
-    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Lærling'
-  },
-  {
-    department: 'Sandefjord vgs arbeidslivstrening',
-    extensionAttribute6: 'OF-SFV-AT',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Sandefjord videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
-  },
-  {
-    department: 'Økonomiseksjon',
-    extensionAttribute6: 'OSE-OKO',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Økonomi, styring og eierskap',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Notodden vgs helse og oppvekst',
-    extensionAttribute6: 'OF-NOV-HO',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Vest-Telemark vgs studiespesialiserande',
-    extensionAttribute6: 'OF-VTV-STUDEIES',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Assistent'
-  },
-  {
-    department: 'Hjalmar Johansen vgs idrett',
-    extensionAttribute6: 'OF-HJV-IDRETT',
-    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
-    company: 'Hjalmar Johansen videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Færder videregående skole',
-    extensionAttribute6: 'OF-FRV',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Diverse'
-  },
-  {
-    department: 'Horten vgs service og samferdsel',
-    extensionAttribute6: 'OF-HORV-SERV-SA',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Holmestrand tannklinikk',
-    extensionAttribute6: 'TF-HOLT',
-    physicalDeliveryOfficeName: 'Holmestrand tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
-  },
-  {
-    department: 'Team Fjell',
-    extensionAttribute6: 'BDK-IT-FJELL',
-    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Vest-Telemark vidaregåande skule',
-    extensionAttribute6: 'OF-VTV',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Sandefjord folkehøyskole skoleassistent',
-    extensionAttribute6: 'OF-SFH-SK-ASS',
-    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
-    company: 'Sandefjord folkehøyskole',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Sektorutvikling-',
-    extensionAttribute6: 'TF-SEK',
-    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannpleier'
-  },
-  {
-    department: 'Stokke tannklinikk',
-    extensionAttribute6: 'TF-STT',
-    physicalDeliveryOfficeName: 'Stokke tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Tannlege'
-  },
-  {
-    department: 'Fagskolen administrasjon',
-    extensionAttribute6: 'NIK-FAGS-ADM',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Administrativ leder'
-  },
-  {
-    department: 'Nøtterøy vgs bibliotek',
-    extensionAttribute6: 'OF-NTV-BIBLIO',
-    physicalDeliveryOfficeName: 'Nøtterøy vgs',
-    company: 'Nøtterøy videregående skole',
-    title: 'Konsulent'
-  },
-  {
-    department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
-    extensionAttribute6: 'OF-THV-AHT',
-    physicalDeliveryOfficeName: 'THVS-Hospitalet',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Revetal tannklinikk',
-    extensionAttribute6: 'TF-RET',
-    physicalDeliveryOfficeName: 'Revevtal tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
-  },
-  {
-    department: 'Notodden vgs merkantilt',
-    extensionAttribute6: 'OF-NOV-MERKANTI',
-    physicalDeliveryOfficeName: 'Notodden vgs',
-    company: 'Notodden videregående skole',
-    title: 'Administrativ leder'
-  },
-  {
-    department: 'Vest-Telemark vgs restaurant og matfag',
-    extensionAttribute6: 'OF-VTV-RM',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Uspesifisert'
-  },
-  {
-    department: 'Nome vgs internat og kantine',
-    extensionAttribute6: 'OF-NOMV-INTERNA',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Thor Heyerdahl vgs elevadministrasjon',
-    extensionAttribute6: 'OF-THV-ELEVADM',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Rådgiver'
-  },
-  {
-    department: 'Haugar tannklinikk 3. etg.',
-    extensionAttribute6: 'TF-HAT',
-    physicalDeliveryOfficeName: 'Haugar tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
-  },
-  {
-    department: 'Bamble vgs elevtjenester og OIMG',
-    extensionAttribute6: 'OF-BAV-ELEVTJEN',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Elevassistent'
-  },
-  {
-    department: 'Horten videregående skole',
-    extensionAttribute6: 'NIK-FAGS',
-    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
-    company: 'Næring, innovasjon og kompetanse',
-    title: 'Adjunkt m/tilleggsutdanning'
-  },
-  {
-    department: 'Horten vgs teknikk og industriell produksjon',
-    extensionAttribute6: 'OF-HORV-TIP',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Horten vgs opplæring i kriminalomsorgen',
-    extensionAttribute6: 'OF-HORV-KRIMOMS',
-    physicalDeliveryOfficeName: 'Horten vgs',
-    company: 'Horten videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Rjukan vgs administrativ stab og drift',
-    extensionAttribute6: 'OF-RJV-ADM-DRIF',
-    physicalDeliveryOfficeName: 'Rjukan vgs',
-    company: 'Rjukan videregående skole',
-    title: 'Renholder'
-  },
-  {
-    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
-    extensionAttribute6: 'OF-BAV-HELSE',
-    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
-    company: 'Bamble videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Thor Heyerdahl videregående skole',
-    extensionAttribute6: 'OF-THV-HO',
-    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
-    company: 'Thor Heyerdahl videregående skole',
-    title: 'Adjunkt'
-  },
-  {
-    department: 'Haugar tannklinikk 2. etg',
-    extensionAttribute6: 'TF-HAT2',
-    physicalDeliveryOfficeName: 'Haugar tannklinikk',
-    company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
-  },
-  {
-    department: 'Skogmo vgs tilrettelagt opplæring',
-    extensionAttribute6: 'OF-SKOV-TILRETT',
-    physicalDeliveryOfficeName: 'Skogmo vgs',
-    company: 'Skogmo videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Vest-Telemark vidaregåande skule',
-    extensionAttribute6: 'OF-VTV',
-    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
-    company: 'Vest-Telemark vidaregåande skule',
-    title: 'Diverse'
-  },
-  {
-    department: 'Færder vgs kunst design og arkitektur',
-    extensionAttribute6: 'OF-FRV-KUNST',
-    physicalDeliveryOfficeName: 'Færder vgs',
-    company: 'Færder videregående skole',
-    title: 'Avdelingsleder'
-  },
-  {
-    department: 'Nome vgs naturbruk II',
-    extensionAttribute6: 'OF-NOMV-NAT-II',
-    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
-    company: 'Nome videregående skole',
-    title: 'Lektor'
-  },
-  {
-    department: 'Telemark fylkeskommune',
-    extensionAttribute6: 'OF-SKIV-KONTOR',
-    physicalDeliveryOfficeName: 'Skien vgs',
-    company: 'Skien videregående skole',
-    title: 'Fagarbeider'
-  },
-  {
-    department: 'Melsom vgs bibliotek',
-    extensionAttribute6: 'OF-MEV-BIBLIO',
-    physicalDeliveryOfficeName: 'Melsom vgs',
-    company: 'Melsom videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HOLV'
   },
   {
     department: 'Sande tannklinikk',
     extensionAttribute6: 'TF-SAT',
     physicalDeliveryOfficeName: 'Sande tannklinikk',
     company: 'Tannhelse og forebygging',
-    title: 'Klinikkleder'
+    title: 'Tannpleier',
+    state: 'TF'
   },
   {
-    department: 'Færder vgs design og håndverk',
-    extensionAttribute6: 'OF-FRV-DH',
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Sandefjord vgs studierektor studieforbredende',
+    extensionAttribute6: 'OF-SFV-SF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Studierektor',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Re vgs kontor',
+    extensionAttribute6: 'OF-REV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lærling',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs bibliotek',
+    extensionAttribute6: 'OF-THV-BIBLIOTE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Færder vgs teknikk og industriell produksjon',
+    extensionAttribute6: 'OF-FRV-TI',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Færder vgs',
     company: 'Færder videregående skole',
-    title: 'Lektor'
+    title: 'Miljøarbeider',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Seljord tannklinikk',
+    extensionAttribute6: 'TF-SELT',
+    physicalDeliveryOfficeName: 'Seljord tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Nøtterøy videregående skole',
+    extensionAttribute6: 'OF-NTV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Team Kaupang',
+    extensionAttribute6: 'BDK-IT-KAUPANG',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærekandidat',
+    state: 'BDK'
+  },
+  {
+    department: 'Midt-Telemark tannklinikk',
+    extensionAttribute6: 'TF-MIT',
+    physicalDeliveryOfficeName: 'Midt-Telemark tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Skien vgs elevtjenester',
+    extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Konsulent',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Horten videregående skole - nettskolen',
+    extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Greveskogen vgs restaurant og matfag',
+    extensionAttribute6: 'OF-GRV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Arbeidsleder',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Notodden vgs studiespesialisering',
+    extensionAttribute6: 'OF-NOV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Bamble vgs service og samferdsel',
+    extensionAttribute6: 'OF-BAV-SERVICE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Assistent',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Sandefjord vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Melsom vgs renhold',
+    extensionAttribute6: 'OF-MEV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Kragerø videregående skole',
+    extensionAttribute6: 'OF-KRV-STUDIESE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Seljord tannklinikk',
+    extensionAttribute6: 'TF-SELT',
+    physicalDeliveryOfficeName: 'Seljord tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Uspesifisert',
+    state: 'TF'
+  },
+  {
+    department: 'Horten vgs nettskolen i Vestfold',
+    extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Kompetansebyggeren yrkesfag',
+    extensionAttribute6: 'OF-KB-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Horten vgs studierektor yrkesfag',
+    extensionAttribute6: 'OF-HORV-YF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Studierektor',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Holmestrand vgs studierektor yrkesfag',
+    extensionAttribute6: 'OF-HOLV-YF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Studierektor',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Team eksamen',
+    extensionAttribute6: 'OF-INN-EKS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Lærling',
+    state: 'OF'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-PED',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Uspesifisert',
+    state: 'OF'
+  },
+  {
+    department: 'Horten vgs idrett',
+    extensionAttribute6: 'OF-HORV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Horten vgs studierektor studieforbredende',
+    extensionAttribute6: 'OF-HORV-SF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Greveskogen vgs språk og samfunnsfag',
+    extensionAttribute6: 'OF-GRV-SPRAK-SA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lektor',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs teknologi og industrifag',
+    extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Rjukan videregående skole',
+    extensionAttribute6: 'OF-RJV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Horten vgs Elektro',
+    extensionAttribute6: 'OF-HORV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Notodden vgs merkantilt',
+    extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lærling',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Fag- og yrkesopplæring',
+    extensionAttribute6: 'OF-FAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Lærling',
+    state: 'OF'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Nome vgs gardsbruk',
+    extensionAttribute6: 'OF-NOMV-GARDSBRU',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Horten videregående skole - nettskolen',
+    extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Horten vgs alternativ opplæring',
+    extensionAttribute6: 'OF-HORV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'PP-tjenesten',
+    extensionAttribute6: 'OF-PPT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'PPT- Kongensgt 20A, Skien',
+    company: 'PP-tjenesten',
+    title: 'Konsulent',
+    state: 'OF-PPT'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Greveskogen vgs musikk,dans,drama og innføring',
+    extensionAttribute6: 'OF-GRV-MDDI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Studierektor',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Horten vgs nettskolen i Vestfold',
+    extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Horten vgs Elektro',
+    extensionAttribute6: 'OF-HORV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Sande videregående skole',
+    extensionAttribute6: 'OF-SANV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
+    extensionAttribute6: 'OF-SFV-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sektorutvikling-',
+    extensionAttribute6: 'TF-SEK',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Tannhelse og forebygging',
+    title: 'Folkehelsekoordinator',
+    state: 'TF'
+  },
+  {
+    department: 'Nome videregående skole',
+    extensionAttribute6: 'OF-NOMV-BA-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Notodden vgs tilrettelagt opplæring',
+    extensionAttribute6: 'OF-NOV-TILRETTE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Vest-Telemark vidaregåande skule',
+    extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Team anskaffelser',
+    extensionAttribute6: 'OSE-KON-ANS',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Oppfølgingstjenesten rådgivere',
+    extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Talenthus - OT',
+    company: 'Oppfølgingstjenesten',
+    title: 'Diverse',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Rjukan vgs elevtjenester',
+    extensionAttribute6: 'OF-RJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Rektor',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-ST-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Renholder',
+    state: 'OSE'
+  },
+  {
+    department: 'Greveskogen vgs AHT',
+    extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Sandefjord vgs språk',
+    extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Teknisk leder',
+    state: 'OSE'
+  },
+  {
+    department: 'Skogmo vgs administrasjon og fellestjenester',
+    extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Fagarbeider 1',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs OIMG',
+    extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team konsernstøtte',
+    extensionAttribute6: 'BDK-IT-STOTTE',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Fagskolen administrasjon',
+    extensionAttribute6: 'NIK-FAGS-ADM',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lærling',
+    state: 'NIK'
+  },
+  {
+    department: 'Færder vgs elevtjenesten',
+    extensionAttribute6: 'OF-FRV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Nome vgs elevtjenester',
+    extensionAttribute6: 'OF-NOMV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Nome vgs elevtjenester',
+    extensionAttribute6: 'OF-NOMV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Miljøterapeut',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Sandefjord folkehøyskole teknisk',
+    extensionAttribute6: 'OF-SFH-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Vaktmester',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
+    extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elevadministrasjon',
+    extensionAttribute6: 'OF-THV-ELEVADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Saksbehandler',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
+    extensionAttribute6: 'OF-HJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Horten vgs service og samferdsel',
+    extensionAttribute6: 'OF-HORV-SERV-SA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Nøtterøy vgs studiespesialisering samfunnsfaglig avdeling',
+    extensionAttribute6: 'OF-NTV-SP-SAMF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Studierektor',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Porsgrunn vgs drift',
+    extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Re vgs helse og oppvekst',
+    extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Melsom vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Færder vgs bygg og anleggsteknikk',
+    extensionAttribute6: 'OF-FRV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærer -',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Vest-Telemark vgs yrkesfag',
+    extensionAttribute6: 'OF-VTV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Adjunkt',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Rjukan vgs elevtjenester',
+    extensionAttribute6: 'OF-RJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Vest-Telemark vgs - helse og oppvekst',
+    extensionAttribute6: 'OF-VTV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Fagarbeider',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Notodden vgs merkantilt',
+    extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Konsulent',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Team marked og utvikling',
+    extensionAttribute6: 'SMM-KOL-marked',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Tannhelse og forebygging',
+    extensionAttribute6: 'TF',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Tannhelse og forebygging',
+    title: 'Direktør',
+    state: 'TF'
+  },
+  {
+    department: 'Porsgrunn videregående skole',
+    extensionAttribute6: 'OF-POV-SOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Næring, innovasjon og kompetanse',
+    extensionAttribute6: 'NIK',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Uspesifisert',
+    state: 'NIK'
+  },
+  {
+    department: 'Nøtterøy vgs kontor',
+    extensionAttribute6: 'OF-NTV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Stabsleder',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Sande vgs idrett',
+    extensionAttribute6: 'OF-SANV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Kompetansebyggeren',
+    extensionAttribute6: 'OF-KB-HELSEFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Adjunkt',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Lærer',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Bamble vgs studiespesialisering',
+    extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Team eksamen',
+    extensionAttribute6: 'OF-INN-EKS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Rådgiver',
+    state: 'OF'
+  },
+  {
+    department: 'Sandefjord vgs helse, oppvekst',
+    extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Horten vgs realfag, forskerlinje',
+    extensionAttribute6: 'OF-HORV-REAL-FO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Sande videregående skole',
+    extensionAttribute6: 'OF-SANV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Nome vgs design, håndverk, elektro og fellesfag',
+    extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elektro og datateknologi',
+    extensionAttribute6: 'OF-THV-EL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Porsgrunn vgs elevtjenester',
+    extensionAttribute6: 'OF-POV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Nome videregående skole',
+    extensionAttribute6: 'OF-NOMV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Bø vgs idrettsseksjon',
+    extensionAttribute6: 'OF-BOV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Avdelingsleder',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Nome vgs design, håndverk, elektro og fellesfag',
+    extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Lærer',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-EL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Fagskolen elektrofag',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Avdelingsleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Team driftskontrakter øst',
+    extensionAttribute6: 'SMM-DRI-ost',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Teamleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV-TI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Porsgrunn vgs drift',
+    extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Miljøterapeut',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Bø vgs idrettsseksjon',
+    extensionAttribute6: 'OF-BOV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Skien tannklinikk, kjeveortopedisk avd.',
+    extensionAttribute6: 'TF-SKT-KJEVEORT',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Sandefjord vgs hverdagslivstrening',
+    extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Horten vgs opplæring i kriminalomsorgen',
+    extensionAttribute6: 'OF-HORV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Greveskogen vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-GRV-SERV-SAM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Studierektor',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Team Kaupang',
+    extensionAttribute6: 'BDK-IT-KAUPANG',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Thor Heyerdahl vgs studierektor yrkesforbredende',
+    extensionAttribute6: 'OF-THV-YF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Studierektor',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Prøvenemnder',
+    extensionAttribute6: 'OF-FAG-provenem',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Fagarbeider',
+    state: 'OF'
+  },
+  {
+    department: 'Skien vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Drangedal tannklinikk',
+    extensionAttribute6: 'TF-DRT',
+    physicalDeliveryOfficeName: 'Drangedal tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Haugar tannklinikk 3. etg.',
+    extensionAttribute6: 'TF-HAT',
+    physicalDeliveryOfficeName: 'Haugar tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Skogmo vgs elektrofag',
+    extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Re vgs administrasjon',
+    extensionAttribute6: 'OF-REV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Studiekoordinator',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elevadministrasjon',
+    extensionAttribute6: 'OF-THV-ELEVADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Konsulent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Arkiv og dokumenthåndtering',
+    extensionAttribute6: 'BDK-ARK',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner av helse vest',
+    extensionAttribute6: 'OF-SMI-VEST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Lektor 1',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Greveskogen vgs språk og samfunnsfag',
+    extensionAttribute6: 'OF-GRV-SPRAK-SA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Studierektor',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Sandefjord vgs elevtjenester',
+    extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Konsulent',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Melsom vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Miljøterapeut',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
+    extensionAttribute6: 'OF-SFV-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Leder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Porsgrunn vgs TIP',
+    extensionAttribute6: 'OF-POV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Kragerø vgs helse- og oppvekstfag',
+    extensionAttribute6: 'OF-KRV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Team Fjell',
+    extensionAttribute6: 'BDK-IT-FJELL',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Studierektor',
+    state: 'NIK'
+  },
+  {
+    department: 'Færder vgs drift og vedlikehold',
+    extensionAttribute6: 'OF-FRV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærling',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Nøtterøy vgs studiespesialisering samfunnsfaglig avdeling',
+    extensionAttribute6: 'OF-NTV-SP-SAMF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Arkiv og dokumenthåndtering',
+    extensionAttribute6: 'BDK-ARK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Strategi og kompetanseledelse',
+    extensionAttribute6: 'HRMU-STR',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'HR, mestring og utvikling',
+    title: 'Rådgiver',
+    state: 'HRMU'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV-MUSIKK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lektor',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Notodden tannklinikk',
+    extensionAttribute6: 'TF-NOT',
+    physicalDeliveryOfficeName: 'Notodden tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Assistent',
+    state: 'TF'
+  },
+  {
+    department: 'Team utbygging Bypakke Grenland',
+    extensionAttribute6: 'SMM-UTB-bypakke',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Diverse',
+    state: 'SMM'
+  },
+  {
+    department: 'Horten vgs teknisk',
+    extensionAttribute6: 'OF-HORV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Teknisk leder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Rektor',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Skogmo vgs administrasjon og fellestjenester',
+    extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærling',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Holmestrand vgs teknisk industriell produksjon',
+    extensionAttribute6: 'OF-HOLV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Re vgs bygg- og anleggsteknikk',
+    extensionAttribute6: 'OF-REV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lærer -',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Horten vgs service og informasjon',
+    extensionAttribute6: 'OF-HORV-SERV-IN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Konsulent',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Oppfølgingstjenesten rådgivere',
+    extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Oppfølgingstjenesten',
+    title: 'Rådgiver',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Fagskolen administrasjon',
+    extensionAttribute6: 'NIK-FAGS-ADM',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Konsulent',
+    state: 'NIK'
+  },
+  {
+    department: 'Bamble vgs industrifag',
+    extensionAttribute6: 'OF-BAV-INDUSTRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lærer -',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Hof tannklinikk',
+    extensionAttribute6: 'TF-HOT',
+    physicalDeliveryOfficeName: 'Hof tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
+    extensionAttribute6: 'OF-HJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs studierektor yrkesforbredende',
+    extensionAttribute6: 'OF-THV-YF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sandefjord vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Færder vgs elektrofag',
+    extensionAttribute6: 'OF-FRV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærer',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent l',
+    state: 'BDK'
+  },
+  {
+    department: 'Bø vgs idrettsseksjon',
+    extensionAttribute6: 'OF-BOV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Adjunkt',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Nome vgs helse og oppvekstfag',
+    extensionAttribute6: 'OF-NOMV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Vest-Telemark vidaregåande skule',
+    extensionAttribute6: 'FOLKEVALGTE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Folkevalgte',
+    title: 'Diverse',
+    state: 'FOLKEVALGTE'
+  },
+  {
+    department: 'Skien vgs elevtjenester',
+    extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Barnevernpedagog',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Holmestrand vgs studierektor studieforberedende',
+    extensionAttribute6: 'OF-HOLV-SF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Studierektor',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Rjukan vgs elevtjenester',
+    extensionAttribute6: 'OF-RJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Nome vgs internat og kantine',
+    extensionAttribute6: 'OF-NOMV-INTERNA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Bø vgs realseksjon',
+    extensionAttribute6: 'OF-BOV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Skogmo vgs bygg og anleggsfag',
+    extensionAttribute6: 'OF-SKOV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Greveskogen vgs AHT',
+    extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Miljøterapeut',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Porsgrunn vgs idrett',
+    extensionAttribute6: 'OF-POV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Skogmo vgs elektrofag',
+    extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Horten vgs realfag, forskerlinje',
+    extensionAttribute6: 'OF-HORV-REAL-FO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Skogmo vgs fellesfag',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Notodden vgs studiespesialisering',
+    extensionAttribute6: 'OF-NOV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Kragerø vgs spesialundervisning',
+    extensionAttribute6: 'OF-KRV-SPES-UND',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Assistent',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor',
+    state: 'NIK'
+  },
+  {
+    department: 'Team marked og utvikling',
+    extensionAttribute6: 'SMM-KOL-marked',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Lærling',
+    state: 'SMM'
+  },
+  {
+    department: 'Notodden vgs bibliotek',
+    extensionAttribute6: 'OF-NOV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Studieleder',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Holmestrand vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-HOLV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Nøtterøy vgs helse- og oppvekst',
+    extensionAttribute6: 'OF-NTV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Studierektor',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Sandefjord folkehøyskole kjøkken,renhold',
+    extensionAttribute6: 'OF-SFH-KJOKKEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Assistent',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Thor Heyerdahl vgs bygg- og anleggsteknikk',
+    extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Stokke tannklinikk',
+    extensionAttribute6: 'TF-STT',
+    physicalDeliveryOfficeName: 'Stokke tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Team budsjett og strategi',
+    extensionAttribute6: 'OSE-OKO-BUDS',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Rjukan vgs ledelse',
+    extensionAttribute6: 'OF-RJV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs idrett',
+    extensionAttribute6: 'OF-HJV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Skien vgs bibliotek',
+    extensionAttribute6: 'OF-SKIV-BIBL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Bibliotekar',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Færder vgs tekniske og allmenne fag',
+    extensionAttribute6: 'OF-FRV-TAF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Skien vgs kantine',
+    extensionAttribute6: 'OF-SKIV-KANTINE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lærling',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Notodden vgs helse og oppvekst',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Greveskogen vgs stab',
+    extensionAttribute6: 'OF-GRV-STAB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Kontorsjef',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Sande vgs st.spes realfag',
+    extensionAttribute6: 'OF-SANV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Notodden vgs studiespesialisering',
+    extensionAttribute6: 'OF-NOV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lærer',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Porsgrunn vgs real',
+    extensionAttribute6: 'OF-POV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs  språk, samfunnsfag, økonomi',
+    extensionAttribute6: 'OF-THV-ST-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sandefjord folkehøyskole kjøkken,renhold',
+    extensionAttribute6: 'OF-SFH-KJOKKEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Renholder',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV-REAL-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Kragerø vgs ledelse',
+    extensionAttribute6: 'OF-KRV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Administrativ leder',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Horten vgs idrett',
+    extensionAttribute6: 'OF-HORV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Diverse',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Notodden vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-NOV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Renholder',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Team arealforvaltning',
+    extensionAttribute6: 'SMM-FORV-areal',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Greveskogen vgs restaurant og matfag',
+    extensionAttribute6: 'OF-GRV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'HR, mestring og utvikling',
+    extensionAttribute6: 'HRMU',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'HR, mestring og utvikling',
+    title: 'Direktør',
+    state: 'HRMU'
+  },
+  {
+    department: 'Larvik tannklinikk',
+    extensionAttribute6: 'TF-LART',
+    physicalDeliveryOfficeName: 'Larvik tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Holmestrand vgs teknisk industriell produksjon',
+    extensionAttribute6: 'OF-HOLV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lektor',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Vest-Telemark vgs restaurant og matfag',
+    extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Konsulent',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
+    extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Notodden vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-NOV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Konsulent',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Drift og vedlikehold',
+    extensionAttribute6: 'SMM-DRI',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Melsom videregående skole',
+    extensionAttribute6: 'OF-MEV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Økonomiseksjon',
+    extensionAttribute6: 'OSE-OKO',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Teamleder',
+    state: 'OSE'
+  },
+  {
+    department: 'Sandefjord vgs elevtjenester',
+    extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Nome vgs elevtjenester',
+    extensionAttribute6: 'OF-NOMV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Midt-Telemark tannklinikk',
+    extensionAttribute6: 'TF-MIT',
+    physicalDeliveryOfficeName: 'Midt-Telemark tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Assistent',
+    state: 'TF'
+  },
+  {
+    department: 'Thor Heyerdahl vgs  realfag',
+    extensionAttribute6: 'OF-THV-REALFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Skogmo vgs helse og oppvekst VG1',
+    extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Seljord tannklinikk',
+    extensionAttribute6: 'TF-SELT',
+    physicalDeliveryOfficeName: 'Seljord tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Kultur, regional identitet, idrett og frivillighet',
+    extensionAttribute6: 'KRIF',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Konsulent',
+    state: 'KRIF'
+  },
+  {
+    department: 'Rjukan tannklinikk',
+    extensionAttribute6: 'TF-RJT',
+    physicalDeliveryOfficeName: 'Rjukan tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Kompetansebyggeren  helsefagarbeider',
+    extensionAttribute6: 'OF-KB-HELSEFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Kompetansebyggeren',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Borgejordet tannklinikk',
+    extensionAttribute6: 'TF-BORT',
+    physicalDeliveryOfficeName: 'Borgejordet tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Nome videregående skole',
+    extensionAttribute6: 'OF-NOMV-BA-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Lærer -',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Færder videregående skole',
+    extensionAttribute6: 'OF-FRV-DH',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærer -',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Vest-Telemark vidaregåande skule',
+    extensionAttribute6: 'OF-VTV-ADMINIST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Konsulent',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Skogmo vgs elektrofag',
+    extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Skogmo vgs opplæring i kriminalomsorgen',
+    extensionAttribute6: 'OF-SKOV-OKRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Skien vgs kontor',
+    extensionAttribute6: 'OF-SKIV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lærling',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Horten vgs Design og håndverk',
+    extensionAttribute6: 'OF-HORV-DH',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Kompetansebyggeren administrasjon og drift',
+    extensionAttribute6: 'OF-KB-ADM-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Administrasjonsleder',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Færder vgs elevtjenesten',
+    extensionAttribute6: 'OF-FRV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Kragerø studiesenteret',
+    extensionAttribute6: 'OF-KRV-STUDIESE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Skien tannklinikk, endodontisk avd.',
+    extensionAttribute6: 'TF-SKT-ENDODONT',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlegespesialist',
+    state: 'TF'
+  },
+  {
+    department: 'Færder videregående skole',
+    extensionAttribute6: 'OF-FRV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Porsgrunn tannklinikk',
+    extensionAttribute6: 'TF-POT',
+    physicalDeliveryOfficeName: 'Porsgrunn tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sande vgs kontor',
+    extensionAttribute6: 'OF-SANV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Konsulent',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Nome vgs ledelse',
+    extensionAttribute6: 'OF-NOMV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Fagleder',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Notodden vgs yrkesfag',
+    extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Notodden tannklinikk',
+    extensionAttribute6: 'TF-NOT',
+    physicalDeliveryOfficeName: 'Notodden tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier 1',
+    state: 'TF'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Team politisk støtte',
+    extensionAttribute6: 'OSE-KON-POL',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Teamleder',
+    state: 'OSE'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Team bruvedlikehold',
+    extensionAttribute6: 'SMM-DRI-bru',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Holmestrand vgs basen',
+    extensionAttribute6: 'OF-HOLV-BASEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Assistent',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Greveskogen vgs språk og samfunnsfag',
+    extensionAttribute6: 'OF-GRV-SPRAK-SA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Horten vgs service og samferdsel',
+    extensionAttribute6: 'OF-HORV-SERV-SA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Holmestrand vgs teknisk',
+    extensionAttribute6: 'OF-HOLV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Vaktmester',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Holmestrand tannklinikk',
+    extensionAttribute6: 'TF-HOLT',
+    physicalDeliveryOfficeName: 'Holmestrand tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Nome vgs kontor, bibliotek og IKT',
+    extensionAttribute6: 'OF-NOMV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Konsulent',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Fagskolen administrasjon',
+    extensionAttribute6: 'NIK-FAGS-ADM',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Avdelingsleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Bø vgs idrettsseksjon',
+    extensionAttribute6: 'OF-BOV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Horten vgs media og kommunikasjon',
+    extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Horten vgs ST språk vg2, VG3,PB',
+    extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Notodden videregående skole',
+    extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Porsgrunn vgs drift',
+    extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Fagarbeider 1',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner avd videregående',
+    extensionAttribute6: 'OF-SMI-VGS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Studierektor',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Team skoleskyss, TT-kort og løyver',
+    extensionAttribute6: 'SMM-KOL-SKYSS',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Notodden videregående skole',
+    extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Re vgs administrasjon',
+    extensionAttribute6: 'OF-REV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Seniorrådgiver',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Fagskolen maritim utdanning',
+    extensionAttribute6: 'NIK-FAGS-MARITI',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Avdelingsleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Skogmo vgs administrasjon og fellestjenester',
+    extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Fullmektig',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lektor',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Stabsleder',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Kommunikasjon',
+    extensionAttribute6: 'BDK-KOM',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Seksjonsleder',
+    state: 'BDK'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elevtjenesten',
+    extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs  administrasjon',
+    extensionAttribute6: 'OF-THV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Rådgiver',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Rjukan vgs administrativ stab og drift',
+    extensionAttribute6: 'OF-RJV-ADM-DRIF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs restaurant og matfag',
+    extensionAttribute6: 'OF-HJV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Skogmo vgs TIP og realfag',
+    extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Færder vgs opplæring innen kriminalomsorgen',
+    extensionAttribute6: 'OF-FRV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Drift og vedlikehold',
+    extensionAttribute6: 'SMM-DRI',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elevtjenesten',
+    extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Skogmo vgs tilrettelagt opplæring',
+    extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Bø vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-BOV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Adjunkt',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
+    extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team bruvedlikehold',
+    extensionAttribute6: 'SMM-DRI-bru',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Teamleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Nøtterøy videregående skole',
+    extensionAttribute6: 'OF-NTV-SP-SAMF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Notodden videregående skole',
+    extensionAttribute6: 'OF-NOV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Rektor',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Bamble vgs service og samferdsel',
+    extensionAttribute6: 'OF-BAV-SERVICE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Lærer',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Fagskolen elektrofag',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Avdelingsleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Fagskolen Vestfold og Telemark',
+    extensionAttribute6: 'NIK-FAGS',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor',
+    state: 'NIK'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Thor Heyerdahl vgs teknologi og industrifag',
+    extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Notodden vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-NOV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Adjunkt',
+    state: 'NIK'
+  },
+  {
+    department: 'Skien tannklinikk, kjeveortopedisk avd.',
+    extensionAttribute6: 'TF-SKT-KJEVEORT',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlegespesialist',
+    state: 'TF'
+  },
+  {
+    department: null,
+    'ext*': null,
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: null,
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: null
+  },
+  {
+    department: 'Kragerø studiesenteret',
+    extensionAttribute6: 'OF-KRV-STUDIESE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lærer',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Kompetanseutvikling og inkludering',
+    extensionAttribute6: 'NIK-KOMP',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Seksjonsleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Skogmo vgs TIP og realfag',
+    extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Diverse',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
+    extensionAttribute6: 'OF-SFV-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Kantinebestyrer',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Notodden vgs helse og oppvekst',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Greveskogen vgs musikk,dans,drama og innføring',
+    extensionAttribute6: 'OF-GRV-MDDI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Skien vgs elevtjenester',
+    extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Konsulent l',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Kompetansebyggeren studierektor',
+    extensionAttribute6: 'OF-KB-ST-REKTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Studierektor',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Sande vgs kontor',
+    extensionAttribute6: 'OF-SANV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Førstekonsulent',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Færder vgs kontor,stab',
+    extensionAttribute6: 'OF-FRV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Skogmo vgs fellesfag',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV-INDUSTRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Studieleder',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Team vegforvaltning',
+    extensionAttribute6: 'SMM-FORV-vegf',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Vest-Telemark vgs restaurant og matfag',
+    extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Vernepleier',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Sandefjord folkehøyskole kontor',
+    extensionAttribute6: 'OF-SFH-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Sekretær',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Skien tannklinikk',
+    extensionAttribute6: 'TF-SKT',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Horten vgs idrett',
+    extensionAttribute6: 'OF-HORV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Notodden videregående skole',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Porsgrunn vgs drift',
+    extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'IT konserndrift og brukerstøtte',
+    extensionAttribute6: 'BDK-IT',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Seksjonsleder',
+    state: 'BDK'
+  },
+  {
+    department: 'Sandefjord vgs servicekontor',
+    extensionAttribute6: 'OF-SFV-SERVKTR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Team geodata',
+    extensionAttribute6: 'SMM-DRI-geodata',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Thor Heyerdahl vgs teknologi og industrifag',
+    extensionAttribute6: 'OF-THV-TP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Hjalmar Johansen videregående skole',
+    extensionAttribute6: 'OF-HJV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Horten vgs ST språk vg2, VG3,PB',
+    extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team vegforvaltning',
+    extensionAttribute6: 'SMM-FORV-vegf',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Færder vgs elevkantine',
+    extensionAttribute6: 'OF-FRV-ELEVKANT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærekandidat',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Holmestrand vgs basen',
+    extensionAttribute6: 'OF-HOLV-BASEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Oppfølgingstjenesten fagkoordinator',
+    extensionAttribute6: 'OF-OT-FAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'OT Larvik',
+    company: 'Oppfølgingstjenesten',
+    title: 'Leder',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Porsgrunn vgs bibliotek',
+    extensionAttribute6: 'OF-POV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Konsulent',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
+    extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Vernepleier',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Notodden vgs merkantilt',
+    extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Renholder',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Nome vgs gardsbruk',
+    extensionAttribute6: 'OF-NOMV-GARDSBRU',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Arbeider',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Sande vgs AHT',
+    extensionAttribute6: 'OF-SANV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Opplæring og folkehelse',
+    extensionAttribute6: 'OF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Direktør',
+    state: 'OF'
+  },
+  {
+    department: 'Hovedtillitsvalgte',
+    extensionAttribute6: 'HRMU-HTV',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'HR, mestring og utvikling',
+    title: 'Tillitsvalgt',
+    state: 'HRMU'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Nøtterøy vgs studiespesialisering samfunnsfaglig avdeling',
+    extensionAttribute6: 'OF-NTV-SP-SAMF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Assistent',
+    state: 'OSE'
+  },
+  {
+    department: 'Nome vgs ledelse',
+    extensionAttribute6: 'OF-NOMV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Skien tannklinikk, endodontisk avd.',
+    extensionAttribute6: 'TF-SKT-ENDODONT',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannhelsesekretær',
+    state: 'TF'
+  },
+  {
+    department: 'Porsgrunn videregående skole',
+    extensionAttribute6: 'OF-POV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lærer -',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Fagskolen byggfag',
+    extensionAttribute6: 'NIK-FAGS-BYGG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor 1',
+    state: 'NIK'
+  },
+  {
+    department: 'Kultur, idrett og friluftsliv',
+    extensionAttribute6: 'KRIF-KIF',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Teamleder',
+    state: 'KRIF'
+  },
+  {
+    department: 'Notodden vgs ressurssenter',
+    extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lektor',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Melsom vgs gård internat',
+    extensionAttribute6: 'OF-MEV-INTERNAT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
+    extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Greveskogen vgs kroppsøving',
+    extensionAttribute6: 'OF-GRV-KROPPSOV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Folkehelse og livsmestring',
+    extensionAttribute6: 'OF-FHL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Seksjonsleder',
+    state: 'OF'
+  },
+  {
+    department: 'Skien vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lektor',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Sande vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-SANV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Sande vgs bibliotek',
+    extensionAttribute6: 'OF-SANV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Assistent',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Kompetansebyggeren sensorer og eksamensvakter',
+    extensionAttribute6: 'OF-KB-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Eksamensvakt',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Færder vgs påbygging generell studiekompetanse',
+    extensionAttribute6: 'OF-FRV-PB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs idrettsfag',
+    extensionAttribute6: 'OF-THV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Konsulent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Kommunikasjon',
+    extensionAttribute6: 'BDK-KOM',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Rådgiver',
+    state: 'BDK'
+  },
+  {
+    department: 'Teknologi og digitalisering',
+    extensionAttribute6: 'BDK-TEK',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Hof tannklinikk',
+    extensionAttribute6: 'TF-HOT',
+    physicalDeliveryOfficeName: 'Hof tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Sande vgs medier og kommunikasjon',
+    extensionAttribute6: 'OF-SANV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Sande vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-SANV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: null,
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Samfunnsutvikling, internasjonalisering og klima',
+    extensionAttribute6: 'SIK',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samfunnsutvikling, internasjonalisering og klima',
+    title: 'Direktør',
+    state: 'SIK'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Re vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-REV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Melsom vgs studiespesialisering',
+    extensionAttribute6: 'OF-MEV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Mestring og utvikling',
+    extensionAttribute6: 'HRMU-MES',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'HR, mestring og utvikling',
+    title: 'Seksjonsleder',
+    state: 'HRMU'
+  },
+  {
+    department: 'Bamble vgs elevtjenester og OIMG',
+    extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Bibliotekar 1',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Vest-Telemark vidaregåande skule',
+    extensionAttribute6: 'OF-VTV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Studieleder',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Sektorutvikling',
+    extensionAttribute6: 'SMM-SEK',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Seksjonsleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Sande vgs medier og kommunikasjon',
+    extensionAttribute6: 'OF-SANV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Borgejordet tannklinikk',
+    extensionAttribute6: 'TF-BORT',
+    physicalDeliveryOfficeName: 'Borgejordet tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Team Kaupang',
+    extensionAttribute6: 'BDK-IT-KAUPANG',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Rådgiver',
+    state: 'BDK'
+  },
+  {
+    department: 'Porsgrunn vgs avd. Nord',
+    extensionAttribute6: 'OF-POV-NORD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Studieleder',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Studieleder',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs teknisk drift',
+    extensionAttribute6: 'OF-THV-TEKN-DRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Unge arbeidstakere',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team regnskap og rapportering',
+    extensionAttribute6: 'OSE-OKO-REGN',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Førstekonsulent',
+    state: 'OSE'
+  },
+  {
+    department: 'Skogmo vgs helse og oppvekst VG2-3',
+    extensionAttribute6: 'OF-SKOV-HO2',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Skogmo vgs helse og oppvekst VG1',
+    extensionAttribute6: 'OF-SKOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Skogmo vgs tilrettelagt opplæring',
+    extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Rådgiver',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Team utbygging vest',
+    extensionAttribute6: 'SMM-UTB-vest',
+    physicalDeliveryOfficeName: 'SMM - Notodden trafikkstasjon',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Rjukan videregående skole',
+    extensionAttribute6: 'OF-RJV-ADM-DRIF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Holmestrand videregående skole',
+    extensionAttribute6: 'OF-HOLV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lektor',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs teknisk drift',
+    extensionAttribute6: 'OF-THV-TEKN-DRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Assistent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sandefjord folkehøyskole skoleassistent',
+    extensionAttribute6: 'OF-SFH-SK-ASS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Uspesifisert',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Porsgrunn vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-POV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lærer -',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Holmestrand vgs helse og oppvekst',
+    extensionAttribute6: 'OF-HOLV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Sandefjord vgs norsk',
+    extensionAttribute6: 'OF-SFV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Re vgs ST språk, realfag',
+    extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Nøtterøy videregående skole',
+    extensionAttribute6: 'OF-NTV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
+    extensionAttribute6: 'OF-HJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Bibliotekar',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'PP-tjenesten',
+    extensionAttribute6: 'OF-PPT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'PPT- Kongensgt 20A, Skien',
+    company: 'PP-tjenesten',
+    title: 'Seksjonsleder',
+    state: 'OF-PPT'
+  },
+  {
+    department: 'Kragerø vgs studieforberedende',
+    extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lærer -',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Prosjektleder',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Sandefjord vgs helse, oppvekst',
+    extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Sandefjord vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-SFV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Lystlunden tannklinikk',
+    extensionAttribute6: 'TF-LYT',
+    physicalDeliveryOfficeName: 'Lystlunden tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Rjukan vgs elevtjenester',
+    extensionAttribute6: 'OF-RJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Pedagogisk støtte og utvikling',
+    extensionAttribute6: 'OF-PED',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Opplæring og folkehelse',
+    title: 'Advokat',
+    state: 'OF'
+  },
+  {
+    department: 'Skogmo vgs TIP og realfag',
+    extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Bamble vgs kontor og IKT',
+    extensionAttribute6: 'OF-BAV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Sekretær',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Brukerbehov, digitalisering og kommunikasjon',
+    extensionAttribute6: 'BDK',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Utviklingsleder',
+    state: 'BDK'
+  },
+  {
+    department: 'Thor Heyerdahl vgs musikk og dans',
+    extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Barne- og ungdomsarbeider',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-NORSK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Notodden vgs yrkesfag',
+    extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lærer',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Sandefjord vgs språk',
+    extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærling',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærling',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Skogmo vgs administrasjon og fellestjenester',
+    extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Sekretær',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Hjalmar Johansen vgs elevtjenester og bibliotek',
+    extensionAttribute6: 'OF-HJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lektor',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Folkevalgte',
+    extensionAttribute6: 'FOLKEVALGTE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Folkevalgte',
+    title: 'Diverse',
+    state: 'FOLKEVALGTE'
+  },
+  {
+    department: 'Porsgrunn vgs informasjonsteknologi og medieproduksjon',
+    extensionAttribute6: 'OF-POV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Skogmo vgs tilrettelagt opplæring',
+    extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Assistent',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Melsom vgs kontor',
+    extensionAttribute6: 'OF-MEV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Kontorleder',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Team trafikksikkerhet og miljøvennlig transport',
+    extensionAttribute6: 'SMM-FORV-trafik',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Teamleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
+    extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Færder vgs elevtjenesten',
+    extensionAttribute6: 'OF-FRV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Porsgrunn tannklinikk',
+    extensionAttribute6: 'TF-POT',
+    physicalDeliveryOfficeName: 'Porsgrunn tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Rjukan tannklinikk',
+    extensionAttribute6: 'TF-RJT',
+    physicalDeliveryOfficeName: 'Rjukan tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Fagskolen maritim utdanning',
+    extensionAttribute6: 'NIK-FAGS-MARITI',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-BOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Renholder',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Notodden vgs helse og oppvekst',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lærer -',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Horten vgs Elektro',
+    extensionAttribute6: 'OF-HORV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Oppfølgingstjenesten rådgivere',
+    extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Oppfølgingstjenesten',
+    title: 'Rådgiver',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Seksjonsleder',
+    state: 'OSE'
+  },
+  {
+    department: 'Skien tannklinikk, avd grå',
+    extensionAttribute6: 'TF-SKT-AVD-GRA',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Porsgrunn vgs drift',
+    extensionAttribute6: 'OF-POV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lærling',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Team driftskontrakter vest',
+    extensionAttribute6: 'SMM-DRI-vest',
+    physicalDeliveryOfficeName: 'Åmot - Vinje kommune',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Bamble vgs service og samferdsel',
+    extensionAttribute6: 'OF-BAV-SERVICE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Undervisningsstilling',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Færder vgs teknikk og industriell produksjon',
+    extensionAttribute6: 'OF-FRV-TI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Sande vgs st.spes realfag',
+    extensionAttribute6: 'OF-SANV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Lektor',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Rjukan vgs elevtjenester',
+    extensionAttribute6: 'OF-RJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Elevassistent m/fagbrev',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Skien tannklinikk',
+    extensionAttribute6: 'TF-SKT',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Fagskolen maritim utdanning',
+    extensionAttribute6: 'NIK-FAGS-MARITI',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor',
+    state: 'NIK'
+  },
+  {
+    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
+    extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lærer',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-POV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Team trafikksikkerhet og miljøvennlig transport',
+    extensionAttribute6: 'SMM-FORV-trafik',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Fylkesbibliotek',
+    extensionAttribute6: 'KRIF-FB',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Rådgiver',
+    state: 'KRIF'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Oppfølgingstjenesten fagkoordinator',
+    extensionAttribute6: 'OF-OT-FAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Oppfølgingstjenesten',
+    title: 'Rådgiver',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Nome vgs renhold og vaktmester',
+    extensionAttribute6: 'OF-NOMV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Renholder',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Notodden vgs ressurssenter',
+    extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Studieleder',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-KB-ADM-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Renholder',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Re vgs ST språk, realfag',
+    extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Rjukan vgs studiespesialisering',
+    extensionAttribute6: 'OF-RJV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Lektor',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Fylkesbibliotek',
+    extensionAttribute6: 'KRIF-FB',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Spesialbibliotekar',
+    state: 'KRIF'
+  },
+  {
+    department: 'Sandefjord vgs helse, oppvekst',
+    extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord vgs elevtjenester',
+    extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sektorutvikling-',
+    extensionAttribute6: 'TF-SEK',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Tannhelse og forebygging',
+    title: 'Rådgiver',
+    state: 'TF'
+  },
+  {
+    department: 'Skogmo vgs administrasjon og fellestjenester',
+    extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Administrativ leder',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Team vegforvaltning',
+    extensionAttribute6: 'SMM-FORV-vegf',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Melsom vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærling',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Team anskaffelser',
+    extensionAttribute6: 'OSE-KON-ANS',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Vest-Telemark vidaregåande skule',
+    extensionAttribute6: 'OF-VTV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Studieleder',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs OIMG',
+    extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lærer',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Skien tannklinikk, avd. grønn',
+    extensionAttribute6: 'TF-SKT-AVD-GRON',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Rektor',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Team trafikksikkerhet og miljøvennlig transport',
+    extensionAttribute6: 'SMM-FORV-trafik',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-HORV-DH',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Sandefjord vgs idrett',
+    extensionAttribute6: 'OF-SFV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-SKIV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Fylkesbibliotek',
+    extensionAttribute6: 'KRIF-FB',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Konsulent',
+    state: 'KRIF'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Skogmo vgs bygg og anleggsfag',
+    extensionAttribute6: 'OF-SKOV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Greveskogen vgs språk og samfunnsfag',
+    extensionAttribute6: 'OF-GRV-SPRAK-SA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Greveskogen vgs AHT',
+    extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Team driftskontrakter vest',
+    extensionAttribute6: 'SMM-DRI-vest',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Kragerø vgs tekniske fag',
+    extensionAttribute6: 'OF-KRV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Skien vgs kantine',
+    extensionAttribute6: 'OF-SKIV-KANTINE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Sektorutvikling-',
+    extensionAttribute6: 'TF-SEK',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Tannhelse og forebygging',
+    title: 'Rådgiver',
+    state: 'TF'
+  },
+  {
+    department: 'Sektorutvikling-',
+    extensionAttribute6: 'TF-SEK',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Tannhelse og forebygging',
+    title: 'Diverse',
+    state: 'TF'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Assistent',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Sandefjord vgs international baccalaureate',
+    extensionAttribute6: 'OF-SFV-IB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord vgs realfag, kunst, design og arkitektur',
+    extensionAttribute6: 'OF-SFV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs helse- og oppvekstfag',
+    extensionAttribute6: 'OF-THV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Team helhetlig styring',
+    extensionAttribute6: 'OSE-KON-HEL',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-SKIV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Administrativ leder',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Vestfold fylkeskommune',
+    extensionAttribute6: 'OF-HJV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
+    extensionAttribute6: 'OF-SFV-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærekandidat',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Personal og HMS',
+    extensionAttribute6: 'HRMU-PERS',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'HR, mestring og utvikling',
+    title: 'Førstekonsulent',
+    state: 'HRMU'
+  },
+  {
+    department: 'Sande vgs teknisk og industriell produksjon',
+    extensionAttribute6: 'OF-SANV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Oppfølgingstjenesten rådgivere',
+    extensionAttribute6: 'OF-OT-RAD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Talenthus - OT',
+    company: 'Oppfølgingstjenesten',
+    title: 'Leder',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Porsgrunn videregående skole',
+    extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Team elektro og veglys',
+    extensionAttribute6: 'SMM-DRI-elektro',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Greveskogen vgs økonomi- og realfag',
+    extensionAttribute6: 'OF-GRV-REAL-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lærer -',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs OIMG',
+    extensionAttribute6: 'OF-HJV-OIMG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Fysioterapeut',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Nome vgs internat og kantine',
+    extensionAttribute6: 'OF-NOMV-INTERNA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Kokk',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Porsgrunn videregående skole',
+    extensionAttribute6: 'OF-POV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Skien vgs dans og drama',
+    extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Kompetansebyggeren  helsefagarbeider',
+    extensionAttribute6: 'OF-KB-HELSEFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Nøtterøy vgs bibliotek',
+    extensionAttribute6: 'OF-NTV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Bibliotekar',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Oppfølgingstjenesten fagkoordinator',
+    extensionAttribute6: 'OF-OT-FAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'OT Horten',
+    company: 'Oppfølgingstjenesten',
+    title: 'Leder',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Nome vgs internat og kantine',
+    extensionAttribute6: 'OF-NOMV-INTERNA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Miljøterapeut',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Skien vgs kantine',
+    extensionAttribute6: 'OF-SKIV-KANTINE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Team HMS og personvern',
+    extensionAttribute6: 'HRMU-PERS-HMS',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'HR, mestring og utvikling',
+    title: 'Rådgiver',
+    state: 'HRMU'
+  },
+  {
+    department: 'Nøtterøy vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-NTV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Eksamensvakt',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Adjunkt',
+    state: 'NIK'
+  },
+  {
+    department: 'Horten vgs teknikk og industriell produksjon',
+    extensionAttribute6: 'OF-HORV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Bø vidaregåande skule',
+    extensionAttribute6: 'OF-BOV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Rektor',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Holmestrand videregående skole',
+    extensionAttribute6: 'OF-HOLV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Horten vgs elevtjenesten',
+    extensionAttribute6: 'OF-HORV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs idrett',
+    extensionAttribute6: 'OF-HJV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lærer',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Sandefjord vgs hverdagslivstrening',
+    extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Team utbygging Bypakke Grenland',
+    extensionAttribute6: 'SMM-UTB-bypakke',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Sandefjord folkehøyskole undervisning',
+    extensionAttribute6: 'OF-SFH-UNDERVIS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Avdelingsleder',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Greveskogen vgs stab',
+    extensionAttribute6: 'OF-GRV-STAB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Driftsleder teknisk',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Horten vgs helse og oppvekst',
+    extensionAttribute6: 'OF-HORV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Sandefjord vgs språk',
+    extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Porsgrunn vgs real',
+    extensionAttribute6: 'OF-POV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Team Fjell',
+    extensionAttribute6: 'BDK-IT-FJELL',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Konsernstyring',
+    extensionAttribute6: 'OSE-KON',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Fagskolen Vestfold og Telemark',
+    extensionAttribute6: 'NIK-FAGS-EKSAME',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Thor Heyerdahl vgs  språk, samfunnsfag, økonomi',
+    extensionAttribute6: 'OF-THV-ST-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Fag- og yrkesopplæring',
+    extensionAttribute6: 'OF-FAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Rådgiver',
+    state: 'OF'
+  },
+  {
+    department: 'Notodden vgs yrkesfag',
+    extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Kragerø studiesenteret',
+    extensionAttribute6: 'OF-KRV-STUDIESE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Miljøterapeut',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Næringsutvikling og entreprenørskap',
+    extensionAttribute6: 'NIK-NR',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Leder',
+    state: 'NIK'
+  },
+  {
+    department: 'Bø vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-BOV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Team Grenland',
+    extensionAttribute6: 'BDK-IT-GRENLAND',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Vest-Telemark vgs - helse og oppvekst',
+    extensionAttribute6: 'OF-VTV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Fagarbeider 1',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Skogmo vgs bygg og anleggsfag',
+    extensionAttribute6: 'OF-SKOV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Nome videregående skole',
+    extensionAttribute6: 'OF-NOMV-DH-EL-F',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Lærer -',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Sandefjord folkehøyskole kontor',
+    extensionAttribute6: 'OF-SFH-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Konsulent',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Nøtterøy vgs teknisk',
+    extensionAttribute6: 'OF-NTV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Hjalmar Johansen vgs idrett',
+    extensionAttribute6: 'OF-HJV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Fagskolen elektrofag',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Uspesifisert',
+    state: 'NIK'
+  },
+  {
+    department: 'Fagskolen Vestfold og Telemark',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lærer -',
+    state: 'NIK'
+  },
+  {
+    department: 'Horten vgs Design og håndverk',
+    extensionAttribute6: 'OF-HORV-DH',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV-SEV-SAM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lærer',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Diverse',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord vgs elevtjenester',
+    extensionAttribute6: 'OF-SFV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Bamble vgs elevtjenester og OIMG',
+    extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Hovedtillitsvalgte',
+    extensionAttribute6: 'HRMU-HTV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'HR, mestring og utvikling',
+    title: 'Tillitsvalgt',
+    state: 'HRMU'
+  },
+  {
+    department: 'Sektorutvikling-',
+    extensionAttribute6: 'TF-SEK',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Tannhelse og forebygging',
+    title: 'Konsulent',
+    state: 'TF'
+  },
+  {
+    department: 'Team marked og utvikling',
+    extensionAttribute6: 'SMM-KOL-marked',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Unge arbeidstakere',
+    state: 'SMM'
+  },
+  {
+    department: 'Skien vgs drift',
+    extensionAttribute6: 'OF-SKIV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Renholder',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Lærer -',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Fagskolen elektrofag',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Porsgrunn vgs informasjonsteknologi og medieproduksjon',
+    extensionAttribute6: 'OF-POV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Nome vgs internat og kantine',
+    extensionAttribute6: 'OF-NOMV-INTERNA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Nome vgs naturbruk II',
+    extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Nøtterøy vgs elevtjenesten',
+    extensionAttribute6: 'OF-NTV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Skogmo vgs opplæring i kriminalomsorgen',
+    extensionAttribute6: 'OF-SKOV-OKRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Porsgrunn vgs elevtjenester',
+    extensionAttribute6: 'OF-POV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Studieleder',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Greveskogen vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-GRV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Assistent',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Holmestrand vgs språk,samfunnsfag,økonomi',
+    extensionAttribute6: 'OF-HOLV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
+    extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Notodden vgs ressurssenter',
+    extensionAttribute6: 'OF-NOV-RESSURSS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Fagleder',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elevtjenesten',
+    extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Vestfold fylkeskommune',
+    extensionAttribute6: 'OF-HORV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team elektro og veglys',
+    extensionAttribute6: 'SMM-DRI-elektro',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Teamleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Team bruvedlikehold',
+    extensionAttribute6: 'SMM-DRI-bru',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Greveskogen vgs restaurant og matfag',
+    extensionAttribute6: 'OF-GRV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lærekandidat',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Stokke tannklinikk',
+    extensionAttribute6: 'TF-STT',
+    physicalDeliveryOfficeName: 'Stokke tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Assistent 1',
+    state: 'TF'
+  },
+  {
+    department: 'Talenthus kompetansesenter',
+    extensionAttribute6: 'OF-OT-TH-KOMP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Talenthus - OT',
+    company: 'Oppfølgingstjenesten',
+    title: 'Adjunkt 1',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Klima, miljø og internasjonalisering',
+    extensionAttribute6: 'SIK-KLI',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samfunnsutvikling, internasjonalisering og klima',
+    title: 'Seksjonsleder',
+    state: 'SIK'
+  },
+  {
+    department: 'Sandefjord folkehøyskole kjøkken,renhold',
+    extensionAttribute6: 'OF-SFH-KJOKKEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Leder',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Greveskogen vgs musikk,dans,drama og innføring',
+    extensionAttribute6: 'OF-GRV-MDDI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lektor',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Re vgs bygg- og anleggsteknikk',
+    extensionAttribute6: 'OF-REV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Notodden vgs merkantilt',
+    extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Fagarbeider 1',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Vest-Telemark vgs administrasjon og OIMG',
+    extensionAttribute6: 'OF-VTV-ADMINIST',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Fagarbeider 1',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Team driftskontrakter vest',
+    extensionAttribute6: 'SMM-DRI-vest',
+    physicalDeliveryOfficeName: 'SMM - Notodden trafikkstasjon',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Assistent',
+    state: 'OSE'
+  },
+  {
+    department: 'Skien tannklinikk, oralkirurgisk avd.',
+    extensionAttribute6: 'TF-SKT-ORALKIRU',
+    physicalDeliveryOfficeName: 'Skien tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlegespesialist',
+    state: 'TF'
+  },
+  {
+    department: 'Kultur, idrett og friluftsliv',
+    extensionAttribute6: 'KRIF-KIF',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Seksjonsleder',
+    state: 'KRIF'
+  },
+  {
+    department: 'Melsom videregående skole (SMI)',
+    extensionAttribute6: 'OF-SMI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Re vgs helse og oppvekst',
+    extensionAttribute6: 'OF-REV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Diverse',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Rjukan vgs administrativ stab og drift',
+    extensionAttribute6: 'OF-RJV-ADM-DRIF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Konsernstyring',
+    extensionAttribute6: 'OSE-KON',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Seksjonsleder',
+    state: 'OSE'
+  },
+  {
+    department: 'Kragerø videregående skole',
+    extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Rjukan vgs elevtjenester',
+    extensionAttribute6: 'OF-RJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Re vgs bibliotek',
+    extensionAttribute6: 'OF-REV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Bibliotekar',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Fagskolen elektrofag',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Rjukan videregående skole',
+    extensionAttribute6: 'OF-RJV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Skogmo vgs TIP og realfag',
+    extensionAttribute6: 'OF-SKOV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Porsgrunn vgs kontor',
+    extensionAttribute6: 'OF-POV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Konsulent l',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Samfunnsutvikling, internasjonalisering og klima',
+    extensionAttribute6: 'SIK',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Samfunnsutvikling, internasjonalisering og klima',
+    title: 'Leder',
+    state: 'SIK'
+  },
+  {
+    department: 'Nøtterøy vgs studiespesialisering språkfaglig avdeling',
+    extensionAttribute6: 'OF-NTV-SP-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Næringsutvikling og entreprenørskap',
+    extensionAttribute6: 'NIK-NR',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Seksjonsleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Rjukan videregående skole',
+    extensionAttribute6: 'OF-RJV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Re vgs bygg- og anleggsteknikk',
+    extensionAttribute6: 'OF-REV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Greveskogen vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-GRV-SERV-SAM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Kompetansebyggeren  helsefagarbeider',
+    extensionAttribute6: 'OF-KB-HELSEFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Adjunkt',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Arkiv og dokumenthåndtering',
+    extensionAttribute6: 'BDK-ARK',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Seksjonsleder',
+    state: 'BDK'
+  },
+  {
+    department: 'Vest-Telemark vgs yrkesfag',
+    extensionAttribute6: 'OF-VTV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner',
+    extensionAttribute6: 'OF-SMI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Team prosjektstøtte',
+    extensionAttribute6: 'SMM-UTB-prosjek',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Re vgs bygg- og anleggsteknikk',
+    extensionAttribute6: 'OF-REV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Teknisk assistent',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Nøtterøy vgs studiespesialisering realfag,kroppsøving',
+    extensionAttribute6: 'OF-NTV-REAL-KRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Lærer',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Skogmo videregående skole',
+    extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Stathelle tannklinikk',
+    extensionAttribute6: 'TF-STAT',
+    physicalDeliveryOfficeName: 'Stathelle tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Rjukan vgs administrativ stab og drift',
+    extensionAttribute6: 'OF-RJV-ADM-DRIF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Konsulent',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Skien vgs språk, samfunn og økonomi',
+    extensionAttribute6: 'OF-SKIV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Skien vgs elevtjenester',
+    extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Miljøterapeut',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-FRV-PB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lærer -',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Sandefjord vgs musikk,dans,drama',
+    extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Team Nord-Jarlsberg',
+    extensionAttribute6: 'BDK-IT-NORD',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Skogmo vgs elektrofag',
+    extensionAttribute6: 'OF-SKOV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Porsgrunn vgs idrett',
+    extensionAttribute6: 'OF-POV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Team Fjell',
+    extensionAttribute6: 'BDK-IT-FJELL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Rjukan vgs yrkesfag',
+    extensionAttribute6: 'OF-RJV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team Kaupang',
+    extensionAttribute6: 'BDK-IT-KAUPANG',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Kultur, idrett og friluftsliv',
+    extensionAttribute6: 'KRIF-KIF',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Diverse',
+    state: 'KRIF'
+  },
+  {
+    department: 'Strategi og utvikling',
+    extensionAttribute6: 'SMM-STR',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Uspesifisert',
+    state: 'SMM'
+  },
+  {
+    department: 'Greveskogen vgs renhold',
+    extensionAttribute6: 'OF-GRV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Leder',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Melsom videregående skole',
+    extensionAttribute6: 'OF-MEV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Renholder',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Lardal tannklinikk',
+    extensionAttribute6: 'TF-LAT',
+    physicalDeliveryOfficeName: 'Lardal tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Assistent',
+    state: 'TF'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Kantinebestyrer',
+    state: 'OSE'
+  },
+  {
+    department: 'Sandefjord vgs teknikk, industriell produksjon, elektrofag og FB',
+    extensionAttribute6: 'OF-SFV-TIP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Kragerø tannklinikk',
+    extensionAttribute6: 'TF-KRT',
+    physicalDeliveryOfficeName: 'Kragerø tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Greveskogen vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-GRV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Fagskolen byggfag',
+    extensionAttribute6: 'NIK-FAGS-BYGG',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor',
+    state: 'NIK'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord vgs hverdagslivstrening',
+    extensionAttribute6: 'OF-SFV-HT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Larvik tannklinikk',
+    extensionAttribute6: 'TF-LART',
+    physicalDeliveryOfficeName: 'Larvik tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Assistent',
+    state: 'TF'
+  },
+  {
+    department: 'Fagskolen helsefag',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor',
+    state: 'NIK'
+  },
+  {
+    department: 'Fyresdal tannklinikk',
+    extensionAttribute6: 'TF-FYT',
+    physicalDeliveryOfficeName: 'Fyresdal tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Assistent',
+    state: 'TF'
+  },
+  {
+    department: 'Team bruvedlikehold',
+    extensionAttribute6: 'SMM-DRI-bru',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Notodden vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-NOV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Diverse',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Kragerø vgs helse- og oppvekstfag',
+    extensionAttribute6: 'OF-KRV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Sande videregående skole',
+    extensionAttribute6: 'OF-SANV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Fagskolen administrasjon',
+    extensionAttribute6: 'NIK-FAGS-ADM',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Leder',
+    state: 'NIK'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-NOMV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Renholder',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Team inntak',
+    extensionAttribute6: 'OF-INN-INN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Opplæring og folkehelse',
+    title: 'Konsulent',
+    state: 'OF'
+  },
+  {
+    department: 'Thor Heyerdahl vgs elevtjenesten',
+    extensionAttribute6: 'OF-THV-ELEVTJ',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Kragerø vgs studieforberedende',
+    extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Søeberg tannklinikk',
+    extensionAttribute6: 'TF-SET',
+    physicalDeliveryOfficeName: 'Søeberg tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Fagskolen Vestfold og Telemark',
+    extensionAttribute6: 'NIK-FAGS-HELSE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV-SPR-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Fagskolen elektrofag',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fagskolen VT Horten',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Adjunkt',
+    state: 'NIK'
+  },
+  {
+    department: 'Bø vgs realseksjon',
+    extensionAttribute6: 'OF-BOV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Vinje tannklinikk',
+    extensionAttribute6: 'TF-VIT',
+    physicalDeliveryOfficeName: 'Vinje tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Hof tannklinikk',
+    extensionAttribute6: 'TF-HOT',
+    physicalDeliveryOfficeName: 'Hof tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Skien vgs musikk',
+    extensionAttribute6: 'OF-SKIV-MUSIKK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Vestfold fylkeskommune',
+    extensionAttribute6: 'OF-SMI-VGS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Horten vgs  personal og økonomi',
+    extensionAttribute6: 'OF-HORV-PERS-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Stabsleder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV-INDUSTRI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Horten vgs ST språk vg2, VG3,PB',
+    extensionAttribute6: 'OF-HORV-SPRAK-P',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Skien vgs dans og drama',
+    extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-KRV-SF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Sandefjord vgs salg, service, reiseliv, restaurant, matfag, IKT ',
+    extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV-SERVICE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Team geodata',
+    extensionAttribute6: 'SMM-DRI-geodata',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Utbygging',
+    extensionAttribute6: 'SMM-UTB',
+    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Seksjonsleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Sandefjord vgs studierektor yrkesforbredende',
+    extensionAttribute6: 'OF-SFV-YF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Konsulent',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Porsgrunn vgs informasjonsteknologi og medieproduksjon',
+    extensionAttribute6: 'OF-POV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Forvaltning',
+    extensionAttribute6: 'SMM-FORV',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Seksjonsleder',
+    state: 'SMM'
+  },
+  {
+    department: 'Greveskogen vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-GRV-SERV-SAM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Assistent',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Rjukan vgs elevtjenester',
+    extensionAttribute6: 'OF-RJV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Assistent',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Bø vidaregåande skule',
+    extensionAttribute6: 'BDK-IT-FJELL',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
+    extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lærer -',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-SPRAK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord vgs musikk,dans,drama',
+    extensionAttribute6: 'OF-SFV-MDD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Melsom vgs gård Kjøkken',
+    extensionAttribute6: 'OF-MEV-KJOKKEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Internatassistent',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Nome vgs naturbruk II',
+    extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-NOMV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Vest-Telemark vgs restaurant og matfag',
+    extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Sandefjord vgs studierektor yrkesforbredende',
+    extensionAttribute6: 'OF-SFV-YF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Melsom vgs arbeidslivstrening',
+    extensionAttribute6: 'OF-MEV-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Lektor',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Re videregående skole',
+    extensionAttribute6: 'OF-REV-TI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lærer -',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Greveskogen vgs AHT',
+    extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Lærer',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Bamble vgs elevtjenester og OIMG',
+    extensionAttribute6: 'OF-BAV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Konsulent',
+    state: 'OSE'
+  },
+  {
+    department: 'Greveskogen vgs restaurant og matfag',
+    extensionAttribute6: 'OF-GRV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Sande videregående skole',
+    extensionAttribute6: 'OF-SANV-RENHOLD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Renholder',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Nøtterøy vgs helse- og oppvekst',
+    extensionAttribute6: 'OF-NTV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Lærer',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Greveskogen vgs stab',
+    extensionAttribute6: 'OF-GRV-STAB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Avdelingsleder bibliotek',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Team politisk støtte',
+    extensionAttribute6: 'OSE-KON-POL',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Porsgrunn vgs elevtjenester',
+    extensionAttribute6: 'OF-POV-ELEVTJEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Greveskogen vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-GRV-SERV-SAM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs kantine',
+    extensionAttribute6: 'OF-THV-KANTINE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Kantinebestyrer',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Holmestrand vgs administrasjon',
+    extensionAttribute6: 'OF-HOLV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Avd leder',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Teknisk leder',
+    state: 'OSE'
+  },
+  {
+    department: 'Hjalmar Johansen videregående skole',
+    extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Lærer',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Fagskolen Vestfold og Telemark',
+    extensionAttribute6: 'NIK-FAGS',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Sandefjord folkehøyskole kjøkken,renhold',
+    extensionAttribute6: 'OF-SFH-KJOKKEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord folkehøyskole',
+    company: 'Sandefjord folkehøyskole',
+    title: 'Fagarbeider',
+    state: 'OF-SFH'
+  },
+  {
+    department: 'Nøtterøy videregående skole',
+    extensionAttribute6: 'OF-NTV-SP-SAMF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Lærer',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Team regnskap og rapportering',
+    extensionAttribute6: 'OSE-OKO-REGN',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Skogmo vgs fellesfag',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Team Fjell',
+    extensionAttribute6: 'BDK-IT-FJELL',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Porsgrunn vgs frisør,blomster, interiør og eksponeringsdesign',
+    extensionAttribute6: 'OF-POV-DH',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Team anskaffelser',
+    extensionAttribute6: 'OSE-KON-ANS',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Teamleder',
+    state: 'OSE'
+  },
+  {
+    department: 'Team mobilitetstjenester',
+    extensionAttribute6: 'SMM-KOL-MOB',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'OF-HORV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Diverse',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Notodden vgs helse og oppvekst',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Vernepleier',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'IT konserndrift og brukerstøtte',
+    extensionAttribute6: 'BDK-IT',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Rådgiver',
+    state: 'BDK'
+  },
+  {
+    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
+    extensionAttribute6: 'OF-SFV-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Konsulent',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Oppfølgingstjenesten fagkoordinator',
+    extensionAttribute6: 'OF-OT-FAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'OT Sandefjord',
+    company: 'Oppfølgingstjenesten',
+    title: 'Leder',
+    state: 'OF-OT'
+  },
+  {
+    department: 'Porsgrunn tannklinikk',
+    extensionAttribute6: 'TF-POT',
+    physicalDeliveryOfficeName: 'Porsgrunn tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Psykolog',
+    state: 'TF'
+  },
+  {
+    department: 'Sandefjord vgs samfunnsfag',
+    extensionAttribute6: 'OF-SFV-SAMFUNN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Notodden vgs bibliotek',
+    extensionAttribute6: 'OF-NOV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Sande vgs medier og kommunikasjon',
+    extensionAttribute6: 'OF-SANV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Økonomi, styring og eierskap',
+    extensionAttribute6: 'OSE',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Direktør',
+    state: 'OSE'
+  },
+  {
+    department: 'Porsgrunn vgs real',
+    extensionAttribute6: 'OF-POV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Team marked og utvikling',
+    extensionAttribute6: 'SMM-KOL-marked',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Strategi og kompetanseledelse',
+    extensionAttribute6: 'HRMU-STR',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'HR, mestring og utvikling',
+    title: 'Rådgiver',
+    state: 'HRMU'
+  },
+  {
+    department: 'Bø vgs idrettsseksjon',
+    extensionAttribute6: 'OF-BOV-IDRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Team marked og utvikling',
+    extensionAttribute6: 'SMM-KOL-marked',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Bamble videregående skole',
+    extensionAttribute6: 'OF-BAV-STUDIESP',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Lærer',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Færder vgs elevkantine',
+    extensionAttribute6: 'OF-FRV-ELEVKANT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Kokk',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Team politisk støtte',
+    extensionAttribute6: 'OSE-KON-POL',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Rådgiver',
+    state: 'OSE'
+  },
+  {
+    department: 'Kragerø vgs kontor',
+    extensionAttribute6: 'OF-KRV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Kragerø vgs',
+    company: 'Kragerø videregående skole',
+    title: 'Bibliotekar',
+    state: 'OF-KRV'
+  },
+  {
+    department: 'Sandefjord vgs økonomi, resepsjon og kantine',
+    extensionAttribute6: 'OF-SFV-OK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Assistent',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-IB',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SFV'
+  },
+  {
+    department: 'Melsom vgs gård Kjøkken',
+    extensionAttribute6: 'OF-MEV-KJOKKEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Sektorutvikling',
+    extensionAttribute6: 'SMM-SEK',
+    physicalDeliveryOfficeName: 'SMM - Gjerpensgate',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Nome vgs ledelse',
+    extensionAttribute6: 'OF-NOMV-LEDELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Studieleder',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Team marked og utvikling',
+    extensionAttribute6: 'SMM-KOL-marked',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Leder',
+    state: 'SMM'
+  },
+  {
+    department: 'Hjalmar Johansen vgs medier og kommunikasjon',
+    extensionAttribute6: 'OF-HJV-MK',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Hjalmar Johansen vgs',
+    company: 'Hjalmar Johansen videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-HJV'
+  },
+  {
+    department: 'Telemarkskanalen regionalpark',
+    extensionAttribute6: 'NIK-TR',
+    physicalDeliveryOfficeName: 'Telemarkskanalen',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Teamleder',
+    state: 'NIK'
+  },
+  {
+    department: 'Næring, innovasjon og kompetanse',
+    extensionAttribute6: 'NIK',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Direktør',
+    state: 'NIK'
+  },
+  {
+    department: 'Bamble vgs kontor og IKT',
+    extensionAttribute6: 'OF-BAV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Sekretær 1',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Bamble vgs - administrative tjenester',
+    extensionAttribute6: 'OF-BAV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Grasmyr',
+    company: 'Bamble videregående skole',
+    title: 'Administrativ leder',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Drangedal tannklinikk',
+    extensionAttribute6: 'TF-DRT',
+    physicalDeliveryOfficeName: 'Drangedal tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannlege',
+    state: 'TF'
+  },
+  {
+    department: 'Bø vidaregåande skule',
+    extensionAttribute6: 'OF-BOV-SSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Lektor 1',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Nome vgs helse og oppvekstfag',
+    extensionAttribute6: 'OF-NOMV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Adjunkt 1',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs musikk og dans',
+    extensionAttribute6: 'OF-THV-MD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer',
+    state: 'OF-THV'
+  },
+  {
+    department: 'VT pluss',
+    extensionAttribute6: 'VTPLUSS',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'VT pluss',
+    title: 'Utviklingsleder',
+    state: 'VTPLUSS'
+  },
+  {
+    department: 'Notodden vgs bibliotek',
+    extensionAttribute6: 'OF-NOV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Nome videregående skole',
+    extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Horten vgs elevtjenesten',
+    extensionAttribute6: 'OF-HORV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Miljøarbeider',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Notodden vgs yrkesfag',
+    extensionAttribute6: 'OF-NOV-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Assistent',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Re vgs toppidrett fotball og håndball',
+    extensionAttribute6: 'OF-REV-TI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Lærer -',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Team konsernstøtte',
+    extensionAttribute6: 'BDK-IT-STOTTE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Lærling',
+    state: 'BDK'
+  },
+  {
+    department: 'Re vgs administrasjon',
+    extensionAttribute6: 'OF-REV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Re vgs',
+    company: 'Re videregående skole',
+    title: 'Assistent',
+    state: 'OF-REV'
+  },
+  {
+    department: 'Kultur, regional identitet, idrett og frivillighet',
+    extensionAttribute6: 'KRIF',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Direktør',
+    state: 'KRIF'
+  },
+  {
+    department: 'Fagskolen administrasjon',
+    extensionAttribute6: 'NIK-FAGS-ADM',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Diverse',
+    state: 'NIK'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Fagarbeider m/særalder',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Team konserndrift',
+    extensionAttribute6: 'BDK-IT-DRIFT',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Rådgiver',
+    state: 'BDK'
+  },
+  {
+    department: 'Strategi og utvikling',
+    extensionAttribute6: 'SMM-STR',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Konsulent',
+    state: 'SMM'
+  },
+  {
+    department: 'Greveskogen vgs sensor og eksamensvakter',
+    extensionAttribute6: 'OF-GRV-EKSAMEN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Eksamensvakt',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Seniorrådgiver',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Notodden vgs merkantilt',
+    extensionAttribute6: 'OF-NOV-MERKANTI',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Administrativ leder',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
+    extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Lektor 1',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Skolen for sosiale og medisinske institusjoner avd barnevern',
+    extensionAttribute6: 'OF-SMI-BARN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Fagarbeider',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Kollektiv og mobilitet',
+    extensionAttribute6: 'SMM-KOL',
+    physicalDeliveryOfficeName: 'SMM - Farmandstredet',
+    company: 'Samferdsel, miljø og mobilitet',
+    title: 'Rådgiver',
+    state: 'SMM'
+  },
+  {
+    department: 'Horten vgs nettskolen i Vestfold',
+    extensionAttribute6: 'OF-HORV-NETTSKO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Team HMS og personvern',
+    extensionAttribute6: 'HRMU-PERS-HMS',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'HR, mestring og utvikling',
+    title: 'Rådgiver',
+    state: 'HRMU'
+  },
+  {
+    department: 'Kulturarv',
+    extensionAttribute6: 'KRIF-KARV',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Kultur, regional identitet, idrett og frivillighet',
+    title: 'Seksjonsleder',
+    state: 'KRIF'
+  },
+  {
+    department: 'Porsgrunn vgs studiespesialisering med arbeidstrening',
+    extensionAttribute6: 'OF-POV-STUD-AT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Porsgrunn vgs',
+    company: 'Porsgrunn videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-POV'
+  },
+  {
+    department: 'Bø vidaregåande skule',
+    extensionAttribute6: 'OF-BOV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bø vgs',
+    company: 'Bø vidaregåande skule',
+    title: 'Administrativ leder',
+    state: 'OF-BOV'
+  },
+  {
+    department: 'Melsom vgs gård drift og administrasjon',
+    extensionAttribute6: 'OF-MEV-garddrif',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Folkehelse og livsmestring',
+    extensionAttribute6: 'OF-FHL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Opplæring og folkehelse',
+    title: 'Folkehelsekoordinator',
+    state: 'OF'
+  },
+  {
+    department: 'Samfunn og plan',
+    extensionAttribute6: 'SIK-SAM',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Samfunnsutvikling, internasjonalisering og klima',
+    title: 'Seksjonsleder',
+    state: 'SIK'
+  },
+  {
+    department: 'Team konsernstøtte',
+    extensionAttribute6: 'BDK-IT-STOTTE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Konsulent',
+    state: 'BDK'
+  },
+  {
+    department: 'Fagskolen elektrofag',
+    extensionAttribute6: 'NIK-FAGS-ELEKTR',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Adjunkt',
+    state: 'NIK'
+  },
+  {
+    department: 'Thor Heyerdahl videregående skole',
+    extensionAttribute6: 'OF-THV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Lærer -',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Notodden vgs helse og oppvekst',
+    extensionAttribute6: 'OF-NOV-HO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Notodden vgs',
+    company: 'Notodden videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-NOV'
+  },
+  {
+    department: 'Vest-Telemark vgs studiespesialiserande',
+    extensionAttribute6: 'OF-VTV-STUDEIES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Assistent',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Melsom videregående skole (SMI)',
+    extensionAttribute6: 'OF-SMI-BARN',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'SMI-skolen',
+    company: 'Skolen for sosiale og medisinske institusjoner',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SMI'
+  },
+  {
+    department: 'Færder videregående skole',
+    extensionAttribute6: 'OF-FRV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Diverse',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Horten vgs service og samferdsel',
+    extensionAttribute6: 'OF-HORV-SERV-SA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Lektor',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Holmestrand tannklinikk',
+    extensionAttribute6: 'TF-HOLT',
+    physicalDeliveryOfficeName: 'Holmestrand tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Team Fjell',
+    extensionAttribute6: 'BDK-IT-FJELL',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Brukerbehov, digitalisering og kommunikasjon',
+    title: 'Teamleder',
+    state: 'BDK'
+  },
+  {
+    department: 'Vest-Telemark vidaregåande skule',
+    extensionAttribute6: 'OF-VTV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Uspesifisert',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Sektorutvikling-',
+    extensionAttribute6: 'TF-SEK',
+    physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Fagskolen administrasjon',
+    extensionAttribute6: 'NIK-FAGS-ADM',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Administrativ leder',
+    state: 'NIK'
+  },
+  {
+    department: 'Nøtterøy vgs bibliotek',
+    extensionAttribute6: 'OF-NTV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nøtterøy vgs',
+    company: 'Nøtterøy videregående skole',
+    title: 'Konsulent',
+    state: 'OF-NTV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs arbeids- og hverdagslivstrening',
+    extensionAttribute6: 'OF-THV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'THVS-Hospitalet',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Revetal tannklinikk',
+    extensionAttribute6: 'TF-RET',
+    physicalDeliveryOfficeName: 'Revevtal tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Vest-Telemark vgs restaurant og matfag',
+    extensionAttribute6: 'OF-VTV-RM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Seljord',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Uspesifisert',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Kompetansebyggeren yrkesfag',
+    extensionAttribute6: 'OF-KB-YRKESFAG',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nordbyen 40 - Tønsberg',
+    company: 'Kompetansebyggeren',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-KB'
+  },
+  {
+    department: 'Nome videregående skole',
+    extensionAttribute6: 'OF-NOMV-INTERNA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Haugar tannklinikk 3. etg.',
+    extensionAttribute6: 'TF-HAT',
+    physicalDeliveryOfficeName: 'Haugar tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Horten videregående skole',
+    extensionAttribute6: 'NIK-FAGS',
+    physicalDeliveryOfficeName: 'Fagskolen VT - Porsgrunn',
+    company: 'Næring, innovasjon og kompetanse',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'NIK'
+  },
+  {
+    department: 'Service',
+    extensionAttribute6: 'OSE-SER',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Fylkeshuset T18 Skien',
+    company: 'Økonomi, styring og eierskap',
+    title: 'Renholder',
+    state: 'OSE'
+  },
+  {
+    department: 'Horten vgs opplæring i kriminalomsorgen',
+    extensionAttribute6: 'OF-HORV-KRIMOMS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Horten vgs',
+    company: 'Horten videregående skole',
+    title: 'Adjunkt',
+    state: 'OF-HORV'
+  },
+  {
+    department: 'Thor Heyerdahl vgs salg, service og reiseliv',
+    extensionAttribute6: 'OF-THV-SS',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Thor Heyerdahl vgs',
+    company: 'Thor Heyerdahl videregående skole',
+    title: 'Elevassistent',
+    state: 'OF-THV'
+  },
+  {
+    department: 'Rjukan vgs administrativ stab og drift',
+    extensionAttribute6: 'OF-RJV-ADM-DRIF',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Rjukan vgs',
+    company: 'Rjukan videregående skole',
+    title: 'Renholder',
+    state: 'OF-RJV'
+  },
+  {
+    department: 'Bamble vgs helse, oppvekst, rstaurant og matfag',
+    extensionAttribute6: 'OF-BAV-HELSE',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Bamble vgs avd Croftholmen',
+    company: 'Bamble videregående skole',
+    title: 'Lektor',
+    state: 'OF-BAV'
+  },
+  {
+    department: 'Sande videregående skole',
+    extensionAttribute6: 'OF-SANV-REAL',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sande vgs',
+    company: 'Sande videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-SANV'
+  },
+  {
+    department: 'Haugar tannklinikk 2. etg',
+    extensionAttribute6: 'TF-HAT2',
+    physicalDeliveryOfficeName: 'Haugar tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Skogmo vgs tilrettelagt opplæring',
+    extensionAttribute6: 'OF-SKOV-TILRETT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-SKOV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-SKIV-DRIFT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Fagarbeider m/fagskoleutdanning',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Vest-Telemark vidaregåande skule',
+    extensionAttribute6: 'OF-VTV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Vest-Telemark vgs avd Dalen',
+    company: 'Vest-Telemark vidaregåande skule',
+    title: 'Diverse',
+    state: 'OF-VTV'
+  },
+  {
+    department: 'Færder videregående skole',
+    extensionAttribute6: 'OF-FRV',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Avdelingsleder',
+    state: 'OF-FRV'
+  },
+  {
+    department: 'Nome vgs naturbruk II',
+    extensionAttribute6: 'OF-NOMV-NAT-II',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Søve',
+    company: 'Nome videregående skole',
+    title: 'Lektor',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Holmestrand vgs kroppsøving',
+    extensionAttribute6: 'OF-HOLV-KROPPSO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Holmestrand vgs',
+    company: 'Holmestrand videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-HOLV'
+  },
+  {
+    department: 'Greveskogen videregående skole',
+    extensionAttribute6: 'OF-GRV-AHT',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Greveskogen vgs',
+    company: 'Greveskogen videregående skole',
+    title: 'Assistent',
+    state: 'OF-GRV'
+  },
+  {
+    department: 'Telemark fylkeskommune',
+    extensionAttribute6: 'OF-SKIV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Melsom vgs bibliotek',
+    extensionAttribute6: 'OF-MEV-BIBLIO',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Melsom vgs',
+    company: 'Melsom videregående skole',
+    title: 'Adjunkt m/tilleggsutdanning',
+    state: 'OF-MEV'
+  },
+  {
+    department: 'Sande tannklinikk',
+    extensionAttribute6: 'TF-SAT',
+    physicalDeliveryOfficeName: 'Sande tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Klinikkleder',
+    state: 'TF'
+  },
+  {
+    department: 'Færder vgs bygg og anleggsteknikk',
+    extensionAttribute6: 'OF-FRV-BA',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Færder vgs',
+    company: 'Færder videregående skole',
+    title: 'Lektor',
+    state: 'OF-FRV'
   },
   {
     department: 'Team konserndrift',
     extensionAttribute6: 'BDK-IT-DRIFT',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Teamleder'
-  },
-  {
-    department: 'Porsgrunn vgs språk',
-    extensionAttribute6: 'OF-POV-SPRAK',
-    physicalDeliveryOfficeName: 'Porsgrunn vgs',
-    company: 'Porsgrunn videregående skole',
-    title: 'Adjunkt m/tilleggsutdanning'
+    title: 'Teamleder',
+    state: 'BDK'
   },
   {
     department: 'Skogmo vgs administrasjon og fellestjenester',
     extensionAttribute6: 'OF-SKOV-ADM',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skogmo vgs',
     company: 'Skogmo videregående skole',
-    title: 'Kantinebestyrer'
+    title: 'Kantinebestyrer',
+    state: 'OF-SKOV'
   },
   {
     department: 'Horten vgs elevtjenesten',
     extensionAttribute6: 'OF-HORV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Horten vgs',
     company: 'Horten videregående skole',
-    title: 'Avdelingsleder'
+    title: 'Avdelingsleder',
+    state: 'OF-HORV'
   },
   {
     department: 'Nøtterøy vgs teknisk',
     extensionAttribute6: 'OF-NTV-TEKNISK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Nøtterøy vgs',
     company: 'Nøtterøy videregående skole',
-    title: 'Driftsleder teknisk'
+    title: 'Driftsleder teknisk',
+    state: 'OF-NTV'
   },
   {
     department: 'Team konsernstøtte',
     extensionAttribute6: 'BDK-IT-STOTTE',
     physicalDeliveryOfficeName: 'Fylkeshuset i Tønsberg',
     company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Teamleder'
+    title: 'Teamleder',
+    state: 'BDK'
   },
   {
     department: 'Skien vgs musikk',
     extensionAttribute6: 'OF-SKIV-MUSIKK',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Lærer'
+    title: 'Lærer',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Skien videregående skole',
+    extensionAttribute6: 'OF-SKIV-DD',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skien vgs',
+    company: 'Skien videregående skole',
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SKIV'
+  },
+  {
+    department: 'Sandefjord videregående skole',
+    extensionAttribute6: 'OF-SFV-SSRM',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Sandefjord vgs',
+    company: 'Sandefjord videregående skole',
+    title: 'Uspesifisert',
+    state: 'OF-SFV'
   },
   {
     department: 'Skien vgs elevtjenester',
     extensionAttribute6: 'OF-SKIV-ELEVTJE',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Skien vgs',
     company: 'Skien videregående skole',
-    title: 'Fagarbeider 1'
-  },
-  {
-    department: 'Team mobilitetstjenester',
-    extensionAttribute6: 'SMM-KOL-MOB',
-    physicalDeliveryOfficeName: 'Fylkesbakken Skien',
-    company: 'Samferdsel, miljø og mobilitet',
-    title: 'Rådgiver'
+    title: 'Fagarbeider 1',
+    state: 'OF-SKIV'
   },
   {
     department: 'Sande vgs elektro',
     extensionAttribute6: 'OF-SANV-ELEKTRO',
+    extensionAttribute7: 'OF-ALLE',
     physicalDeliveryOfficeName: 'Sande vgs',
     company: 'Sande videregående skole',
-    title: 'Lektor m/tilleggsutdanning'
+    title: 'Lektor m/tilleggsutdanning',
+    state: 'OF-SANV'
   },
   {
-    department: 'Team Kaupang',
-    extensionAttribute6: 'BDK-IT-KAUPANG',
-    physicalDeliveryOfficeName: 'Sandefjord vgs',
-    company: 'Brukerbehov, digitalisering og kommunikasjon',
-    title: 'Teamleder'
+    department: 'Notodden tannklinikk',
+    extensionAttribute6: 'TF-NOT',
+    physicalDeliveryOfficeName: 'Notodden tannklinikk',
+    company: 'Tannhelse og forebygging',
+    title: 'Tannpleier',
+    state: 'TF'
+  },
+  {
+    department: 'Nome vgs kontor, bibliotek og IKT',
+    extensionAttribute6: 'OF-NOMV-KONTOR',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Nome vgs avd Lunde',
+    company: 'Nome videregående skole',
+    title: 'Fagarbeider',
+    state: 'OF-NOMV'
+  },
+  {
+    department: 'Skogmo vgs fellesfag',
+    extensionAttribute6: 'OF-SKOV-FELLES',
+    extensionAttribute7: 'OF-ALLE',
+    physicalDeliveryOfficeName: 'Skogmo vgs',
+    company: 'Skogmo videregående skole',
+    title: 'Lærer -',
+    state: 'OF-SKOV'
   }
 ]
 
