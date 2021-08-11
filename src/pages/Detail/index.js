@@ -405,6 +405,7 @@ export const Detail = () => {
               results && 
               <Heading3 className='vis-font'>
                 <br />
+                { /* eslint-disable-next-line */ }
                 <marquee>Visma InSchool er under innviklet utvikling 🤡</marquee>
               </Heading3>
             }
