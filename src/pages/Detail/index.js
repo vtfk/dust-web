@@ -402,12 +402,12 @@ export const Detail = () => {
 
             {
               !loading &&
-              results && 
-              <Heading3 className='vis-font'>
-                <br />
-                { /* eslint-disable-next-line */ }
+              results &&
+                <Heading3 className='vis-font'>
+                  <br />
+                  {/* eslint-disable-next-line */}
                 <marquee>Visma InSchool er under innviklet utvikling 🤡</marquee>
-              </Heading3>
+                </Heading3>
             }
           </div>
         </div>
