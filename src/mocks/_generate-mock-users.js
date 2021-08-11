@@ -68,4 +68,4 @@ const users = []
 fregansatte.forEach(ansatt => users.push(getUser(ansatt, true)))
 fregelever.forEach(elev => users.push(getUser(elev)))
 
-writeFileSync('./mock-users-new.json', JSON.stringify(users, null, 2))
+writeFileSync('./mock-users.json', JSON.stringify(users, null, 2))
