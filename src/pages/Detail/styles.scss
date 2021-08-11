@@ -173,9 +173,16 @@
             flex: 1;
           }
 
-          .link {
+          .link &:not(.result-table-row-detail-solution-link) {
             margin-left: 60px;
             text-decoration: underline;
+            outline: 0;
+            border: 0;
+          }
+
+          .result-table-row-detail-solution-link {
+            text-decoration: underline;
+            text-align: left;
             outline: 0;
             border: 0;
           }

@@ -174,6 +174,10 @@ export const Detail = () => {
     }
   }
 
+  function openSolutionModal (message, solution, description) {
+    alert(`${description}\n\nDu har møtt på feilen '${message}'\nJeg har følgende løsningsforslag:\n\n${solution}`)
+  }
+  
   function openDetailModal (raw, description) {
     setRawDetails(JSON.stringify(raw, null, '  '))
     setRawDetailsTitle(description || 'Lukk')
@@ -316,9 +320,14 @@ export const Detail = () => {
                             item.data &&
                             item.errorCount > 0 &&
                             item.errorTests.map((testItem, index) => {
+                              const errorMessage = testItem.result?.message || testItem.description
                               return (
                                 <div key={index} className='result-table-row-detail-error'>
-                                  <Paragraph><strong>Feil</strong>: {testItem.result?.message || testItem.description}</Paragraph>
+                                  <Paragraph>
+                                    <Link className='result-table-row-detail-solution-link' onClick={() => { openSolutionModal(errorMessage, testItem.result.solution, testItem.description) }}>
+                                      <strong>Feil</strong>: {errorMessage}
+                                    </Link>
+                                  </Paragraph>
                                   {
                                     testItem.result?.raw &&
                                       <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
@@ -332,9 +341,14 @@ export const Detail = () => {
                             item.data &&
                             item.warningCount > 0 &&
                             item.warningTests.map((testItem, index) => {
+                              const warningMessage = testItem.result?.message || testItem.description
                               return (
                                 <div key={index} className='result-table-row-detail-warning'>
-                                  <Paragraph><strong>Advarsel</strong>: {testItem.result?.message || testItem.description}</Paragraph>
+                                  <Paragraph>
+                                    <Link className='result-table-row-detail-solution-link' onClick={() => { openSolutionModal(warningMessage, testItem.result.solution, testItem.description) }}>
+                                      <strong>Advarsel</strong>: {warningMessage}
+                                    </Link>
+                                  </Paragraph>
                                   {
                                     testItem.result?.raw &&
                                       <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>

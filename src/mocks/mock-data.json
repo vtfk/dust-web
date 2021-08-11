@@ -322,6 +322,7 @@
           "result": {
             "status": "warning",
             "message": "Ingen knyttning til skole funnet. Dersom dette er en manuelt opprettet FEIDE-bruker eller en administrativ ansatt, er dette korrekt",
+            "solution": "Skaff deg en knyttning...",
             "raw": {
               "eduPersonOrgUnitDN": []
             }
@@ -377,6 +378,7 @@
           "result": {
             "status": "error",
             "message": "Grupperettigheter er feil",
+            "solution": "Fiks rettighetene dine...",
             "raw": {
               "eduPersonEntitlement": []
             }
@@ -474,6 +476,7 @@
           "result": {
             "status": "error",
             "message": "Kontoen er deaktivert",
+            "solution": "Aktivere kontoen dersom det er riktig...",
             "raw": {
               "enabled": false
             }
@@ -523,6 +526,7 @@
           "result": {
             "status": "error",
             "message": "OU er ikke korrekt",
+            "solution": "Flytt brukeren til korrekt OU 🤓",
             "raw": {
               "distinguishedName": "CN=fal0101,OU=AUTO USERS,OU=USERS,OU=VTFK,DC=skole,DC=top,DC=no",
               "expectedOU": "OU=AUTO DISABLED USER,OU=USERS,OU=VTFK,DC=skole,DC=top,DC=no"
@@ -675,6 +679,7 @@
           "result": {
             "status": "error",
             "message": "Kontoen er deaktivert",
+            "solution": "Aktiver kontoen...",
             "raw": {
               "enabled": null
             }
@@ -732,6 +737,7 @@
           "result": {
             "status": "error",
             "message": "Passord ikke synkronisert",
+            "solution": "Synkroniser passordet...",
             "raw": {
               "feide": {
                 "passwordLastSet": "2021-03-04T03:18:29.7376174+00:00"
@@ -885,6 +891,7 @@
           "result": {
             "status": "warning",
             "message": "Tilhørighet er satt som en ansatt til tross for at dette er en elev",
+            "solution": "Bytt til elevdrakt 🤓",
             "raw": {
               "eduPersonAffiliation": [
                 "staff",
@@ -1137,6 +1144,7 @@
           "result": {
             "status": "error",
             "message": "Person-objekt har feil person-type",
+            "solution": "Bytt persontypen din...",
             "raw": [
               "workforceID"
             ]
@@ -1182,6 +1190,7 @@
           "result": {
             "status": "error",
             "message": "Har ingen aktive gruppemedlemskap",
+            "solution": "Skaff deg noen gruppemedlemskap...",
             "raw": {
               "person": {
                 "sourcedid": {
@@ -1288,6 +1297,7 @@
           "result": {
             "status": "error",
             "message": "Har ingen aktive gruppemedlemskap",
+            "solution": "Skaff deg noen gruppemedlemskap...",
             "raw": {
               "person": {
                 "sourcedid": {
@@ -1393,6 +1403,7 @@
           "description": "Sjekker at gruppemedlemskapene ikke er avlsuttet",
           "result": {
             "status": "error",
+            "solution": "Skaff deg noen gruppemedlemskap...",
             "message": "Har ingen aktive gruppemedlemskap",
             "raw": {
               "person": {
@@ -1684,6 +1695,7 @@
           "result": {
             "status": "warning",
             "message": "Personen ble funnet i HRM",
+            "solution": "Slett personen fra HRM 🤭",
             "raw": {
               "personIdHRM": "12345"
             }
@@ -1696,6 +1708,7 @@
           "result": {
             "status": "warning",
             "message": "Fant aktivt ansettelsesforhold og stilling i HRM",
+            "solution": "Bytte stilling 😄",
             "raw": {
               "employment": {
                 "bankDetails": null,
@@ -1949,6 +1962,7 @@
           "result": {
             "status": "warning",
             "message": "Kategorien på ansettelsesforholdet (M) er ikke ekskludert, som tilsier at det skal opprettes brukerkonto",
+            "solution": "Bytt kategori...",
             "raw": {
               "category": "M",
               "description": "Midlertidig"
@@ -1980,6 +1994,7 @@
           "result": {
             "status": "error",
             "message": "E-postadressen i AD og HRM er ulike",
+            "solution": "Skjerp deg...",
             "raw": {
               "ad": "fal0101@skole.vtfk.no",
               "hrm": "fal0101@vtfk.no"
@@ -2113,6 +2128,7 @@
           "result": {
             "status": "error",
             "message": "Kontoen er deaktivert",
+            "solution": "Aktiver kontoen...",
             "raw": {
               "accountEnabled": false
             }
@@ -2562,6 +2578,7 @@
           "result": {
             "status": "error",
             "message": "Knyttning til skole mangler 🤭",
+            "solution": "Knyt en nytning til skolen...",
             "raw": {
               "displayName": "Barmhjertig Morfar",
               "distinguishedName": "CN=bar0202,OU=People,OU=Feide,DC=vtfk,DC=no",
@@ -2626,6 +2643,7 @@
           "result": {
             "status": "error",
             "message": "Tilhørighet mangler 🤭",
+            "solution": "Skaff deg tilhørighet",
             "raw": {
               "displayName": "Barmhjertig Morfar",
               "distinguishedName": "CN=bar0202,OU=People,OU=Feide,DC=vtfk,DC=no",
@@ -3415,6 +3433,7 @@
           "result": {
             "status": "warning",
             "message": "Noen brukernavn i HRM er like i AD",
+            "solution": "Skjerp deg...",
             "raw": {
               "ad": "bar0202",
               "hrm": [
