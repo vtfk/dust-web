@@ -151,6 +151,12 @@ export const Detail = () => {
         }
       }
 
+      // sometimes we want to hide certain systems from beeing presented
+      const hasDataTest = normalizedItem.tests.find(test => test.title === 'Har data')
+      if (hasDataTest && hasDataTest.result && hasDataTest.result.message === 'Bruker har ikke data i dette systemet') {
+        normalizedItem.data = []
+      }
+
       normalizedItem.errorTests = errorTests
       normalizedItem.errorCount = errorCount
       normalizedItem.warningTests = warningTests
@@ -193,6 +199,10 @@ export const Detail = () => {
   function repackSystemName (name) {
     const repack = systemsList.filter(system => system.short === name.toLowerCase())
     return repack.length > 0 ? repack[0].name : name.toUpperCase()
+  }
+
+  function shouldShowRawData (data) {
+    return (Array.isArray(data) && data.length > 0) || Object.getOwnPropertyNames(data).filter(prop => prop !== 'length').length > 0
   }
 
   return (
@@ -372,6 +382,7 @@ export const Detail = () => {
 
                           {
                             item.data &&
+                            shouldShowRawData(item.data) &&
                               <div className='result-table-row-detail-raw'>
                                 <Paragraph />
                                 <Link size='small' onClick={() => { openDetailModal(item.data, `${repackSystemName(item.name)} raw-data`) }}>Se raw-data</Link>
