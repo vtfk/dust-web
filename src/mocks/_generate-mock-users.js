@@ -54,7 +54,6 @@ const getUser = (fregPerson, employee = false) => {
     extensionAttribute7: employee ? getRandom(0, 100) !== 42 ? 'OF-ALLE' : null : null,
     departmentShort: employee ? department.extensionAttribute6 : department.department,
     departmentAdditional: null,
-    extensionAttribute7: employee ? department.extensionAttribute7 : undefined,
     office: employee ? department.physicalDeliveryOfficeName : department.company,
     company: department.company,
     title: department.title || undefined,
