@@ -253,7 +253,8 @@
     }
   }
 
-  .detail-modal {
+  .detail-modal,
+  .solution-modal {
     .modal-content {
       padding-top: $baseUnit * 4 !important;
     }
@@ -261,10 +262,17 @@
     .modal-body {
       padding-top: 0;
 
-
       .detail-modal-code {
         background: none !important;
         padding: $baseUnit * 2 !important;
+      }
+
+      .heading-three {
+        font-weight: bold;
+      }
+
+      .paragraph {
+        margin-bottom: $baseUnit * 2;
       }
     }
   }
