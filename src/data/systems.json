@@ -8,10 +8,6 @@
     "short": "aad"
   },
   {
-    "name": "Extens",
-    "short": "pifu"
-  },
-  {
     "name": "FEIDE",
     "short": "feide"
   },
@@ -24,7 +20,11 @@
     "short": "sync"
   },
   {
-    "name": "Visma",
+    "name": "Visma HRM",
     "short": "visma"
+  },
+  {
+    "name": "Visma InSchool (under utvikling)",
+    "short": "vis"
   }
 ]
