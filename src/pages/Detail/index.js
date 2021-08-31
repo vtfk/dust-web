@@ -32,9 +32,9 @@ export const Detail = () => {
   const [expandedItemIndex, setExpandedItemIndex] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
   const [solutionModalOpen, setSolutionModalOpen] = useState(false)
-  const [solutionMessage, setSolutionMessage] = useState('')
-  const [solutionData, setSolutionData] = useState('')
-  const [solutionTitle, setSolutionTitle] = useState('')
+  const [solutionMessage, setSolutionMessage] = useState(null)
+  const [solutionData, setSolutionData] = useState(null)
+  const [solutionTitle, setSolutionTitle] = useState(null)
   const [resultError, setResultError] = useState(null)
   const [results, setResults] = useState(null)
   const [user, setUser] = useState(null)
@@ -202,10 +202,15 @@ export const Detail = () => {
 
   function closeDetailModal () {
     setModalOpen(false)
+    setRawDetails(null)
+    setRawDetailsTitle('Lukk')
   }
 
   function closeSolutionModal () {
     setSolutionModalOpen(false)
+    setSolutionMessage(null)
+    setSolutionData(null)
+    setSolutionTitle(null)
   }
 
   function getOffice () {
