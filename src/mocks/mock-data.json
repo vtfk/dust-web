@@ -322,6 +322,7 @@
           "result": {
             "status": "warning",
             "message": "Ingen knyttning til skole funnet. Dersom dette er en manuelt opprettet FEIDE-bruker eller en administrativ ansatt, er dette korrekt",
+            "solution": "Skaff deg en knyttning...",
             "raw": {
               "eduPersonOrgUnitDN": []
             }
@@ -377,6 +378,7 @@
           "result": {
             "status": "error",
             "message": "Grupperettigheter er feil",
+            "solution": "Fiks rettighetene dine...",
             "raw": {
               "eduPersonEntitlement": []
             }
@@ -474,6 +476,7 @@
           "result": {
             "status": "error",
             "message": "Kontoen er deaktivert",
+            "solution": "Aktivere kontoen dersom det er riktig...",
             "raw": {
               "enabled": false
             }
@@ -523,6 +526,7 @@
           "result": {
             "status": "error",
             "message": "OU er ikke korrekt",
+            "solution": "Flytt brukeren til korrekt OU 🤓",
             "raw": {
               "distinguishedName": "CN=fal0101,OU=AUTO USERS,OU=USERS,OU=VTFK,DC=skole,DC=top,DC=no",
               "expectedOU": "OU=AUTO DISABLED USER,OU=USERS,OU=VTFK,DC=skole,DC=top,DC=no"
@@ -675,6 +679,7 @@
           "result": {
             "status": "error",
             "message": "Kontoen er deaktivert",
+            "solution": "Aktiver kontoen...",
             "raw": {
               "enabled": null
             }
@@ -732,6 +737,7 @@
           "result": {
             "status": "error",
             "message": "Passord ikke synkronisert",
+            "solution": "Synkroniser passordet...",
             "raw": {
               "feide": {
                 "passwordLastSet": "2021-03-04T03:18:29.7376174+00:00"
@@ -885,6 +891,7 @@
           "result": {
             "status": "warning",
             "message": "Tilhørighet er satt som en ansatt til tross for at dette er en elev",
+            "solution": "Bytt til elevdrakt 🤓",
             "raw": {
               "eduPersonAffiliation": [
                 "staff",
@@ -1179,40 +1186,12 @@
           "title": "Har aktivt forhold",
           "description": "Sjekker at bruker har aktivt forhold",
           "result": {
-            "status": "ok",
-            "message": "Bruker har aktivt ansattforhold",
-            "raw": {
-              "employee": {
-                "active": true,
-                "ansettelsesperiode": {
-                  "start": "2005-08-12T00:00:00Z",
-                  "slutt": null
-                },
-                "arbeidsforhold": [
-                  {
-                    "stillingstittel": "Konsulent",
-                    "ansettelsesprosent": 10000,
-                    "gyldighetsperiode": {
-                      "start": "2020-05-22T00:00:00Z",
-                      "slutt": "2020-08-31T23:59:59Z"
-                    },
-                    "undervisningsforhold": null
-                  },
-                  {
-                    "stillingstittel": "Konsulent",
-                    "ansettelsesprosent": 10000,
-                    "gyldighetsperiode": {
-                      "start": "2020-09-01T00:00:00Z",
-                      "slutt": null
-                    },
-                    "undervisningsforhold": null
-                  }
-                ]
-              },
-              "student": {
-                "active": false
-              }
-            }
+            "status": "error",
+            "message": "Person-objekt har feil person-type",
+            "solution": "Bytt persontypen din...",
+            "raw": [
+              "workforceID"
+            ]
           }
         },
         {
@@ -1253,8 +1232,106 @@
           "title": "Har gruppemedlemskap",
           "description": "Sjekker at det finnes gruppemedlemskap",
           "result": {
-            "status": "no-data",
-            "message": "Har ingen gruppemedlemskap"
+            "status": "error",
+            "message": "Har ingen aktive gruppemedlemskap",
+            "solution": "Skaff deg noen gruppemedlemskap...",
+            "raw": {
+              "person": {
+                "sourcedid": {
+                  "source": "TFK",
+                  "id": "01010112345"
+                },
+                "userid": [
+                  {
+                    "text": "01010112345",
+                    "useridtype": "personNIN"
+                  },
+                  {
+                    "text": "FATO1",
+                    "useridtype": "username"
+                  },
+                  {
+                    "text": "FATO1",
+                    "useridtype": "workforceID"
+                  }
+                ],
+                "name": {
+                  "fn": "FALSK TORSK",
+                  "n": {
+                    "family": "TORSK",
+                    "given": "FALSK TORSK"
+                  }
+                },
+                "demographics": {
+                  "gender": 1,
+                  "bday": "2000-10-18"
+                },
+                "email": "fal0101@hotmail.no",
+                "tel": {
+                  "text": "+4712345678",
+                  "teltype": "3"
+                },
+                "adr": {
+                  "street": "Veienveien 96",
+                  "locality": "NOTODDEN",
+                  "pcode": 3678
+                },
+                "extension": {
+                  "pifu_email": {
+                    "text": "fal0101@hotmail.no",
+                    "type": "personEmailPrivate"
+                  },
+                  "pifu_tel": {
+                    "text": "+4712345678",
+                    "type": "personMobileAtOrg"
+                  },
+                  "pifu_adr": {
+                    "type": "personPostalAddressPrivate",
+                    "adr": {
+                      "street": "Veienveien 96",
+                      "locality": "NOTODDEN",
+                      "pcode": 3678
+                    }
+                  }
+                }
+              },
+              "memberships": [
+                {
+                  "sourcedid": {
+                    "source": "TFK",
+                    "id": "NOTVS@38006"
+                  },
+                  "member": {
+                    "sourcedid": {
+                      "source": "TFK",
+                      "id": "01010112345"
+                    },
+                    "idtype": 1,
+                    "role": {
+                      "roletype": "04",
+                      "status": 1
+                    }
+                  }
+                },
+                {
+                  "sourcedid": {
+                    "source": "TFK",
+                    "id": "00000000008"
+                  },
+                  "member": {
+                    "sourcedid": {
+                      "source": "TFK",
+                      "id": "01010112345"
+                    },
+                    "idtype": 1,
+                    "role": {
+                      "roletype": "02",
+                      "status": 1
+                    }
+                  }
+                }
+              ]
+            }
           }
         },
         {
@@ -1262,8 +1339,106 @@
           "title": "Gruppemedlemskap er inaktive",
           "description": "Sjekker om noen gruppemedlemskap er inaktive",
           "result": {
-            "status": "no-data",
-            "message": "Har ingen avsluttede gruppemedlemskap"
+            "status": "error",
+            "message": "Har ingen aktive gruppemedlemskap",
+            "solution": "Skaff deg noen gruppemedlemskap...",
+            "raw": {
+              "person": {
+                "sourcedid": {
+                  "source": "TFK",
+                  "id": "01010112345"
+                },
+                "userid": [
+                  {
+                    "text": "01010112345",
+                    "useridtype": "personNIN"
+                  },
+                  {
+                    "text": "FATO1",
+                    "useridtype": "username"
+                  },
+                  {
+                    "text": "FATO1",
+                    "useridtype": "workforceID"
+                  }
+                ],
+                "name": {
+                  "fn": "FALSK TORSK",
+                  "n": {
+                    "family": "TORSK",
+                    "given": "FALSK TORSK"
+                  }
+                },
+                "demographics": {
+                  "gender": 1,
+                  "bday": "2000-10-18"
+                },
+                "email": "fal0101@hotmail.no",
+                "tel": {
+                  "text": "+4712345678",
+                  "teltype": "3"
+                },
+                "adr": {
+                  "street": "Veienveien 96",
+                  "locality": "NOTODDEN",
+                  "pcode": 3678
+                },
+                "extension": {
+                  "pifu_email": {
+                    "text": "fal0101@hotmail.no",
+                    "type": "personEmailPrivate"
+                  },
+                  "pifu_tel": {
+                    "text": "+4712345678",
+                    "type": "personMobileAtOrg"
+                  },
+                  "pifu_adr": {
+                    "type": "personPostalAddressPrivate",
+                    "adr": {
+                      "street": "Veienveien 96",
+                      "locality": "NOTODDEN",
+                      "pcode": 3678
+                    }
+                  }
+                }
+              },
+              "memberships": [
+                {
+                  "sourcedid": {
+                    "source": "TFK",
+                    "id": "NOTVS@38006"
+                  },
+                  "member": {
+                    "sourcedid": {
+                      "source": "TFK",
+                      "id": "01010112345"
+                    },
+                    "idtype": 1,
+                    "role": {
+                      "roletype": "04",
+                      "status": 1
+                    }
+                  }
+                },
+                {
+                  "sourcedid": {
+                    "source": "TFK",
+                    "id": "00000000008"
+                  },
+                  "member": {
+                    "sourcedid": {
+                      "source": "TFK",
+                      "id": "01010112345"
+                    },
+                    "idtype": 1,
+                    "role": {
+                      "roletype": "02",
+                      "status": 1
+                    }
+                  }
+                }
+              ]
+            }
           }
         },
         {
@@ -1271,8 +1446,106 @@
           "title": "Gruppemedlemskap er aktive",
           "description": "Sjekker at gruppemedlemskap er aktive",
           "result": {
-            "status": "no-data",
-            "message": "Har ingen aktive gruppemedlemskap"
+            "status": "error",
+            "solution": "Skaff deg noen gruppemedlemskap...",
+            "message": "Har ingen aktive gruppemedlemskap",
+            "raw": {
+              "person": {
+                "sourcedid": {
+                  "source": "TFK",
+                  "id": "01010112345"
+                },
+                "userid": [
+                  {
+                    "text": "01010112345",
+                    "useridtype": "personNIN"
+                  },
+                  {
+                    "text": "FATO1",
+                    "useridtype": "username"
+                  },
+                  {
+                    "text": "FATO1",
+                    "useridtype": "workforceID"
+                  }
+                ],
+                "name": {
+                  "fn": "FALSK TORSK",
+                  "n": {
+                    "family": "TORSK",
+                    "given": "FALSK TORSK"
+                  }
+                },
+                "demographics": {
+                  "gender": 1,
+                  "bday": "2000-10-18"
+                },
+                "email": "fal0101@hotmail.no",
+                "tel": {
+                  "text": "+4712345678",
+                  "teltype": "3"
+                },
+                "adr": {
+                  "street": "Veienveien 96",
+                  "locality": "NOTODDEN",
+                  "pcode": 3678
+                },
+                "extension": {
+                  "pifu_email": {
+                    "text": "fal0101@hotmail.no",
+                    "type": "personEmailPrivate"
+                  },
+                  "pifu_tel": {
+                    "text": "+4712345678",
+                    "type": "personMobileAtOrg"
+                  },
+                  "pifu_adr": {
+                    "type": "personPostalAddressPrivate",
+                    "adr": {
+                      "street": "Veienveien 96",
+                      "locality": "NOTODDEN",
+                      "pcode": 3678
+                    }
+                  }
+                }
+              },
+              "memberships": [
+                {
+                  "sourcedid": {
+                    "source": "TFK",
+                    "id": "NOTVS@38006"
+                  },
+                  "member": {
+                    "sourcedid": {
+                      "source": "TFK",
+                      "id": "01010112345"
+                    },
+                    "idtype": 1,
+                    "role": {
+                      "roletype": "04",
+                      "status": 1
+                    }
+                  }
+                },
+                {
+                  "sourcedid": {
+                    "source": "TFK",
+                    "id": "00000000008"
+                  },
+                  "member": {
+                    "sourcedid": {
+                      "source": "TFK",
+                      "id": "01010112345"
+                    },
+                    "idtype": 1,
+                    "role": {
+                      "roletype": "02",
+                      "status": 1
+                    }
+                  }
+                }
+              ]
+            }
           }
         }
       ]
@@ -1466,6 +1739,7 @@
           "result": {
             "status": "warning",
             "message": "Personen ble funnet i HRM",
+            "solution": "Slett personen fra HRM 🤭",
             "raw": {
               "personIdHRM": "12345"
             }
@@ -1478,6 +1752,7 @@
           "result": {
             "status": "warning",
             "message": "Fant aktivt ansettelsesforhold og stilling i HRM",
+            "solution": "Bytte stilling 😄",
             "raw": {
               "employment": {
                 "bankDetails": null,
@@ -1731,6 +2006,7 @@
           "result": {
             "status": "warning",
             "message": "Kategorien på ansettelsesforholdet (M) er ikke ekskludert, som tilsier at det skal opprettes brukerkonto",
+            "solution": "Bytt kategori...",
             "raw": {
               "category": "M",
               "description": "Midlertidig"
@@ -1762,6 +2038,7 @@
           "result": {
             "status": "error",
             "message": "E-postadressen i AD og HRM er ulike",
+            "solution": "Skjerp deg...",
             "raw": {
               "ad": "fal0101@skole.vtfk.no",
               "hrm": "fal0101@vtfk.no"
@@ -1895,6 +2172,7 @@
           "result": {
             "status": "error",
             "message": "Kontoen er deaktivert",
+            "solution": "Aktiver kontoen...",
             "raw": {
               "accountEnabled": false
             }
@@ -2344,6 +2622,7 @@
           "result": {
             "status": "error",
             "message": "Knyttning til skole mangler 🤭",
+            "solution": "Knyt en nytning til skolen...",
             "raw": {
               "displayName": "Barmhjertig Morfar",
               "distinguishedName": "CN=bar0202,OU=People,OU=Feide,DC=vtfk,DC=no",
@@ -2408,6 +2687,7 @@
           "result": {
             "status": "error",
             "message": "Tilhørighet mangler 🤭",
+            "solution": "Skaff deg tilhørighet",
             "raw": {
               "displayName": "Barmhjertig Morfar",
               "distinguishedName": "CN=bar0202,OU=People,OU=Feide,DC=vtfk,DC=no",

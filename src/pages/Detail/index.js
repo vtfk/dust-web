@@ -31,6 +31,10 @@ export const Detail = () => {
   const [loading, setLoading] = useState(true)
   const [expandedItemIndex, setExpandedItemIndex] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
+  const [solutionModalOpen, setSolutionModalOpen] = useState(false)
+  const [solutionMessage, setSolutionMessage] = useState(null)
+  const [solutionData, setSolutionData] = useState(null)
+  const [solutionTitle, setSolutionTitle] = useState(null)
   const [resultError, setResultError] = useState(null)
   const [results, setResults] = useState(null)
   const [user, setUser] = useState(null)
@@ -57,7 +61,10 @@ export const Detail = () => {
   useEffect(() => {
     // close modal on escape
     const handleKeyPress = event => {
-      if (event.key === 'Escape') closeDetailModal()
+      if (event.key === 'Escape') {
+        closeDetailModal()
+        closeSolutionModal()
+      }
     }
 
     document.addEventListener('keyup', handleKeyPress)
@@ -180,6 +187,13 @@ export const Detail = () => {
     }
   }
 
+  function openSolutionModal (message, solution, description) {
+    setSolutionMessage(message)
+    setSolutionData(solution)
+    setSolutionTitle(description)
+    setSolutionModalOpen(true)
+  }
+
   function openDetailModal (raw, description) {
     setRawDetails(JSON.stringify(raw, null, '  '))
     setRawDetailsTitle(description || 'Lukk')
@@ -188,6 +202,15 @@ export const Detail = () => {
 
   function closeDetailModal () {
     setModalOpen(false)
+    setRawDetails(null)
+    setRawDetailsTitle('Lukk')
+  }
+
+  function closeSolutionModal () {
+    setSolutionModalOpen(false)
+    setSolutionMessage(null)
+    setSolutionData(null)
+    setSolutionTitle(null)
   }
 
   function getOffice () {
@@ -326,9 +349,16 @@ export const Detail = () => {
                             item.data &&
                             item.errorCount > 0 &&
                             item.errorTests.map((testItem, index) => {
+                              const errorMessage = testItem.result?.message || testItem.description
                               return (
                                 <div key={index} className='result-table-row-detail-error'>
-                                  <Paragraph><strong>Feil</strong>: {testItem.result?.message || testItem.description}</Paragraph>
+                                  <Paragraph>
+                                    {
+                                      testItem.result.solution
+                                        ? <Link className='result-table-row-detail-solution-link' onClick={() => { openSolutionModal(errorMessage, testItem.result.solution, testItem.description) }}><strong>Feil</strong>: {errorMessage}</Link>
+                                        : <span><strong>Feil</strong>: {errorMessage}</span>
+                                    }
+                                  </Paragraph>
                                   {
                                     testItem.result?.raw &&
                                       <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
@@ -342,9 +372,16 @@ export const Detail = () => {
                             item.data &&
                             item.warningCount > 0 &&
                             item.warningTests.map((testItem, index) => {
+                              const warningMessage = testItem.result?.message || testItem.description
                               return (
                                 <div key={index} className='result-table-row-detail-warning'>
-                                  <Paragraph><strong>Advarsel</strong>: {testItem.result?.message || testItem.description}</Paragraph>
+                                  <Paragraph>
+                                    {
+                                      testItem.result.solution
+                                        ? <Link className='result-table-row-detail-solution-link' onClick={() => { openSolutionModal(warningMessage, testItem.result.solution, testItem.description) }}><strong>Advarsel</strong>: {warningMessage}</Link>
+                                        : <span><strong>Advarsel</strong>: {warningMessage}</span>
+                                    }
+                                  </Paragraph>
                                   {
                                     testItem.result?.raw &&
                                       <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
@@ -423,6 +460,20 @@ export const Detail = () => {
             <SyntaxHighlighter language='json' className='detail-modal-code' style={docco} wrapLines>
               {rawDetails}
             </SyntaxHighlighter>
+          </ModalBody>
+        </Modal>
+
+        <Modal
+          open={solutionModalOpen}
+          title={solutionTitle}
+          onDismiss={() => { closeSolutionModal() }}
+          className='solution-modal'
+        >
+          <ModalBody>
+            <Heading3>Resultat</Heading3>
+            <Paragraph>{solutionMessage}</Paragraph>
+            <Heading3><strong>Løsningsforlag</strong></Heading3>
+            {solutionData}
           </ModalBody>
         </Modal>
 
