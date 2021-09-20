@@ -395,9 +395,16 @@ export const Detail = () => {
                             item.data &&
                             item.okCount > 0 &&
                             item.okTests.map((testItem, index) => {
+                              const infoMessage = testItem.result?.message || testItem.description
                               return (
                                 <div key={index} className='result-table-row-detail-ok'>
-                                  <Paragraph><strong>OK</strong>: {testItem.result?.message || testItem.description}</Paragraph>
+                                  <Paragraph>
+                                    {
+                                      testItem.result.solution
+                                        ? <Link className='result-table-row-detail-solution-link' onClick={() => { openSolutionModal(infoMessage, testItem.result.solution, testItem.description) }}><strong>OK</strong>: {infoMessage}</Link>
+                                        : <span><strong>OK</strong>: {infoMessage}</span>
+                                    }
+                                  </Paragraph>
                                   {
                                     testItem.result?.raw &&
                                       <Link size='small' onClick={() => { openDetailModal(testItem.result.raw, testItem.description) }}>Se data</Link>
