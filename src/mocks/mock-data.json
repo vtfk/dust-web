@@ -441,6 +441,59 @@
           }
         }
       ]
+    },
+    {
+      "name": "equitrack",
+      "timestamp": "2021-11-15T14:24:04.887176Z",
+      "data": {
+        "AccountStatus": "Unlocked",
+        "Balance": "$-189.00",
+        "UserFullName": "ALVORLIG KJERNE",
+        "UserEmail": "alvorlig.kjerne@vtfk.no",
+        "AccountLimit": "$0.00",
+        "UserID": "alv0101"
+      },
+      "status": 200,
+      "tests": [
+        {
+          "id": "equitrack-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "equitrack-02",
+          "title": "Kontoen er ulåst",
+          "description": "Sjekker at kontoen er ulåst",
+          "result": {
+            "status": "ok",
+            "message": "Bruker er ulåst i EquiTrack",
+            "raw": {
+              "accountStatus": "Unlocked"
+            }
+          }
+        },
+        {
+          "id": "equitrack-03",
+          "title": "UserEmail er lik UPN",
+          "description": "Sjekker at UserEmail er lik UserPrincipalName",
+          "result": {
+            "status": "ok",
+            "message": "UserEmail er korrekt",
+            "raw": {
+              "equiTrack": {
+                "userEmail": "alvorlig.kjerne@vtfk.no"
+              },
+              "ad": {
+                "userPrincipalName": "alvorlig.kjerne@vtfk.no"
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   [
@@ -2260,6 +2313,60 @@
           }
         }
       ]
+    },
+    {
+      "name": "equitrack",
+      "timestamp": "2021-11-15T14:24:04.887176Z",
+      "data": {
+        "AccountStatus": "Unlocked",
+        "Balance": "$-189.00",
+        "UserFullName": "FALSK TORSK",
+        "UserEmail": "falsk.torsk@vtfk.no",
+        "AccountLimit": "$0.00",
+        "UserID": "fal0101"
+      },
+      "status": 200,
+      "tests": [
+        {
+          "id": "equitrack-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "equitrack-02",
+          "title": "Kontoen er ulåst",
+          "description": "Sjekker at kontoen er ulåst",
+          "result": {
+            "status": "warning",
+            "message": "Bruker var låst i EquiTrack men er nå låst opp! 👌",
+            "raw": {
+              "accountStatus": "Unlocked",
+              "previousAccountStatus": "Locked"
+            }
+          }
+        },
+        {
+          "id": "equitrack-03",
+          "title": "UserEmail er lik UPN",
+          "description": "Sjekker at UserEmail er lik UserPrincipalName",
+          "result": {
+            "status": "ok",
+            "message": "UserEmail er korrekt",
+            "raw": {
+              "equiTrack": {
+                "userEmail": "falsk.torsk@vtfk.no"
+              },
+              "ad": {
+                "userPrincipalName": "falsk.torsk@vtfk.no"
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   [
@@ -3765,6 +3872,60 @@
                 "seconds": 271.698
               }
             }
+          }
+        }
+      ]
+    },
+    {
+      "name": "equitrack",
+      "timestamp": "2021-11-15T14:24:04.887176Z",
+      "data": {
+        "AccountStatus": "Unlocked",
+        "Balance": "$-189.00",
+        "UserFullName": "Barmhjertig Morfar",
+        "UserEmail": "bar0202@vtfk.no",
+        "AccountLimit": "$0.00",
+        "UserID": "bar0202"
+      },
+      "status": 200,
+      "tests": [
+        {
+          "id": "equitrack-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "equitrack-02",
+          "title": "Kontoen er ulåst",
+          "description": "Sjekker at kontoen er ulåst",
+          "result": {
+            "status": "ok",
+            "message": "Bruker er ulåst i EquiTrack",
+            "raw": {
+              "accountStatus": "Unlocked"
+            }
+          }
+        },
+        {
+          "id": "equitrack-03",
+          "title": "UserEmail er lik UPN",
+          "description": "Sjekker at UserEmail er lik UserPrincipalName",
+          "result": {
+            "status": "warning",
+            "message": "UserEmail er ikke korrekt",
+            "raw": {
+              "equiTrack": {
+                "userEmail": "bar0202@vtfk.no"
+              },
+              "ad": {
+                "userPrincipalName": "barmhjertig.morfar@vtfk.no"
+              }
+            },
+            "solution": "Sak meldes til arbeidsgruppe print"
           }
         }
       ]
