@@ -443,7 +443,7 @@
       ]
     },
     {
-      "name": "equitrack",
+      "name": "equitrac",
       "timestamp": "2021-11-15T14:24:04.887176Z",
       "data": {
         "AccountStatus": "Unlocked",
@@ -456,7 +456,7 @@
       "status": 200,
       "tests": [
         {
-          "id": "equitrack-01",
+          "id": "equitrac-01",
           "title": "Har data",
           "description": "Sjekker at det finnes data her",
           "result": {
@@ -465,26 +465,26 @@
           }
         },
         {
-          "id": "equitrack-02",
+          "id": "equitrac-02",
           "title": "Kontoen er ulåst",
           "description": "Sjekker at kontoen er ulåst",
           "result": {
             "status": "ok",
-            "message": "Bruker er ulåst i EquiTrack",
+            "message": "Bruker er ulåst i Equitrac",
             "raw": {
               "accountStatus": "Unlocked"
             }
           }
         },
         {
-          "id": "equitrack-03",
+          "id": "equitrac-03",
           "title": "UserEmail er lik UPN",
           "description": "Sjekker at UserEmail er lik UserPrincipalName",
           "result": {
             "status": "ok",
             "message": "UserEmail er korrekt",
             "raw": {
-              "equiTrack": {
+              "equitrac": {
                 "userEmail": "alvorlig.kjerne@vtfk.no"
               },
               "ad": {
@@ -2315,7 +2315,7 @@
       ]
     },
     {
-      "name": "equitrack",
+      "name": "equitrac",
       "timestamp": "2021-11-15T14:24:04.887176Z",
       "data": {
         "AccountStatus": "Unlocked",
@@ -2328,7 +2328,7 @@
       "status": 200,
       "tests": [
         {
-          "id": "equitrack-01",
+          "id": "equitrac-01",
           "title": "Har data",
           "description": "Sjekker at det finnes data her",
           "result": {
@@ -2337,12 +2337,12 @@
           }
         },
         {
-          "id": "equitrack-02",
+          "id": "equitrac-02",
           "title": "Kontoen er ulåst",
           "description": "Sjekker at kontoen er ulåst",
           "result": {
             "status": "warning",
-            "message": "Bruker var låst i EquiTrack men er nå låst opp! 👌",
+            "message": "Bruker var låst i Equitrac men er nå låst opp! 👌",
             "raw": {
               "accountStatus": "Unlocked",
               "previousAccountStatus": "Locked"
@@ -2350,14 +2350,14 @@
           }
         },
         {
-          "id": "equitrack-03",
+          "id": "equitrac-03",
           "title": "UserEmail er lik UPN",
           "description": "Sjekker at UserEmail er lik UserPrincipalName",
           "result": {
             "status": "ok",
             "message": "UserEmail er korrekt",
             "raw": {
-              "equiTrack": {
+              "equitrac": {
                 "userEmail": "falsk.torsk@vtfk.no"
               },
               "ad": {
@@ -3877,7 +3877,7 @@
       ]
     },
     {
-      "name": "equitrack",
+      "name": "equitrac",
       "timestamp": "2021-11-15T14:24:04.887176Z",
       "data": {
         "AccountStatus": "Unlocked",
@@ -3890,7 +3890,7 @@
       "status": 200,
       "tests": [
         {
-          "id": "equitrack-01",
+          "id": "equitrac-01",
           "title": "Har data",
           "description": "Sjekker at det finnes data her",
           "result": {
@@ -3899,26 +3899,26 @@
           }
         },
         {
-          "id": "equitrack-02",
+          "id": "equitrac-02",
           "title": "Kontoen er ulåst",
           "description": "Sjekker at kontoen er ulåst",
           "result": {
             "status": "ok",
-            "message": "Bruker er ulåst i EquiTrack",
+            "message": "Bruker er ulåst i Equitrac",
             "raw": {
               "accountStatus": "Unlocked"
             }
           }
         },
         {
-          "id": "equitrack-03",
+          "id": "equitrac-03",
           "title": "UserEmail er lik UPN",
           "description": "Sjekker at UserEmail er lik UserPrincipalName",
           "result": {
             "status": "warning",
             "message": "UserEmail er ikke korrekt",
             "raw": {
-              "equiTrack": {
+              "equitrac": {
                 "userEmail": "bar0202@vtfk.no"
               },
               "ad": {
