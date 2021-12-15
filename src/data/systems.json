@@ -4,11 +4,11 @@
     "short": "ad"
   },
   {
-    "name": "Azure",
+    "name": "Azure (Microsoft 365)",
     "short": "aad"
   },
   {
-    "name": "Equitrac",
+    "name": "Equitrac (utskrift)",
     "short": "equitrac"
   },
   {
@@ -16,11 +16,11 @@
     "short": "feide"
   },
   {
-    "name": "SDS Teams",
+    "name": "SDS Teams LMS",
     "short": "sds"
   },
   {
-    "name": "Synkronisering",
+    "name": "Forrige synkroniseringstidpunkt",
     "short": "sync"
   },
   {
@@ -28,7 +28,7 @@
     "short": "visma"
   },
   {
-    "name": "Visma InSchool (under utvikling)",
+    "name": "Visma InSchool",
     "short": "vis"
   }
 ]
