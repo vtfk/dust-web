@@ -1,4 +1,5 @@
 const { writeFileSync } = require('fs')
+const { dirname, join } = require('path')
 const { ansattDep, elevDep } = require('./_departments')
 const fregansatte = require('./_tenor-eksport-ansatt.json')
 const fregelever = require('./_tenor-eksport-elev.json')
@@ -68,4 +69,4 @@ const users = []
 fregansatte.forEach(ansatt => users.push(getUser(ansatt, true)))
 fregelever.forEach(elev => users.push(getUser(elev)))
 
-writeFileSync('./mock-users.json', JSON.stringify(users, null, 2))
+writeFileSync(join(dirname(__filename), './mock-users.json'), JSON.stringify(users, null, 2))

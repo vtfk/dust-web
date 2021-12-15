@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "refresh": "rm -rf node_modules && rm package-lock.json && npm i",
-    "standard-fix": "standard --fix"
+    "standard-fix": "standard --fix",
+    "generate-mock-users": "node ./src/mocks/_generate-mock-users.js"
   },
   "eslintConfig": {
     "extends": [
