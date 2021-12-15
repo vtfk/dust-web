@@ -59,7 +59,7 @@ const getUser = (fregPerson, employee = false) => {
     company: department.company,
     title: department.title || undefined,
     state: employee ? department.state : undefined,
-    feide: employee ? getRandom(0, 100) < 50 ? true : false : undefined
+    feide: employee ? getRandom(0, 100) < 50 : undefined
   }
 
   persons.push(pers)
