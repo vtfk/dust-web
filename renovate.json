@@ -1,3 +1,6 @@
 {
-  "extends": ["@vtfk"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>vtfk/renovate-config"
+  ]
 }
