@@ -6,9 +6,11 @@ import { Integrations } from '@sentry/tracing'
 import { MsalProvider } from '@vtfk/react-msal'
 import { BaseStyle } from '@vtfk/components'
 
-import * as pkg from '../package.json'
+import pkg from '../package.json'
 import { App } from './App'
 import { APP, AUTH, SENTRY } from './config'
+
+const { name, version } = pkg
 
 if (APP.IS_MOCK) {
   const { worker } = require('./mocks/browser')
@@ -18,7 +20,7 @@ if (APP.IS_MOCK) {
 if (SENTRY.ENABLED) {
   Sentry.init({
     ...SENTRY,
-    release: `${pkg.name}@${pkg.version}`,
+    release: `${name}@${version}`,
     autoSessionTracking: true,
     integrations: [new Integrations.BrowserTracing()],
     tracesSampleRate: 1.0
