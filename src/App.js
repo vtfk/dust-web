@@ -1,7 +1,7 @@
 import React from 'react'
 import * as Sentry from '@sentry/react'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useSession } from '@vtfk/react-msal'
 import { AUTH, APP } from './config'
 
@@ -14,12 +14,13 @@ const AppContent = () => {
   return (
     <Router>
       <div className='app'>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/help' component={Help} />
-          <Route exact path='/detail/:id' component={Detail} />
-          <Route exact path='*' component={PageNotFound} />
-        </Switch>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/help' element={<Help />} />
+          <Route exact path='/detail/:id' element={<Detail />} />
+
+          <Route exact path='*' element={<PageNotFound />} />
+        </Routes>
       </div>
     </Router>
   )
