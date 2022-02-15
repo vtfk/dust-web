@@ -7,11 +7,13 @@ import {
   Paragraph,
   IconDropdownNav,
   IconDropdownNavItem,
-  SearchField,
+  /* SearchField, */ // TODO: Uncomment when SearchField with debounce has been moved to component library
   SkipLink
 } from '@vtfk/components'
 
-import { useDebounce } from 'use-debounce'
+import { SearchField } from '../components/SearchField' // TODO: Remove when SearchField with debounce has been moved to component library
+
+// TODO: Remove SearchField from components folder. Uninstall use-debounce
 
 import { APP } from '../config'
 
@@ -25,32 +27,26 @@ export function Layout (props) {
   const { apiGet, apiPost } = useSession()
 
   const [query, setQuery] = useState('')
-  const [searchTriggerQuery] = useDebounce(query, 1000)
   const [searching, setSearching] = useState(false)
 
   const [searchInputFocused, setSearchInputFocused] = useState(false)
   const [searchResult, setSearchResult] = useState([])
   const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
 
-  useEffect(() => {
-    const search = async q => {
+  const search = async (q) => {
+    if (q) {
       const { result } = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
 
       if (result) {
         setSearchResult(result)
       }
-      setSearching(false)
-    }
-
-    if (query) {
-      search(query)
     } else {
       setSearchResult([])
     }
 
+    setSearching(false)
     setSearchResultSelectedIndex(0)
-    // eslint-disable-next-line
-  }, [searchTriggerQuery, apiGet])
+  }
 
   useEffect(() => {
     const pressKeyUp = () => {
@@ -87,9 +83,9 @@ export function Layout (props) {
     // eslint-disable-next-line
   }, [searchInputFocused, searchResult, searchResultSelectedIndex])
 
-  function onQueryType (query) {
+  function onPreDebounced (q) {
     setSearching(true)
-    setQuery(query)
+    setQuery(q)
   }
 
   async function generateReport (userData) {
@@ -155,7 +151,9 @@ export function Layout (props) {
 
             <div className='header-search-text'>
               <SearchField
-                onChange={e => onQueryType(e.target.value)}
+                onPreDebounce={e => onPreDebounced(e.target.value)}
+                onDebounce={e => search(e.target.value)}
+                debounceMs={1000}
                 autocomplete={false}
                 value={query}
                 rounded
