@@ -83,7 +83,7 @@ export function Layout (props) {
     // eslint-disable-next-line
   }, [searchInputFocused, searchResult, searchResultSelectedIndex])
 
-  function onPreDebounced (q) {
+  function onChanged (q) {
     setSearching(true)
     setQuery(q)
   }
@@ -151,7 +151,7 @@ export function Layout (props) {
 
             <div className='header-search-text'>
               <SearchField
-                onPreDebounce={e => onPreDebounced(e.target.value)}
+                onChange={e => onChanged(e.target.value)}
                 onDebounce={e => search(e.target.value)}
                 debounceMs={1000}
                 autocomplete={false}
