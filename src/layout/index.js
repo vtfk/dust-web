@@ -11,8 +11,6 @@ import {
   SkipLink
 } from '@vtfk/components'
 
-import { useDebounce } from 'use-debounce'
-
 import { APP } from '../config'
 
 import systems from '../data/systems.json'
@@ -25,32 +23,26 @@ export function Layout (props) {
   const { apiGet, apiPost } = useSession()
 
   const [query, setQuery] = useState('')
-  const [searchTriggerQuery] = useDebounce(query, 1000)
   const [searching, setSearching] = useState(false)
 
   const [searchInputFocused, setSearchInputFocused] = useState(false)
   const [searchResult, setSearchResult] = useState([])
   const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
 
-  useEffect(() => {
-    const search = async q => {
+  const search = async (q) => {
+    if (q) {
       const { result } = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
 
       if (result) {
         setSearchResult(result)
       }
-      setSearching(false)
-    }
-
-    if (query) {
-      search(query)
     } else {
       setSearchResult([])
     }
 
+    setSearching(false)
     setSearchResultSelectedIndex(0)
-    // eslint-disable-next-line
-  }, [searchTriggerQuery, apiGet])
+  }
 
   useEffect(() => {
     const pressKeyUp = () => {
@@ -87,9 +79,9 @@ export function Layout (props) {
     // eslint-disable-next-line
   }, [searchInputFocused, searchResult, searchResultSelectedIndex])
 
-  function onQueryType (query) {
+  function onChanged (q) {
     setSearching(true)
-    setQuery(query)
+    setQuery(q)
   }
 
   async function generateReport (userData) {
@@ -155,7 +147,9 @@ export function Layout (props) {
 
             <div className='header-search-text'>
               <SearchField
-                onChange={e => onQueryType(e.target.value)}
+                onChange={e => onChanged(e.target.value)}
+                onDebounce={e => search(e.target.value)}
+                debounceMs={1000}
                 autocomplete={false}
                 value={query}
                 rounded
