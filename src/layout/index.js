@@ -7,13 +7,9 @@ import {
   Paragraph,
   IconDropdownNav,
   IconDropdownNavItem,
-  /* SearchField, */ // TODO: Uncomment when SearchField with debounce has been moved to component library
+  SearchField,
   SkipLink
 } from '@vtfk/components'
-
-import { SearchField } from '../components/SearchField' // TODO: Remove when SearchField with debounce has been moved to component library
-
-// TODO: Remove SearchField from components folder. Uninstall use-debounce
 
 import { APP } from '../config'
 
