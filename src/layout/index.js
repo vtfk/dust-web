@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useSession } from '@vtfk/react-msal'
 import {
   Heading2,
@@ -10,8 +10,6 @@ import {
   SearchField,
   SkipLink
 } from '@vtfk/components'
-
-import { useDebounce } from 'use-debounce'
 
 import { APP } from '../config'
 
@@ -25,71 +23,27 @@ export function Layout (props) {
   const { apiGet, apiPost } = useSession()
 
   const [query, setQuery] = useState('')
-  const [searchTriggerQuery] = useDebounce(query, 1000)
   const [searching, setSearching] = useState(false)
 
-  const [searchInputFocused, setSearchInputFocused] = useState(false)
-  const [searchResult, setSearchResult] = useState([])
-  const [searchResultSelectedIndex, setSearchResultSelectedIndex] = useState(0)
+  const [repackedSearchResult, setRepackedSearchResult] = useState([])
 
-  useEffect(() => {
-    const search = async q => {
+  const search = async (q) => {
+    if (q) {
       const { result } = await apiGet(`${APP.API_URL}/search?q=${encodeURIComponent(q)}`)
 
       if (result) {
-        setSearchResult(result)
+        setRepackedSearchResult(repackSearchResult(result))
       }
-      setSearching(false)
-    }
-
-    if (query) {
-      search(query)
     } else {
-      setSearchResult([])
+      setRepackedSearchResult([])
     }
 
-    setSearchResultSelectedIndex(0)
-    // eslint-disable-next-line
-  }, [searchTriggerQuery, apiGet])
+    setSearching(false)
+  }
 
-  useEffect(() => {
-    const pressKeyUp = () => {
-      if (
-        searchInputFocused &&
-        searchResult.length > 0 &&
-        searchResultSelectedIndex > 0
-      ) {
-        setSearchResultSelectedIndex(searchResultSelectedIndex - 1)
-      }
-    }
-
-    const pressKeyDown = () => {
-      if (
-        searchInputFocused &&
-        searchResult.length > 0 &&
-        searchResultSelectedIndex < searchResult.length - 1
-      ) {
-        setSearchResultSelectedIndex(searchResultSelectedIndex + 1)
-      }
-    }
-
-    const onKeyup = e => {
-      if (e.key === 'ArrowUp') {
-        pressKeyUp()
-      } else if (e.key === 'ArrowDown') {
-        pressKeyDown()
-      } else if (e.key === 'Enter' && searchResult && searchResult.length > 0) {
-        generateReport(searchResult[searchResultSelectedIndex])
-      }
-    }
-    window.addEventListener('keyup', onKeyup)
-    return () => window.removeEventListener('keyup', onKeyup)
-    // eslint-disable-next-line
-  }, [searchInputFocused, searchResult, searchResultSelectedIndex])
-
-  function onQueryType (query) {
+  function onChanged (q) {
     setSearching(true)
-    setQuery(query)
+    setQuery(q)
   }
 
   async function generateReport (userData) {
@@ -110,6 +64,17 @@ export function Layout (props) {
 
   function help () {
     window.location = '/help'
+  }
+
+  function repackSearchResult (result) {
+    return result.map(item => {
+      return {
+        ...item,
+        itemTitle: item.displayName,
+        itemSecondary: `${item.samAccountName} ${item.domain === 'login' ? '🤓' : '🎓'}`,
+        itemDescription: item.office
+      }
+    })
   }
 
   return (
@@ -152,66 +117,21 @@ export function Layout (props) {
                   <Paragraph className='header-description'>Et verktøy hvor du kan søke på visningsnavn, brukernavn, e-post eller personnummer. Verktøyet søker i mange systemer, og returnerer debuginfo og en visuell representasjon av feilsituasjoner.</Paragraph>
                 </>
             }
-
-            <div className='header-search-text'>
-              <SearchField
-                onChange={e => onQueryType(e.target.value)}
-                autocomplete={false}
-                value={query}
-                rounded
-                style={
-                  searchInputFocused && query !== ''
-                    ? { boxShadow: 'none', paddingRight: 200, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, borderColor: '#979797', borderBottomWidth: 0 }
-                    : { boxShadow: 'none', paddingRight: 200, borderColor: '#979797' }
-                }
-                onFocus={() => { setSearchInputFocused(true) }}
-                onBlur={() => { setSearchInputFocused(false) }}
-                placeholder='Din søketekst..'
-              />
-
-              {
-                searchInputFocused &&
-                query !== '' &&
-                  <>
-                    <div className='header-search-result'>
-                      <div className='search-results'>
-                        {
-                          searchResult.length > 0 &&
-                          searchResult.map((item, index) => {
-                            return (
-                              <div onMouseDown={() => { generateReport(item) }} key={index} className={`search-results-item ${index === searchResultSelectedIndex ? 'active' : ''}`}>
-                                <Paragraph className='search-results-item-name'>{item.displayName}</Paragraph>
-                                <Paragraph className='search-results-item-sam' size='small'>{`${item.samAccountName} ${item.domain === 'login' ? '🤓' : '🎓'}`}</Paragraph>
-                                <Paragraph className='search-results-item-office' size='small'>{item.office}</Paragraph>
-                              </div>
-                            )
-                          })
-                        }
-
-                        {
-                          !searching &&
-                          searchResult.length === 0 &&
-                            <div className='search-results-item-message search-alternatives'>
-                              <Paragraph>
-                                Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({ displayName: query }) }}>fullt navn</button>, <button onMouseDown={() => { generateReport({ samAccountName: query }) }}>brukernavn</button> eller <button onMouseDown={() => { generateReport({ employeeNumber: query }) }}>fødselsnummer</button>
-                              </Paragraph>
-                            </div>
-                        }
-
-                        {
-                          searching &&
-                            <div className='search-results-item-message search-alternatives'>
-                              <Paragraph>
-                                Søker...
-                              </Paragraph>
-                            </div>
-                        }
-                      </div>
-                    </div>
-                  </>
-              }
-            </div>
-
+          </div>
+          <div className='header-search-text'>
+            <SearchField
+              onChange={e => onChanged(e.target.value)}
+              onSearch={e => search(e.target.value)}
+              debounceMs={1000}
+              onSelected={value => { generateReport(value) }}
+              autocomplete={false}
+              rounded
+              placeholder='Din søketekst..'
+              loading={searching}
+              loadingText='Søker...'
+              emptyText={<>Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({ displayName: query }) }}>fullt navn</button>, <button onMouseDown={() => { generateReport({ samAccountName: query }) }}>brukernavn</button> eller <button onMouseDown={() => { generateReport({ employeeNumber: query }) }}>fødselsnummer</button></>}
+              items={repackedSearchResult}
+            />
           </div>
         </div>
       </div>
