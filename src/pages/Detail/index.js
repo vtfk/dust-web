@@ -215,7 +215,7 @@ export const Detail = () => {
 
   function getOffice () {
     if (user.domain && user.domain === 'login' && user.state) return `${user.state} - ${user.office}`
-    else if (user.domain && user.domain === 'skole' && user.departmentShort) return `${user.departmentShort.split(':')[1]} - ${user.office}`
+    else if (user.domain && user.domain === 'skole' && user.departmentShort && user.departmentShort.includes(':')) return `${user.departmentShort.split(':')[1]} - ${user.office}`
     return user.office
   }
 
