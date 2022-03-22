@@ -219,6 +219,16 @@ export const Detail = () => {
     return user.office
   }
 
+  function getTitle () {
+    if (!user.domain) return ''
+    if (user.domain === 'login') return user.title // employee
+    if (user.domain === 'skole') {
+      if (user.office.includes(' Lærling')) return 'Lærling' // apprentice
+      if (user.office.includes('OT ')) return 'OT-ungdom' // OT
+      return 'Elev' // student
+    }
+  }
+
   function repackSystemName (name) {
     const repack = systemsList.filter(system => system.short === name.toLowerCase())
     return repack.length > 0 ? repack[0].name : name.toUpperCase()
@@ -274,7 +284,7 @@ export const Detail = () => {
                   {
                     !user
                       ? <Skeleton style={{ marginBottom: 5 }} randomWidth={[20, 40]} />
-                      : user.domain ? user.domain === 'login' ? user.title : 'Elev' : ''
+                      : getTitle()
                   }
                 </Paragraph>
               </div>
