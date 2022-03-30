@@ -42,11 +42,15 @@ export function Layout (props) {
   }
 
   function onChanged (q) {
+    if (!q) return
+
     setSearching(true)
     setQuery(q)
   }
 
   async function generateReport (userData) {
+    if (!query) return
+
     const body = await apiPost(`${APP.API_URL}/report`, {
       systems: systems.map(system => system.short),
       user: {
@@ -123,7 +127,7 @@ export function Layout (props) {
               onChange={e => onChanged(e.target.value)}
               onSearch={e => search(e.target.value)}
               debounceMs={1000}
-              onSelected={value => { generateReport(value) }}
+              onSelected={value => generateReport(value)}
               autocomplete={false}
               rounded
               placeholder='Din søketekst..'
