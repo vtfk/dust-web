@@ -12,7 +12,7 @@
     "react-router-dom": "6.2.2",
     "react-scripts": "5.0.0",
     "react-syntax-highlighter": "15.5.0",
-    "sass": "1.49.9"
+    "sass": "1.49.11"
   },
   "scripts": {
     "start": "react-scripts start",
