@@ -222,11 +222,8 @@ export const Detail = () => {
   function getTitle () {
     if (!user.domain) return ''
     if (user.domain === 'login') return user.title // employee
-    if (user.domain === 'skole') {
-      if (user.office.includes(' Lærling')) return 'Lærling' // apprentice
-      if (user.office.includes('OT ')) return 'OT-ungdom' // OT
-      return 'Elev' // student
-    }
+    if (user.domain === 'skole' && user.title) return user.title // apprentice, OT or student
+    return ''
   }
 
   function repackSystemName (name) {
