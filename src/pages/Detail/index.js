@@ -222,7 +222,7 @@ export const Detail = () => {
   function getTitle () {
     if (!user.domain) return ''
     if (user.domain === 'login') return user.title // employee
-    if (user.domain === 'skole' && user.type) return user.type // apprentice, OT or student
+    if (user.domain === 'skole' && user.title) return user.title // apprentice, OT or student
     return ''
   }
 
