@@ -39,7 +39,6 @@ export const Detail = () => {
   const [results, setResults] = useState(null)
   const [user, setUser] = useState(null)
   const [systems, setSystems] = useState(null)
-  const [vigoBasStamp, setVigoBasStamp] = useState(null) // this is needed to support legacy data (vigobas at root of document)
   const [rawDetails, setRawDetails] = useState(null)
   const [rawDetailsTitle, setRawDetailsTitle] = useState('Lukk')
   const { apiGet } = useSession()
@@ -49,14 +48,6 @@ export const Detail = () => {
   const isUserEmpty = user => user && typeof user === 'object' && Object.getOwnPropertyNames(user).length === 2
   const isDataEmpty = data => data && data.filter(system => system.data && system.data.length > 0).length === 0
   const callHasNoData = (user, data) => isUserEmpty(user) && isDataEmpty(data)
-
-  function padDate (num) {
-    return num >= 10 ? num : `0${num}`
-  }
-
-  function prettifyDate (date) {
-    return `${padDate(date.getDate())}.${padDate(date.getMonth() + 1)}.${date.getFullYear()} ${padDate(date.getHours())}:${padDate(date.getMinutes())}:${padDate(date.getSeconds())}`
-  }
 
   useEffect(() => {
     // close modal on escape
@@ -97,7 +88,6 @@ export const Detail = () => {
           : data.user)
       } else if (status === 200) {
         setLoading(false)
-        if (data?.vigobas?.lastRunTime) setVigoBasStamp(prettifyDate(new Date(data.vigobas.lastRunTime)))
         normalizeAndSetResults(data.data)
         setUser(data.user)
       } else if (status === 202) {
@@ -444,15 +434,6 @@ export const Detail = () => {
                   </div>
                 )
               })
-            }
-
-            {
-              !loading &&
-              results &&
-              vigoBasStamp &&
-                <Heading4 className='info-timestamp'>
-                  <strong>Siste kjøring av VigoBas:</strong> {vigoBasStamp}
-                </Heading4>
             }
 
             {
