@@ -154,6 +154,11 @@ export const Detail = () => {
         normalizedItem.data = []
       }
 
+      if (errorCount === 0 && warningCount === 0 && okCount === 0 && normalizedItem.error && typeof normalizedItem.error === 'object') {
+        // This result has no tests and no data but it has an error. Increment the errorCount to flag that there are one error here
+        errorCount++
+      }
+
       normalizedItem.errorTests = errorTests
       normalizedItem.errorCount = errorCount
       normalizedItem.warningTests = warningTests
