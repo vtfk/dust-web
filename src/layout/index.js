@@ -133,7 +133,7 @@ export function Layout (props) {
               placeholder='Din søketekst..'
               loading={searching}
               loadingText='Søker...'
-              emptyText={<>Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({ displayName: query }) }}>fullt navn</button>, <button onMouseDown={() => { generateReport({ samAccountName: query }) }}>brukernavn</button> eller <button onMouseDown={() => { generateReport({ employeeNumber: query }) }}>fødselsnummer</button></>}
+              emptyText={<>Bruker ikke funnet i AD. Søk med <button onMouseDown={() => { generateReport({ displayName: query }) }}>fullt navn</button> , <button onMouseDown={() => { generateReport({ samAccountName: query }) }}>brukernavn</button> eller <button onMouseDown={() => { generateReport({ employeeNumber: query }) }}>fødselsnummer</button></>}
               items={repackedSearchResult}
             />
           </div>
