@@ -2456,6 +2456,80 @@
           }
         }
       ]
+    },
+    {
+      "name": "vigoot",
+      "timestamp": "2022-08-22T12:43:49.635Z",
+      "data": {
+        "fornavn": "Barmhjertig",
+        "etternavn": "Morfar",
+        "fdato": "02.02.1933",
+        "fnr": "02023311111",
+        "epost": "barmhjertig.morfar@hmail.com",
+        "mobilnr": "81549300",
+        "tilknytningnr": null,
+        "tilknytningnavn": null,
+        "aktivitetskode": "OTOV",
+        "promrkode": "",
+        "promrnavn": "",
+        "start": "",
+        "slutt": "",
+        "timestamp": "2022-08-22T10:01:16.204Z"
+      },
+      "tests": [
+        {
+          "id": "vigoot-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "vigoot-02",
+          "title": "Har fornavn og etternavn",
+          "description": "Sjekker at bruker er registrert med fornavn og etternavn",
+          "result": {
+            "status": "ok",
+            "message": "Har fornavn og etternavn",
+            "raw": {
+              "fornavn": "Barmhjertig",
+              "etternavn": "Morfar"
+            }
+          }
+        },
+        {
+          "id": "vigoot-03",
+          "title": "Har tilknytning",
+          "description": "Sjekker at bruker har tilknytning",
+          "result": {
+            "status": "error",
+            "message": "Mangler tilknytning",
+            "raw": {
+              "tilknytningnr": null,
+              "tilknytningnavn": null
+            },
+            "solution": "Rettes i VIGO OT"
+          }
+        },
+        {
+          "id": "vigoot-04",
+          "title": "Har gyldig fødselsnummer",
+          "description": "Sjekker at fødselsnummer er gyldig",
+          "result": {
+            "status": "ok",
+            "message": "Har gyldig Fødselsnummer",
+            "raw": {
+              "employeeNumber": "02023311111",
+              "fnr": {
+                "valid": true,
+                "type": "Fødselsnummer"
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   [
@@ -4091,6 +4165,79 @@
         },
         {
           "id": "vigolaerling-05",
+          "title": "Har gyldig fødselsnummer",
+          "description": "Sjekker at fødselsnummer er gyldig",
+          "result": {
+            "status": "ok",
+            "message": "Har gyldig Fødselsnummer",
+            "raw": {
+              "employeeNumber": "02023311111",
+              "fnr": {
+                "valid": true,
+                "type": "Fødselsnummer"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "vigoot",
+      "timestamp": "2022-08-22T12:43:49.635Z",
+      "data": {
+        "fornavn": "Barmhjertig",
+        "etternavn": "Morfar",
+        "fdato": "02.02.1933",
+        "fnr": "02023311111",
+        "epost": "barmhjertig.morfar@hmail.com",
+        "mobilnr": "81549300",
+        "tilknytningnr": "12345",
+        "tilknytningnavn": "OT Larvik",
+        "aktivitetskode": "OTOV",
+        "promrkode": "",
+        "promrnavn": "",
+        "start": "",
+        "slutt": "",
+        "timestamp": "2022-08-22T10:01:16.204Z"
+      },
+      "tests": [
+        {
+          "id": "vigoot-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "vigoot-02",
+          "title": "Har fornavn og etternavn",
+          "description": "Sjekker at bruker er registrert med fornavn og etternavn",
+          "result": {
+            "status": "ok",
+            "message": "Har fornavn og etternavn",
+            "raw": {
+              "fornavn": "Barmhjertig",
+              "etternavn": "Morfar"
+            }
+          }
+        },
+        {
+          "id": "vigoot-03",
+          "title": "Har tilknytning",
+          "description": "Sjekker at bruker har tilknytning",
+          "result": {
+            "status": "ok",
+            "message": "Har tilknytning",
+            "raw": {
+              "tilknytningnr": "12345",
+              "tilknytningnavn": "OT Larvik"
+            }
+          }
+        },
+        {
+          "id": "vigoot-04",
           "title": "Har gyldig fødselsnummer",
           "description": "Sjekker at fødselsnummer er gyldig",
           "result": {
