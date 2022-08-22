@@ -2367,6 +2367,95 @@
           }
         }
       ]
+    },
+    {
+      "name": "vigolaerling",
+      "timestamp": "2022-08-22T12:41:03.594Z",
+      "data": {
+        "fornavn": "Barmhjertig",
+        "etternavn": "Morfar",
+        "fdato": "02.02.1933",
+        "fnr": "02023311111",
+        "sysId": "AEFDCAKHBITH",
+        "epost": "barmhjertig.morfar@hmail.com",
+        "mobilnr": "81549300",
+        "type": "L",
+        "promrkode": "BAANG3",
+        "promrnavn": "Anleggsgartnerfaget",
+        "bnr": null,
+        "bedrnavn": null,
+        "start": "20.06.2022",
+        "slutt": "19.06.2024",
+        "timestamp": "2022-08-22T10:01:19.640Z"
+      },
+      "status": 200,
+      "tests": [
+        {
+          "id": "vigolaerling-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "vigolaerling-02",
+          "title": "Har fornavn og etternavn",
+          "description": "Sjekker at bruker er registrert med fornavn og etternavn",
+          "result": {
+            "status": "ok",
+            "message": "Har fornavn og etternavn",
+            "raw": {
+              "fornavn": "Barmhjertig",
+              "etternavn": "Morfar"
+            }
+          }
+        },
+        {
+          "id": "vigolaerling-03",
+          "title": "Har tilknytning til bedrift",
+          "description": "Sjekker at bruker har tilknytning til bedrift",
+          "result": {
+            "status": "error",
+            "message": "Mangler tilknytning til bedrift",
+            "raw": {
+              "bedriftsnr": null,
+              "bedriftsNavn": null
+            },
+            "solution": "Rettes i VIGO Opplæring (Lærling)"
+          }
+        },
+        {
+          "id": "vigolaerling-04",
+          "title": "Har start- og sluttdato",
+          "description": "Sjekker at bruker har start- og sluttdato",
+          "result": {
+            "status": "ok",
+            "message": "Har start- og sluttdato",
+            "raw": {
+              "start": "20.06.2022",
+              "slutt": "19.06.2024"
+            }
+          }
+        },
+        {
+          "id": "vigolaerling-05",
+          "title": "Har gyldig fødselsnummer",
+          "description": "Sjekker at fødselsnummer er gyldig",
+          "result": {
+            "status": "ok",
+            "message": "Har gyldig Fødselsnummer",
+            "raw": {
+              "employeeNumber": "02023311111",
+              "fnr": {
+                "valid": true,
+                "type": "Fødselsnummer"
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   [
@@ -3926,6 +4015,94 @@
               }
             },
             "solution": "Sak meldes til arbeidsgruppe print"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vigolaerling",
+      "timestamp": "2022-08-22T12:41:03.594Z",
+      "data": {
+        "fornavn": "Barmhjertig",
+        "etternavn": "Morfar",
+        "fdato": "02.02.1933",
+        "fnr": "02023311111",
+        "sysId": "AEFDCAKHBITH",
+        "epost": "barmhjertig.morfar@hmail.com",
+        "mobilnr": "81549300",
+        "type": "L",
+        "promrkode": "BAANG3",
+        "promrnavn": "Anleggsgartnerfaget",
+        "bnr": "621346433",
+        "bedrnavn": "Ole i Dole",
+        "start": "20.06.2022",
+        "slutt": "19.06.2024",
+        "timestamp": "2022-08-22T10:01:19.640Z"
+      },
+      "status": 200,
+      "tests": [
+        {
+          "id": "vigolaerling-01",
+          "title": "Har data",
+          "description": "Sjekker at det finnes data her",
+          "result": {
+            "status": "ok",
+            "message": "Har data"
+          }
+        },
+        {
+          "id": "vigolaerling-02",
+          "title": "Har fornavn og etternavn",
+          "description": "Sjekker at bruker er registrert med fornavn og etternavn",
+          "result": {
+            "status": "ok",
+            "message": "Har fornavn og etternavn",
+            "raw": {
+              "fornavn": "Barmhjertig",
+              "etternavn": "Morfar"
+            }
+          }
+        },
+        {
+          "id": "vigolaerling-03",
+          "title": "Har tilknytning til bedrift",
+          "description": "Sjekker at bruker har tilknytning til bedrift",
+          "result": {
+            "status": "ok",
+            "message": "Har tilknytning til bedrift",
+            "raw": {
+              "bedriftsnr": "621346433",
+              "bedriftsNavn": "Ole i Dole"
+            }
+          }
+        },
+        {
+          "id": "vigolaerling-04",
+          "title": "Har start- og sluttdato",
+          "description": "Sjekker at bruker har start- og sluttdato",
+          "result": {
+            "status": "ok",
+            "message": "Har start- og sluttdato",
+            "raw": {
+              "start": "20.06.2022",
+              "slutt": "19.06.2024"
+            }
+          }
+        },
+        {
+          "id": "vigolaerling-05",
+          "title": "Har gyldig fødselsnummer",
+          "description": "Sjekker at fødselsnummer er gyldig",
+          "result": {
+            "status": "ok",
+            "message": "Har gyldig Fødselsnummer",
+            "raw": {
+              "employeeNumber": "02023311111",
+              "fnr": {
+                "valid": true,
+                "type": "Fødselsnummer"
+              }
+            }
           }
         }
       ]
