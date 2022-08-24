@@ -5,7 +5,7 @@
   "dependencies": {
     "@sentry/react": "6.19.7",
     "@sentry/tracing": "6.19.7",
-    "@vtfk/components": "0.7.15",
+    "@vtfk/components": "0.12.2",
     "@vtfk/react-msal": "2.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
