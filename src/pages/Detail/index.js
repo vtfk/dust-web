@@ -15,8 +15,7 @@ import {
   ModalBody
 } from '@vtfk/components'
 
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import ReactJson from 'react-json-view'
 
 import { APP } from '../../config'
 
@@ -190,7 +189,7 @@ export const Detail = () => {
   }
 
   function openDetailModal (raw, description) {
-    setRawDetails(JSON.stringify(raw, null, '  '))
+    setRawDetails(raw)
     setRawDetailsTitle(description || 'Lukk')
     setModalOpen(true)
   }
@@ -457,9 +456,20 @@ export const Detail = () => {
           className='detail-modal'
         >
           <ModalBody>
-            <SyntaxHighlighter language='json' className='detail-modal-code' style={docco} wrapLines>
-              {rawDetails}
-            </SyntaxHighlighter>
+            <ReactJson
+              collapsed={false}
+              collapseStringsAfterLength={false}
+              displayDataTypes={false}
+              displayObjectSize={false}
+              enableAdd={false}
+              enableClipboard={false}
+              enableDelete={false}
+              enableEdit={false}
+              iconStyle='square'
+              indentWidth={4}
+              src={rawDetails}
+              theme='summerfruit:inverted' // all themes can be seen here: https://mac-s-g.github.io/react-json-view/demo/dist/
+            />
           </ModalBody>
         </Modal>
 

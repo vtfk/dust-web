@@ -9,9 +9,9 @@
     "@vtfk/react-msal": "2.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-json-view": "1.21.3",
     "react-router-dom": "6.2.2",
     "react-scripts": "5.0.1",
-    "react-syntax-highlighter": "15.5.0",
     "sass": "1.49.11"
   },
   "scripts": {
