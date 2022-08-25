@@ -467,6 +467,7 @@ export const Detail = () => {
               enableEdit={false}
               iconStyle='square'
               indentWidth={4}
+              name={null}
               src={rawDetails}
               theme='summerfruit:inverted' // all themes can be seen here: https://mac-s-g.github.io/react-json-view/demo/dist/
             />
