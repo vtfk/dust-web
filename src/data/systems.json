@@ -38,5 +38,9 @@
   {
     "name": "Visma InSchool",
     "short": "vis"
+  },
+  {
+    "name": "Public 360",
+    "short": "p360"
   }
 ]

@@ -462,7 +462,7 @@ export const Detail = () => {
               displayDataTypes={false}
               displayObjectSize={false}
               enableAdd={false}
-              enableClipboard={true}
+              enableClipboard
               enableDelete={false}
               enableEdit={false}
               iconStyle='square'
