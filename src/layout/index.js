@@ -126,6 +126,8 @@ export function Layout (props) {
             <SearchField
               onChange={e => onChanged(e.target.value)}
               onSearch={e => search(e.target.value)}
+              onClear={() => setQuery('')}
+              showClear={!!query}
               debounceMs={1000}
               onSelected={value => generateReport(value)}
               autocomplete={false}
