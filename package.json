@@ -47,7 +47,7 @@
   "devDependencies": {
     "msw": "0.38.2",
     "quick-score": "0.0.14",
-    "standard": "16.0.4"
+    "standard": "17.1.2"
   },
   "msw": {
     "workerDirectory": "public"
