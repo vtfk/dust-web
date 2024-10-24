@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sentry/react": "6.19.7",
+    "@sentry/react": "8.35.0",
     "@sentry/tracing": "6.19.7",
     "@vtfk/components": "0.12.2",
     "@vtfk/react-msal": "2.0.3",
